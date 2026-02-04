@@ -6,30 +6,30 @@
             <div class="banner-content">
                 <div class="banner-typography">
                     <div class="banner-subtitle-wrapper">
-                        <div class="banner-subtitle">Creative Ideas That Inspire Growth</div>
+                        <div class="banner-subtitle">Building Africa’s Digital Future</div>
                     </div>
                     <div class="banner-title-description">
-                        <h1 class="banner-title">World’s Best Creative Agency Team</h1>
-                        <p class="banner-description-text">World’s best creative agency team – crafting legendary
-                            brands through bold ideas, strategic genius, and flawless execution that dominates the
-                            global stage.</p>
+                        <h1 class="banner-title">Accelerating Digital Transformation Across Africa</h1>
+                        <p class="banner-description-text">We help companies design, build, and deploy innovative digital
+                            solutions that improve
+                            performance, efficiency, and long-term growth.</p>
                     </div>
                     <div class="banner-button-wrapper">
                         <a href="/template-pages/pricing" class="primary-button w-inline-block">
                             <div class="primary-button-inner">
                                 <div class="primary-button-text-wrap">
-                                    <div class="primary-button-text-block">Get Started</div>
-                                    <div class="primary-button-text-block is-text-absolute">Get Started</div>
+                                    <div class="primary-button-text-block">Start Your Digital Project</div>
                                 </div>
                             </div>
                         </a>
-                        <a href="#" class="banner-video-button w-inline-block w-lightbox">
-                            <div class="banner-video-button-wrap">
-                                <img src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/6878091acf8b568c6f8dfd84_Banner%20Video%20Button%20Icon.svg"
-                                    loading="lazy" alt="Play Icon" class="banner-video-button-icon" />
+                        <a href="/template-pages/contact-us" data-wf--primary-button--variant="secondary"
+                            class="primary-button w-inline-block">
+                            <div class="primary-button-inner w-variant-e542b707-47be-8374-03f0-de6722c5f865">
+                                <div class="primary-button-text-wrap">
+                                    <div class="primary-button-text-block w-variant-e542b707-47be-8374-03f0-de6722c5f865">
+                                        Discover Our Services</div>
+                                </div>
                             </div>
-                            <div class="banner-video-button-text">Watch Demo</div>
-
                         </a>
                     </div>
                 </div>
@@ -51,32 +51,32 @@
                 <div class="ticker">
                     <div class="inner-ticker-wrapper">
                         <div class="ticker-circle"></div>
-                        <img src="{{ asset('partners/partner-1.png') }}"
-                            loading="lazy" alt="Partner Logo" class="company-logo" />
+                        <img src="{{ asset('partners/partner-1.png') }}" loading="lazy" alt="Partner Logo"
+                            class="company-logo" />
                         <div class="ticker-circle"></div>
-                        <img src="{{ asset('partners/partner-2.png')}}"
-                            loading="lazy" alt="Partner Logo" class="company-logo" />
+                        <img src="{{ asset('partners/partner-2.png') }}" loading="lazy" alt="Partner Logo"
+                            class="company-logo" />
                         <div class="ticker-circle"></div>
-                        <img src="{{ asset('partners/partner-3.png') }}"
-                            loading="lazy" alt="Partner Logo" class="company-logo" />
+                        <img src="{{ asset('partners/partner-3.png') }}" loading="lazy" alt="Partner Logo"
+                            class="company-logo" />
                         <div class="ticker-circle"></div>
-                        <img src="{{ asset('partners/partner-4.png') }}"
-                            loading="lazy" alt="Partner Logo" class="company-logo" />
+                        <img src="{{ asset('partners/partner-4.png') }}" loading="lazy" alt="Partner Logo"
+                            class="company-logo" />
                         <div class="ticker-circle"></div>
-                        <img src="{{ asset('partners/partner-5.png') }}"
-                            loading="lazy" alt="Partner Logo" class="company-logo" />
+                        <img src="{{ asset('partners/partner-5.png') }}" loading="lazy" alt="Partner Logo"
+                            class="company-logo" />
                         <div class="ticker-circle"></div>
-                        <img src="{{ asset('partners/partner-6.png') }}.svg"
-                            loading="lazy" alt="Partner Logo" class="company-logo" />
+                        <img src="{{ asset('partners/partner-6.png') }}.svg" loading="lazy" alt="Partner Logo"
+                            class="company-logo" />
                         <div class="ticker-circle"></div>
-                        <img src="{{ asset('partners/partner-7.png') }}"
-                            loading="lazy" alt="Partner Logo" class="company-logo" />
+                        <img src="{{ asset('partners/partner-7.png') }}" loading="lazy" alt="Partner Logo"
+                            class="company-logo" />
                         <div class="ticker-circle"></div>
-                        <img src="{{ asset('partners/partner-8.png') }}"
-                            loading="lazy" alt="Partner Logo" class="company-logo" />
+                        <img src="{{ asset('partners/partner-8.png') }}" loading="lazy" alt="Partner Logo"
+                            class="company-logo" />
                         <div class="ticker-circle"></div>
-                        <img src="{{ asset('partners/partner-9.png') }}"
-                            loading="lazy" alt="Partner Logo" class="company-logo" />
+                        <img src="{{ asset('partners/partner-9.png') }}" loading="lazy" alt="Partner Logo"
+                            class="company-logo" />
                     </div>
                 </div>
             </div>
@@ -89,12 +89,13 @@
                     <div class="section-subtitle-single"><img
                             src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/687810aa5293f9e8c955c26a_Section%20Subtitle%20Icon.svg"
                             loading="lazy" alt="Subtitle Icon" class="section-subtitle-icon" />
-                        <div class="section-subtitle">About Us</div>
+                        <div class="section-subtitle">About Digitexia</div>
                     </div>
                 </div>
-                <h2 class="section-title about-mobile">Who We Are. Learn About us</h2>
-                <p class="section-description about-us">We are a dynamic team of innovators, storytellers, and visionaries
-                    dedicated to transforming ideas into extraordinary experiences.</p>
+                <h2 class="section-title about-mobile">Who We Are. Building Digital Solutions for Africa</h2>
+                <p class="section-description about-us">We are a pan-African team of technology experts and digital
+                    innovators dedicated to helping organizations transform their ideas into scalable, impactful digital
+                    solutions.</p>
             </div>
             <div class="about-us-content">
                 <div data-w-id="867b5e97-f513-07e2-ad0c-f997f670fcee" class="about-us-image-wrapper"><img
@@ -113,18 +114,11 @@
                                     <div class="about-us-card-counter-wrap">
                                         <div class="summery-counter-wrap">
                                             <div class="single-counter-wrap _1">
-                                                <h3 class="number-digit">9</h3>
+                                                <h3 class="number-digit">10+</h3>
                                             </div>
-                                            <div class="single-counter-wrap _2">
-                                                <h3 class="number-digit">0</h3>
-                                            </div>
-                                            <div class="single-counter-wrap _1">
-                                                <h3 class="number-digit">0</h3>
-                                            </div>
-                                            <h3 class="number-digit">+</h3>
                                         </div>
                                     </div>
-                                    <p class="about-us-card-description">We deliver great work always</p>
+                                    <p class="about-us-card-description">Digital Solutions Delivered</p>
                                 </div>
                             </div>
                             <div class="about-us-card _02">
@@ -135,15 +129,11 @@
                                     <div class="about-us-card-counter-wrap">
                                         <div class="summery-counter-wrap">
                                             <div class="single-counter-wrap _1">
-                                                <h3 class="number-digit">1</h3>
+                                                <h3 class="number-digit">5+</h3>
                                             </div>
-                                            <div class="single-counter-wrap _2">
-                                                <h3 class="number-digit">2</h3>
-                                            </div>
-                                            <h3 class="number-digit">+</h3>
                                         </div>
                                     </div>
-                                    <p class="about-us-card-description">Experience you can count on</p>
+                                    <p class="about-us-card-description">Years of Combined Experience</p>
                                 </div>
                             </div>
                             <div class="about-us-card _03">
@@ -154,15 +144,11 @@
                                     <div class="about-us-card-counter-wrap">
                                         <div class="summery-counter-wrap">
                                             <div class="single-counter-wrap _1">
-                                                <h3 class="number-digit">2</h3>
+                                                <h3 class="number-digit">100%</h3>
                                             </div>
-                                            <div class="single-counter-wrap _2">
-                                                <h3 class="number-digit">8</h3>
-                                            </div>
-                                            <h3 class="number-digit">+</h3>
                                         </div>
                                     </div>
-                                    <p class="about-us-card-description">Award-Winning Work, Trusted Results</p>
+                                    <p class="about-us-card-description">Client-Focused Approach</p>
                                 </div>
                             </div>
                             <div class="about-us-card _04">
@@ -173,13 +159,11 @@
                                     <div class="about-us-card-counter-wrap">
                                         <div class="summery-counter-wrap">
                                             <div class="single-counter-wrap _1">
-                                                <h3 class="number-digit">5</h3>
+                                                <h3 class="number-digit">Pan-A</h3>
                                             </div>
-                                            <h3 class="number-digit">K</h3>
-                                            <h3 class="number-digit">+</h3>
                                         </div>
                                     </div>
-                                    <p class="about-us-card-description">We have happy Clients worldwide</p>
+                                    <p class="about-us-card-description">Clients & Partners</p>
                                 </div>
                             </div>
                         </div>
@@ -189,8 +173,7 @@
                             class="primary-button w-inline-block">
                             <div class="primary-button-inner">
                                 <div class="primary-button-text-wrap">
-                                    <div class="primary-button-text-block">More About Us</div>
-                                    <div class="primary-button-text-block is-text-absolute">More About Us</div>
+                                    <div class="primary-button-text-block">Learn More About Digitexia</div>
                                 </div>
                             </div>
                         </a><a href="tel:22(00)3567890" class="navbar-contact-link-block w-inline-block">
@@ -198,8 +181,8 @@
                                     src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/687802f515a83fbfc32a6ae4_Contact%20Icon.svg"
                                     loading="lazy" alt="Phone Icon" class="contact-icon about" /></div>
                             <div class="navbar-contact-title-number">
-                                <div class="navbar-contact-title about-us">Get free Quote</div>
-                                <div class="navbar-contact-number about">22 (00) 356 7890</div>
+                                <div class="navbar-contact-title about-us">Request a Free Consultation</div>
+                                <div class="navbar-contact-number about">(00237) 650 94 5280</div>
                             </div>
                         </a></div>
                 </div>
@@ -216,9 +199,10 @@
                         <div class="section-subtitle white">Services</div>
                     </div>
                 </div>
-                <h2 class="section-title white">Your Needs, Our Expertise</h2>
-                <p class="section-description white-color services">Your Vision, Our Expertise – Together, we bring ideas
-                    to life with tailored solutions that deliver real results. Let’s build something amazing.</p>
+                <h2 class="section-title white">Your Business Challenges, Our Digital Expertise</h2>
+                <p class="section-description white-color services">Your vision, our expertise — together, we design and
+                    build digital solutions tailored to your business needs, delivering measurable and sustainable results.
+                </p>
             </div>
             <div class="services-contenr">
                 <div class="services-single-wrapper">
@@ -232,7 +216,7 @@
                                             <div data-w-id="996ade88-712c-652f-a7d5-a6740dea2bd5" class="services-number">
                                                 01</div>
                                             <h2 data-w-id="fecc23b7-7e62-a351-4b5a-eb794dfa52ec" class="services-name">Web
-                                                Design</h2>
+                                                Digital Strategy & Consulting</h2>
                                         </div>
                                         <div data-w-id="ee2d1959-1d9f-4a95-f18b-278b61be4895"
                                             class="services-arrow-icon-wrapper">
@@ -243,10 +227,9 @@
                                     <div class="services-description-wrapper">
                                         <div data-w-id="be27fb93-ff60-9477-0331-89e08cf5e38f"
                                             class="services-description-single">
-                                            <p class="services-description-text">Focuses on the aesthetic and user
-                                                experience of a website, creating visually appealing and intuitive layouts.
-                                                It involves aspects like graphic design, typography, and color schemes to
-                                                enhance user engagement.</p>
+                                            <p class="services-description-text">We help organizations define clear digital
+                                                strategies by analyzing their processes, challenges, and growth objectives,
+                                                then translating them into actionable digital roadmaps.</p>
                                         </div>
                                     </div><img src="{{ asset('images/service-1.jpg') }}" loading="lazy"
                                         data-w-id="4d18c86f-1a55-0ade-905e-94c160616e6e" alt="Service Image"
@@ -266,7 +249,7 @@
                                             <div data-w-id="ab38aa81-ed75-752f-1365-2f2e8f53fae2" class="services-number">
                                                 02</div>
                                             <h2 data-w-id="ab38aa81-ed75-752f-1365-2f2e8f53fae4" class="services-name">Web
-                                                Development</h2>
+                                                & Software Development</h2>
                                         </div>
                                         <div data-w-id="ab38aa81-ed75-752f-1365-2f2e8f53fae5"
                                             class="services-arrow-icon-wrapper"><img
@@ -276,10 +259,9 @@
                                     <div class="services-description-wrapper">
                                         <div data-w-id="ab38aa81-ed75-752f-1365-2f2e8f53fae8"
                                             class="services-description-single">
-                                            <p class="services-description-text">Involves the coding and programming that
-                                                makes a website functional and interactive. This includes front-end
-                                                development (what users see) and back-end development (server, database, and
-                                                application logic).</p>
+                                            <p class="services-description-text">We design and develop robust web
+                                                applications, mobile solutions, and custom software tailored to business
+                                                needs, using modern and scalable technologies.</p>
                                         </div>
                                     </div><img src="{{ asset('images/service-2.jpg') }}" loading="lazy"
                                         data-w-id="ab38aa81-ed75-752f-1365-2f2e8f53faea" alt="Service Image"
@@ -299,7 +281,7 @@
                                             <div data-w-id="09d08cac-d607-ec02-5387-75ad1a62fe9e" class="services-number">
                                                 03</div>
                                             <h2 data-w-id="09d08cac-d607-ec02-5387-75ad1a62fea0" class="services-name">
-                                                Branding</h2>
+                                                Business Process Digitalization</h2>
                                         </div>
                                         <div class="services-arrow-icon-wrapper">
                                             <img src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a8c4dc0bf39abe4f4c253d_Services%20Arrow%20Icon.svg"
@@ -309,10 +291,9 @@
                                     <div class="services-description-wrapper">
                                         <div data-w-id="09d08cac-d607-ec02-5387-75ad1a62fea4"
                                             class="services-description-single">
-                                            <p class="services-description-text">The process of creating a unique identity
-                                                for a company or product, encompassing its name, logo, messaging, and
-                                                overall market perception. It aims to establish recognition and a positive
-                                                emotional connection with the target audience.</p>
+                                            <p class="services-description-text">We digitalize and automate internal
+                                                business processes to improve efficiency, reduce operational costs, and
+                                                enhance decision-making through smart digital tools.</p>
                                         </div>
                                     </div>
                                     <img src="{{ asset('images/service-3.jpg') }}" loading="lazy"
@@ -334,7 +315,7 @@
                                             <div data-w-id="f1b498ae-d155-e4f6-a43f-c2cc236e6225" class="services-number">
                                                 04</div>
                                             <h2 data-w-id="f1b498ae-d155-e4f6-a43f-c2cc236e6227" class="services-name">
-                                                Product Design</h2>
+                                                Product Design & UX/UI</h2>
                                         </div>
                                         <div data-w-id="f1b498ae-d155-e4f6-a43f-c2cc236e6228"
                                             class="services-arrow-icon-wrapper"><img
@@ -344,10 +325,9 @@
                                     <div class="services-description-wrapper">
                                         <div data-w-id="f1b498ae-d155-e4f6-a43f-c2cc236e622b"
                                             class="services-description-single">
-                                            <p class="services-description-text">Encompasses the entire process of creating
-                                                a new product, from conceptualization and research to prototyping and final
-                                                execution. It focuses on solving user problems and enhancing the overall
-                                                user experience and functionality of a product.</p>
+                                            <p class="services-description-text">rom concept to execution, we design
+                                                digital products focused on user experience, usability, and performance to
+                                                ensure adoption and long-term success.</p>
                                         </div>
                                     </div>
                                     <img src="{{ asset('images/service-4.jpg') }}" loading="lazy"
