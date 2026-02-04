@@ -1,7 +1,7 @@
 @extends('index')
 
 @section('contain')
-    <section class="section inner-banner">
+    <section class="section inner-banner" style="padding-inline: 1rem">
         <div class="container">
             <div class="inner-banner-content">
                 <div class="inner-banner-text-wrapper">

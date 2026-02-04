@@ -1,7 +1,7 @@
 @extends('index')
 
 @section('contain')
-    <section class="section inner-banner">
+    <section class="section inner-banner" style="padding-inline: 1rem">
         <div class="container">
             <div class="inner-banner-content">
                 <div class="inner-banner-text-wrapper">
@@ -37,7 +37,7 @@
         </div>
     </section>
 
-    <section class="section team-members-main">
+    <section class="section team-members-main" style="padding-inline: 1rem">
         <div class="container">
             <div class="team-members-main-content">
                 <div class="team-members-main-collection-list-wrapper w-dyn-list">

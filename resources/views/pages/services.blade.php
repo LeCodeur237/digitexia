@@ -1,7 +1,7 @@
 @extends('index')
 
 @section('contain')
-    <section class="section inner-banner">
+    <section class="section inner-banner" style="padding-inline: 1rem">
         <div class="container">
             <div class="inner-banner-content">
                 <div class="inner-banner-text-wrapper">
@@ -266,7 +266,7 @@
         </div>
     </section>
     <section class="section benefit-section">
-        <div class="benefit-content">
+        <div class="benefit-content" style="padding-inline: 1rem; padding-block: 5rem;">
             <div class="benefit-image-wrapper"><img
                     src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68af526b9b09c1f0d5201fb8_Benefit%20Image.jpg"
                     loading="lazy" alt="Benefit Image" height="Auto" class="benefit-image" /></div>
@@ -311,7 +311,7 @@
             </div>
         </div>
     </section>
-    <section class="section faq">
+    <section class="section faq" style="padding-inline: 1rem">
         <div class="container">
             <div class="section-title-wrapper">
                 <div class="section-subtitle-wrap">

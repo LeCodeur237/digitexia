@@ -1,7 +1,7 @@
 @extends('index')
 
 @section('contain')
-    <section class="section banner">
+    <section class="section banner" style="padding-inline: 1rem">
         <div class="container">
             <div class="banner-content">
                 <div class="banner-typography">
@@ -82,7 +82,7 @@
             </div>
         </div>
     </section>
-    <section class="section about-us">
+    <section class="section about-us" style="padding-inline: 1rem">
         <div class="container">
             <div class="section-title-wrapper">
                 <div class="section-subtitle-wrap">
@@ -527,7 +527,7 @@
             </div>
         </div>
     </section>
-    <section class="section working-process">
+    <section class="section working-process" style="padding-inline: 1rem">
         <div class="container">
             <div class="working-process-content">
                 <div class="working-process-typography">
@@ -1090,7 +1090,7 @@
             </div>
         </div>
     </section>
-    <section class="section blog" style="padding-block: 10rem">
+    <section class="section blog" style="padding-block: 10rem; padding-inline: 1rem">
         <div class="container">
             <div class="blog-section-title-wrapper">
                 <div class="blog-section-title-single-wrapper">

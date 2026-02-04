@@ -60,7 +60,7 @@
 @endpush
 
 @section('contain')
-    <section class="section inner-banner">
+    <section class="section inner-banner" style="padding-inline: 1rem">
         <div class="container">
             <div class="inner-banner-content">
                 <div class="inner-banner-text-wrapper">
@@ -94,7 +94,7 @@
         </div>
     </section>
 
-    <section class="section careers-positions">
+    <section class="section careers-positions" style="padding-inline: 1rem">
         <div class="container">
             <div class="section-title-wrapper">
                 <div class="section-subtitle-wrap">
@@ -178,7 +178,7 @@
         </div>
     </section>
 
-    <section class="section spontaneous-application" style="padding-bottom: 100px;">
+    <section class="section spontaneous-application" style="padding-bottom: 100px; padding-inline: 1rem;">
         <div class="container">
             <div class="section-title-wrapper">
                 <h2 class="section-title">Spontaneous Application</h2>

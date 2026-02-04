@@ -1,4 +1,4 @@
-<section class="section footer">
+<section class="section footer" style="padding-inline: 1rem">
     <div class="footer-top-content">
         <div class="container">
             <div class="footer-content">

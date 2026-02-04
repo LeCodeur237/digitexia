@@ -42,7 +42,7 @@
 @endpush
 
 @section('contain')
-    <section class="section inner-banner">
+    <section class="section inner-banner" style="padding-inline: 1rem">
         <div class="container">
             <div class="inner-banner-content">
                 <div class="inner-banner-text-wrapper">
@@ -75,7 +75,7 @@
             </div>
         </div>
     </section>
-    <section class="section partners">
+    <section class="section partners" style="padding-inline: 1rem">
         <div class="container">
             <div class="section-title-wrapper">
                 <div class="section-subtitle-wrap">

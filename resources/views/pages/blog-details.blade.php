@@ -12,7 +12,7 @@
 @endpush
 
 @section('contain')
-    <section class="section blog-details">
+    <section class="section blog-details" style="padding-inline: 3rem">
         <div class="container">
             <div class="blog-details-content">
                 <div class="blog-details-top-content">
@@ -39,12 +39,10 @@
                                     class="blog-details-social-media-icon"></a></div>
                         </div>
                     </div>
-                    <div
-                        class="blog-details-image-wrapper"><img
+                    <div class="blog-details-image-wrapper"><img
                             src="https://cdn.prod.website-files.com/688a6c3373e0fdb14fbef689/68b3394c715be375e5093752_Blog%20Details%20Image3.jpg"
                             loading="lazy" alt="" class="blog-details-image" /></div>
-                    <div
-                        class="blog-details-author-wrapper">
+                    <div class="blog-details-author-wrapper">
                         <div class="blog-details-author-single"><img
                                 src="https://cdn.prod.website-files.com/688a6c3373e0fdb14fbef689/68b33cf7f38b7710f7e2c84a_Blog%20Details%20Author%20Image.png"
                                 loading="lazy" alt="" class="blog-details-author-image" />
@@ -66,8 +64,7 @@
                             </div>
                         </div>
                     </div>
-                    <div
-                        class="blog-details-rich-content">
+                    <div class="blog-details-rich-content" style="padding-inline: 3rem">
                         <div class="blog-details-rich-text w-richtext">
                             <h2>Why Website Speed Matters: The Unseen Costs of Slowness</h2>
                             <p>This blog post will delve into actionable strategies to significantly boost your
