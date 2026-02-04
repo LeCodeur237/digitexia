@@ -176,3 +176,24 @@
 .team-members-main {
     margin-bottom: 8rem;
 }
+
+.rounded{
+    border-radius: 50px !important;
+}
+
+.blue-digit {
+    background-color: #002a61;
+    color: white;
+}
+.blue-digit-fade {
+    background-color: #dceafcab;
+    color: black;
+}
+.green-digit {
+    background-color: #00bf63 !important;
+    color: white !important;
+}
+.red-digit {
+    background-color: #ba0000;
+    color: white;
+}

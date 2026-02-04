@@ -5,7 +5,7 @@
         <div class="container">
             <div class="banner-content">
                 <div class="banner-typography">
-                    <div class="banner-subtitle-wrapper">
+                    <div class="banner-subtitle-wrapper blue-digit-fade rounded">
                         <div class="banner-subtitle">Building Africa’s Digital Future</div>
                     </div>
                     <div class="banner-title-description">
@@ -16,17 +16,16 @@
                     </div>
                     <div class="banner-button-wrapper">
                         <a href="/template-pages/pricing" class="primary-button w-inline-block">
-                            <div class="primary-button-inner">
+                            <div class="primary-button-inner blue-digit">
                                 <div class="primary-button-text-wrap">
                                     <div class="primary-button-text-block">Start Your Digital Project</div>
                                 </div>
                             </div>
                         </a>
-                        <a href="/template-pages/contact-us" data-wf--primary-button--variant="secondary"
-                            class="primary-button w-inline-block">
-                            <div class="primary-button-inner w-variant-e542b707-47be-8374-03f0-de6722c5f865">
+                        <a href="/template-pages/contact-us" class="primary-button  w-inline-block">
+                            <div class="primary-button-inner green-digit">
                                 <div class="primary-button-text-wrap">
-                                    <div class="primary-button-text-block w-variant-e542b707-47be-8374-03f0-de6722c5f865">
+                                    <div class="primary-button-text-block">
                                         Discover Our Services</div>
                                 </div>
                             </div>
@@ -43,7 +42,7 @@
     <section class="section company-section">
         <div class="company-subtitle-wrapper">
             <div class="company-subtitle-line"></div>
-            <div class="company-subtitle">Trusted Partners Worldwide for Success</div>
+            <div class="company-subtitle blue-digit-fade">Trusted Partners Worldwide for Success</div>
             <div class="company-subtitle-line"></div>
         </div>
         <div class="sponsors-ticker-wrapper">
@@ -86,9 +85,7 @@
         <div class="container">
             <div class="section-title-wrapper">
                 <div class="section-subtitle-wrap">
-                    <div class="section-subtitle-single"><img
-                            src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/687810aa5293f9e8c955c26a_Section%20Subtitle%20Icon.svg"
-                            loading="lazy" alt="Subtitle Icon" class="section-subtitle-icon" />
+                    <div class="section-subtitle-single blue-digit-fade">
                         <div class="section-subtitle">About Digitexia</div>
                     </div>
                 </div>
@@ -98,18 +95,19 @@
                     solutions.</p>
             </div>
             <div class="about-us-content">
-                <div data-w-id="867b5e97-f513-07e2-ad0c-f997f670fcee" class="about-us-image-wrapper"><img
-                        src="{{ asset('images/126208.jpg') }}" loading="lazy" sizes="(max-width: 584px) 100vw, 584px"
+                <div class="about-us-image-wrapper">
+                    <img src="{{ asset('images/126208.jpg') }}" loading="lazy" sizes="(max-width: 584px) 100vw, 584px"
                         srcset="{{ asset('images/126208.jpg') }} 500w, {{ asset('images/126208.jpg') }} 584w"
                         alt="About Image" class="image about-us-image" />
                 </div>
                 <div class="about-us-typography">
                     <div class="about-us-top-content">
                         <div class="w-layout-grid about-us-top-grid">
-                            <div class="about-us-card _01">
-                                <div class="about-us-card-icon-wrap"><img
-                                        src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68781451c1b2ec734bdb1f89_About%20Us%20Card%20Icon1.svg"
-                                        loading="lazy" alt="About Icon" class="about-us-card-icon" /></div>
+                            <div class="about-us-card _01 blue-digit-fade">
+                                <div class="about-us-card-icon-wrap">
+                                    <img src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68781451c1b2ec734bdb1f89_About%20Us%20Card%20Icon1.svg"
+                                        loading="lazy" alt="About Icon" class="about-us-card-icon" />
+                                </div>
                                 <div class="about-us-card-typography">
                                     <div class="about-us-card-counter-wrap">
                                         <div class="summery-counter-wrap">
@@ -121,7 +119,7 @@
                                     <p class="about-us-card-description">Digital Solutions Delivered</p>
                                 </div>
                             </div>
-                            <div class="about-us-card _02">
+                            <div class="about-us-card _02 blue-digit-fade">
                                 <div class="about-us-card-icon-wrap"><img
                                         src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/6878145183772d0cdf6005e8_About%20Us%20Card%20Icon2.svg"
                                         loading="lazy" alt="About Icon" class="about-us-card-icon" /></div>
@@ -136,7 +134,7 @@
                                     <p class="about-us-card-description">Years of Combined Experience</p>
                                 </div>
                             </div>
-                            <div class="about-us-card _03">
+                            <div class="about-us-card _03 blue-digit-fade">
                                 <div class="about-us-card-icon-wrap"><img
                                         src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68781451e9e825ffe70ac4af_About%20Us%20Card%20Icon3.svg"
                                         loading="lazy" alt="About Icon" class="about-us-card-icon" /></div>
@@ -151,7 +149,7 @@
                                     <p class="about-us-card-description">Client-Focused Approach</p>
                                 </div>
                             </div>
-                            <div class="about-us-card _04">
+                            <div class="about-us-card _04 blue-digit-fade">
                                 <div class="about-us-card-icon-wrap"><img
                                         src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68781451954bf1b86c600b25_About%20Us%20Card%20Icon4.svg"
                                         loading="lazy" alt="About Icon" class="about-us-card-icon" /></div>
@@ -171,20 +169,23 @@
                     <div class="about-us-bottom-content"><a href="/template-pages/about-us"
                             data-wf--primary-button--variant="base" data-w-id="3d8db9dc-5eed-be45-f768-868f0c7978a9"
                             class="primary-button w-inline-block">
-                            <div class="primary-button-inner">
+                            <div class="primary-button-inner blue-digit">
                                 <div class="primary-button-text-wrap">
                                     <div class="primary-button-text-block">Learn More About Digitexia</div>
                                 </div>
                             </div>
-                        </a><a href="tel:22(00)3567890" class="navbar-contact-link-block w-inline-block">
-                            <div class="navbar-contact-icon-wrap about-us"><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/687802f515a83fbfc32a6ae4_Contact%20Icon.svg"
-                                    loading="lazy" alt="Phone Icon" class="contact-icon about" /></div>
+                        </a>
+                        <a href="tel:22(00)3567890" class="navbar-contact-link-block w-inline-block">
+                            <div class="navbar-contact-icon-wrap about-us blue-digit-fade">
+                                <img src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/687802f515a83fbfc32a6ae4_Contact%20Icon.svg"
+                                    loading="lazy" alt="Phone Icon" class="contact-icon about" />
+                            </div>
                             <div class="navbar-contact-title-number">
                                 <div class="navbar-contact-title about-us">Request a Free Consultation</div>
                                 <div class="navbar-contact-number about">(00237) 650 94 5280</div>
                             </div>
-                        </a></div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -193,10 +194,8 @@
         <div class="container">
             <div class="section-title-wrapper">
                 <div class="section-subtitle-wrap">
-                    <div class="section-subtitle-single gray-bg"><img
-                            src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a8be303fa5a8c72f1cf197_Section%20Subtitle%20Icon2.svg"
-                            loading="lazy" alt="Subtitle Icon" class="section-subtitle-icon" />
-                        <div class="section-subtitle white">Services</div>
+                    <div class="section-subtitle-single gray-bg">
+                        <div class="section-subtitle white">Our Services</div>
                     </div>
                 </div>
                 <h2 class="section-title white">Your Business Challenges, Our Digital Expertise</h2>
@@ -342,16 +341,14 @@
         </div>
     </section>
     <section class="section portfolio">
-        <div data-w-id="d81279eb-b65a-12ac-3c6b-923ba4aec547" class="portfolio-content-vh">
+        <div class="portfolio-content-vh">
             <div class="portfolio-sticky">
                 <div class="portfolio-top-content">
                     <div class="container">
                         <div class="section-title-wrapper">
                             <div class="section-subtitle-wrap">
-                                <div class="section-subtitle-single"><img
-                                        src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/687810aa5293f9e8c955c26a_Section%20Subtitle%20Icon.svg"
-                                        loading="lazy" alt="Subtitle Icon" class="section-subtitle-icon" />
-                                    <div class="section-subtitle">Portfolio</div>
+                                <div class="section-subtitle-single">
+                                    <div class="section-subtitle">Our Projects</div>
                                 </div>
                             </div>
                             <h2 class="section-title mb0">Explore Our Real Woks</h2>
@@ -507,14 +504,12 @@
             </div>
         </div>
     </section>
-    <section class="section working-process" style="padding-inline: 1rem">
+    <section class="section working-process blue-digit-fade" style="padding-inline: 1rem">
         <div class="container">
             <div class="working-process-content">
                 <div class="working-process-typography">
                     <div class="section-subtitle-wrap left-alignment">
-                        <div class="section-subtitle-single"><img
-                                src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/687810aa5293f9e8c955c26a_Section%20Subtitle%20Icon.svg"
-                                loading="lazy" alt="Subtitle Icon" class="section-subtitle-icon" />
+                        <div class="section-subtitle-single">
                             <div class="section-subtitle">Working Process</div>
                         </div>
                     </div>
@@ -524,10 +519,9 @@
                     <div class="working-process-button-wrapper"><a href="/template-pages/pricing"
                             data-wf--primary-button--variant="base" data-w-id="3d8db9dc-5eed-be45-f768-868f0c7978a9"
                             class="primary-button w-inline-block">
-                            <div class="primary-button-inner">
+                            <div class="primary-button-inner blue-digit">
                                 <div class="primary-button-text-wrap">
                                     <div class="primary-button-text-block">Start Projects</div>
-                                    <div class="primary-button-text-block is-text-absolute">Start Projects</div>
                                 </div>
                             </div>
                         </a></div>
@@ -584,7 +578,7 @@
             </div>
         </div>
     </section>
-    <section class="section services-tools">
+    <section class="section services-tools blue-digit">
         <div class="services-tools-ticker">
             <div class="ticker">
                 <div class="services-tools-ticker-inner">
@@ -721,9 +715,7 @@
             <div class="container">
                 <div class="section-title-wrapper">
                     <div class="section-subtitle-wrap">
-                        <div class="section-subtitle-single"><img
-                                src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/687810aa5293f9e8c955c26a_Section%20Subtitle%20Icon.svg"
-                                loading="lazy" alt="Subtitle Icon" class="section-subtitle-icon" />
+                        <div class="section-subtitle-single">
                             <div class="section-subtitle">Testimonial</div>
                         </div>
                     </div>
@@ -733,22 +725,15 @@
                 </div>
             </div>
         </div>
-        <div data-w-id="9f907c42-0e3c-ca5a-06af-69ec27d598ee" class="testimonial-bottom-content">
+        <div class="testimonial-bottom-content">
             <div class="testimonial-ticker">
                 <div class="ticker-testimonial">
                     <div class="testimonial-inner-ticker-wrapper">
-                        <div class="testimonial-card">
-                            <div class="testimonial-card-review-wrapper"><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fe4ffef9b43f72c36_Testimonial%20Card%20Review%20Icon2.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /></div>
+                        <div class="testimonial-card blue-digit-fade">
+                            <div class="testimonial-card-review-wrapper">
+                                <img src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
+                                    loading="lazy" alt="" class="testimonial-card-review-icon" />
+                            </div>
                             <div class="testimonial-card-description-wrapper">
                                 <p class="testimonial-card-description-text">Was initially hesitant about the project, but
                                     the team quickly put my mind at ease. Their expertise and creative solutions were
@@ -764,45 +749,32 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="testimonial-card">
-                            <div class="testimonial-card-review-wrapper"><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /></div>
+                        <div class="testimonial-card blue-digit-fade">
+                            <div class="testimonial-card-review-wrapper">
+                                <img src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
+                                    loading="lazy" alt="" class="testimonial-card-review-icon" />
+                            </div>
                             <div class="testimonial-card-description-wrapper">
                                 <p class="testimonial-card-description-text">I came to them with a vague idea, and they
                                     helped me refine it into a concrete plan. Throughout the process, they kept me informed
                                     and involved, ensuring I was happy with the direction.</p>
                             </div>
                             <div class="testimonial-card-author-wrapper">
-                                <div class="testimonial-card-author-image-wrapper"><img
-                                        src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a8b2ce08dcf75e3ac0a337_Testimonial%20Card%20Author%20Image2.png"
-                                        loading="lazy" alt="" class="testimonial-card-author-image" /></div>
+                                <div class="testimonial-card-author-image-wrapper">
+                                    <img src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a8b2ce08dcf75e3ac0a337_Testimonial%20Card%20Author%20Image2.png"
+                                        loading="lazy" alt="" class="testimonial-card-author-image" />
+                                </div>
                                 <div class="testimonial-card-author-name-bio-wrapper">
                                     <h6 class="testimonial-card-author-name">Alisa Olivia</h6>
                                     <div class="testimonial-card-author-bio">CTO at Ritovex</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="testimonial-card">
-                            <div class="testimonial-card-review-wrapper"><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /></div>
+                        <div class="testimonial-card blue-digit-fade">
+                            <div class="testimonial-card-review-wrapper">
+                                <img src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
+                                    loading="lazy" alt="" class="testimonial-card-review-icon" />
+                            </div>
                             <div class="testimonial-card-description-wrapper">
                                 <p class="testimonial-card-description-text">Working with them was a true pleasure. They
                                     were responsive, communicative, and always willing to go the extra mile. I especially
@@ -818,238 +790,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="testimonial-card">
-                            <div class="testimonial-card-review-wrapper"><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fe4ffef9b43f72c36_Testimonial%20Card%20Review%20Icon2.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /></div>
-                            <div class="testimonial-card-description-wrapper">
-                                <p class="testimonial-card-description-text">Throughout the process, they kept me informed
-                                    and involved, ensuring I was happy with the direction. I came to them with a vague idea,
-                                    and they helped me refine it into a concrete plan.</p>
+                        <div class="testimonial-card blue-digit-fade">
+                            <div class="testimonial-card-review-wrapper">
+                                <img src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
+                                    loading="lazy" alt="" class="testimonial-card-review-icon" />
                             </div>
-                            <div class="testimonial-card-author-wrapper">
-                                <div class="testimonial-card-author-image-wrapper"><img
-                                        src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a8b2cea461dc549f0c811d_Testimonial%20Card%20Author%20Image4.png"
-                                        loading="lazy" alt="" class="testimonial-card-author-image" /></div>
-                                <div class="testimonial-card-author-name-bio-wrapper">
-                                    <h6 class="testimonial-card-author-name">Ema Watson</h6>
-                                    <div class="testimonial-card-author-bio">Founder at Ritof</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-inner-ticker-wrapper">
-                        <div class="testimonial-card">
-                            <div class="testimonial-card-review-wrapper"><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fe4ffef9b43f72c36_Testimonial%20Card%20Review%20Icon2.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /></div>
-                            <div class="testimonial-card-description-wrapper">
-                                <p class="testimonial-card-description-text">Was initially hesitant about the project, but
-                                    the team quickly put my mind at ease. Their expertise and creative solutions were
-                                    impressive. The final product exceeded my expectations,</p>
-                            </div>
-                            <div class="testimonial-card-author-wrapper">
-                                <div class="testimonial-card-author-image-wrapper"><img
-                                        src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a8b2ce85663a578d1bef2a_Testimonial%20Card%20Author%20Image1.png"
-                                        loading="lazy" alt="" class="testimonial-card-author-image" /></div>
-                                <div class="testimonial-card-author-name-bio-wrapper">
-                                    <h6 class="testimonial-card-author-name">Jakob Alison</h6>
-                                    <div class="testimonial-card-author-bio">Project Manager at triko</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-card">
-                            <div class="testimonial-card-review-wrapper"><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /></div>
-                            <div class="testimonial-card-description-wrapper">
-                                <p class="testimonial-card-description-text">I came to them with a vague idea, and they
-                                    helped me refine it into a concrete plan. Throughout the process, they kept me informed
-                                    and involved, ensuring I was happy with the direction.</p>
-                            </div>
-                            <div class="testimonial-card-author-wrapper">
-                                <div class="testimonial-card-author-image-wrapper"><img
-                                        src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a8b2ce08dcf75e3ac0a337_Testimonial%20Card%20Author%20Image2.png"
-                                        loading="lazy" alt="" class="testimonial-card-author-image" /></div>
-                                <div class="testimonial-card-author-name-bio-wrapper">
-                                    <h6 class="testimonial-card-author-name">Alisa Olivia</h6>
-                                    <div class="testimonial-card-author-bio">CTO at Ritovex</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-card">
-                            <div class="testimonial-card-review-wrapper"><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /></div>
-                            <div class="testimonial-card-description-wrapper">
-                                <p class="testimonial-card-description-text">Working with them was a true pleasure. They
-                                    were responsive, communicative, and always willing to go the extra mile. I especially
-                                    appreciated their attention to detail</p>
-                            </div>
-                            <div class="testimonial-card-author-wrapper">
-                                <div class="testimonial-card-author-image-wrapper"><img
-                                        src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a8b2ced4b407065ff16588_Testimonial%20Card%20Author%20Image3.png"
-                                        loading="lazy" alt="" class="testimonial-card-author-image" /></div>
-                                <div class="testimonial-card-author-name-bio-wrapper">
-                                    <h6 class="testimonial-card-author-name">Jordan Walk</h6>
-                                    <div class="testimonial-card-author-bio">Software Engineer at Briks</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-card">
-                            <div class="testimonial-card-review-wrapper"><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fe4ffef9b43f72c36_Testimonial%20Card%20Review%20Icon2.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /></div>
-                            <div class="testimonial-card-description-wrapper">
-                                <p class="testimonial-card-description-text">Throughout the process, they kept me informed
-                                    and involved, ensuring I was happy with the direction. I came to them with a vague idea,
-                                    and they helped me refine it into a concrete plan.</p>
-                            </div>
-                            <div class="testimonial-card-author-wrapper">
-                                <div class="testimonial-card-author-image-wrapper"><img
-                                        src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a8b2cea461dc549f0c811d_Testimonial%20Card%20Author%20Image4.png"
-                                        loading="lazy" alt="" class="testimonial-card-author-image" /></div>
-                                <div class="testimonial-card-author-name-bio-wrapper">
-                                    <h6 class="testimonial-card-author-name">Ema Watson</h6>
-                                    <div class="testimonial-card-author-bio">Founder at Ritof</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-inner-ticker-wrapper">
-                        <div class="testimonial-card">
-                            <div class="testimonial-card-review-wrapper"><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fe4ffef9b43f72c36_Testimonial%20Card%20Review%20Icon2.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /></div>
-                            <div class="testimonial-card-description-wrapper">
-                                <p class="testimonial-card-description-text">Was initially hesitant about the project, but
-                                    the team quickly put my mind at ease. Their expertise and creative solutions were
-                                    impressive. The final product exceeded my expectations,</p>
-                            </div>
-                            <div class="testimonial-card-author-wrapper">
-                                <div class="testimonial-card-author-image-wrapper"><img
-                                        src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a8b2ce85663a578d1bef2a_Testimonial%20Card%20Author%20Image1.png"
-                                        loading="lazy" alt="" class="testimonial-card-author-image" /></div>
-                                <div class="testimonial-card-author-name-bio-wrapper">
-                                    <h6 class="testimonial-card-author-name">Jakob Alison</h6>
-                                    <div class="testimonial-card-author-bio">Project Manager at triko</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-card">
-                            <div class="testimonial-card-review-wrapper"><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /></div>
-                            <div class="testimonial-card-description-wrapper">
-                                <p class="testimonial-card-description-text">I came to them with a vague idea, and they
-                                    helped me refine it into a concrete plan. Throughout the process, they kept me informed
-                                    and involved, ensuring I was happy with the direction.</p>
-                            </div>
-                            <div class="testimonial-card-author-wrapper">
-                                <div class="testimonial-card-author-image-wrapper"><img
-                                        src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a8b2ce08dcf75e3ac0a337_Testimonial%20Card%20Author%20Image2.png"
-                                        loading="lazy" alt="" class="testimonial-card-author-image" /></div>
-                                <div class="testimonial-card-author-name-bio-wrapper">
-                                    <h6 class="testimonial-card-author-name">Alisa Olivia</h6>
-                                    <div class="testimonial-card-author-bio">CTO at Ritovex</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-card">
-                            <div class="testimonial-card-review-wrapper"><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /></div>
-                            <div class="testimonial-card-description-wrapper">
-                                <p class="testimonial-card-description-text">Working with them was a true pleasure. They
-                                    were responsive, communicative, and always willing to go the extra mile. I especially
-                                    appreciated their attention to detail</p>
-                            </div>
-                            <div class="testimonial-card-author-wrapper">
-                                <div class="testimonial-card-author-image-wrapper"><img
-                                        src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a8b2ced4b407065ff16588_Testimonial%20Card%20Author%20Image3.png"
-                                        loading="lazy" alt="" class="testimonial-card-author-image" /></div>
-                                <div class="testimonial-card-author-name-bio-wrapper">
-                                    <h6 class="testimonial-card-author-name">Jordan Walk</h6>
-                                    <div class="testimonial-card-author-bio">Software Engineer at Briks</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-card">
-                            <div class="testimonial-card-review-wrapper"><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fdbe1cb1c58f4bc43_Testimonial%20Card%20Review%20Icon1.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /><img
-                                    src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/68a7706fe4ffef9b43f72c36_Testimonial%20Card%20Review%20Icon2.svg"
-                                    loading="lazy" alt="" class="testimonial-card-review-icon" /></div>
                             <div class="testimonial-card-description-wrapper">
                                 <p class="testimonial-card-description-text">Throughout the process, they kept me informed
                                     and involved, ensuring I was happy with the direction. I came to them with a vague idea,
@@ -1070,14 +815,13 @@
             </div>
         </div>
     </section>
+
     <section class="section blog" style="padding-block: 10rem; padding-inline: 1rem">
         <div class="container">
             <div class="blog-section-title-wrapper">
                 <div class="blog-section-title-single-wrapper">
                     <div class="section-subtitle-wrap left-alignment">
-                        <div class="section-subtitle-single"><img
-                                src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/687810aa5293f9e8c955c26a_Section%20Subtitle%20Icon.svg"
-                                loading="lazy" alt="Subtitle Icon" class="section-subtitle-icon" />
+                        <div class="section-subtitle-single">
                             <div class="section-subtitle">Our Blogs</div>
                         </div>
                     </div>
@@ -1086,7 +830,7 @@
                 <div class="blog-section-button-wrapper"><a href="/template-pages/blog"
                         data-wf--primary-button--variant="base" data-w-id="3d8db9dc-5eed-be45-f768-868f0c7978a9"
                         class="primary-button w-inline-block">
-                        <div class="primary-button-inner">
+                        <div class="primary-button-inner blue-digit">
                             <div class="primary-button-text-wrap">
                                 <div class="primary-button-text-block">Browse All Article</div>
                                 <div class="primary-button-text-block is-text-absolute">Browse All Article</div>
@@ -1105,7 +849,7 @@
                                         loading="lazy"
                                         style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
                                         alt="Blog Image" class="blog-image" /></a>
-                                <div class="blog-typography">
+                                <div class="blog-typography blue-digit-fade">
                                     <div class="blog-category-tag-date-wrapper">
                                         <div class="blog-category">Design</div>
                                         <div class="blog-date-wrapper"><img
@@ -1114,8 +858,8 @@
                                             <div class="blog-date">July 31, 2025</div>
                                         </div>
                                     </div>
-                                    <div class="blog-title-description"><a
-                                            href="/blog/simple-tips-for-better-website-design" class="blog-title">Simple
+                                    <div class="blog-title-description">
+                                        <a href="/blog/simple-tips-for-better-website-design" class="blog-title">Simple
                                             Tips for Better Website Design</a>
                                         <p class="blog-description-text">Learn easy ways to improve your website’s look
                                             and feel. easy step for you</p>
@@ -1126,23 +870,24 @@
                         <div role="listitem" class="blog-collection-list-item w-dyn-item">
                             <div class="blog-single"><a data-w-id="2796ff38-93ca-bf85-ceea-af243fa95b8c"
                                     href="/blog/how-to-speed-up-your-website-fast-loading"
-                                    class="blog-image-wrapper w-inline-block"><img
-                                        src="https://cdn.prod.website-files.com/688a6c3373e0fdb14fbef689/688a6f14fce3da4b055bd44a_Blog%20Image8.jpg"
+                                    class="blog-image-wrapper w-inline-block">
+                                    <img src="https://cdn.prod.website-files.com/688a6c3373e0fdb14fbef689/688a6f14fce3da4b055bd44a_Blog%20Image8.jpg"
                                         loading="lazy"
                                         style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                        alt="Blog Image" class="blog-image" /></a>
-                                <div class="blog-typography">
+                                        alt="Blog Image" class="blog-image" />
+                                </a>
+                                <div class="blog-typography blue-digit-fade">
                                     <div class="blog-category-tag-date-wrapper">
                                         <div class="blog-category">Design</div>
-                                        <div class="blog-date-wrapper"><img
-                                                src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/688ebdbfcf1bd5a5f84021f3_Blog%20Date%20Icon.svg"
+                                        <div class="blog-date-wrapper">
+                                            <img src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/688ebdbfcf1bd5a5f84021f3_Blog%20Date%20Icon.svg"
                                                 loading="lazy" alt="Date" />
                                             <div class="blog-date">July 31, 2025</div>
                                         </div>
                                     </div>
                                     <div class="blog-title-description"><a
-                                            href="/blog/how-to-speed-up-your-website-fast-loading"
-                                            class="blog-title">How to Speed Up Your Website Fast loading</a>
+                                            href="/blog/how-to-speed-up-your-website-fast-loading" class="blog-title">How
+                                            to Speed Up Your Website Fast loading</a>
                                         <p class="blog-description-text">Quick fixes to make your site load faster. How
                                             great user experience boosts your business</p>
                                     </div>
@@ -1152,16 +897,17 @@
                         <div role="listitem" class="blog-collection-list-item w-dyn-item">
                             <div class="blog-single"><a data-w-id="2796ff38-93ca-bf85-ceea-af243fa95b8c"
                                     href="/blog/best-tools-for-app-development-today-world-vqrqo"
-                                    class="blog-image-wrapper w-inline-block"><img
-                                        src="https://cdn.prod.website-files.com/688a6c3373e0fdb14fbef689/688a6eec142bdf303761443b_Blog%20Image7.jpg"
+                                    class="blog-image-wrapper w-inline-block">
+                                    <img src="https://cdn.prod.website-files.com/688a6c3373e0fdb14fbef689/688a6eec142bdf303761443b_Blog%20Image7.jpg"
                                         loading="lazy"
                                         style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                        alt="Blog Image" class="blog-image" /></a>
-                                <div class="blog-typography">
+                                        alt="Blog Image" class="blog-image" />
+                                </a>
+                                <div class="blog-typography blue-digit-fade">
                                     <div class="blog-category-tag-date-wrapper">
                                         <div class="blog-category">Design</div>
-                                        <div class="blog-date-wrapper"><img
-                                                src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/688ebdbfcf1bd5a5f84021f3_Blog%20Date%20Icon.svg"
+                                        <div class="blog-date-wrapper">
+                                            <img src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/688ebdbfcf1bd5a5f84021f3_Blog%20Date%20Icon.svg"
                                                 loading="lazy" alt="Date" />
                                             <div class="blog-date">July 31, 2025</div>
                                         </div>

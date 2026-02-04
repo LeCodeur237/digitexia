@@ -2137,7 +2137,7 @@ textarea.w-input, textarea.w-select {
   --_typography---title-xl: 60px;
   --_fonts---line-height--130: 130%;
   --_typography---paragraphs--buttons: 18px;
-  --_colors-plates---secondary: #ff7a52;
+  --_colors-plates---secondary: #00bf63;
   --_fonts---line-height--100: 100%;
   --white\<deleted\|variable-177089b8\>: white;
   --_fonts---font-family--fa-icon: "Fa 400", Arial, sans-serif;
@@ -3669,7 +3669,6 @@ figure {
 }
 
 .section.services-tools {
-  background-color: var(--_colors-plates---primary);
   padding-top: 24px;
   padding-bottom: 24px;
 }
@@ -4413,7 +4412,6 @@ figure {
 }
 
 .testimonial-card {
-  background-color: var(--_colors-plates---light-gray);
   border-radius: 20px;
   width: 520px;
   margin-right: 32px;
