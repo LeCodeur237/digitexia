@@ -1,286 +1,472 @@
-@extends('index')
+﻿@extends('index')
+
+@section('page_title', 'Our Blogs — DigiTexia Technology & Innovation')
+
+@push('styles')
+<link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('css/blog-digitexia.css') }}">
+@endpush
 
 @section('contain')
-    <section class="section inner-banner" style="padding-inline: 1rem">
-        <div class="container">
-            <div class="inner-banner-content">
-                <div class="inner-banner-text-wrapper">
-                    <div class="inner-banner-typography">
-                        <h1 class="inner-banner-title">Our Blogs</h1>
-                        <p class="inner-banner-description">Understand the various reasons behind these retractions, from
-                            personal conviction to external pressures, and discover the profound implications they can have
-                            on individuals, justice, and public perception.</p>
-                    </div>
-                    <div class="services-button-wrapper"><a href="/template-pages/pricing"
-                            data-wf--primary-button--variant="base" data-w-id="3d8db9dc-5eed-be45-f768-868f0c7978a9"
-                            class="primary-button w-inline-block">
-                            <div class="primary-button-inner">
-                                <div class="primary-button-text-wrap">
-                                    <div class="primary-button-text-block">Start Projects</div>
-                                </div>
-                            </div>
-                        </a><a href="/template-pages/contact-us" data-wf--primary-button--variant="secondary"
-                            data-w-id="3d8db9dc-5eed-be45-f768-868f0c7978a9" class="primary-button w-inline-block">
-                            <div class="primary-button-inner w-variant-e542b707-47be-8374-03f0-de6722c5f865">
-                                <div class="primary-button-text-wrap">
-                                    <div class="primary-button-text-block w-variant-e542b707-47be-8374-03f0-de6722c5f865">
-                                        Get a
-                                        Free Consultation</div>
-                                </div>
-                            </div>
-                        </a></div>
-                </div>
-                <div class="services-banner-image-wrapper">
-                    <img src="{{ asset('images/12150971_4890883.png') }}" loading="lazy" alt="Service Image"
-                        class="services-banner-image" />
-                </div>
-            </div>
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     HERO
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<section id="hero">
+  <div class="hero-bg"></div><div class="hero-grid-ln"></div>
+  <div class="hero-inner rv">
+    <div class="hero-crumb">
+      <a href="index.html">Home</a><span>â€º</span>
+      <span class="curr">Blog</span>
+    </div>
+    <span class="tag" style="margin-bottom:1.25rem;display:inline-block">DigiTexia Blog</span>
+    <h1>Insights on <em>digital transformation</em><br>across Africa.</h1>
+    <p class="lead">Perspectives, deep dives, and practical guides on technology, innovation, and building the digital future of African organizations â€” from the DigiTexia team.</p>
+
+    <div class="search-bar rv d1">
+      <span class="search-icon">ðŸ”</span>
+      <input type="text" placeholder="Search articles, topics, productsâ€¦">
+      <kbd>âŒ˜K</kbd>
+    </div>
+
+    <div class="cat-pills rv d2">
+      <span class="cat-pill active">All Articles</span>
+      <span class="cat-pill">Digital Transformation</span>
+      <span class="cat-pill">Product Updates</span>
+      <span class="cat-pill">Africa & Tech</span>
+      <span class="cat-pill">How-to Guides</span>
+      <span class="cat-pill">Innovation</span>
+      <span class="cat-pill">Company News</span>
+    </div>
+  </div>
+</section>
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     FEATURED POST
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<section id="featured">
+  <div class="feat-inner rv">
+    <div class="feat-card">
+      <div class="feat-visual">
+        <div class="feat-visual-bg"></div>
+        <div class="feat-badge">âœ¦ Featured Article</div>
+        <div class="feat-visual-ico">ðŸŒ</div>
+      </div>
+      <div class="feat-body">
+        <div class="feat-meta">
+          <span class="feat-cat" style="background:var(--blue-dim);border-color:var(--blue-bdr);color:#93C5FD">Africa & Tech</span>
+          <span class="feat-date">March 2025</span>
+          <span class="feat-read">Â· 8 min read</span>
         </div>
-    </section>
-    <section class="section main-blog-section" style="padding-inline: 1rem">
-        <div class="container">
-            <div class="blog-content">
-                <div class="blog-collection-list-wrapper w-dyn-list">
-                    <div role="list" class="blog-collection-list w-dyn-items">
-                        <div role="listitem" class="blog-collection-list-item w-dyn-item">
-                            <div class="blog-single"><a data-w-id="87bef21f-cad2-af73-0e9d-953d745684a0"
-                                    href="/blog/simple-tips-for-better-website-design"
-                                    class="blog-image-wrapper w-inline-block"><img
-                                        src="https://cdn.prod.website-files.com/688a6c3373e0fdb14fbef689/688a6f38c2a413d69c4b61b0_Blog%20Image9.jpg"
-                                        loading="lazy"
-                                        style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                        alt="Blog Image" class="blog-image" /></a>
-                                <div class="blog-typography">
-                                    <div class="blog-category-tag-date-wrapper">
-                                        <div class="blog-category">Design</div>
-                                        <div class="blog-date-wrapper"><img
-                                                src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/688ebdbfcf1bd5a5f84021f3_Blog%20Date%20Icon.svg"
-                                                loading="lazy" alt="Date" />
-                                            <div class="blog-date">July 31, 2025</div>
-                                        </div>
-                                    </div>
-                                    <div class="blog-title-description"><a
-                                            href="/blog/simple-tips-for-better-website-design" class="blog-title">Simple
-                                            Tips for Better Website Design</a>
-                                        <p class="blog-description-text">Learn easy ways to improve your website’s look and
-                                            feel. easy step for you</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div role="listitem" class="blog-collection-list-item w-dyn-item">
-                            <div class="blog-single"><a data-w-id="87bef21f-cad2-af73-0e9d-953d745684a0"
-                                    href="/blog/how-to-speed-up-your-website-fast-loading"
-                                    class="blog-image-wrapper w-inline-block"><img
-                                        src="https://cdn.prod.website-files.com/688a6c3373e0fdb14fbef689/688a6f14fce3da4b055bd44a_Blog%20Image8.jpg"
-                                        loading="lazy"
-                                        style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                        alt="Blog Image" class="blog-image" /></a>
-                                <div class="blog-typography">
-                                    <div class="blog-category-tag-date-wrapper">
-                                        <div class="blog-category">Design</div>
-                                        <div class="blog-date-wrapper"><img
-                                                src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/688ebdbfcf1bd5a5f84021f3_Blog%20Date%20Icon.svg"
-                                                loading="lazy" alt="Date" />
-                                            <div class="blog-date">July 31, 2025</div>
-                                        </div>
-                                    </div>
-                                    <div class="blog-title-description"><a
-                                            href="/blog/how-to-speed-up-your-website-fast-loading" class="blog-title">How to
-                                            Speed Up Your Website Fast loading</a>
-                                        <p class="blog-description-text">Quick fixes to make your site load faster. How
-                                            great user experience boosts your business</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div role="listitem" class="blog-collection-list-item w-dyn-item">
-                            <div class="blog-single"><a data-w-id="87bef21f-cad2-af73-0e9d-953d745684a0"
-                                    href="/blog/best-tools-for-app-development-today-world-vqrqo"
-                                    class="blog-image-wrapper w-inline-block"><img
-                                        src="https://cdn.prod.website-files.com/688a6c3373e0fdb14fbef689/688a6eec142bdf303761443b_Blog%20Image7.jpg"
-                                        loading="lazy"
-                                        style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                        alt="Blog Image" class="blog-image" /></a>
-                                <div class="blog-typography">
-                                    <div class="blog-category-tag-date-wrapper">
-                                        <div class="blog-category">Design</div>
-                                        <div class="blog-date-wrapper"><img
-                                                src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/688ebdbfcf1bd5a5f84021f3_Blog%20Date%20Icon.svg"
-                                                loading="lazy" alt="Date" />
-                                            <div class="blog-date">July 31, 2025</div>
-                                        </div>
-                                    </div>
-                                    <div class="blog-title-description"><a
-                                            href="/blog/best-tools-for-app-development-today-world-vqrqo"
-                                            class="blog-title">Best Tools for App Development Today world</a>
-                                        <p class="blog-description-text">Keep your site safe with simple security tips best
-                                            tools to build apps easily and quickly</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div role="listitem" class="blog-collection-list-item w-dyn-item">
-                            <div class="blog-single"><a data-w-id="87bef21f-cad2-af73-0e9d-953d745684a0"
-                                    href="/blog/how-design-first-agencies-are-tech-development"
-                                    class="blog-image-wrapper w-inline-block"><img
-                                        src="https://cdn.prod.website-files.com/688a6c3373e0fdb14fbef689/688a6ebbbc170564e93818d2_Blog%20Image6.jpg"
-                                        loading="lazy"
-                                        style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                        alt="Blog Image" class="blog-image" /></a>
-                                <div class="blog-typography">
-                                    <div class="blog-category-tag-date-wrapper">
-                                        <div class="blog-category">Development</div>
-                                        <div class="blog-date-wrapper"><img
-                                                src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/688ebdbfcf1bd5a5f84021f3_Blog%20Date%20Icon.svg"
-                                                loading="lazy" alt="Date" />
-                                            <div class="blog-date">July 31, 2025</div>
-                                        </div>
-                                    </div>
-                                    <div class="blog-title-description"><a
-                                            href="/blog/how-design-first-agencies-are-tech-development"
-                                            class="blog-title">How Design-First Agencies Are Tech Development</a>
-                                        <p class="blog-description-text">Discover why leading tech development agencies are
-                                            prioritizing user experience</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div role="listitem" class="blog-collection-list-item w-dyn-item">
-                            <div class="blog-single"><a data-w-id="87bef21f-cad2-af73-0e9d-953d745684a0"
-                                    href="/blog/streamlining-your-tech-project-with-a-full-service-agency"
-                                    class="blog-image-wrapper w-inline-block"><img
-                                        src="https://cdn.prod.website-files.com/688a6c3373e0fdb14fbef689/688a6e8c244709abd2685da3_Blog%20Image5.jpg"
-                                        loading="lazy"
-                                        style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                        alt="Blog Image" class="blog-image" /></a>
-                                <div class="blog-typography">
-                                    <div class="blog-category-tag-date-wrapper">
-                                        <div class="blog-category">Design</div>
-                                        <div class="blog-date-wrapper"><img
-                                                src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/688ebdbfcf1bd5a5f84021f3_Blog%20Date%20Icon.svg"
-                                                loading="lazy" alt="Date" />
-                                            <div class="blog-date">July 31, 2025</div>
-                                        </div>
-                                    </div>
-                                    <div class="blog-title-description"><a
-                                            href="/blog/streamlining-your-tech-project-with-a-full-service-agency"
-                                            class="blog-title">Streamlining Your Tech Project with a Full-Service
-                                            Agency</a>
-                                        <p class="blog-description-text">earn how partnering with a tech development and
-                                            design agency that embraces agile</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div role="listitem" class="blog-collection-list-item w-dyn-item">
-                            <div class="blog-single"><a data-w-id="87bef21f-cad2-af73-0e9d-953d745684a0"
-                                    href="/blog/the-synergy-of-development-design-in-modern-agencies"
-                                    class="blog-image-wrapper w-inline-block"><img
-                                        src="https://cdn.prod.website-files.com/688a6c3373e0fdb14fbef689/688a6e50f58dabd4b261b2b8_Blog%20Image4.jpg"
-                                        loading="lazy"
-                                        style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                        alt="Blog Image" class="blog-image" /></a>
-                                <div class="blog-typography">
-                                    <div class="blog-category-tag-date-wrapper">
-                                        <div class="blog-category">Agency</div>
-                                        <div class="blog-date-wrapper"><img
-                                                src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/688ebdbfcf1bd5a5f84021f3_Blog%20Date%20Icon.svg"
-                                                loading="lazy" alt="Date" />
-                                            <div class="blog-date">July 31, 2025</div>
-                                        </div>
-                                    </div>
-                                    <div class="blog-title-description"><a
-                                            href="/blog/the-synergy-of-development-design-in-modern-agencies"
-                                            class="blog-title">The Synergy of Development &amp; Design in Modern
-                                            Agencies</a>
-                                        <p class="blog-description-text">Explore the powerful collaboration between
-                                            developers and designers</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div role="listitem" class="blog-collection-list-item w-dyn-item">
-                            <div class="blog-single"><a data-w-id="87bef21f-cad2-af73-0e9d-953d745684a0"
-                                    href="/blog/why-custom-software-development-is-a-strategic"
-                                    class="blog-image-wrapper w-inline-block"><img
-                                        src="https://cdn.prod.website-files.com/688a6c3373e0fdb14fbef689/688a6e0dfa14d8675cd3dc09_Blog%20Image3.jpg"
-                                        loading="lazy"
-                                        style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                        alt="Blog Image" class="blog-image" /></a>
-                                <div class="blog-typography">
-                                    <div class="blog-category-tag-date-wrapper">
-                                        <div class="blog-category">Software</div>
-                                        <div class="blog-date-wrapper"><img
-                                                src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/688ebdbfcf1bd5a5f84021f3_Blog%20Date%20Icon.svg"
-                                                loading="lazy" alt="Date" />
-                                            <div class="blog-date">July 31, 2025</div>
-                                        </div>
-                                    </div>
-                                    <div class="blog-title-description"><a
-                                            href="/blog/why-custom-software-development-is-a-strategic"
-                                            class="blog-title">Why Custom Software Development is a Strategic </a>
-                                        <p class="blog-description-text">Understand the long-term benefits of investing in
-                                            bespoke software developed by expert agencie</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div role="listitem" class="blog-collection-list-item w-dyn-item">
-                            <div class="blog-single"><a data-w-id="87bef21f-cad2-af73-0e9d-953d745684a0"
-                                    href="/blog/the-art-and-science-of-ui-ux-design-for-tech-products"
-                                    class="blog-image-wrapper w-inline-block"><img
-                                        src="https://cdn.prod.website-files.com/688a6c3373e0fdb14fbef689/688a6da33561edb32e6d87d5_Blog%20Image2.jpg"
-                                        loading="lazy"
-                                        style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                        alt="Blog Image" class="blog-image" /></a>
-                                <div class="blog-typography">
-                                    <div class="blog-category-tag-date-wrapper">
-                                        <div class="blog-category">Design</div>
-                                        <div class="blog-date-wrapper"><img
-                                                src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/688ebdbfcf1bd5a5f84021f3_Blog%20Date%20Icon.svg"
-                                                loading="lazy" alt="Date" />
-                                            <div class="blog-date">July 31, 2025</div>
-                                        </div>
-                                    </div>
-                                    <div class="blog-title-description"><a
-                                            href="/blog/the-art-and-science-of-ui-ux-design-for-tech-products"
-                                            class="blog-title">The Art and Science of UI/UX Design for Tech Products</a>
-                                        <p class="blog-description-text">Delve into the meticulous process behind user
-                                            interface (UI) and user experience (UX) design</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div role="listitem" class="blog-collection-list-item w-dyn-item">
-                            <div class="blog-single"><a data-w-id="87bef21f-cad2-af73-0e9d-953d745684a0"
-                                    href="/blog/navigating-the-complexities-of-tech-development"
-                                    class="blog-image-wrapper w-inline-block"><img
-                                        src="https://cdn.prod.website-files.com/688a6c3373e0fdb14fbef689/688a6d2204eb44e29e313c1e_Blog%20Image1.jpg"
-                                        loading="lazy"
-                                        style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                        alt="Blog Image" class="blog-image" /></a>
-                                <div class="blog-typography">
-                                    <div class="blog-category-tag-date-wrapper">
-                                        <div class="blog-category">Technology</div>
-                                        <div class="blog-date-wrapper"><img
-                                                src="https://cdn.prod.website-files.com/6877e02f5387b6bdd6d338ec/688ebdbfcf1bd5a5f84021f3_Blog%20Date%20Icon.svg"
-                                                loading="lazy" alt="Date" />
-                                            <div class="blog-date">July 31, 2025</div>
-                                        </div>
-                                    </div>
-                                    <div class="blog-title-description"><a
-                                            href="/blog/navigating-the-complexities-of-tech-development"
-                                            class="blog-title">Navigating the Complexities of Tech Development </a>
-                                        <p class="blog-description-text">Unpack the comprehensive support a dedicated tech
-                                            development and design agency can offer,</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <h3>Africa doesn't need technological catch-up â€” it needs a technological leap forward.</h3>
+        <p>The narrative of African technology has long been framed around "catching up" with the West. But this framing is fundamentally wrong â€” and limiting. Africa has a unique opportunity to leapfrog outdated infrastructure and build digital systems designed for tomorrow, not yesterday. Here is why the continent's digital transformation is not a delay, but an advantage.</p>
+        <div class="feat-author">
+          <div class="feat-av" style="background:rgba(18,70,240,.12)">ðŸ‘©â€ðŸ’¼</div>
+          <div>
+            <div class="feat-author-name">Anne DZOU</div>
+            <div class="feat-author-role">CEO, DigiTexia</div>
+          </div>
         </div>
-    </section>
+        <a href="#" class="feat-link">Read full article <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     BLOG GRID + SIDEBAR
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<section id="blog-grid">
+  <div class="bg-inner wrap">
+
+    <!-- POSTS -->
+    <div class="posts-section">
+
+      <!-- Digital Transformation -->
+      <h3>Digital Transformation</h3>
+      <div class="posts-grid">
+
+        <div class="post-card rv d1">
+          <div class="post-thumb">
+            <div class="post-thumb-bg" style="background:linear-gradient(135deg,rgba(18,70,240,.12),rgba(99,102,241,.08))"></div>
+            <span style="position:relative;z-index:1">ðŸ”„</span>
+          </div>
+          <div class="post-body">
+            <div class="post-meta">
+              <span class="post-cat" style="background:var(--blue-dim);border-color:var(--blue-bdr);color:#93C5FD">Digital Transformation</span>
+              <span class="post-date">Feb 2025</span>
+            </div>
+            <h4>Why digitalization fails in African enterprises â€” and how to fix it</h4>
+            <p>Most digital transformation projects fail not because of the technology, but because of misalignment between tools and organizational realities. Here are the five root causes â€” and how DigiTexia's approach addresses each one.</p>
+            <div class="post-footer">
+              <div style="display:flex;align-items:center;gap:.5rem">
+                <div class="post-av" style="background:rgba(22,199,132,.1)">ðŸ‘¨â€ðŸ’»</div>
+                <div>
+                  <div class="post-author">Lucien DZOU</div>
+                  <div class="post-read">6 min read</div>
+                </div>
+              </div>
+              <span class="post-arrow">â†’</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="post-card rv d2">
+          <div class="post-thumb">
+            <div class="post-thumb-bg" style="background:linear-gradient(135deg,rgba(22,199,132,.1),rgba(14,165,233,.08))"></div>
+            <span style="position:relative;z-index:1">ðŸ“‹</span>
+          </div>
+          <div class="post-body">
+            <div class="post-meta">
+              <span class="post-cat" style="background:var(--blue-dim);border-color:var(--blue-bdr);color:#93C5FD">Digital Transformation</span>
+              <span class="post-date">Jan 2025</span>
+            </div>
+            <h4>The true cost of manual processes: what your spreadsheets are costing you</h4>
+            <p>Organizations relying on Excel, email chains, and paper documents are bleeding money silently. We break down the real financial and operational cost of staying manual â€” with data to back it up.</p>
+            <div class="post-footer">
+              <div style="display:flex;align-items:center;gap:.5rem">
+                <div class="post-av" style="background:var(--blue-dim)">ðŸ‘©â€ðŸ’¼</div>
+                <div>
+                  <div class="post-author">Anne DZOU</div>
+                  <div class="post-read">5 min read</div>
+                </div>
+              </div>
+              <span class="post-arrow">â†’</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="post-card rv d3">
+          <div class="post-thumb">
+            <div class="post-thumb-bg" style="background:linear-gradient(135deg,rgba(245,158,11,.1),rgba(236,72,153,.06))"></div>
+            <span style="position:relative;z-index:1">âš¡</span>
+          </div>
+          <div class="post-body">
+            <div class="post-meta">
+              <span class="post-cat" style="background:var(--blue-dim);border-color:var(--blue-bdr);color:#93C5FD">Digital Transformation</span>
+              <span class="post-date">Dec 2024</span>
+            </div>
+            <h4>Agile digital transformation: how to deliver value in weeks, not months</h4>
+            <p>At DigiTexia, we believe a digital project should not take months before producing value. Here is our methodology for delivering working, impactful solutions rapidly â€” without sacrificing quality.</p>
+            <div class="post-footer">
+              <div style="display:flex;align-items:center;gap:.5rem">
+                <div class="post-av" style="background:rgba(22,199,132,.1)">ðŸ‘¨â€ðŸ’»</div>
+                <div>
+                  <div class="post-author">Lucien DZOU</div>
+                  <div class="post-read">7 min read</div>
+                </div>
+              </div>
+              <span class="post-arrow">â†’</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="post-card rv d4">
+          <div class="post-thumb">
+            <div class="post-thumb-bg" style="background:linear-gradient(135deg,rgba(99,102,241,.12),rgba(18,70,240,.08))"></div>
+            <span style="position:relative;z-index:1">ðŸ›ï¸</span>
+          </div>
+          <div class="post-body">
+            <div class="post-meta">
+              <span class="post-cat" style="background:var(--blue-dim);border-color:var(--blue-bdr);color:#93C5FD">Digital Transformation</span>
+              <span class="post-date">Nov 2024</span>
+            </div>
+            <h4>Digitalizing African public institutions: challenges, opportunities, and first steps</h4>
+            <p>Public institutions face unique challenges in digital transformation â€” legacy processes, compliance requirements, and limited budgets. We explore a practical roadmap for modernization.</p>
+            <div class="post-footer">
+              <div style="display:flex;align-items:center;gap:.5rem">
+                <div class="post-av" style="background:var(--blue-dim)">ðŸ‘©â€ðŸ’¼</div>
+                <div>
+                  <div class="post-author">Anne DZOU</div>
+                  <div class="post-read">9 min read</div>
+                </div>
+              </div>
+              <span class="post-arrow">â†’</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Product Updates -->
+      <h3>Product Updates</h3>
+      <div class="posts-grid">
+
+        <div class="post-card rv d1">
+          <div class="post-thumb">
+            <div class="post-thumb-bg" style="background:linear-gradient(135deg,rgba(14,165,233,.12),rgba(22,199,132,.06))"></div>
+            <span style="position:relative;z-index:1">ðŸ“¦</span>
+          </div>
+          <div class="post-body">
+            <div class="post-meta">
+              <span class="post-cat" style="background:rgba(14,165,233,.12);border-color:rgba(14,165,233,.28);color:#7DD3FC">Product Update</span>
+              <span class="post-date">Mar 2025</span>
+            </div>
+            <h4>InventoryPro 2.0: multi-location tracking and real-time stock alerts are here</h4>
+            <p>The latest version of InventoryPro introduces cross-site inventory management, automated low-stock alerts, and an enhanced consumption analytics dashboard. Here's everything that's new.</p>
+            <div class="post-footer">
+              <div style="display:flex;align-items:center;gap:.5rem">
+                <div class="post-av" style="background:rgba(22,199,132,.1)">ðŸ‘¨â€ðŸ’»</div>
+                <div>
+                  <div class="post-author">Lucien DZOU</div>
+                  <div class="post-read">4 min read</div>
+                </div>
+              </div>
+              <span class="post-arrow">â†’</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="post-card rv d2">
+          <div class="post-thumb">
+            <div class="post-thumb-bg" style="background:linear-gradient(135deg,rgba(22,199,132,.1),rgba(18,70,240,.06))"></div>
+            <span style="position:relative;z-index:1">âŒš</span>
+          </div>
+          <div class="post-body">
+            <div class="post-meta">
+              <span class="post-cat" style="background:var(--green-dim);border-color:var(--green-bdr);color:var(--green)">Product Update</span>
+              <span class="post-date">Feb 2025</span>
+            </div>
+            <h4>Introducing DigiHealth Bracelet: patient records accessible in under 3 seconds</h4>
+            <p>Our most innovative product to date â€” a QR-coded wearable that gives any authorized healthcare professional instant access to a patient's full medical record. Here's how it works and why it matters.</p>
+            <div class="post-footer">
+              <div style="display:flex;align-items:center;gap:.5rem">
+                <div class="post-av" style="background:rgba(22,199,132,.1)">ðŸ‘¨â€ðŸ’»</div>
+                <div>
+                  <div class="post-author">Lucien DZOU</div>
+                  <div class="post-read">6 min read</div>
+                </div>
+              </div>
+              <span class="post-arrow">â†’</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="post-card rv d3">
+          <div class="post-thumb">
+            <div class="post-thumb-bg" style="background:linear-gradient(135deg,rgba(245,158,11,.1),rgba(245,158,11,.05))"></div>
+            <span style="position:relative;z-index:1">ðŸ“Š</span>
+          </div>
+          <div class="post-body">
+            <div class="post-meta">
+              <span class="post-cat" style="background:rgba(245,158,11,.12);border-color:rgba(245,158,11,.28);color:#FCD34D">Product Update</span>
+              <span class="post-date">Jan 2025</span>
+            </div>
+            <h4>DigiPerformance: new attendance geolocation and automated appraisal modules</h4>
+            <p>The latest DigiPerformance release adds GPS-verified attendance, automated KPI scoring, and a revamped team comparison dashboard for managers. A full breakdown of what's changed.</p>
+            <div class="post-footer">
+              <div style="display:flex;align-items:center;gap:.5rem">
+                <div class="post-av" style="background:rgba(22,199,132,.1)">ðŸ‘¨â€ðŸ’»</div>
+                <div>
+                  <div class="post-author">Lucien DZOU</div>
+                  <div class="post-read">5 min read</div>
+                </div>
+              </div>
+              <span class="post-arrow">â†’</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="post-card rv d4">
+          <div class="post-thumb">
+            <div class="post-thumb-bg" style="background:linear-gradient(135deg,rgba(236,72,153,.1),rgba(99,102,241,.07))"></div>
+            <span style="position:relative;z-index:1">âœ‰ï¸</span>
+          </div>
+          <div class="post-body">
+            <div class="post-meta">
+              <span class="post-cat" style="background:rgba(236,72,153,.1);border-color:rgba(236,72,153,.25);color:#F9A8D4">Product Update</span>
+              <span class="post-date">Dec 2024</span>
+            </div>
+            <h4>DigiCourier: how CREMIN-CAM eliminated paper mail tracking across 3 departments</h4>
+            <p>A behind-the-scenes look at how we deployed DigiCourier for one of our enterprise clients â€” the challenges faced, the solutions engineered, and the results achieved within the first 60 days.</p>
+            <div class="post-footer">
+              <div style="display:flex;align-items:center;gap:.5rem">
+                <div class="post-av" style="background:var(--blue-dim)">ðŸ‘©â€ðŸ’¼</div>
+                <div>
+                  <div class="post-author">Anne DZOU</div>
+                  <div class="post-read">8 min read</div>
+                </div>
+              </div>
+              <span class="post-arrow">â†’</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Africa & Innovation -->
+      <h3>Africa & Innovation</h3>
+      <div class="posts-grid">
+
+        <div class="post-card rv d1">
+          <div class="post-thumb">
+            <div class="post-thumb-bg" style="background:linear-gradient(135deg,rgba(22,199,132,.12),rgba(18,70,240,.06))"></div>
+            <span style="position:relative;z-index:1">ðŸš€</span>
+          </div>
+          <div class="post-body">
+            <div class="post-meta">
+              <span class="post-cat" style="background:var(--green-dim);border-color:var(--green-bdr);color:var(--green)">Africa & Tech</span>
+              <span class="post-date">Mar 2025</span>
+            </div>
+            <h4>The African startup ecosystem in 2025: what's working and what still needs fixing</h4>
+            <p>From Lagos to Nairobi to YaoundÃ© â€” the African tech startup space is maturing rapidly. But significant structural challenges remain. Here is our honest assessment of where we stand today.</p>
+            <div class="post-footer">
+              <div style="display:flex;align-items:center;gap:.5rem">
+                <div class="post-av" style="background:var(--blue-dim)">ðŸ‘©â€ðŸ’¼</div>
+                <div>
+                  <div class="post-author">Anne DZOU</div>
+                  <div class="post-read">10 min read</div>
+                </div>
+              </div>
+              <span class="post-arrow">â†’</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="post-card rv d2">
+          <div class="post-thumb">
+            <div class="post-thumb-bg" style="background:linear-gradient(135deg,rgba(99,102,241,.12),rgba(14,165,233,.07))"></div>
+            <span style="position:relative;z-index:1">ðŸ¥</span>
+          </div>
+          <div class="post-body">
+            <div class="post-meta">
+              <span class="post-cat" style="background:var(--green-dim);border-color:var(--green-bdr);color:var(--green)">Africa & Tech</span>
+              <span class="post-date">Jan 2025</span>
+            </div>
+            <h4>Digital health in Africa: why the paper medical record is the continent's biggest silent crisis</h4>
+            <p>Millions of patients across Africa receive treatment without access to their medical history â€” every single day. The consequences are preventable deaths, drug interactions, and wasted resources. Technology can fix this.</p>
+            <div class="post-footer">
+              <div style="display:flex;align-items:center;gap:.5rem">
+                <div class="post-av" style="background:rgba(22,199,132,.1)">ðŸ‘¨â€ðŸ’»</div>
+                <div>
+                  <div class="post-author">Lucien DZOU</div>
+                  <div class="post-read">7 min read</div>
+                </div>
+              </div>
+              <span class="post-arrow">â†’</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="load-more rv">
+        <a href="#" class="btn-sec">Load more articles <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+      <!-- Newsletter -->
+      <div class="newsletter-block rv">
+        <div class="nl-ico">ðŸ“©</div>
+        <div class="nl-title">Stay in the loop</div>
+        <div class="nl-desc">Get the latest DigiTexia insights, product updates, and Africa tech perspectives delivered to your inbox.</div>
+        <input type="email" class="nl-input" placeholder="your@@email.com">
+        <button class="nl-btn">Subscribe for free</button>
+        <div class="nl-note">No spam. Unsubscribe at any time.</div>
+      </div>
+
+      <!-- Topics -->
+      <div class="sidebar-block rv d1">
+        <div class="sidebar-title">Browse Topics</div>
+        <div class="topic-list">
+          <span class="topic-chip">Digital Transformation</span>
+          <span class="topic-chip">Product Updates</span>
+          <span class="topic-chip">Africa & Tech</span>
+          <span class="topic-chip">Innovation</span>
+          <span class="topic-chip">How-to Guides</span>
+          <span class="topic-chip">FlexiCare</span>
+          <span class="topic-chip">InventoryPro</span>
+          <span class="topic-chip">DigiHealth</span>
+          <span class="topic-chip">HR & Performance</span>
+          <span class="topic-chip">Healthcare</span>
+          <span class="topic-chip">Startups</span>
+          <span class="topic-chip">Company News</span>
+        </div>
+      </div>
+
+      <!-- Popular posts -->
+      <div class="sidebar-block rv d2">
+        <div class="sidebar-title">Most Read</div>
+        <div class="popular-list">
+          <div class="popular-item">
+            <div class="popular-num">01</div>
+            <div>
+              <div class="popular-title">Africa doesn't need catch-up â€” it needs a leap forward</div>
+              <div class="popular-meta">Anne DZOU Â· 8 min Â· Africa & Tech</div>
+            </div>
+          </div>
+          <div class="popular-item">
+            <div class="popular-num">02</div>
+            <div>
+              <div class="popular-title">DigiHealth Bracelet: patient records in 3 seconds</div>
+              <div class="popular-meta">Lucien DZOU Â· 6 min Â· Product Update</div>
+            </div>
+          </div>
+          <div class="popular-item">
+            <div class="popular-num">03</div>
+            <div>
+              <div class="popular-title">The true cost of manual processes in African enterprises</div>
+              <div class="popular-meta">Anne DZOU Â· 5 min Â· Digital Transformation</div>
+            </div>
+          </div>
+          <div class="popular-item">
+            <div class="popular-num">04</div>
+            <div>
+              <div class="popular-title">How CREMIN-CAM eliminated paper mail tracking</div>
+              <div class="popular-meta">Anne DZOU Â· 8 min Â· Product Update</div>
+            </div>
+          </div>
+          <div class="popular-item">
+            <div class="popular-num">05</div>
+            <div>
+              <div class="popular-title">Agile transformation: value in weeks, not months</div>
+              <div class="popular-meta">Lucien DZOU Â· 7 min Â· Digital Transformation</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- About authors -->
+      <div class="sidebar-block rv d3">
+        <div class="sidebar-title">Authors</div>
+        <div style="display:flex;flex-direction:column;gap:1rem">
+          <div style="display:flex;align-items:center;gap:.85rem">
+            <div style="width:44px;height:44px;border-radius:50%;background:rgba(18,70,240,.12);border:1px solid var(--blue-bdr);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0">ðŸ‘©â€ðŸ’¼</div>
+            <div>
+              <div style="font-size:.85rem;font-weight:600">Anne DZOU</div>
+              <div style="font-size:.72rem;color:var(--muted)">CEO Â· Strategy, Vision, Africa</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:.85rem">
+            <div style="width:44px;height:44px;border-radius:50%;background:rgba(22,199,132,.1);border:1px solid var(--green-bdr);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0">ðŸ‘¨â€ðŸ’»</div>
+            <div>
+              <div style="font-size:.85rem;font-weight:600">Lucien DZOU</div>
+              <div style="font-size:.72rem;color:var(--muted)">CTO Â· Technology, Products, R&D</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     CTA
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<section id="blog-cta">
+  <div class="cta-inner rv">
+    <span class="tag" style="margin-bottom:1.5rem;display:inline-block">Transform Your Organization</span>
+    <h2>Ready to go beyond reading about digital transformation?</h2>
+    <p class="lead">Let DigiTexia help you implement it â€” with solutions built specifically for your organization's context and goals.</p>
+    <div class="cta-btns">
+      <a href="index.html#cta-final" class="btn-pri">Request a Free Consultation <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="solutions.html" class="btn-sec">Explore Our Solutions â†’</a>
+    </div>
+  </div>
+</section>
+
+<!-- â”€â”€â”€ FOOTER â”€â”€â”€ -->
 @endsection
