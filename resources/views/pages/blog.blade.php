@@ -226,7 +226,7 @@
               <span class="post-cat" style="background:var(--green-dim);border-color:var(--green-bdr);color:var(--green)">Product Update</span>
               <span class="post-date">Feb 2025</span>
             </div>
-            <h4>Introducing DigiHealth Bracelet: patient records accessible in under 3 seconds</h4>
+            <h4>Introducing MedTrace: patient records accessible in under 3 seconds</h4>
             <p>Our most innovative product to date â€” a QR-coded wearable that gives any authorized healthcare professional instant access to a patient's full medical record. Here's how it works and why it matters.</p>
             <div class="post-footer">
               <div style="display:flex;align-items:center;gap:.5rem">
@@ -251,8 +251,8 @@
               <span class="post-cat" style="background:rgba(245,158,11,.12);border-color:rgba(245,158,11,.28);color:#FCD34D">Product Update</span>
               <span class="post-date">Jan 2025</span>
             </div>
-            <h4>DigiPerformance: new attendance geolocation and automated appraisal modules</h4>
-            <p>The latest DigiPerformance release adds GPS-verified attendance, automated KPI scoring, and a revamped team comparison dashboard for managers. A full breakdown of what's changed.</p>
+            <h4>Perfomia: new attendance geolocation and automated appraisal modules</h4>
+            <p>The latest Perfomia release adds GPS-verified attendance, automated KPI scoring, and a revamped team comparison dashboard for managers. A full breakdown of what's changed.</p>
             <div class="post-footer">
               <div style="display:flex;align-items:center;gap:.5rem">
                 <div class="post-av" style="background:rgba(22,199,132,.1)">ðŸ‘¨â€ðŸ’»</div>
@@ -378,7 +378,7 @@
           <span class="topic-chip">How-to Guides</span>
           <span class="topic-chip">FlexiCare</span>
           <span class="topic-chip">InventoryPro</span>
-          <span class="topic-chip">DigiHealth</span>
+          <span class="topic-chip">MedTrace</span>
           <span class="topic-chip">HR & Performance</span>
           <span class="topic-chip">Healthcare</span>
           <span class="topic-chip">Startups</span>
@@ -400,7 +400,7 @@
           <div class="popular-item">
             <div class="popular-num">02</div>
             <div>
-              <div class="popular-title">DigiHealth Bracelet: patient records in 3 seconds</div>
+              <div class="popular-title">MedTrace: patient records in 3 seconds</div>
               <div class="popular-meta">Lucien DZOU Â· 6 min Â· Product Update</div>
             </div>
           </div>
@@ -470,3 +470,4 @@
 
 <!-- â”€â”€â”€ FOOTER â”€â”€â”€ -->
 @endsection
+

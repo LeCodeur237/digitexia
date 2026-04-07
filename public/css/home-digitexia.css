@@ -130,7 +130,7 @@ h2 {
 .lead {
     font-size: 1rem;
     font-weight: 300;
-    color: var(--muted-lt);
+    color: rgba(255,255,255,.78);
     line-height: 1.75;
     max-width: 580px;
 }
@@ -247,7 +247,7 @@ nav.sc {
 #mainNav .nav-mid a {
     font-size: 0.85rem;
     font-weight: 400;
-    color: var(--muted-lt);
+    color: rgba(255,255,255,.78);
     transition: color 0.2s;
 }
 #mainNav .nav-mid a:hover {
@@ -265,7 +265,7 @@ nav.sc {
     align-items: center;
     gap: 0.5rem;
     font-size: 0.8rem;
-    color: var(--muted-lt);
+    color: rgba(255,255,255,.78);
     transition: color 0.2s;
 }
 .nav-tel:hover {
@@ -589,7 +589,7 @@ h1 em {
 }
 .msc-l {
     font-size: 0.56rem;
-    color: var(--muted);
+    color: rgba(255,255,255,.72);
     text-transform: uppercase;
     letter-spacing: 0.07em;
     margin-bottom: 0.35rem;
@@ -616,7 +616,7 @@ h1 em {
 }
 .mkc-lbl {
     font-size: 0.6rem;
-    color: var(--muted);
+    color: rgba(255,255,255,.72);
     margin-bottom: 0.65rem;
     text-transform: uppercase;
     letter-spacing: 0.06em;
@@ -783,7 +783,7 @@ h1 em {
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--muted);
+    color: rgba(255,255,255,.72);
     margin-bottom: 1.2rem;
 }
 .sev-row {
@@ -799,7 +799,7 @@ h1 em {
     display: flex;
     justify-content: space-between;
     font-size: 0.78rem;
-    color: var(--muted-lt);
+    color: rgba(255,255,255,.78);
 }
 .sev-critical {
     color: #ffffff;
@@ -892,7 +892,7 @@ h1 em {
 }
 .pain-desc {
     font-size: 0.82rem;
-    color: var(--muted-lt);
+    color: rgba(255,255,255,.78);
     line-height: 1.6;
 }
 .pain-bridge {
@@ -999,7 +999,7 @@ h1 em {
 }
 .solutions-note {
     font-size: 0.875rem;
-    color: var(--muted-lt);
+    color: rgba(255,255,255,.78);
     line-height: 1.7;
     margin-top: 1rem;
 }
@@ -1085,7 +1085,7 @@ h1 em {
 }
 .pcard-desc {
     font-size: 0.855rem;
-    color: var(--muted-lt);
+    color: rgba(255,255,255,.78);
     line-height: 1.65;
 }
 .pcard-badge {
@@ -1155,7 +1155,7 @@ h1 em {
 }
 .val-p {
     font-size: 0.85rem;
-    color: var(--muted-lt);
+    color: rgba(255,255,255,.78);
     line-height: 1.65;
 }
 
@@ -1174,7 +1174,7 @@ h1 em {
     font-size: 1rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    color: var(--muted-lt);
+    color: rgba(255,255,255,.78);
 }
 .wp-stat {
     background: var(--ink-2);
@@ -1193,7 +1193,7 @@ h1 em {
 }
 .wp-stat-lbl {
     font-size: 0.75rem;
-    color: var(--muted);
+    color: rgba(255,255,255,.72);
     margin-top: 0.15rem;
 }
 .wp-badge {
@@ -1277,7 +1277,7 @@ h1 em {
 }
 .wf-desc {
     font-size: 0.825rem;
-    color: var(--muted-lt);
+    color: rgba(255,255,255,.78);
     line-height: 1.6;
 }
 
@@ -1332,7 +1332,7 @@ h1 em {
 }
 .imp-sub {
     font-size: 0.73rem;
-    color: var(--muted);
+    color: rgba(255,255,255,.72);
     line-height: 1.45;
 }
 
@@ -1393,7 +1393,7 @@ footer {
 }
 .fbrand-bio {
     font-size: 0.875rem;
-    color: var(--muted);
+    color: rgba(255, 255, 255, 0.72);
     line-height: 1.7;
     margin-top: 1rem;
     max-width: 300px;
@@ -1404,7 +1404,7 @@ footer {
     margin-bottom: 1rem;
 }
 .muted-link {
-    color: var(--muted);
+    color: rgba(255, 255, 255, 0.72);
 }
 .value-list-spaced {
     margin-top: 2rem;
@@ -1415,7 +1415,7 @@ footer {
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--muted);
+    color: #fff;
     margin-bottom: 1.25rem;
 }
 .fcol ul {
@@ -1426,7 +1426,7 @@ footer {
 }
 .fcol a {
     font-size: 0.875rem;
-    color: rgba(242, 245, 255, 0.45);
+    color: rgba(255, 255, 255, 0.72);
     transition: color 0.2s;
 }
 .fcol a:hover {
@@ -1442,7 +1442,7 @@ footer {
     align-items: flex-start;
     gap: 0.65rem;
     font-size: 0.875rem;
-    color: rgba(242, 245, 255, 0.45);
+    color: rgba(255, 255, 255, 0.78);
 }
 .fc-ico {
     width: 28px;
@@ -1472,7 +1472,7 @@ footer {
     align-items: center;
     justify-content: center;
     font-size: 0.72rem;
-    color: var(--muted);
+    color: rgba(255, 255, 255, 0.72);
     transition: all 0.15s;
     text-decoration: none;
 }
@@ -1490,7 +1490,7 @@ footer {
     padding-top: 2rem;
     border-top: 1px solid var(--bdr);
     font-size: 0.78rem;
-    color: var(--muted);
+    color: rgba(255, 255, 255, 0.72);
     flex-wrap: wrap;
     gap: 1rem;
 }
@@ -1567,7 +1567,7 @@ footer {
 .nav-dropdown > a {
     font-size: 0.85rem;
     font-weight: 400;
-    color: var(--muted-lt);
+    color: rgba(255,255,255,.78);
     transition: color 0.2s;
     cursor: pointer;
     display: flex;
@@ -1634,7 +1634,7 @@ footer {
     border-radius: 8px;
     font-size: 0.825rem;
     font-weight: 400;
-    color: var(--muted-lt);
+    color: rgba(255,255,255,.78);
     text-decoration: none;
     transition:
         background 0.15s,
@@ -1688,3 +1688,4 @@ footer {
         transform: none !important;
     }
 }
+

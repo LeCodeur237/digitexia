@@ -278,7 +278,7 @@
             <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
         </div>
-        <div class="faq-a"><p class="faq-a-text">Both. DigiTexia offers a portfolio of proven ready-to-deploy products (FlexiCare, InventoryPro, DigiPerformance, DigiCourier, DigiHealth Bracelet) as well as fully custom software development tailored to your specific needs. We can also customize our existing products for your context.</p></div>
+        <div class="faq-a"><p class="faq-a-text">Both. DigiTexia offers a portfolio of proven ready-to-deploy products (FlexiCare, InventoryPro, Perfomia, DigiCourier, MedTrace) as well as fully custom software development tailored to your specific needs. We can also customize our existing products for your context.</p></div>
       </div>
 
       <div class="faq-item" onclick="toggleFaq(this)">
@@ -390,3 +390,4 @@
 
 <!-- â”€â”€â”€ FOOTER â”€â”€â”€ -->
 @endsection
+

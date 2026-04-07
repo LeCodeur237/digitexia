@@ -1,4 +1,4 @@
-<footer>
+﻿<footer>
   <div class="footer-grid">
     <div>
       <img src="{{ asset('logo/logo-footer.png') }}" alt="DigiTexia" class="footer-logo">
@@ -27,9 +27,8 @@
       <ul>
         <li><a href="{{ url('/solutions/flexicare') }}">FlexiCare</a></li>
         <li><a href="{{ url('/solutions/inventorypro') }}">InventoryPro</a></li>
-        <li><a href="{{ url('/solutions/digiperformance') }}">DigiPerformance</a></li>
-        <li><a href="{{ url('/solutions/digicourier') }}">DigiCourier</a></li>
-        <li><a href="{{ url('/solutions/digihealth') }}">DigiHealth Bracelet</a></li>
+        <li><a href="{{ url('/solutions/perfomia') }}">Perfomia</a></li>
+        <li><a href="{{ url('/solutions/medtrace') }}">MedTrace</a></li>
       </ul>
     </div>
 
@@ -48,3 +47,4 @@
     <span>Powered by <a href="https://groupsnowwhite.com/" class="muted-link">Snow White Group</a></span>
   </div>
 </footer>
+

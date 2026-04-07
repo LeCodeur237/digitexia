@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 use Illuminate\Support\Facades\Route;
 
@@ -31,8 +31,20 @@ Route::get('/solutions', function () {
 });
 
 Route::get('/solutions/{slug}', function (string $slug) {
+    if ($slug === 'inventorypro') {
+        return view('pages.inventorypro');
+    }
     if ($slug === 'flexicare') {
         return view('pages.flexicare');
+    }
+    if ($slug === 'digiperformance') {
+        $slug = 'perfomia';
+    }
+    if ($slug === 'perfomia') {
+        return view('pages.perfomia');
+    }
+    if ($slug === 'digihealth') {
+        $slug = 'medtrace';
     }
 
     $solutions = [
@@ -64,16 +76,16 @@ Route::get('/solutions/{slug}', function (string $slug) {
                 'Alerts and reports keep the inventory cycle under control.',
             ],
         ],
-        'digiperformance' => [
-            'title' => 'DigiPerformance',
-            'page_title' => 'DigiPerformance — DigiTexia',
+        'perfomia' => [
+            'title' => 'Perfomia',
+            'page_title' => 'Perfomia — DigiTexia',
             'eyebrow' => 'HR & Performance',
             'icon' => 'ti-chart-bar',
             'accent' => '#F59E0B',
             'accent_soft' => 'rgba(245,158,11,.14)',
             'summary' => 'Comprehensive performance tracking for task delegation, activity monitoring, staff evaluation, and attendance management.',
             'problem' => 'When attendance, task follow-up, and evaluations live in different files, managers lose visibility and teams lose momentum.',
-            'solution' => 'DigiPerformance brings the whole performance cycle into one platform, from task assignment to appraisal.',
+            'solution' => 'Perfomia brings the whole performance cycle into one platform, from task assignment to appraisal.',
             'audience' => 'Operations leaders, HR teams, project managers, and supervisors.',
             'stats' => [
                 ['value' => '94%', 'label' => 'Attendance visibility'],
@@ -120,16 +132,16 @@ Route::get('/solutions/{slug}', function (string $slug) {
                 'Every step is archived for later search and audit.',
             ],
         ],
-        'digihealth' => [
-            'title' => 'DigiHealth Bracelet',
-            'page_title' => 'DigiHealth Bracelet — DigiTexia',
+        'medtrace' => [
+            'title' => 'MedTrace',
+            'page_title' => 'MedTrace — DigiTexia',
             'eyebrow' => 'Healthcare Innovation',
             'icon' => 'ti-heart-pulse',
             'accent' => '#16C784',
             'accent_soft' => 'rgba(22,199,132,.14)',
             'summary' => 'Innovative digital medical record system accessible via QR-coded wearables, providing instant access to vital patient data at the point of care.',
             'problem' => 'In emergencies, waiting for paper files or old records can slow treatment and put lives at risk.',
-            'solution' => 'DigiHealth Bracelet gives authorized caregivers instant access to critical patient information through a secure QR scan.',
+            'solution' => 'MedTrace gives authorized caregivers instant access to critical patient information through a secure QR scan.',
             'audience' => 'Clinics, hospitals, emergency teams, and patients who need portable medical identity.',
             'stats' => [
                 ['value' => '<3s', 'label' => 'Emergency access'],
@@ -192,3 +204,4 @@ Route::get('/contact-us', function () {
 Route::get('/carriers', function () {
     return view('pages.carriers');
 });
+

@@ -107,6 +107,34 @@ nav.sc{background:rgba(8,12,24,.97)}
 #page-hero h1 em{font-style:normal;background:linear-gradient(135deg,#6BA4FF 0%,var(--blue-lt) 40%,var(--green) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 #page-hero .lead{max-width:580px;margin:0 auto 2.5rem}
 .ph-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.proof-strip{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:1rem;
+  max-width:940px;
+  margin:2.2rem auto 0;
+}
+.proof-item{
+  padding:1rem 1.1rem;
+  border:1px solid var(--bdr);
+  border-radius:14px;
+  background:rgba(255,255,255,.03);
+  text-align:left;
+}
+.proof-item strong{
+  display:block;
+  font-size:.82rem;
+  font-weight:700;
+  letter-spacing:.02em;
+  margin-bottom:.3rem;
+  color:var(--white);
+}
+.proof-item span{
+  display:block;
+  font-size:.74rem;
+  line-height:1.5;
+  color:var(--muted-lt);
+}
 
 /* product nav pills */
 .product-nav{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin-top:3.5rem}
@@ -199,11 +227,11 @@ nav.sc{background:rgba(8,12,24,.97)}
 .cmp-inner{max-width:1100px;margin:0 auto}
 .cmp-header{text-align:center;margin-bottom:3.5rem}
 .cmp-table{border:1px solid var(--bdr);border-radius:16px;overflow:hidden}
-.cmp-head-row{display:grid;grid-template-columns:2fr repeat(5,1fr);background:var(--ink-3);border-bottom:1px solid var(--bdr);padding:1rem 1.5rem;align-items:center;gap:.5rem}
+.cmp-head-row{display:grid;grid-template-columns:2fr repeat(4,1fr);background:var(--ink-3);border-bottom:1px solid var(--bdr);padding:1rem 1.5rem;align-items:center;gap:.5rem}
 .cmp-prod-head{text-align:center}
 .cmp-prod-name{font-family:'Clash Display',sans-serif;font-size:.72rem;font-weight:700;line-height:1.25}
 .cmp-prod-ico{font-size:1.2rem;margin-bottom:.35rem}
-.cmp-row{display:grid;grid-template-columns:2fr repeat(5,1fr);padding:.9rem 1.5rem;border-bottom:1px solid var(--bdr);align-items:center;gap:.5rem;transition:background .15s}
+.cmp-row{display:grid;grid-template-columns:2fr repeat(4,1fr);padding:.9rem 1.5rem;border-bottom:1px solid var(--bdr);align-items:center;gap:.5rem;transition:background .15s}
 .cmp-row:last-child{border-bottom:none}
 .cmp-row:hover{background:rgba(255,255,255,.02)}
 .cmp-feature{font-size:.82rem;color:var(--muted-lt)}
@@ -241,12 +269,13 @@ footer{background:var(--ink-2);border-top:1px solid var(--bdr);padding:5rem 5% 2
   .ov-grid{grid-template-columns:1fr 1fr}
   .ov-card.span2{grid-column:span 1}
   .footer-grid{grid-template-columns:1fr 1fr}
-  .cmp-head-row,.cmp-row{grid-template-columns:1.5fr repeat(5,1fr);font-size:.75rem}
+  .cmp-head-row,.cmp-row{grid-template-columns:1.5fr repeat(4,1fr);font-size:.75rem}
 }
 @media(max-width:640px){
   .ov-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr}
   .cmp-table{overflow-x:auto}
-  .cmp-head-row,.cmp-row{min-width:600px}
+  .cmp-head-row,.cmp-row{min-width:520px}
   .product-nav{gap:.4rem}
+  .proof-strip{grid-template-columns:1fr}
 }

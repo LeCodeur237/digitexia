@@ -252,7 +252,7 @@
       <div class="exp-card" style="background:linear-gradient(135deg,rgba(18,70,240,.08),rgba(22,199,132,.04));border-color:var(--blue-bdr);display:flex;flex-direction:column;justify-content:center;text-align:center;align-items:center;gap:.75rem">
         <div style="font-size:2rem">ðŸ“¦</div>
         <div class="exp-card-title">Ready-Made Products</div>
-        <div class="exp-card-desc">FlexiCare, InventoryPro, DigiPerformance, DigiCourier, and DigiHealth Bracelet â€” proven products deployable immediately.</div>
+        <div class="exp-card-desc">FlexiCare, InventoryPro, Perfomia, DigiCourier, and MedTrace â€” proven products deployable immediately.</div>
         <a href="solutions.html" style="font-size:.8rem;font-weight:600;color:var(--blue-lt);display:flex;align-items:center;gap:.3rem;margin-top:.25rem">View All Solutions â†’</a>
       </div>
     </div>
@@ -399,3 +399,4 @@
 
 <!-- â”€â”€â”€ FOOTER â”€â”€â”€ -->
 @endsection
+

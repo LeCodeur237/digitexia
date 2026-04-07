@@ -1,12 +1,12 @@
-:root {
+﻿:root {
   --blue:      #1246F0;
   --blue-lt:   #2F63F8;
   --blue-dim:  rgba(18,70,240,0.14);
   --blue-bdr:  rgba(18,70,240,0.28);
   --green:     #16C784;
-  --red:       #F04444;
-  --red-dim:   rgba(240,68,68,0.12);
-  --red-bdr:   rgba(240,68,68,0.25);
+  --red:       #F87171;
+  --red-dim:   rgba(248,113,113,0.14);
+  --red-bdr:   rgba(248,113,113,0.32);
   --orange:    #16C784;
   --orange-dim:rgba(22,199,132,0.12);
   --ink:       #080C18;
@@ -139,7 +139,7 @@ body::after{
 a{text-decoration:none;color:inherit}
 img{display:block}
 
-/* ─── BUTTONS ─── */
+/* â”€â”€â”€ BUTTONS â”€â”€â”€ */
 .btn-pri{
   display:inline-flex;align-items:center;gap:.5rem;
   background:linear-gradient(135deg,var(--blue) 0%,var(--green) 100%);color:#fff;
@@ -158,7 +158,7 @@ img{display:block}
 }
 .btn-sec:hover{border-color:rgba(255,255,255,.18);background:rgba(255,255,255,.05);transform:translateY(-2px)}
 
-/* ─── SHARED ─── */
+/* â”€â”€â”€ SHARED â”€â”€â”€ */
 .wrap{max-width:1240px;margin:0 auto;padding:0 5%}
 .tag{
   display:inline-block;font-size:.68rem;font-weight:600;letter-spacing:.12em;
@@ -168,8 +168,8 @@ img{display:block}
 }
 .tag-red{
   display:inline-block;font-size:.68rem;font-weight:600;letter-spacing:.12em;
-  text-transform:uppercase;color:var(--blue);
-  background:var(--blue-dim);border:1px solid var(--blue-bdr);
+  text-transform:uppercase;color:var(--red);
+  background:var(--red-dim);border:1px solid var(--red-bdr);
   padding:.28rem .85rem;border-radius:100px;margin-bottom:1.25rem;
 }
 h2{
@@ -264,8 +264,8 @@ h3{
 }
 .chaos-tool-body{flex:1}
 .chaos-tool-name{font-size:.82rem;font-weight:600;color:var(--white);margin-bottom:.15rem}
-.chaos-tool-issue{font-size:.72rem;color:var(--blue);display:flex;align-items:center;gap:.35rem}
-.chaos-tool-issue i{font-size:.72rem;flex-shrink:0}
+.chaos-tool-issue{font-size:.72rem;color:var(--red);display:flex;align-items:center;gap:.35rem}
+.chaos-tool-issue i{font-size:.72rem;flex-shrink:0;color:var(--red)}
 .chaos-arrow{
   display:flex;justify-content:center;align-items:center;gap:1rem;
   padding:1.25rem 0 .75rem;position:relative;
@@ -282,15 +282,15 @@ h3{
 }
 .chaos-result{
   display:flex;align-items:center;gap:.75rem;
-  background:rgba(18,70,240,.06);border:1px solid var(--blue-bdr);
+  background:rgba(248,113,113,.08);border:1px solid var(--red-bdr);
   border-radius:10px;padding:1rem 1.25rem;
 }
-.chaos-result-ico{font-size:1.5rem}
+.chaos-result-ico{font-size:1.5rem;color:var(--red)}
 .chaos-result-text{font-size:.825rem;color:var(--white);font-weight:500;line-height:1.45}
 
-/* ═══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    STATS BANNER
-═══════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 #stats-banner{
   border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);
   background:var(--ink-2);padding:3.5rem 5%;
@@ -310,16 +310,16 @@ h3{
   font-family:'Clash Display',sans-serif;font-size:2.4rem;font-weight:700;
   letter-spacing:-.04em;line-height:1;
 }
-.stat-num.red{color:var(--blue)}
+.stat-num.red{color:var(--red)}
 .stat-num.orange{color:var(--orange)}
 .stat-num.blue{color:var(--blue)}
 .stat-num.green{color:var(--green)}
 .stat-label{font-size:.82rem;color:var(--muted-lt);line-height:1.45;margin-top:.1rem}
 .stat-src{font-size:.68rem;color:var(--muted);margin-top:.25rem}
 
-/* ═══════════════════════════════════════
-   PAIN POINTS — DEEP DIVE
-═══════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   PAIN POINTS â€” DEEP DIVE
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 #pain-points{padding:100px 5%}
 .pain-intro{
   max-width:1240px;margin:0 auto;
@@ -358,15 +358,15 @@ h3{
 .pain-card-desc{font-size:.845rem;color:var(--muted-lt);line-height:1.7}
 .pain-card-impact{
   margin-top:1.25rem;padding:.75rem 1rem;
-  background:var(--blue-dim);border:1px solid var(--blue-bdr);
-  border-radius:8px;font-size:.775rem;color:var(--blue);line-height:1.45;
+  background:var(--red-dim);border:1px solid var(--red-bdr);
+  border-radius:8px;font-size:.775rem;color:var(--red);line-height:1.45;
   display:flex;align-items:flex-start;gap:.5rem;
 }
 .pain-card-impact::before{content:'\2193';font-size:.85rem;flex-shrink:0;margin-top:.05rem}
 
-/* ═══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    THE COST OF INACTION
-═══════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 #cost{
   padding:100px 5%;
   background:var(--ink-2);
@@ -415,9 +415,9 @@ h3{
 .cost-item-title{font-family:'Clash Display',sans-serif;font-size:.92rem;font-weight:700;margin-bottom:.3rem}
 .cost-item-desc{font-size:.825rem;color:var(--muted-lt);line-height:1.6}
 
-/* ═══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    BEFORE vs AFTER
-═══════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 #before-after{padding:100px 5%}
 .ba-inner{max-width:1240px;margin:0 auto}
 .ba-header{text-align:center;margin-bottom:4rem}
@@ -462,9 +462,9 @@ h3{
   color:var(--muted-lt);
 }
 
-/* ═══════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    WHO IS AFFECTED
-═══════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 #who{
   padding:100px 5%;
   background:var(--ink-2);
@@ -487,9 +487,9 @@ h3{
 .sector-name{font-family:'Clash Display',sans-serif;font-size:.95rem;font-weight:700;margin-bottom:.5rem}
 .sector-issue{font-size:.775rem;color:var(--muted-lt);line-height:1.5}
 
-/* ═══════════════════════════════════════
-   BRIDGE — THE TRANSITION
-═══════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   BRIDGE â€” THE TRANSITION
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 #bridge{padding:100px 5%}
 .bridge-inner{
   max-width:1100px;margin:0 auto;
@@ -532,7 +532,57 @@ h3{
 
 .bridge-ctas{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
 
-/* ─── RESPONSIVE ─── */
+/* â”€â”€â”€ RESPONSIVE â”€â”€â”€ */
+/* ─── FOOTER ─── */
+footer{
+  background:var(--ink-2);
+  border-top:1px solid var(--bdr);
+  padding:5rem 5% 2.5rem;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1.5fr;
+  gap:3rem;
+  max-width:1240px;
+  margin:0 auto 3rem;
+}
+.footer-logo{height:40px;width:auto}
+.fbrand-bio{font-size:.875rem;line-height:1.7;margin-top:1rem;max-width:300px}
+.fcol h5{
+  font-family:'Clash Display',sans-serif;
+  font-size:.7rem;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:1.25rem;
+}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.fcol a{font-size:.875rem;color:rgba(242,245,255,.45);transition:color .2s}
+.fcol a:hover{color:var(--white)}
+.fcontact{display:flex;flex-direction:column;gap:.75rem}
+.fc-row{display:flex;align-items:flex-start;gap:.65rem;font-size:.875rem}
+.fc-ico{
+  width:28px;height:28px;
+  background:var(--blue-dim);border:1px solid var(--blue-bdr);
+  border-radius:6px;display:flex;align-items:center;justify-content:center;
+  font-size:.65rem;flex-shrink:0;margin-top:2px;
+}
+.socials{display:flex;gap:.55rem;margin-top:1.35rem}
+.soc{
+  width:32px;height:32px;
+  background:rgba(255,255,255,.04);border:1px solid var(--bdr);
+  border-radius:7px;display:flex;align-items:center;justify-content:center;
+  font-size:.72rem;color:var(--muted);transition:all .15s;text-decoration:none;
+}
+.soc:hover{background:var(--blue-dim);border-color:var(--blue-bdr);color:#6BA4FF}
+.fbot{
+  max-width:1240px;margin:0 auto;
+  display:flex;justify-content:space-between;align-items:center;
+  padding-top:2rem;border-top:1px solid var(--bdr);
+  font-size:.78rem;flex-wrap:wrap;gap:1rem;
+}
+
 @media(max-width:1024px){
   .ph-inner,.pain-intro,.cost-header,.who-header{grid-template-columns:1fr;gap:3rem}
   .ba-grid{grid-template-columns:1fr;gap:1.5rem}
@@ -546,8 +596,6 @@ h3{
   .pain-grid,.sector-grid,.stats-inner{grid-template-columns:1fr}
   .bridge-inner{padding:2.5rem 1.5rem}
   .ph-left h1{font-size:2.3rem}
+  footer{padding:4rem 5% 2rem}
+  .footer-grid{grid-template-columns:1fr}
 }
-
-
-
-
