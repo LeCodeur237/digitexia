@@ -223,20 +223,118 @@ nav.sc{background:rgba(8,12,24,.97)}
 .cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
 
 /* â”€â”€â”€ FOOTER â”€â”€â”€ */
-footer{background:var(--ink-2);border-top:1px solid var(--bdr);padding:5rem 5% 2.5rem}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:3rem;max-width:1240px;margin:0 auto 3rem}
-.fbrand-bio{font-size:.875rem;color:var(--muted);line-height:1.7;margin-top:1rem;max-width:300px}
-.fcol h5{font-family:'Clash Display',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem}
-.fcol ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
-.fcol a{font-size:.875rem;color:rgba(242,245,255,.45);transition:color .2s}
-.fcol a:hover{color:var(--white)}
-.fcontact{display:flex;flex-direction:column;gap:.75rem}
-.fc-row{display:flex;align-items:flex-start;gap:.65rem;font-size:.875rem;color:rgba(242,245,255,.45)}
-.fc-ico{width:28px;height:28px;background:var(--blue-dim);border:1px solid var(--blue-bdr);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.65rem;flex-shrink:0;margin-top:2px}
-.socials{display:flex;gap:.55rem;margin-top:1.35rem}
-.soc{width:32px;height:32px;background:rgba(255,255,255,.04);border:1px solid var(--bdr);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:.72rem;color:var(--muted);transition:all .15s;text-decoration:none}
-.soc:hover{background:var(--blue-dim);border-color:var(--blue-bdr);color:#6BA4FF}
-.fbot{max-width:1240px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding-top:2rem;border-top:1px solid var(--bdr);font-size:.78rem;color:var(--muted);flex-wrap:wrap;gap:1rem}
+footer {
+  background: var(--ink-2);
+  border-top: 1px solid var(--bdr);
+  padding: 5rem 5% 2.5rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 3rem;
+  max-width: 1240px;
+  margin: 0 auto 3rem;
+}
+.footer-logo {
+  height: 40px;
+  width: auto;
+  margin-bottom: 1rem;
+}
+.fbrand-bio {
+  font-size: .875rem;
+  color: rgba(255,255,255,.72);
+  line-height: 1.7;
+  margin-top: 1rem;
+  max-width: 300px;
+}
+.muted-link {
+  color: rgba(255,255,255,.72);
+}
+.fcol h5 {
+  font-family: 'Clash Display', sans-serif;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 1.25rem;
+}
+.fcol ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+}
+.fcol a {
+  font-size: .875rem;
+  color: rgba(255,255,255,.72);
+  transition: color .2s;
+}
+.fcol a:hover {
+  color: var(--white);
+}
+.fcontact {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+.fc-row {
+  display: flex;
+  align-items: flex-start;
+  gap: .65rem;
+  font-size: .875rem;
+  color: rgba(255,255,255,.72);
+}
+.fc-ico {
+  width: 28px;
+  height: 28px;
+  background: var(--blue-dim);
+  border: 1px solid var(--blue-bdr);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .65rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.socials {
+  display: flex;
+  gap: .55rem;
+  margin-top: 1.35rem;
+}
+.soc {
+  width: 32px;
+  height: 32px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--bdr);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .72rem;
+  color: var(--muted);
+  transition: all .15s;
+  text-decoration: none;
+}
+.soc:hover {
+  background: var(--blue-dim);
+  border-color: var(--blue-bdr);
+  color: #6BA4FF;
+}
+.fbot {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  border-top: 1px solid var(--bdr);
+  font-size: .78rem;
+  color: var(--muted);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
 
 /* â”€â”€â”€ RESPONSIVE â”€â”€â”€ */
 @media(max-width:1024px){

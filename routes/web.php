@@ -1,5 +1,8 @@
-ï»¿<?php
+<?php
 
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\BlogCommentController;
+use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -50,7 +53,7 @@ Route::get('/solutions/{slug}', function (string $slug) {
     $solutions = [
         'inventorypro' => [
             'title' => 'InventoryPro',
-            'page_title' => 'InventoryPro â€” DigiTexia',
+            'page_title' => 'InventoryPro — DigiTexia',
             'eyebrow' => 'Stock Management',
             'icon' => 'ti-box',
             'accent' => '#0EA5E9',
@@ -78,7 +81,7 @@ Route::get('/solutions/{slug}', function (string $slug) {
         ],
         'perfomia' => [
             'title' => 'Perfomia',
-            'page_title' => 'Perfomia â€” DigiTexia',
+            'page_title' => 'Perfomia — DigiTexia',
             'eyebrow' => 'HR & Performance',
             'icon' => 'ti-chart-bar',
             'accent' => '#F59E0B',
@@ -106,7 +109,7 @@ Route::get('/solutions/{slug}', function (string $slug) {
         ],
         'digicourier' => [
             'title' => 'DigiCourier',
-            'page_title' => 'DigiCourier â€” DigiTexia',
+            'page_title' => 'DigiCourier — DigiTexia',
             'eyebrow' => 'Internal Comms',
             'icon' => 'ti-mail',
             'accent' => '#EC4899',
@@ -134,7 +137,7 @@ Route::get('/solutions/{slug}', function (string $slug) {
         ],
         'medtrace' => [
             'title' => 'MedTrace',
-            'page_title' => 'MedTrace â€” DigiTexia',
+            'page_title' => 'MedTrace — DigiTexia',
             'eyebrow' => 'Healthcare Innovation',
             'icon' => 'ti-heart-pulse',
             'accent' => '#16C784',
@@ -189,9 +192,27 @@ Route::get('/team-members', function () {
     return view('pages.teams');
 });
 
-Route::get('/life-at-digi', function () {
-    return view('pages.blog');
-});
+Route::get('/life-at-digi', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/life-at-digi/{post:slug}', [BlogController::class, 'show'])->name('blog.show');
+Route::post('/life-at-digi/{post:slug}/comments', [BlogCommentController::class, 'store'])
+    ->middleware('auth')
+    ->name('blog.comments.store');
+
+Route::get('/login', [LoginController::class, 'create'])->name('login');
+Route::post('/login', [LoginController::class, 'store'])->name('login.store');
+Route::post('/logout', [LoginController::class, 'destroy'])->middleware('auth')->name('logout');
+
+Route::prefix('admin/blog')
+    ->middleware('auth')
+    ->name('blog.admin.')
+    ->group(function () {
+        Route::get('/', [BlogController::class, 'adminIndex'])->name('index');
+        Route::get('/create', [BlogController::class, 'create'])->name('create');
+        Route::post('/', [BlogController::class, 'store'])->name('store');
+        Route::get('/{post}/edit', [BlogController::class, 'edit'])->name('edit');
+        Route::match(['put', 'patch'], '/{post}', [BlogController::class, 'update'])->name('update');
+        Route::delete('/{post}', [BlogController::class, 'destroy'])->name('destroy');
+    });
 
 Route::get('/life-at-digi-details', function () {
     return view('pages.blog-details');
@@ -204,4 +225,3 @@ Route::get('/contact-us', function () {
 Route::get('/carriers', function () {
     return view('pages.carriers');
 });
-

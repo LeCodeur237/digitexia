@@ -1,4 +1,4 @@
-@extends('index')
+﻿@extends('index')
 
 @section('page_title', 'Our Partners — DigiTexia Technology & Innovation')
 
@@ -411,7 +411,7 @@
   </div>
 </section>
 
-<!-- â”€â”€â”€ FOOTER â”€â”€â”€ -->
+<!--  FOOTER  -->
 @push('scripts')
 <script>
 const obs = new IntersectionObserver(entries => {
