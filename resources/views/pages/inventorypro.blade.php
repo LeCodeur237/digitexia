@@ -8,13 +8,13 @@
 @endpush
 
 @section('fullpage')
-<!-- ─── NAV ─── -->
-<nav id="mainNav">
-  <div class="nav-brand">
-    <div class="nav-logomark"><div class="nav-logomark-inner"></div></div>
-    <div class="nav-name">Inventory<span>Pro</span></div>
+
+<nav id="ipNav" class="ip-nav">
+  <div class="ip-nav-brand">
+    <div class="ip-nav-logomark"><div class="ip-nav-logomark-inner"></div></div>
+    <div class="ip-nav-name">Inventory<span>Pro</span></div>
   </div>
-  <ul class="nav-links">
+  <ul class="ip-nav-links">
     <li><a href="#why">Problématique</a></li>
     <li><a href="#features">Fonctionnalités</a></li>
     <li><a href="#multi">Multi-agences</a></li>
@@ -22,15 +22,12 @@
     <li><a href="#gallery">Aperçu</a></li>
     <li><a href="#cta-final">Démo</a></li>
   </ul>
-  <div class="nav-right">
-    <a href="{{ url('/') }}" class="nav-back">← DigiTexia</a>
-    <a href="#cta-final" class="btn btn-primary" style="padding:.55rem 1.25rem;font-size:.82rem">Demander une démo</a>
+  <div class="ip-nav-right">
+    <a href="{{ url('/') }}" class="ip-nav-back"><i class="ti ti-arrow-left"></i> DigiTexia</a>
+    <a href="#cta-final" class="btn btn-primary ip-nav-cta">Demander une démo</a>
   </div>
 </nav>
 
-<!-- ════════════════════════════════════
-     HERO
-════════════════════════════════════ -->
 <section id="hero">
   <div class="hero-texture"></div>
   <div class="hero-inner">
@@ -192,31 +189,6 @@
       </div>
     </div>
 
-  </div>
-</section>
-
-<!-- ── Trust strip ── -->
-<section id="trust-strip">
-  <div class="ts-inner">
-    <div class="ts-label">Ils nous font confiance</div>
-    <div class="ts-logos">
-      <div class="ts-logo">
-        <div class="ts-logo-mark" style="background:#EFF6FF;border-color:#BFDBFE;color:#1D4ED8">C</div>
-        CREMIN-CAM
-      </div>
-      <div class="ts-logo">
-        <div class="ts-logo-mark" style="background:#F0FDF4;border-color:#BBF7D0;color:#15803D">E</div>
-        Elles Plus Africa
-      </div>
-      <div class="ts-logo">
-        <div class="ts-logo-mark" style="background:#FFF7ED;border-color:#FDE68A;color:#B45309">O</div>
-        Orin Consulting
-      </div>
-      <div class="ts-logo">
-        <div class="ts-logo-mark" style="background:#F8FAFC;border-color:#CBD5E1;color:#475569">S</div>
-        Snow White Group
-      </div>
-    </div>
   </div>
 </section>
 
@@ -482,38 +454,6 @@
       </div>
     </div>
 
-    <!-- CREMIN-CAM case study -->
-    <div class="rv" style="margin-top:3rem;background:#fff;border:1px solid var(--bdr);border-radius:20px;padding:2.5rem;box-shadow:var(--shadow-md);position:relative;overflow:hidden">
-      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal),var(--sky))"></div>
-      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--bdr)">
-        <div style="display:flex;align-items:center;gap:1rem">
-          <div style="width:52px;height:52px;border-radius:12px;background:var(--teal-dim);border:1px solid var(--teal-bdr);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:.72rem;font-weight:700;color:var(--teal);line-height:1.2;text-align:center;flex-shrink:0">CRE<br>MIN</div>
-          <div>
-            <div style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--navy)">CREMIN-CAM</div>
-            <div style="font-family:var(--font-body);font-size:.78rem;color:var(--muted)">Institution financière de proximité · Cameroun</div>
-          </div>
-        </div>
-        <div class="tag tag-teal" style="margin-bottom:0">Cas client</div>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.75rem">
-        <div style="text-align:center;padding:1.1rem;background:var(--slate);border:1px solid var(--bdr);border-radius:10px">
-          <div style="font-family:var(--font-display);font-size:1.6rem;font-weight:900;color:var(--teal)">−40%</div>
-          <div style="font-family:var(--font-body);font-size:.75rem;color:var(--muted);margin-top:.25rem">Délais de traitement</div>
-        </div>
-        <div style="text-align:center;padding:1.1rem;background:var(--slate);border:1px solid var(--bdr);border-radius:10px">
-          <div style="font-family:var(--font-display);font-size:1.6rem;font-weight:900;color:var(--sky)">100%</div>
-          <div style="font-family:var(--font-body);font-size:.75rem;color:var(--muted);margin-top:.25rem">Traçabilité des opérations</div>
-        </div>
-        <div style="text-align:center;padding:1.1rem;background:var(--slate);border:1px solid var(--bdr);border-radius:10px">
-          <div style="font-family:var(--font-display);font-size:1.6rem;font-weight:900;color:var(--navy)">+3</div>
-          <div style="font-family:var(--font-body);font-size:.75rem;color:var(--muted);margin-top:.25rem">Agences connectées</div>
-        </div>
-      </div>
-      <div style="font-family:var(--font-body);font-size:.875rem;color:var(--ink-soft);line-height:1.8;font-style:italic;padding:1.1rem 1.25rem;border-left:3px solid var(--teal);background:var(--slate);border-radius:0 8px 8px 0">
-        "Avant InventoryPro, nos opérations de stock et de paiement étaient gérées dans des tableurs partagés par email. Aujourd'hui, chaque mouvement est tracé, chaque validation se fait en quelques clics et nos directeurs ont une vision en temps réel. La différence est immédiate."
-      </div>
-    </div>
-
     <!-- Gallery row -->
     <div class="gallery-row rv" style="margin-top:2.5rem">
       <div class="gal-item">
@@ -538,46 +478,6 @@
       </div>
     </div>
 
-  </div>
-</section>
-
-<!-- ════════════════════════════════════
-     TRUST / TESTIMONIALS
-════════════════════════════════════ -->
-<section id="trust">
-  <div class="trust-inner">
-    <div class="rv">
-      <span class="tag tag-teal"><i class="ti ti-shield-check"></i> Confiance & Sécurité</span>
-      <h2>Une plateforme sur laquelle vous pouvez compter.</h2>
-      <p class="lead" style="margin-bottom:2rem">InventoryPro a été conçu pour répondre aux exigences de sécurité, de traçabilité et de conformité des institutions financières. Votre infrastructure opérationnelle mérite mieux que des solutions génériques.</p>
-      <div class="trust-badges">
-        <div class="tb-item"><div class="tb-ico"><i class="ti ti-lock"></i></div><div><div class="tb-label">Données sécurisées</div><div class="tb-sub">Chiffrement bout en bout</div></div></div>
-        <div class="tb-item"><div class="tb-ico"><i class="ti ti-receipt-2"></i></div><div><div class="tb-label">Audit trail complet</div><div class="tb-sub">Chaque action journalisée</div></div></div>
-        <div class="tb-item"><div class="tb-ico"><i class="ti ti-settings"></i></div><div><div class="tb-label">99.9% disponibilité</div><div class="tb-sub">Infrastructure fiable</div></div></div>
-        <div class="tb-item"><div class="tb-ico"><i class="ti ti-world"></i></div><div><div class="tb-label">Conçu pour l'Afrique</div><div class="tb-sub">Adapté aux réalités terrain</div></div></div>
-        <div class="tb-item"><div class="tb-ico"><i class="ti ti-clipboard-list"></i></div><div><div class="tb-label">Conformité intégrée</div><div class="tb-sub">Processus normés et traçables</div></div></div>
-        <div class="tb-item"><div class="tb-ico"><i class="ti ti-school"></i></div><div><div class="tb-label">Formation incluse</div><div class="tb-sub">Accompagnement DigiTexia</div></div></div>
-      </div>
-    </div>
-
-    <div class="testimonials rv d2">
-      <div class="test-card">
-        <div class="test-stars"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i></div>
-        <p class="test-quote">InventoryPro a radicalement changé notre gestion quotidienne. Nos agents n'ont plus besoin d'envoyer des emails pour chaque demande — tout se fait en ligne, avec validation automatique selon le niveau hiérarchique. Un vrai gain de temps.</p>
-        <div class="test-author">
-          <div class="test-av"><div class="img-ph" style="height:100%"><div class="img-ph-ico" style="font-size:.7rem"><i class="ti ti-user"></i></div></div></div>
-          <div><div class="test-name">Directeur des Opérations</div><div class="test-role">Institution financière de proximité · Cameroun</div></div>
-        </div>
-      </div>
-      <div class="test-card">
-        <div class="test-stars"><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i></div>
-        <p class="test-quote">La traçabilité offerte par InventoryPro nous a permis de passer notre audit interne sans aucune difficulté. Chaque opération est documentée, horodatée, et retrouvable en quelques secondes. C'est exactement ce dont nous avions besoin.</p>
-        <div class="test-author">
-          <div class="test-av"><div class="img-ph" style="height:100%"><div class="img-ph-ico" style="font-size:.7rem"><i class="ti ti-user"></i></div></div></div>
-          <div><div class="test-name">Responsable Contrôle Interne</div><div class="test-role">Coopérative d'épargne et de crédit</div></div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -671,7 +571,6 @@
   </div>
 </section>
 
-<!-- ─── FOOTER ─── -->
 <footer>
   <div class="footer-top">
     <div>
@@ -683,7 +582,7 @@
       <div class="fb-contacts">
         <div class="fb-c"><span class="fb-c-ico"><i class="ti ti-phone"></i></span>(+237) 650 945 280 / 691 095 590</div>
         <div class="fb-c"><span class="fb-c-ico"><i class="ti ti-mail"></i></span>contactdigitexia@gmail.com</div>
-        <div class="fb-c"><span class="fb-c-ico">🌐</span>www.digitexia.org</div>
+        <div class="fb-c"><span class="fb-c-ico"><i class="ti ti-world"></i></span>www.digitexia.org</div>
         <div class="fb-c"><span class="fb-c-ico"><i class="ti ti-map-pin"></i></span>Yaoundé, Cameroun</div>
       </div>
     </div>
@@ -732,7 +631,7 @@ const obs = new IntersectionObserver(entries => {
 document.querySelectorAll('.rv').forEach(el => obs.observe(el));
 
 /* ─── Nav scroll ─── */
-const nav = document.getElementById('mainNav');
+const nav = document.getElementById('ipNav');
 window.addEventListener('scroll', () => nav.classList.toggle('sc', window.scrollY > 60));
 
 /* ─── Animate progress bars on scroll ─── */
@@ -750,6 +649,9 @@ const progObs = new IntersectionObserver(entries => {
 document.querySelectorAll('.hd-chart').forEach(el => progObs.observe(el));
 </script>
 @endsection
+
+
+
 
 
 

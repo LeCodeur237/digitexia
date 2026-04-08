@@ -42,12 +42,12 @@
     <div class="rv">
       <div class="hero-kicker">
         <div class="hk-badge"><div class="hk-dot"></div>SaaS · Microfinance</div>
-        <div class="hk-cat">Plateforme de gestion intelligente</div>
+        <div class="hk-cat">Plateforme de pilotage opérationnel</div>
       </div>
 
-      <h1><span class="hi">PERFOMIA</span> — La solution <span class="ha">intelligente</span> pour les microfinances modernes.</h1>
+      <h1><span class="hi">PERFOMIA</span> — Centralisez, automatisez et pilotez votre microfinance.</h1>
 
-      <p class="lead">Optimisez la gestion de vos opérations, améliorez la performance de vos équipes et prenez des décisions basées sur la data. Conçu pour les réalités africaines.</p>
+      <p class="lead">Moins de traitement manuel. Plus de contrôle. Des décisions plus rapides grâce à une plateforme conçue pour les opérations de microfinance en Afrique.</p>
 
       <div class="hero-ctas">
         <a href="#cta-final" class="btn btn-em">
@@ -58,13 +58,13 @@
       </div>
 
       <div class="trust-strip">
-        <div class="trust-item"><i class="ti ti-building-bank trust-ico"></i>Conçu pour la microfinance</div>
+        <div class="trust-item"><i class="ti ti-building-bank trust-ico"></i>Pour microfinance</div>
         <div class="trust-div"></div>
-        <div class="trust-item"><i class="ti ti-world trust-ico"></i>Adapté à l'Afrique</div>
+        <div class="trust-item"><i class="ti ti-world trust-ico"></i>Pensé pour l'Afrique</div>
         <div class="trust-div"></div>
-        <div class="trust-item"><i class="ti ti-zap trust-ico"></i>Déploiement rapide</div>
+        <div class="trust-item"><i class="ti ti-zap trust-ico"></i>Déploiement encadré</div>
         <div class="trust-div"></div>
-        <div class="trust-item"><i class="ti ti-shield-lock trust-ico"></i>Données sécurisées</div>
+        <div class="trust-item"><i class="ti ti-shield-lock trust-ico"></i>Traçabilité & sécurité</div>
       </div>
     </div>
 
@@ -180,34 +180,34 @@
 
       <div class="rv">
         <div class="tag" style="background:rgba(220,38,38,.1);border-color:rgba(220,38,38,.25);color:#F87171"><i class="ti ti-alert-triangle"></i> Le problème</div>
-        <h2>Les microfinances perdent du temps et de l'argent chaque jour.</h2>
-        <p class="lead" style="margin-bottom:2rem">Sans outil adapté, les opérations se font manuellement, la performance reste invisible, et les décisions se prennent à l'aveugle.</p>
+        <h2>Sans pilotage central, la microfinance perd en vitesse et en marge.</h2>
+        <p class="lead" style="margin-bottom:2rem">Les processus manuels ralentissent les équipes, cachent la performance réelle et compliquent les décisions.</p>
 
         <div class="prob-pains">
           <div class="pain-item">
             <div class="pain-ico"><i class="ti ti-folder"></i></div>
-            <div><div class="pain-title">Suivi manuel des dossiers clients</div><div class="pain-desc">Les dossiers circulent sur papier ou dans des fichiers Excel éparpillés — sources constantes d'erreurs et de retards.</div></div>
+            <div><div class="pain-title">Dossiers suivis à la main</div><div class="pain-desc">Papier, Excel et emails créent des erreurs, des retards et une perte de contrôle.</div></div>
           </div>
           <div class="pain-item">
             <div class="pain-ico"><i class="ti ti-chart-bar-off"></i></div>
-            <div><div class="pain-title">Impossibilité de mesurer la performance des agents</div><div class="pain-desc">Aucune donnée centralisée pour évaluer qui travaille bien, qui a du mal, et pourquoi.</div></div>
+            <div><div class="pain-title">Performance difficile à lire</div><div class="pain-desc">Sans données centralisées, il est impossible d'évaluer les agents et d'agir vite.</div></div>
           </div>
           <div class="pain-item">
             <div class="pain-ico"><i class="ti ti-layers-difference"></i></div>
-            <div><div class="pain-title">Opérations non centralisées</div><div class="pain-desc">Chaque agence, chaque équipe utilise ses propres méthodes — aucune vision globale n'est possible.</div></div>
+            <div><div class="pain-title">Aucune vision globale</div><div class="pain-desc">Chaque agence travaille avec ses propres méthodes, sans lecture consolidée.</div></div>
           </div>
           <div class="pain-item">
             <div class="pain-ico"><i class="ti ti-clock-hour-4"></i></div>
-            <div><div class="pain-title">Délais excessifs dans le traitement</div><div class="pain-desc">Les demandes s'accumulent, les clients attendent, les équipes s'épuisent sur des tâches répétitives.</div></div>
+            <div><div class="pain-title">Traitement trop lent</div><div class="pain-desc">Les demandes s'accumulent et les équipes passent trop de temps sur des tâches répétitives.</div></div>
           </div>
           <div class="pain-item">
             <div class="pain-ico"><i class="ti ti-chart-dots"></i></div>
-            <div><div class="pain-title">Faible exploitation des données</div><div class="pain-desc">Des informations précieuses existent mais ne sont jamais analysées pour améliorer les processus.</div></div>
+            <div><div class="pain-title">Données sous-exploitées</div><div class="pain-desc">Les chiffres existent, mais ils ne servent pas à améliorer les opérations.</div></div>
           </div>
         </div>
 
         <div class="consequence">
-          <div class="con-title">Résultat direct</div>
+          <div class="con-title">Conséquence directe</div>
           <div class="con-items">
             <div class="con-item"><i class="ti ti-clock-hour-3 con-ico"></i>Perte de temps massive</div>
             <div class="con-item"><i class="ti ti-circle-x con-ico"></i>Erreurs fréquentes</div>
@@ -219,9 +219,9 @@
 
       <div class="rv d2">
         <div class="sol-panel">
-          <div class="tag"><i class="ti ti-sparkles"></i> La solution</div>
-          <div class="sol-title">PERFOMIA change la donne.</div>
-          <div class="sol-sub">Une plateforme intelligente construite spécifiquement pour les microfinances — qui centralise, automatise et optimise chaque aspect de vos opérations.</div>
+          <div class="tag"><i class="ti ti-sparkles"></i> La réponse</div>
+          <div class="sol-title">Un centre de pilotage pour vos opérations.</div>
+          <div class="sol-sub">PERFOMIA centralise vos dossiers, automatise les tâches critiques et donne aux dirigeants une vue claire de la performance.</div>
           <div class="sol-items">
             <div class="sol-item"><div class="sol-check"><i class="ti ti-check"></i></div><div class="sol-text">Suivi des tâches en temps réel</div></div>
             <div class="sol-item"><div class="sol-check"><i class="ti ti-check"></i></div><div class="sol-text">Gestion centralisée des opérations</div></div>
@@ -243,8 +243,8 @@
   <div class="feat-inner">
     <div class="section-header rv">
       <div class="tag"><i class="ti ti-settings-cog"></i> Fonctionnalités clés</div>
-      <h2>Tout ce dont votre microfinance a besoin, dans une seule plateforme.</h2>
-      <p class="lead">4 modules intégrés qui couvrent l'intégralité de vos besoins opérationnels — du suivi des agents aux décisions stratégiques.</p>
+      <h2>Les fonctions qui font gagner du temps et du contrôle.</h2>
+      <p class="lead">4 modules clés pour piloter les opérations, les équipes et la performance en temps réel.</p>
     </div>
 
     <div class="feat-modules">
@@ -252,7 +252,7 @@
       <div class="feat-module fm-green rv d1">
         <div class="fm-icon"><i class="ti ti-users"></i></div>
         <div class="fm-title">Gestion du Personnel</div>
-        <div class="fm-desc">Suivez la performance de chaque agent en temps réel. Attribuez des tâches, mesurez les résultats, et identifiez les opportunités d'amélioration avant qu'elles ne deviennent des problèmes.</div>
+        <div class="fm-desc">Attribuez, mesurez et corrigez rapidement. Tout ce qu'il faut pour suivre les équipes sans perte de temps.</div>
         <div class="fm-items">
           <div class="fm-item"><span class="fm-bullet"></span>Attribution automatique des tâches selon la charge</div>
           <div class="fm-item"><span class="fm-bullet"></span>Suivi individuel et collectif en temps réel</div>
@@ -264,7 +264,7 @@
       <div class="feat-module fm-gold rv d2">
         <div class="fm-icon"><i class="ti ti-folder"></i></div>
         <div class="fm-title">Gestion des Opérations</div>
-        <div class="fm-desc">Centralisez 100% de vos dossiers clients et opérations. Fini les fichiers éparpillés — tout est accessible, traçable, et sécurisé en un seul endroit.</div>
+        <div class="fm-desc">Centralisez dossiers, actions et historiques dans un seul espace sécurisé.</div>
         <div class="fm-items">
           <div class="fm-item"><span class="fm-bullet"></span>Suivi centralisé des dossiers clients</div>
           <div class="fm-item"><span class="fm-bullet"></span>Historique complet de toutes les actions</div>
@@ -276,7 +276,7 @@
       <div class="feat-module fm-blue rv d1">
         <div class="fm-icon"><i class="ti ti-chart-bar"></i></div>
         <div class="fm-title">Tableau de Bord Intelligent</div>
-        <div class="fm-desc">Visualisez vos KPI critiques en temps réel. Des rapports automatisés qui vous donnent une vision claire de votre performance — sans effort de compilation.</div>
+        <div class="fm-desc">Suivez les KPI qui comptent et obtenez des rapports utiles sans compilation manuelle.</div>
         <div class="fm-items">
           <div class="fm-item"><span class="fm-bullet"></span>KPI en temps réel sur un seul écran</div>
           <div class="fm-item"><span class="fm-bullet"></span>Statistiques de performance par équipe</div>
@@ -288,7 +288,7 @@
       <div class="feat-module fm-purple rv d2">
         <div class="fm-icon"><i class="ti ti-robot"></i></div>
         <div class="fm-title">Intelligence Artificielle</div>
-        <div class="fm-desc">PERFOMIA embarque un moteur d'IA qui analyse vos données en continu, détecte les anomalies avant qu'elles ne s'aggravent, et vous suggère des actions concrètes d'optimisation.</div>
+        <div class="fm-desc">L'IA détecte les anomalies et aide vos décideurs à agir plus vite.</div>
         <div class="fm-items">
           <div class="fm-item"><span class="fm-bullet"></span>Détection automatique des anomalies</div>
           <div class="fm-item"><span class="fm-bullet"></span>Suggestions d'optimisation basées sur les données</div>
@@ -327,8 +327,8 @@
   <div class="impact-inner">
     <div class="section-header rv">
       <div class="tag-gold"><i class="ti ti-trending-up"></i> Impact & Résultats</div>
-      <h2>Des résultats mesurables, pas des promesses.</h2>
-      <p class="lead">Les microfinances qui déploient PERFOMIA constatent des améliorations significatives dès les premières semaines d'utilisation.</p>
+      <h2>Des gains visibles dès les premières semaines.</h2>
+      <p class="lead">Moins de délais, moins d'erreurs, plus de visibilité et une meilleure rentabilité opérationnelle.</p>
     </div>
 
     <div class="impact-grid">
@@ -358,35 +358,6 @@
         <div class="ic-label">amélioration de la rentabilité opérationnelle</div>
       </div>
     </div>
-
-    <!-- Case Study CREMIN-CAM -->
-    <div class="impact-case rv">
-      <div class="case-header">
-        <div class="case-logo">CRE<br>MIN</div>
-        <div>
-          <div class="case-name">CREMIN-CAM</div>
-          <div class="case-sub">Institution financière de proximité · Cameroun</div>
-        </div>
-        <div class="case-badge">Cas client</div>
-      </div>
-      <div class="case-stats">
-        <div class="cs-stat">
-          <div class="cs-stat-num">−40%</div>
-          <div class="cs-stat-lbl">Délais de traitement des dossiers</div>
-        </div>
-        <div class="cs-stat">
-          <div class="cs-stat-num">+35%</div>
-          <div class="cs-stat-lbl">Productivité des agents</div>
-        </div>
-        <div class="cs-stat">
-          <div class="cs-stat-num">100%</div>
-          <div class="cs-stat-lbl">Opérations centralisées</div>
-        </div>
-      </div>
-      <div class="case-quote">
-        "PERFOMIA a transformé notre façon de travailler. Nos agents savent exactement ce qu'ils ont à faire, nos directeurs voient la performance en temps réel, et nos dossiers clients ne se perdent plus jamais. Le déploiement a été rapide et l'équipe DigiTexia nous a accompagnés à chaque étape."
-      </div>
-    </div>
   </div>
 </section>
 
@@ -397,8 +368,8 @@
   <div class="fw-inner">
     <div class="section-header rv">
       <div class="tag-blue"><i class="ti ti-building-bank"></i> Pour qui ?</div>
-      <h2>PERFOMIA est fait pour votre organisation.</h2>
-      <p class="lead">Conçu pour toutes les structures qui gèrent des crédits, des clients et des équipes — quelle que soit leur taille.</p>
+      <h2>Pour les organisations qui veulent mieux piloter leurs opérations.</h2>
+      <p class="lead">Microfinance, coopératives et institutions qui gèrent des crédits, des clients et des équipes.</p>
     </div>
 
     <div class="fw-grid">
@@ -410,7 +381,7 @@
         </div>
       </div>
       <div class="fw-card rv d2">
-        <div class="fw-ico"><i class="ti ti-handshake"></i></div>
+        <div class="fw-ico"><i class="ti ti-brand-dcos"></i></div>
         <div>
           <div class="fw-title">Coopératives d'épargne et de crédit</div>
           <div class="fw-desc">Les COOPEC et mutuelles qui veulent digitaliser leur gestion sans investissement technologique massif.</div>
@@ -441,8 +412,8 @@
   <div class="price-inner">
     <div class="section-header rv">
       <div class="tag">💰 Tarification</div>
-      <h2>Des offres adaptées à chaque structure.</h2>
-      <p class="lead">Choisissez le pack qui correspond à votre taille et à vos ambitions. Aucun engagement à long terme — commencez dès aujourd'hui.</p>
+      <h2>Une tarification qui reflète la valeur de la plateforme.</h2>
+      <p class="lead">Des packs clairs, avec un onboarding sérieux et une montée en gamme possible selon vos besoins.</p>
     </div>
 
     <div class="price-grid">
@@ -451,24 +422,24 @@
       <div class="price-card standard rv d1">
         <div class="pc-band standard"></div>
         <div class="pc-body">
-          <div class="pc-badge">Standard</div>
-          <div class="pc-name">Pack Standard</div>
+          <div class="pc-badge">Essential</div>
+          <div class="pc-name">Pack Essential</div>
           <div class="pc-price-row">
-            <div class="pc-amount">100 000</div>
+            <div class="pc-amount">150 000</div>
             <div class="pc-currency">FCFA</div>
           </div>
           <div class="pc-period">/ mois</div>
-          <div class="pc-desc">Idéal pour démarrer et digitaliser vos opérations de base.</div>
+          <div class="pc-desc">Pour structurer les opérations essentielles et démarrer proprement.</div>
           <div class="pc-features">
             <div class="pc-feat ok"><div class="pc-feat-ico"><i class="ti ti-check"></i></div>Gestion des tâches</div>
-            <div class="pc-feat ok"><div class="pc-feat-ico"><i class="ti ti-check"></i></div>Tableau de bord de base</div>
+            <div class="pc-feat ok"><div class="pc-feat-ico"><i class="ti ti-check"></i></div>Tableau de bord</div>
             <div class="pc-feat ok"><div class="pc-feat-ico"><i class="ti ti-check"></i></div>Suivi des agents</div>
             <div class="pc-feat ok"><div class="pc-feat-ico"><i class="ti ti-check"></i></div>Alertes automatiques</div>
-            <div class="pc-feat na"><div class="pc-feat-ico"><i class="ti ti-minus"></i></div>Intelligence artificielle</div>
+            <div class="pc-feat na"><div class="pc-feat-ico"><i class="ti ti-minus"></i></div>IA</div>
             <div class="pc-feat na"><div class="pc-feat-ico"><i class="ti ti-minus"></i></div>Rapports avancés</div>
-            <div class="pc-feat na"><div class="pc-feat-ico"><i class="ti ti-minus"></i></div>Support dédié</div>
+            <div class="pc-feat na"><div class="pc-feat-ico"><i class="ti ti-minus"></i></div>Support prioritaire</div>
           </div>
-          <a href="#cta-final" class="btn btn-ghost pc-cta">Choisir Standard</a>
+          <a href="#cta-final" class="btn btn-ghost pc-cta">Choisir Essential</a>
         </div>
       </div>
 
@@ -476,24 +447,24 @@
       <div class="price-card pro featured rv d2">
         <div class="pc-band pro"></div>
         <div class="pc-body">
-          <div class="pc-badge" style="background:var(--em);border-color:var(--em-lt);color:#fff">⭐ Recommandé</div>
-          <div class="pc-name">Pack Professionnel</div>
+          <div class="pc-badge" style="background:var(--em);border-color:var(--em-lt);color:#fff">Recommandé</div>
+          <div class="pc-name">Pack Growth</div>
           <div class="pc-price-row">
-            <div class="pc-amount">150 000</div>
+            <div class="pc-amount">250 000</div>
             <div class="pc-currency">FCFA</div>
           </div>
           <div class="pc-period">/ mois</div>
-          <div class="pc-desc">La puissance complète de PERFOMIA avec l'IA pour des décisions plus intelligentes.</div>
+          <div class="pc-desc">Le meilleur équilibre entre pilotage, intelligence et adoption rapide.</div>
           <div class="pc-features">
-            <div class="pc-feat ok"><div class="pc-feat-ico"><i class="ti ti-check"></i></div>Toutes les fonctionnalités Standard</div>
-            <div class="pc-feat ok"><div class="pc-feat-ico"><i class="ti ti-check"></i></div>Intelligence artificielle</div>
-            <div class="pc-feat ok"><div class="pc-feat-ico"><i class="ti ti-check"></i></div>Rapports avancés automatisés</div>
-            <div class="pc-feat ok"><div class="pc-feat-ico"><i class="ti ti-check"></i></div>Détection d'anomalies IA</div>
-            <div class="pc-feat ok"><div class="pc-feat-ico"><i class="ti ti-check"></i></div>Analyse prédictive des risques</div>
+            <div class="pc-feat ok"><div class="pc-feat-ico"><i class="ti ti-check"></i></div>Toutes les fonctions Essential</div>
+            <div class="pc-feat ok"><div class="pc-feat-ico"><i class="ti ti-check"></i></div>IA embarquée</div>
+            <div class="pc-feat ok"><div class="pc-feat-ico"><i class="ti ti-check"></i></div>Rapports avancés</div>
+            <div class="pc-feat ok"><div class="pc-feat-ico"><i class="ti ti-check"></i></div>Détection d'anomalies</div>
+            <div class="pc-feat ok"><div class="pc-feat-ico"><i class="ti ti-check"></i></div>Analyse prédictive</div>
             <div class="pc-feat na"><div class="pc-feat-ico"><i class="ti ti-minus"></i></div>Personnalisation complète</div>
-            <div class="pc-feat na"><div class="pc-feat-ico"><i class="ti ti-minus"></i></div>Support dédié 24/7</div>
+            <div class="pc-feat na"><div class="pc-feat-ico"><i class="ti ti-minus"></i></div>Support 24/7</div>
           </div>
-          <a href="#cta-final" class="btn btn-em pc-cta">Choisir Professionnel</a>
+          <a href="#cta-final" class="btn btn-em pc-cta">Choisir Growth</a>
         </div>
       </div>
 
@@ -501,40 +472,39 @@
       <div class="price-card premium rv d3">
         <div class="pc-band premium"></div>
         <div class="pc-body">
-          <div class="pc-badge">Premium</div>
-          <div class="pc-name">Pack Premium</div>
+          <div class="pc-badge">Enterprise</div>
+          <div class="pc-name">Pack Enterprise</div>
           <div class="pc-price-row">
-            <div class="pc-amount">350 000</div>
+            <div class="pc-amount">500 000</div>
             <div class="pc-currency">FCFA</div>
           </div>
           <div class="pc-period">/ mois</div>
-          <div class="pc-desc">La solution sur-mesure pour les grandes institutions avec un accompagnement total.</div>
+          <div class="pc-desc">Pour les institutions qui veulent un accompagnement, des intégrations et une personnalisation poussée.</div>
           <div class="pc-features">
-            <div class="pc-feat ok"><div class="pc-feat-ico"><i class="ti ti-check"></i></div>Toutes les fonctionnalités Pro</div>
+            <div class="pc-feat ok"><div class="pc-feat-ico"><i class="ti ti-check"></i></div>Toutes les fonctions Growth</div>
             <div class="pc-feat ok"><div class="pc-feat-ico"><i class="ti ti-check"></i></div>Personnalisation complète</div>
-            <div class="pc-feat ok"><div class="pc-feat-ico"><i class="ti ti-check"></i></div>Support dédié prioritaire</div>
-            <div class="pc-feat ok"><div class="pc-feat-ico"><i class="ti ti-check"></i></div>Formation des équipes incluse</div>
-            <div class="pc-feat ok"><div class="pc-feat-ico"><i class="ti ti-check"></i></div>Intégrations personnalisées</div>
+            <div class="pc-feat ok"><div class="pc-feat-ico"><i class="ti ti-check"></i></div>Support prioritaire</div>
+            <div class="pc-feat ok"><div class="pc-feat-ico"><i class="ti ti-check"></i></div>Formation incluse</div>
+            <div class="pc-feat ok"><div class="pc-feat-ico"><i class="ti ti-check"></i></div>Intégrations sur mesure</div>
             <div class="pc-feat ok"><div class="pc-feat-ico"><i class="ti ti-check"></i></div>SLA garanti</div>
-            <div class="pc-feat ok"><div class="pc-feat-ico"><i class="ti ti-check"></i></div>Roadmap personnalisée</div>
+            <div class="pc-feat ok"><div class="pc-feat-ico"><i class="ti ti-check"></i></div>Roadmap dédiée</div>
           </div>
-          <a href="#cta-final" class="btn btn-gold pc-cta">Choisir Premium</a>
+          <a href="#cta-final" class="btn btn-gold pc-cta">Choisir Enterprise</a>
         </div>
       </div>
 
     </div>
-
     <!-- Integration -->
     <div class="integration-card rv">
       <div class="integ-left">
         <div class="tag-gold" style="margin-bottom:1rem"><i class="ti ti-tools"></i> Mise en place</div>
-        <h3>Intégration & Déploiement</h3>
-        <p class="lead">Un déploiement clé en main, géré de A à Z par l'équipe DigiTexia — pour que vous soyez opérationnels rapidement, sans friction.</p>
+        <h3 style="color: white">Intégration & Déploiement</h3>
+        <p class="lead">Un onboarding sérieux, géré de A à Z par l'équipe DigiTexia pour sécuriser le lancement.</p>
         <div class="integ-price">
-          <div class="integ-amount">500 000 FCFA</div>
+          <div class="integ-amount">850 000 FCFA</div>
           <div class="integ-label">frais unique d'intégration</div>
         </div>
-        <div class="integ-note">Investissement unique — aucun frais récurrent lié au déploiement.</div>
+        <div class="integ-note">Couvre le paramétrage, l'import de données, les tests et la formation initiale.</div>
         <a href="#cta-final" class="btn btn-gold">Démarrer le déploiement</a>
       </div>
       <div class="integ-items">
@@ -558,28 +528,28 @@
 
     <div class="rv">
       <div class="tag"><i class="ti ti-bullseye"></i> Pourquoi PERFOMIA ?</div>
-      <h2>Conçu pour l'Afrique. Pensé pour le terrain.</h2>
-      <p class="lead" style="margin-bottom:2rem">PERFOMIA n'est pas un logiciel importé et adapté à la va-vite. C'est une solution construite depuis le début pour répondre aux réalités spécifiques des microfinances africaines.</p>
+      <h2>Conçu pour le terrain. Pensé pour le dirigeant.</h2>
+      <p class="lead" style="margin-bottom:2rem">PERFOMIA est construit pour les microfinances qui veulent plus de visibilité, plus de vitesse et plus de contrôle.</p>
       <div class="why-points">
         <div class="why-point">
           <div class="wp-ico"><i class="ti ti-world"></i></div>
-          <div><div class="wp-title">Conçu pour l'Afrique</div><div class="wp-desc">Interface en français, adapté aux réalités locales, optimisé pour les connexions variables.</div></div>
+          <div><div class="wp-title">Adapté à l'Afrique</div><div class="wp-desc">Interface en français, réalités locales et connexions variables prises en compte.</div></div>
         </div>
         <div class="why-point">
           <div class="wp-ico"><i class="ti ti-zap"></i></div>
-          <div><div class="wp-title">Déploiement rapide, valeur immédiate</div><div class="wp-desc">Selon DigiTexia, un projet digital ne doit pas prendre des mois avant de produire de la valeur. PERFOMIA est opérationnel en semaines, pas en années.</div></div>
+          <div><div class="wp-title">Valeur rapide</div><div class="wp-desc">Mise en service en semaines, avec gains visibles dès les premières itérations.</div></div>
         </div>
         <div class="why-point">
           <div class="wp-ico"><i class="ti ti-robot"></i></div>
-          <div><div class="wp-title">IA embarquée, pas en option</div><div class="wp-desc">L'intelligence artificielle est intégrée nativement — pas une couche ajoutée après coup.</div></div>
+          <div><div class="wp-title">IA intégrée</div><div class="wp-desc">L'IA est native, utile et orientée décision.</div></div>
         </div>
         <div class="why-point">
           <div class="wp-ico"><i class="ti ti-shield-check"></i></div>
-          <div><div class="wp-title">Support long terme garanti</div><div class="wp-desc">DigiTexia reste à vos côtés après le déploiement — maintenance, évolutions, formation continue.</div></div>
+          <div><div class="wp-title">Support continu</div><div class="wp-desc">Maintenance, évolutions et accompagnement après lancement.</div></div>
         </div>
         <div class="why-point">
           <div class="wp-ico"><i class="ti ti-chart-line"></i></div>
-          <div><div class="wp-title">Évolutif avec votre croissance</div><div class="wp-desc">Passez d'un pack à l'autre selon vos besoins — PERFOMIA grandit avec votre institution.</div></div>
+          <div><div class="wp-title">Évolutif</div><div class="wp-desc">La plateforme grandit avec votre institution et vos volumes.</div></div>
         </div>
       </div>
     </div>
@@ -690,17 +660,17 @@
   <div class="cta-ambient"></div><div class="cta-grid-lines"></div>
   <div class="cta-inner rv">
     <div class="tag"><i class="ti ti-bullseye"></i> Passez à l'action</div>
-    <h2>Transformez votre microfinance dès aujourd'hui.</h2>
-    <p class="lead">Rejoignez les institutions qui ont choisi PERFOMIA pour moderniser leurs opérations, améliorer la performance de leurs équipes et prendre des décisions basées sur la data.</p>
+    <h2>Montons votre microfinance au niveau supérieur.</h2>
+    <p class="lead">Demandez une démo et voyez comment PERFOMIA peut réduire vos délais, clarifier vos opérations et améliorer votre rentabilité.</p>
     <div class="cta-btns">
       <a href="mailto:contactdigitexia@gmail.com?subject=Demande%20d%C3%A9mo%20PERFOMIA" class="btn btn-em">
-        Demander une démonstration
+        Réserver une démo
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
-      <a href="{{ url('/contact-us') }}" class="btn btn-ghost">Nous contacter</a>
+      <a href="{{ url('/contact-us') }}" class="btn btn-ghost">Parler à un expert</a>
     </div>
     <div class="cta-guarantee">
-      <div class="cta-g-item">✅ Démo gratuite sans engagement</div>
+      <div class="cta-g-item">✅ Démo gratuite et ciblée</div>
       <div class="cta-g-item">✅ Réponse sous 24h</div>
       <div class="cta-g-item">✅ Accompagnement personnalisé</div>
       <div class="cta-g-item">✅ Déploiement clé en main</div>
