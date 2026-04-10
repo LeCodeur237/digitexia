@@ -1,6 +1,6 @@
-﻿@extends('index')
+@extends('index')
 
-@section('page_title', 'Solutions — DigiTexia')
+@section('page_title', 'Solutions � DigiTexia')
 
 @push('styles')
 <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -46,10 +46,10 @@
     </div>
 
     <div class="product-nav">
-      <a href="#flexicare" class="pnav-pill"><span class="pdot" style="background:#6366F1"></span>FlexiCare</a>
-      <a href="#inventorypro" class="pnav-pill"><span class="pdot" style="background:#0EA5E9"></span>InventoryPro</a>
-      <a href="#perfomia" class="pnav-pill"><span class="pdot" style="background:#F59E0B"></span>Perfomia</a>
-      <a href="#medtrace" class="pnav-pill"><span class="pdot" style="background:#16C784"></span>MedTrace</a>
+      <a href="#flexicare" class="pnav-pill"><span class="pdot" style="background:var(--blue-lt)"></span>FlexiCare</a>
+      <a href="#inventorypro" class="pnav-pill"><span class="pdot" style="background:var(--blue-lt)"></span>InventoryPro</a>
+      <a href="#perfomia" class="pnav-pill"><span class="pdot" style="background:var(--accent-fg)"></span>Perfomia</a>
+      <a href="#medtrace" class="pnav-pill"><span class="pdot" style="background:var(--green)"></span>MedTrace</a>
     </div>
   </div>
 </section>
@@ -57,8 +57,8 @@
 <section id="overview">
   <div class="ov-inner">
     <div class="ov-grid rv">
-      <div class="ov-card span2" style="--accent-grad:linear-gradient(90deg,#6366F1,transparent);border-color:rgba(99,102,241,.25)">
-        <div class="ov-card-badge" style="background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.28);color:#A5B4FC"><i class="ti ti-heart-handshake"></i> Care Services Platform</div>
+      <div class="ov-card span2" style="--accent-grad:linear-gradient(90deg,var(--blue-lt),transparent);border-color:var(--accent-border)">
+        <div class="ov-card-badge" style="background:var(--accent-soft);border:1px solid var(--accent-border);color:var(--accent-fg)"><i class="ti ti-heart-handshake"></i> Care Services Platform</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center">
           <div>
             <div class="ov-card-ico"><i class="ti ti-heart-handshake"></i></div>
@@ -68,18 +68,18 @@
               <span class="feat-chip">Smart Matching</span><span class="feat-chip">Profile Verification</span><span class="feat-chip">Scheduling</span><span class="feat-chip">Ratings</span><span class="feat-chip">Real-Time Booking</span>
             </div>
           </div>
-          <div style="background:var(--ink-3);border:1px solid rgba(99,102,241,.2);border-radius:12px;padding:1.25rem;display:flex;flex-direction:column;gap:.65rem">
-            <div style="font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#A5B4FC;margin-bottom:.25rem">Live Matching Feed</div>
-            <div class="pv-row"><div class="pv-row-ico" style="background:rgba(99,102,241,.12)"><i class="ti ti-scan"></i></div><div><div class="pv-row-title">Amina K. &mdash; Cook</div><div class="pv-row-sub">4.9 &bull; 3km away &bull; Available now</div></div><div class="pv-row-tag" style="background:rgba(22,199,132,.1);color:var(--green);border:1px solid rgba(22,199,132,.25)">Match</div></div>
-            <div class="pv-row"><div class="pv-row-ico" style="background:rgba(99,102,241,.12)"><i class="ti ti-baby-carriage"></i></div><div><div class="pv-row-title">Marie T. &mdash; Childcare</div><div class="pv-row-sub">4.8 &bull; 1.2km away &bull; Available now</div></div><div class="pv-row-tag" style="background:rgba(22,199,132,.1);color:var(--green);border:1px solid rgba(22,199,132,.25)">Match</div></div>
-            <div class="pv-row"><div class="pv-row-ico" style="background:rgba(99,102,241,.12)"><i class="ti ti-broom"></i></div><div><div class="pv-row-title">Paul M. &mdash; Cleaner</div><div class="pv-row-sub">4.7 &bull; 2km away &bull; Booked today</div></div><div class="pv-row-tag" style="background:rgba(245,158,11,.1);color:#FCD34D;border:1px solid rgba(245,158,11,.25)">Busy</div></div>
+          <div style="background:var(--bg-tertiary);border:1px solid var(--accent-border);border-radius:12px;padding:1.25rem;display:flex;flex-direction:column;gap:.65rem">
+            <div style="font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--accent-fg);margin-bottom:.25rem">Live Matching Feed</div>
+            <div class="pv-row"><div class="pv-row-ico" style="background:var(--accent-soft)"><i class="ti ti-scan"></i></div><div><div class="pv-row-title">Amina K. &mdash; Cook</div><div class="pv-row-sub">4.9 &bull; 3km away &bull; Available now</div></div><div class="pv-row-tag" style="background:var(--success-soft);color:var(--green);border:1px solid var(--success-border)">Match</div></div>
+            <div class="pv-row"><div class="pv-row-ico" style="background:var(--accent-soft)"><i class="ti ti-baby-carriage"></i></div><div><div class="pv-row-title">Marie T. &mdash; Childcare</div><div class="pv-row-sub">4.8 &bull; 1.2km away &bull; Available now</div></div><div class="pv-row-tag" style="background:var(--success-soft);color:var(--green);border:1px solid var(--success-border)">Match</div></div>
+            <div class="pv-row"><div class="pv-row-ico" style="background:var(--accent-soft)"><i class="ti ti-broom"></i></div><div><div class="pv-row-title">Paul M. &mdash; Cleaner</div><div class="pv-row-sub">4.7 &bull; 2km away &bull; Booked today</div></div><div class="pv-row-tag" style="background:var(--accent-soft);color:var(--accent-fg);border:1px solid var(--accent-border)">Busy</div></div>
           </div>
         </div>
         <a href="{{ url('/solutions/flexicare') }}" class="ov-card-cta">View full details &rarr;</a>
       </div>
 
-      <div class="ov-card" style="--accent-grad:linear-gradient(90deg,#0EA5E9,transparent);border-color:rgba(14,165,233,.25)">
-        <div class="ov-card-badge" style="background:rgba(14,165,233,.12);border:1px solid rgba(14,165,233,.28);color:#7DD3FC"><i class="ti ti-box"></i> Stock Management</div>
+      <div class="ov-card" style="--accent-grad:linear-gradient(90deg,var(--blue-lt),transparent);border-color:var(--accent-border)">
+        <div class="ov-card-badge" style="background:var(--accent-soft);border:1px solid var(--accent-border);color:var(--accent-fg)"><i class="ti ti-box"></i> Stock Management</div>
         <div class="ov-card-ico"><i class="ti ti-box"></i></div>
         <div class="ov-card-name">InventoryPro</div>
         <div class="ov-card-desc">Track stock, control requests, and keep every location aligned from one place.</div>
@@ -87,8 +87,8 @@
         <a href="{{ url('/solutions/inventorypro') }}" class="ov-card-cta">View full details &rarr;</a>
       </div>
 
-      <div class="ov-card" style="--accent-grad:linear-gradient(90deg,#F59E0B,transparent);border-color:rgba(245,158,11,.25)">
-        <div class="ov-card-badge" style="background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.28);color:#FCD34D"><i class="ti ti-chart-bar"></i> HR & Performance</div>
+      <div class="ov-card" style="--accent-grad:linear-gradient(90deg,var(--accent-fg),transparent);border-color:var(--accent-border)">
+        <div class="ov-card-badge" style="background:var(--accent-soft);border:1px solid var(--accent-border);color:var(--accent-fg)"><i class="ti ti-chart-bar"></i> HR & Performance</div>
         <div class="ov-card-ico"><i class="ti ti-chart-bar"></i></div>
         <div class="ov-card-name">Perfomia</div>
         <div class="ov-card-desc">A clear view of tasks, attendance, and staff performance for day-to-day management.</div>
@@ -96,20 +96,20 @@
         <a href="{{ url('/solutions/perfomia') }}" class="ov-card-cta">View full details &rarr;</a>
       </div>
 
-      <div class="ov-card span2" style="--accent-grad:linear-gradient(90deg,#16C784,transparent);border-color:rgba(22,199,132,.25)">
+      <div class="ov-card span2" style="--accent-grad:linear-gradient(90deg,var(--green),transparent);border-color:var(--success-border)">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center">
           <div>
-            <div class="ov-card-badge" style="background:rgba(22,199,132,.1);border:1px solid rgba(22,199,132,.25);color:var(--green)"><i class="ti ti-heart-pulse"></i> Healthcare Innovation</div>
+            <div class="ov-card-badge" style="background:var(--success-soft);border:1px solid var(--success-border);color:var(--green)"><i class="ti ti-heart-pulse"></i> Healthcare Innovation</div>
             <div class="ov-card-ico"><i class="ti ti-heart-pulse"></i></div>
             <div class="ov-card-name">MedTrace</div>
             <div class="ov-card-desc">A QR-based medical record system that gives practitioners fast access to critical patient data.</div>
             <div class="ov-card-features"><span class="feat-chip">QR Wearable</span><span class="feat-chip">Instant Records</span><span class="feat-chip">Emergency Data</span><span class="feat-chip">Secure</span></div>
             <a href="{{ url('/solutions/medtrace') }}" class="ov-card-cta" style="margin-top:1rem">View full details &rarr;</a>
           </div>
-          <div style="background:var(--ink-3);border:1px solid rgba(22,199,132,.2);border-radius:12px;padding:1.5rem;text-align:center">
+          <div style="background:var(--bg-tertiary);border:1px solid var(--success-border);border-radius:12px;padding:1.5rem;text-align:center">
             <div style="font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--green);margin-bottom:1.25rem">Patient Record via QR Scan</div>
             <div style="font-size:2.5rem;margin-bottom:.75rem"><i class="ti ti-qrcode"></i></div>
-            <div style="background:rgba(22,199,132,.08);border:1px solid rgba(22,199,132,.2);border-radius:8px;padding:.85rem;font-size:.75rem;color:#D1FAE5;line-height:1.6;text-align:left">
+            <div style="background:var(--success-soft);border:1px solid var(--success-border);border-radius:8px;padding:.85rem;font-size:.75rem;color:var(--success-fg);line-height:1.6;text-align:left">
               <div style="font-weight:600;color:var(--green);margin-bottom:.5rem">Jean-Paul M., 42 ans</div>
               <div><i class="ti ti-blood-off"></i> Type O+ &nbsp;&middot;&nbsp; <i class="ti ti-alert-triangle"></i> Penicillin allergy</div>
               <div style="margin-top:.35rem"><i class="ti ti-pill"></i> Metformin 500mg/day</div>
@@ -198,4 +198,8 @@ if (ddToggle && ddMenu) {
 </script>
 @endpush
 @endsection
+
+
+
+
 

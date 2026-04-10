@@ -11,8 +11,8 @@
         }
 
         .career-card {
-            background-color: #fff;
-            border: 1px solid #e5e7eb;
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 40px 30px;
             transition: all 0.3s ease;
@@ -22,8 +22,8 @@
         }
 
         .career-card:hover {
-            border-color: #000;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-color: var(--text-main);
+            box-shadow: var(--shadow-soft);
             transform: translateY(-5px);
         }
 
@@ -31,7 +31,7 @@
             font-size: 24px;
             font-weight: 700;
             margin-bottom: 15px;
-            color: #1a1a1a;
+            color: var(--text-main);
             line-height: 1.3;
         }
 
@@ -43,16 +43,16 @@
         }
 
         .career-tag {
-            background-color: #f3f4f6;
+            background-color: var(--surface-bg);
             padding: 6px 14px;
             border-radius: 50px;
             font-size: 14px;
-            color: #4b5563;
+            color: var(--text-muted);
             font-weight: 500;
         }
 
         .career-description {
-            color: #6b7280;
+            color: var(--text-soft);
             margin-bottom: 30px;
             line-height: 1.6;
         }
@@ -223,3 +223,5 @@
         </div>
     </section>
 @endsection
+
+

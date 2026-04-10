@@ -49,7 +49,7 @@
     padding: .95rem 1rem;
     border-radius: 14px;
     border: 1px solid var(--bdr);
-    background: rgba(255,255,255,.03);
+    background: var(--surface-soft);
   }
 
   .contact-point-ico {
@@ -62,7 +62,7 @@
     flex-shrink: 0;
     background: var(--blue-dim);
     border: 1px solid var(--blue-bdr);
-    color: #93C5FD;
+    color: var(--accent-fg);
   }
 
   .contact-point-title {
@@ -81,8 +81,8 @@
     position: relative;
     overflow: hidden;
     background:
-      radial-gradient(ellipse 60% 55% at 50% 20%, rgba(18,70,240,.14) 0%, transparent 65%),
-      radial-gradient(ellipse 35% 40% at 15% 75%, rgba(22,199,132,.08) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 55% at 50% 20%, var(--accent-soft) 0%, transparent 65%),
+      radial-gradient(ellipse 35% 40% at 15% 75%, var(--success-soft) 0%, transparent 60%),
       var(--ink);
   }
 
@@ -105,7 +105,7 @@
 
   .contact-copy h1 em {
     font-style: normal;
-    background: linear-gradient(135deg,#6BA4FF 0%,var(--blue-lt) 40%,var(--green) 100%);
+    background: linear-gradient(135deg,var(--accent-soft) 0%,var(--blue-lt) 40%,var(--green) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -120,7 +120,7 @@
     border-radius: 22px;
     border: 1px solid var(--bdr);
     background: rgba(14,20,34,.92);
-    box-shadow: 0 24px 60px rgba(0,0,0,.32);
+    box-shadow: var(--shadow-elev);
     backdrop-filter: blur(18px);
   }
 
@@ -145,7 +145,7 @@
     padding: 1rem;
     border-radius: 14px;
     border: 1px solid var(--bdr);
-    background: rgba(255,255,255,.03);
+    background: var(--surface-soft);
   }
 
   .contact-mini .label {
@@ -207,7 +207,7 @@
   .form-select:focus,
   .form-textarea:focus {
     border-color: var(--blue-bdr);
-    box-shadow: 0 0 0 3px rgba(18,70,240,.12);
+    box-shadow: 0 0 0 3px var(--accent-soft);
   }
 
   .form-textarea {
@@ -347,3 +347,4 @@
   </div>
 </section>
 @endsection
+

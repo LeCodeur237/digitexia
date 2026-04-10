@@ -1,6 +1,6 @@
-ï»¿@extends('index')
+@extends('index')
 
-@section('page_title', 'The Problem â€” DigiTexia')
+@section('page_title', 'The Problem — DigiTexia')
 
 @push('styles')
 <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -113,28 +113,28 @@
         <p class="lead">If your team still works with WhatsApp, Excel and paper, these are the bottlenecks that slow everything down.</p>
       </div>
       <div class="rv d1">
-        <div style="background:var(--ink-2);border:1px solid var(--bdr);border-radius:16px;padding:2rem;">
+        <div style="background:var(--card-bg);border:1px solid var(--bdr);border-radius:16px;padding:2rem;">
           <div style="font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem;">Impact Severity</div>
           <div style="display:flex;flex-direction:column;gap:1rem;">
             <div>
-              <div style="display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted-lt);margin-bottom:.4rem"><span>Time Loss</span><span style="color:#F87171;font-weight:600">High</span></div>
-              <div style="height:6px;background:rgba(255,255,255,.06);border-radius:100px;overflow:hidden"><div style="width:92%;height:100%;background:linear-gradient(90deg,#F43F5E,#F87171);border-radius:100px"></div></div>
+              <div style="display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted-lt);margin-bottom:.4rem"><span>Time Loss</span><span style="color:var(--danger-fg);font-weight:600">High</span></div>
+              <div style="height:6px;background:var(--surface-bg);border-radius:100px;overflow:hidden"><div style="width:92%;height:100%;background:linear-gradient(90deg,var(--danger),var(--danger-fg));border-radius:100px"></div></div>
             </div>
             <div>
-              <div style="display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted-lt);margin-bottom:.4rem"><span>Data Errors</span><span style="color:#F87171;font-weight:600">High</span></div>
-              <div style="height:6px;background:rgba(255,255,255,.06);border-radius:100px;overflow:hidden"><div style="width:88%;height:100%;background:linear-gradient(90deg,#F43F5E,#F87171);border-radius:100px"></div></div>
+              <div style="display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted-lt);margin-bottom:.4rem"><span>Data Errors</span><span style="color:var(--danger-fg);font-weight:600">High</span></div>
+              <div style="height:6px;background:var(--surface-bg);border-radius:100px;overflow:hidden"><div style="width:88%;height:100%;background:linear-gradient(90deg,var(--danger),var(--danger-fg));border-radius:100px"></div></div>
             </div>
             <div>
               <div style="display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted-lt);margin-bottom:.4rem"><span>Visibility</span><span style="color:var(--orange);font-weight:600">High</span></div>
-              <div style="height:6px;background:rgba(255,255,255,.06);border-radius:100px;overflow:hidden"><div style="width:78%;height:100%;background:linear-gradient(90deg,#F59E0B,#FCD34D);border-radius:100px"></div></div>
+              <div style="height:6px;background:var(--surface-bg);border-radius:100px;overflow:hidden"><div style="width:78%;height:100%;background:linear-gradient(90deg,var(--accent-fg),var(--accent-fg));border-radius:100px"></div></div>
             </div>
             <div>
               <div style="display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted-lt);margin-bottom:.4rem"><span>Collaboration</span><span style="color:var(--orange);font-weight:600">High</span></div>
-              <div style="height:6px;background:rgba(255,255,255,.06);border-radius:100px;overflow:hidden"><div style="width:72%;height:100%;background:linear-gradient(90deg,#F59E0B,#FCD34D);border-radius:100px"></div></div>
+              <div style="height:6px;background:var(--surface-bg);border-radius:100px;overflow:hidden"><div style="width:72%;height:100%;background:linear-gradient(90deg,var(--accent-fg),var(--accent-fg));border-radius:100px"></div></div>
             </div>
             <div>
-              <div style="display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted-lt);margin-bottom:.4rem"><span>Traceability</span><span style="color:#60A5FA;font-weight:600">Medium</span></div>
-              <div style="height:6px;background:rgba(255,255,255,.06);border-radius:100px;overflow:hidden"><div style="width:62%;height:100%;background:linear-gradient(90deg,var(--blue),#60A5FA);border-radius:100px"></div></div>
+              <div style="display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted-lt);margin-bottom:.4rem"><span>Traceability</span><span style="color:var(--blue-lt);font-weight:600">Medium</span></div>
+              <div style="height:6px;background:var(--surface-bg);border-radius:100px;overflow:hidden"><div style="width:62%;height:100%;background:linear-gradient(90deg,var(--blue),var(--blue-lt));border-radius:100px"></div></div>
             </div>
           </div>
         </div>
@@ -175,11 +175,11 @@
         <div class="pain-card-num">05</div>
         <div class="pain-card-ico"><i class="ti ti-search"></i></div>
         <div class="pain-card-title">No Clear Audit Trail</div>
-        <div class="pain-card-desc">When a supervisor asks who approved what, the answer is often in someoneâ€™s inbox, notebook or memory.</div>
+        <div class="pain-card-desc">When a supervisor asks who approved what, the answer is often in someone’s inbox, notebook or memory.</div>
         <div class="pain-card-impact">Finding the truth takes too long</div>
       </div>
       <!-- Bridge card -->
-      <div class="pain-card rv d3" style="background:linear-gradient(135deg,rgba(18,70,240,.1),rgba(18,70,240,.03));border-color:var(--blue-bdr);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:1.25rem">
+      <div class="pain-card rv d3" style="background:linear-gradient(135deg,var(--accent-soft),var(--accent-soft));border-color:var(--blue-bdr);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:1.25rem">
         <div style="font-size:2.5rem"><i class="ti ti-link"></i></div>
         <div class="pain-card-title" style="color:var(--white)">DigiTexia brings it all into one place</div>
         <div class="pain-card-desc">One simple platform for teams that want less confusion, less paper and faster work.</div>
@@ -205,27 +205,27 @@
         <div class="cost-bars-wrap">
           <div class="cost-bar-row">
             <div class="cost-bar-label">Manual data entry</div>
-            <div class="cost-bar-track"><div class="cost-bar-fill" style="--w:85%;background:linear-gradient(90deg,#F43F5E,#F87171)"></div></div>
+            <div class="cost-bar-track"><div class="cost-bar-fill" style="--w:85%;background:linear-gradient(90deg,var(--danger),var(--danger-fg))"></div></div>
             <div class="cost-bar-val">85%</div>
           </div>
           <div class="cost-bar-row">
             <div class="cost-bar-label">Email overload</div>
-            <div class="cost-bar-track"><div class="cost-bar-fill" style="--w:72%;background:linear-gradient(90deg,#F59E0B,#FCD34D)"></div></div>
+            <div class="cost-bar-track"><div class="cost-bar-fill" style="--w:72%;background:linear-gradient(90deg,var(--accent-fg),var(--accent-fg))"></div></div>
             <div class="cost-bar-val">72%</div>
           </div>
           <div class="cost-bar-row">
             <div class="cost-bar-label">Searching for info</div>
-            <div class="cost-bar-track"><div class="cost-bar-fill" style="--w:64%;background:linear-gradient(90deg,#F59E0B,#FCD34D)"></div></div>
+            <div class="cost-bar-track"><div class="cost-bar-fill" style="--w:64%;background:linear-gradient(90deg,var(--accent-fg),var(--accent-fg))"></div></div>
             <div class="cost-bar-val">64%</div>
           </div>
           <div class="cost-bar-row">
             <div class="cost-bar-label">Duplicate work</div>
-            <div class="cost-bar-track"><div class="cost-bar-fill" style="--w:58%;background:linear-gradient(90deg,var(--blue),#60A5FA)"></div></div>
+            <div class="cost-bar-track"><div class="cost-bar-fill" style="--w:58%;background:linear-gradient(90deg,var(--blue),var(--blue-lt))"></div></div>
             <div class="cost-bar-val">58%</div>
           </div>
           <div class="cost-bar-row">
             <div class="cost-bar-label">Error correction</div>
-            <div class="cost-bar-track"><div class="cost-bar-fill" style="--w:47%;background:linear-gradient(90deg,var(--blue),#60A5FA)"></div></div>
+            <div class="cost-bar-track"><div class="cost-bar-fill" style="--w:47%;background:linear-gradient(90deg,var(--blue),var(--blue-lt))"></div></div>
             <div class="cost-bar-val">47%</div>
           </div>
         </div>
@@ -432,3 +432,6 @@ if (ddToggle && ddMenu) {
 </script>
 @endpush
 @endsection
+
+
+

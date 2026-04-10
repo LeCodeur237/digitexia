@@ -1,21 +1,21 @@
 ﻿:root {
-  --blue:      #1246F0;
-  --blue-lt:   #2F63F8;
-  --blue-dim:  rgba(18,70,240,0.14);
-  --blue-bdr:  rgba(18,70,240,0.28);
-  --green:     #16C784;
+  --blue: var(--accent);
+  --blue-lt: var(--accent-lt);
+  --blue-dim: var(--accent-dim);
+  --blue-bdr: var(--accent-border);
+  --green: var(--success);
   --red:       #F87171;
   --red-dim:   rgba(248,113,113,0.14);
   --red-bdr:   rgba(248,113,113,0.32);
   --orange:    #16C784;
   --orange-dim:rgba(22,199,132,0.12);
-  --ink:       #080C18;
-  --ink-2:     #0E1422;
-  --ink-3:     #161D30;
-  --white:     #F2F5FF;
-  --muted:     #5E6880;
-  --muted-lt:  #8A94AB;
-  --bdr:       rgba(255,255,255,0.065);
+  --ink: var(--bg-primary);
+  --ink-2: var(--bg-secondary);
+  --ink-3: var(--bg-tertiary);
+  --white: var(--text-main);
+  --muted: var(--text-muted);
+  --muted-lt: var(--text-soft);
+  --bdr: var(--border-color);
 }
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -129,7 +129,7 @@ footer .fbot {
 #page-hero .ph-breadcrumb a,
 #page-hero .ph-breadcrumb span,
 #page-hero .ph-breadcrumb .curr {
-  color: rgba(255,255,255,.78);
+  color: var(--text-muted);
 }
 body::after{
   content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;
@@ -156,7 +156,7 @@ img{display:block}
   padding:.85rem 1.9rem;border-radius:8px;border:1px solid var(--bdr);cursor:pointer;
   transition:border-color .2s,background .2s,transform .18s;
 }
-.btn-sec:hover{border-color:rgba(255,255,255,.18);background:rgba(255,255,255,.05);transform:translateY(-2px)}
+.btn-sec:hover{border-color:rgba(255,255,255,.18);background:var(--surface-soft);transform:translateY(-2px)}
 
 /* â”€â”€â”€ SHARED â”€â”€â”€ */
 .wrap{max-width:1240px;margin:0 auto;padding:0 5%}
@@ -387,7 +387,7 @@ h3{
 .cost-bars-wrap{display:flex;flex-direction:column;gap:.9rem}
 .cost-bar-row{display:flex;align-items:center;gap:1rem}
 .cost-bar-label{font-size:.75rem;color:var(--muted-lt);width:120px;flex-shrink:0}
-.cost-bar-track{flex:1;height:10px;background:rgba(255,255,255,.04);border-radius:100px;overflow:hidden}
+.cost-bar-track{flex:1;height:10px;background:var(--surface-bg);border-radius:100px;overflow:hidden}
 .cost-bar-fill{
   height:100%;border-radius:100px;
   animation:barFill 1.2s ease both;
@@ -571,7 +571,7 @@ footer{
 .socials{display:flex;gap:.55rem;margin-top:1.35rem}
 .soc{
   width:32px;height:32px;
-  background:rgba(255,255,255,.04);border:1px solid var(--bdr);
+  background:var(--surface-bg);border:1px solid var(--bdr);
   border-radius:7px;display:flex;align-items:center;justify-content:center;
   font-size:.72rem;color:var(--muted);transition:all .15s;text-decoration:none;
 }
@@ -599,3 +599,5 @@ footer{
   footer{padding:4rem 5% 2rem}
   .footer-grid{grid-template-columns:1fr}
 }
+
+

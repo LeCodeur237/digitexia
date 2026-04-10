@@ -16,16 +16,24 @@ class LoginController extends Controller
     public function store(Request $request)
     {
         $credentials = $request->validate([
-            'email' => ['required', 'email'],
+            'phone_local' => ['required', 'string', 'max:30'],
             'password' => ['required', 'string'],
         ]);
 
-        if (! Auth::attempt($credentials, $request->boolean('remember'))) {
+        $phoneDigits = preg_replace('/\D+/', '', $credentials['phone_local']);
+        $phone = str_starts_with($phoneDigits, '237')
+            ? '+' . $phoneDigits
+            : '+237' . ltrim($phoneDigits, '0');
+
+        if (! Auth::attempt([
+            'phone' => $phone,
+            'password' => $credentials['password'],
+        ], $request->boolean('remember'))) {
             return back()
                 ->withErrors([
-                    'email' => 'The provided credentials are incorrect.',
+                    'phone_local' => 'The provided credentials are incorrect.',
                 ])
-                ->onlyInput('email');
+                ->onlyInput('phone_local');
         }
 
         $request->session()->regenerate();

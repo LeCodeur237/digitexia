@@ -9,7 +9,7 @@
         .d-block{
             padding-bottom: 4rem !important;
             padding-top: 4rem !important;
-            border-bottom: 1px solid #e5e7eb;
+            border-bottom: 1px solid var(--border-color);
         }
     </style>
 @endpush
@@ -83,3 +83,5 @@
         </div>
     </section>
 @endsection
+
+

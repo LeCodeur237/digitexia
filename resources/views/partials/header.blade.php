@@ -52,9 +52,20 @@
 @endphp
 
 <style>
+    #mainNav .nav-mid a,
+    #mainNav .nav-dropdown > a {
+        color: var(--text-muted);
+        transition: color .3s ease;
+    }
+
+    #mainNav .nav-mid a:hover,
     #mainNav .nav-mid a.active,
-    #mainNav .nav-dropdown>a.active {
-        color: var(--white);
+    #mainNav .nav-dropdown > a:hover,
+    #mainNav .nav-dropdown > a.active {
+        color: var(--text-main);
+    }
+
+    #mainNav .nav-mid a.active {
         position: relative;
     }
 
@@ -67,48 +78,59 @@
         height: 2px;
         border-radius: 999px;
         background: linear-gradient(90deg, var(--blue-lt), var(--green));
-        box-shadow: 0 0 18px rgba(18, 70, 240, .35);
+        box-shadow: 0 0 18px var(--accent-soft);
     }
 
-    #mainNav .nav-dropdown>a.active svg {
+    #mainNav .nav-dropdown > a.active svg {
         transform: rotate(180deg);
     }
 
-    .current-page-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: .45rem;
-        padding: .5rem .85rem;
-        border-radius: 999px;
+    #mainNav .dropdown-menu {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        box-shadow: var(--shadow-lg);
+    }
+
+    #mainNav .dropdown-item {
+        color: var(--text-muted);
+    }
+
+    #mainNav .dropdown-item:hover {
+        background: var(--accent-dim);
+        color: var(--text-main);
+    }
+
+    #mainNav .dropdown-item-ico {
+        background: var(--surface-bg);
+        border: 1px solid var(--border-color);
+        color: var(--text-main);
+    }
+
+    #mainNav .dropdown-item:hover .dropdown-item-ico {
+        background: var(--accent-dim);
+        border-color: var(--accent-border);
+    }
+
+    #mainNav .nav-btn {
+        background: var(--blue);
+        color: var(--on-accent);
+        transition: background .2s ease, transform .15s ease;
+    }
+
+    #mainNav .nav-btn:hover {
+        background: var(--blue-lt);
+        transform: translateY(-1px);
+    }
+
+    #mainNav .current-page-badge,
+    #mainNav .page-location-badge {
         border: 1px solid var(--blue-bdr);
         background: var(--blue-dim);
-        color: var(--white);
-        font-size: .72rem;
-        font-weight: 700;
-        letter-spacing: .04em;
-        text-transform: uppercase;
-        white-space: nowrap;
+        color: var(--text-main);
     }
 
-    .current-page-badge span {
+    #mainNav .current-page-badge span {
         color: var(--blue-lt);
-    }
-
-    .page-location-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: .4rem;
-        padding: .45rem .75rem;
-        border-radius: 999px;
-        border: 1px solid rgba(18, 70, 240, .25);
-        background: rgba(18, 70, 240, .08);
-        color: #fff;
-        font-size: .72rem;
-        font-weight: 700;
-        letter-spacing: .04em;
-        text-transform: uppercase;
-        white-space: nowrap;
-        margin-right: .8rem;
     }
 </style>
 <nav id="mainNav">

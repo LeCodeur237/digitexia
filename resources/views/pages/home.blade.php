@@ -1,4 +1,4 @@
-﻿@extends('index')
+@extends('index')
 
 @push('styles')
 <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -8,7 +8,7 @@
 @section('fullpage')
 @include('partials.header')
 
-<!-- ─── SECTION 1 — HERO ─── -->
+<!-- --- SECTION 1 � HERO --- -->
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
@@ -35,7 +35,7 @@
       <div class="mockup">
         <div class="mkbar">
           <div class="dot dr"></div><div class="dot dy"></div><div class="dot dg"></div>
-          <span class="mktitle">DigiTexia · Operations Dashboard</span>
+          <span class="mktitle">DigiTexia � Operations Dashboard</span>
         </div>
         <div class="mkbody">
           <div class="mksidebar">
@@ -48,13 +48,13 @@
           </div>
           <div class="mkcontent">
             <div class="mk-stats">
-              <div class="msc"><div class="msc-l">Tasks Done</div><div class="msc-v">2,847</div><div class="msc-g">↑ 18.2%</div></div>
-              <div class="msc"><div class="msc-l">Efficiency</div><div class="msc-v">94%</div><div class="msc-g">↑ 6.4%</div></div>
-              <div class="msc"><div class="msc-l">Errors</div><div class="msc-v">0.3%</div><div class="msc-g msc-g-blue">↓ 91%</div></div>
-              <div class="msc"><div class="msc-l">Active Users</div><div class="msc-v">312</div><div class="msc-g">↑ 24%</div></div>
+              <div class="msc"><div class="msc-l">Tasks Done</div><div class="msc-v">2,847</div><div class="msc-g">? 18.2%</div></div>
+              <div class="msc"><div class="msc-l">Efficiency</div><div class="msc-v">94%</div><div class="msc-g">? 6.4%</div></div>
+              <div class="msc"><div class="msc-l">Errors</div><div class="msc-v">0.3%</div><div class="msc-g msc-g-blue">? 91%</div></div>
+              <div class="msc"><div class="msc-l">Active Users</div><div class="msc-v">312</div><div class="msc-g">? 24%</div></div>
             </div>
             <div class="mk-chart">
-              <div class="mkc-lbl">Operational Performance — Last 12 Weeks</div>
+              <div class="mkc-lbl">Operational Performance � Last 12 Weeks</div>
               <div class="bars">
                 <div class="bar b0"></div><div class="bar b1"></div>
                 <div class="bar b2"></div><div class="bar b3"></div>
@@ -71,7 +71,7 @@
   </div>
 </section>
 
-<!-- ─── SECTION 2 — THE PROBLEM ─── -->
+<!-- --- SECTION 2 � THE PROBLEM --- -->
 <section id="problem">
   <div class="wrap">
     <div class="problem-intro">
@@ -145,61 +145,61 @@
   </div>
 </section>
 
-<!-- ─── SECTION 3 — SOLUTIONS ─── -->
+<!-- --- SECTION 3 � SOLUTIONS --- -->
 <section id="solutions">
   <div class="sol-inner">
     <div class="sol-head rv" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 4rem; flex-wrap: wrap; margin-bottom: 3rem;">
       <div style="flex: 1.2; min-width: 300px;">
         <span class="tag">Nos solutions</span>
-        <h2 style="margin-bottom: 0;">Une architecture numérique pour chaque pilier de votre entreprise.</h2>
+        <h2 style="margin-bottom: 0;">Une architecture num�rique pour chaque pilier de votre entreprise.</h2>
       </div>
       <div style="flex: 1; min-width: 300px;">
-        <p class="lead lead-sm" style="margin-bottom: 0.5rem;">Nous avons conçu un écosystème de produits intelligents pour remplacer vos processus manuels par une efficacité automatisée.</p>
+        <p class="lead lead-sm" style="margin-bottom: 0.5rem;">Nous avons con�u un �cosyst�me de produits intelligents pour remplacer vos processus manuels par une efficacit� automatis�e.</p>
       </div>
     </div>
 
     <div class="pain-grid rv d1">
       <!-- Card 1: FlexiCare context -->
       <article class="pain-card">
-        <div class="pain-card-head"><span class="pain-ico" style="color: #6366F1;"><i class="ti ti-users"></i></span></div>
-        <h3 class="pain-title">Services & Main-d'œuvre</h3>
-        <p class="pain-desc">Matching intelligent et gestion des prestataires de services domestiques avec vérification de profil intégrée.</p>
-        <div class="solutions-bullets" style="margin-top: 1rem; border-top: 1px solid var(--ink-3); padding-top: 1rem;">
-          <div class="solutions-bullet"><i class="ti ti-check"></i> Booking en temps réel</div>
-          <div class="solutions-bullet"><i class="ti ti-check"></i> Notation & Fiabilité</div>
+        <div class="pain-card-head"><span class="pain-ico" style="color: var(--blue-lt);"><i class="ti ti-users"></i></span></div>
+        <h3 class="pain-title">Services & Main-d'�uvre</h3>
+        <p class="pain-desc">Matching intelligent et gestion des prestataires de services domestiques avec v�rification de profil int�gr�e.</p>
+        <div class="solutions-bullets" style="margin-top: 1rem; border-top: 1px solid var(--bg-tertiary); padding-top: 1rem;">
+          <div class="solutions-bullet"><i class="ti ti-check"></i> Booking en temps r�el</div>
+          <div class="solutions-bullet"><i class="ti ti-check"></i> Notation & Fiabilit�</div>
         </div>
       </article>
 
       <!-- Card 2: Inventory context -->
       <article class="pain-card">
-        <div class="pain-card-head"><span class="pain-ico" style="color: #0EA5E9;"><i class="ti ti-package"></i></span></div>
+        <div class="pain-card-head"><span class="pain-ico" style="color: var(--blue-lt);"><i class="ti ti-package"></i></span></div>
         <h3 class="pain-title">Stocks & Ressources</h3>
-        <p class="pain-desc">Contrôle rigoureux des inventaires multi-sites, gestion des demandes internes et alertes de stock bas.</p>
-        <div class="solutions-bullets" style="margin-top: 1rem; border-top: 1px solid var(--ink-3); padding-top: 1rem;">
-          <div class="solutions-bullet"><i class="ti ti-check"></i> Traçabilité totale</div>
+        <p class="pain-desc">Contr�le rigoureux des inventaires multi-sites, gestion des demandes internes et alertes de stock bas.</p>
+        <div class="solutions-bullets" style="margin-top: 1rem; border-top: 1px solid var(--bg-tertiary); padding-top: 1rem;">
+          <div class="solutions-bullet"><i class="ti ti-check"></i> Tra�abilit� totale</div>
           <div class="solutions-bullet"><i class="ti ti-check"></i> Analytics de consommation</div>
         </div>
       </article>
 
       <!-- Card 3: Performance context -->
       <article class="pain-card">
-        <div class="pain-card-head"><span class="pain-ico" style="color: #F59E0B;"><i class="ti ti-chart-bar"></i></span></div>
+        <div class="pain-card-head"><span class="pain-ico" style="color: var(--orange);"><i class="ti ti-chart-bar"></i></span></div>
         <h3 class="pain-title">Performance & RH</h3>
-        <p class="pain-desc">Suivi des KPIs, délégation de tâches et gestion des présences pour une productivité d'équipe optimale.</p>
-        <div class="solutions-bullets" style="margin-top: 1rem; border-top: 1px solid var(--ink-3); padding-top: 1rem;">
-          <div class="solutions-bullet"><i class="ti ti-check"></i> Évaluations objectives</div>
+        <p class="pain-desc">Suivi des KPIs, d�l�gation de t�ches et gestion des pr�sences pour une productivit� d'�quipe optimale.</p>
+        <div class="solutions-bullets" style="margin-top: 1rem; border-top: 1px solid var(--bg-tertiary); padding-top: 1rem;">
+          <div class="solutions-bullet"><i class="ti ti-check"></i> �valuations objectives</div>
           <div class="solutions-bullet"><i class="ti ti-check"></i> Tableaux de bord live</div>
         </div>
       </article>
     </div>
 
     <div class="sol-cta-row rv">
-      <a href="/solutions" class="btn-sec">Découvrir toutes nos solutions</a>
+      <a href="/solutions" class="btn-sec">D�couvrir toutes nos solutions</a>
     </div>
   </div>
 </section>
 
-<!-- ─── SECTION 4 — WHY CHOOSE DIGITEXIA ─── -->
+<!-- --- SECTION 4 � WHY CHOOSE DIGITEXIA --- -->
 <section id="why">
   <div class="why-inner wrap">
     <!-- Values -->
@@ -243,7 +243,7 @@
       <div class="wp-title">DigiTexia by the numbers</div>
       <div class="wp-stat">
         <div><div class="wp-stat-val">10+</div><div class="wp-stat-lbl">Digital Solutions Delivered</div></div>
-        <span class="wp-badge green-badge">↑ Growing</span>
+        <span class="wp-badge green-badge">? Growing</span>
       </div>
       <div class="wp-stat">
         <div><div class="wp-stat-val">5+</div><div class="wp-stat-lbl">Years of Combined Experience</div></div>
@@ -261,7 +261,7 @@
   </div>
 </section>
 
-<!-- ─── SECTION 5 — WORKFLOW ─── -->
+<!-- --- SECTION 5 � WORKFLOW --- -->
 <section id="workflow">
   <div class="wf-inner">
     <div class="rv">
@@ -293,7 +293,7 @@
   </div>
 </section>
 
-<!-- ─── SECTION 6 — IMPACT ─── -->
+<!-- --- SECTION 6 � IMPACT --- -->
 <section id="impact">
   <div class="impact-inner">
     <div class="impact-top">
@@ -301,7 +301,7 @@
         <span class="tag">The Impact</span>
         <h2>Tangible Benefits for Your Organization.</h2>
       </div>
-      <p class="lead rv d1">The measurable outcomes our platforms deliver — from day one through long-term operation.</p>
+      <p class="lead rv d1">The measurable outcomes our platforms deliver � from day one through long-term operation.</p>
     </div>
     <div class="impact-grid rv">
       <div class="imp-cell">
@@ -333,7 +333,7 @@
   </div>
 </section>
 
-<!-- ─── SECTION 7 — FINAL CTA ─── -->
+<!-- --- SECTION 7 � FINAL CTA --- -->
 <section id="cta-final">
   <div class="cta-inner rv">
     <span class="tag">Get Started</span>
@@ -431,3 +431,4 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 @endpush
+

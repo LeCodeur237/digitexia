@@ -1,6 +1,6 @@
-﻿@extends('index')
+@extends('index')
 
-@section('page_title', 'Why Us — DigiTexia')
+@section('page_title', 'Why Us � DigiTexia')
 
 @push('styles')
 <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
   <div class="ph-bg"></div><div class="ph-grid"></div>
   <div class="ph-inner">
     <div class="ph-left rv">
-      <div class="ph-breadcrumb"><a href="{{ url('/') }}">Home</a><span>›</span><span class="curr">Why Us</span></div>
+      <div class="ph-breadcrumb"><a href="{{ url('/') }}">Home</a><span>�</span><span class="curr">Why Us</span></div>
       <span class="tag">Why Choose DigiTexia</span>
       <h1>We build digital products that <em>solve real problems.</em></h1>
       <p class="lead">Less manual work. Faster decisions. Better control. DigiTexia helps teams and institutions move from friction to execution.</p>
@@ -29,7 +29,7 @@
         <div class="id-logo-wrap"><i class="ti ti-world"></i></div>
         <div>
           <div class="id-name">Digitexia Corporate</div>
-          <div class="id-sub">Technology &amp; Innovation · Pan-African Startup</div>
+          <div class="id-sub">Technology &amp; Innovation � Pan-African Startup</div>
         </div>
       </div>
       <div class="id-rows">
@@ -50,7 +50,7 @@
         <div class="id-divider"></div>
         <div class="id-row">
           <div class="id-row-label">HQ</div>
-          <div class="id-row-val">Yaoundé, Cameroon</div>
+          <div class="id-row-val">Yaound�, Cameroon</div>
         </div>
         <div class="id-divider"></div>
         <div class="id-row">
@@ -96,12 +96,12 @@
 
     <div class="reasons-grid rv">
       <div class="reason-card" style="--accent:var(--blue)">
-        <div class="reason-num" style="background:var(--blue-dim);border-color:var(--blue-bdr);color:#93C5FD">01</div>
+        <div class="reason-num" style="background:var(--blue-dim);border-color:var(--blue-bdr);color:var(--accent-fg)">01</div>
         <div class="reason-ico"><i class="ti ti-microscope"></i></div>
         <div class="reason-title">Strong technical depth</div>
         <div class="reason-desc">We design reliable software that fits the client, not the other way around.</div>
-        <div class="reason-proof" style="background:var(--blue-dim);border-color:var(--blue-bdr);color:#93C5FD">
-          <span class="reason-proof-ico">→</span>Scalable, secure, and built to evolve.
+        <div class="reason-proof" style="background:var(--blue-dim);border-color:var(--blue-bdr);color:var(--accent-fg)">
+          <span class="reason-proof-ico">?</span>Scalable, secure, and built to evolve.
         </div>
       </div>
 
@@ -111,27 +111,27 @@
         <div class="reason-title">Built for African markets</div>
         <div class="reason-desc">We design for local realities, not generic assumptions.</div>
         <div class="reason-proof" style="background:var(--green-dim);border-color:var(--green-bdr);color:var(--green)">
-          <span class="reason-proof-ico">→</span>Made for the market, ready to scale.
+          <span class="reason-proof-ico">?</span>Made for the market, ready to scale.
         </div>
       </div>
 
-      <div class="reason-card" style="--accent:#F59E0B">
-        <div class="reason-num" style="background:rgba(245,158,11,.12);border-color:rgba(245,158,11,.28);color:#FCD34D">03</div>
+      <div class="reason-card" style="--accent:var(--accent-fg)">
+        <div class="reason-num" style="background:var(--accent-soft);border-color:var(--accent-border);color:var(--accent-fg)">03</div>
         <div class="reason-ico"><i class="ti ti-chart-bar"></i></div>
         <div class="reason-title">Built for results</div>
         <div class="reason-desc">We focus on faster workflows, fewer errors, and measurable gains.</div>
-        <div class="reason-proof" style="background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.25);color:#FCD34D">
-          <span class="reason-proof-ico">→</span>Fewer errors. Better speed. Lower cost.
+        <div class="reason-proof" style="background:var(--accent-soft);border-color:var(--accent-border);color:var(--accent-fg)">
+          <span class="reason-proof-ico">?</span>Fewer errors. Better speed. Lower cost.
         </div>
       </div>
 
-      <div class="reason-card" style="--accent:#EC4899">
-        <div class="reason-num" style="background:rgba(236,72,153,.12);border-color:rgba(236,72,153,.28);color:#F9A8D4">04</div>
+      <div class="reason-card" style="--accent:var(--danger)">
+        <div class="reason-num" style="background:var(--danger-soft);border-color:var(--danger-border);color:var(--danger-fg)">04</div>
         <div class="reason-ico"><i class="ti ti-handshake"></i></div>
         <div class="reason-title">A partner, not a vendor</div>
         <div class="reason-desc">We stay after launch: support, improvements, and guidance.</div>
-        <div class="reason-proof" style="background:rgba(236,72,153,.1);border-color:rgba(236,72,153,.25);color:#F9A8D4">
-          <span class="reason-proof-ico">→</span>Support that keeps working after go-live.
+        <div class="reason-proof" style="background:var(--danger-soft);border-color:var(--danger-border);color:var(--danger-fg)">
+          <span class="reason-proof-ico">?</span>Support that keeps working after go-live.
         </div>
       </div>
     </div>
@@ -209,8 +209,8 @@
           <div style="font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem">Our Approach</div>
           <div style="font-size:.9rem;color:var(--muted-lt);line-height:1.75;margin-bottom:1.25rem">Fast delivery, clear priorities, no wasted motion.</div>
           <div style="display:flex;gap:.5rem;flex-wrap:wrap">
-            <span style="font-size:.65rem;padding:.2rem .7rem;border-radius:100px;background:var(--blue-dim);border:1px solid var(--blue-bdr);color:#93C5FD">Agile</span>
-            <span style="font-size:.65rem;padding:.2rem .7rem;border-radius:100px;background:var(--blue-dim);border:1px solid var(--blue-bdr);color:#93C5FD">Scalable</span>
+            <span style="font-size:.65rem;padding:.2rem .7rem;border-radius:100px;background:var(--blue-dim);border:1px solid var(--blue-bdr);color:var(--accent-fg)">Agile</span>
+            <span style="font-size:.65rem;padding:.2rem .7rem;border-radius:100px;background:var(--blue-dim);border:1px solid var(--blue-bdr);color:var(--accent-fg)">Scalable</span>
             <span style="font-size:.65rem;padding:.2rem .7rem;border-radius:100px;background:var(--green-dim);border:1px solid var(--green-bdr);color:var(--green)">Secure</span>
             <span style="font-size:.65rem;padding:.2rem .7rem;border-radius:100px;background:var(--green-dim);border:1px solid var(--green-bdr);color:var(--green)">Performant</span>
           </div>
@@ -249,11 +249,11 @@
         <div class="exp-card-desc">Choose the right tools and roadmap, faster.</div>
         <div class="exp-tags"><span class="exp-tag">System Architecture</span><span class="exp-tag">Digital Strategy</span><span class="exp-tag">IT Project Mgmt</span></div>
       </div>
-      <div class="exp-card" style="background:linear-gradient(135deg,rgba(18,70,240,.08),rgba(22,199,132,.04));border-color:var(--blue-bdr);display:flex;flex-direction:column;justify-content:center;text-align:center;align-items:center;gap:.75rem">
+      <div class="exp-card" style="background:linear-gradient(135deg,var(--accent-dim),var(--success-soft));border-color:var(--blue-bdr);display:flex;flex-direction:column;justify-content:center;text-align:center;align-items:center;gap:.75rem">
         <div style="font-size:2rem"><i class="ti ti-box"></i></div>
         <div class="exp-card-title">Ready-Made Products</div>
         <div class="exp-card-desc">Products ready to deploy and adapt.</div>
-        <a href="{{ url('/solutions') }}" style="font-size:.8rem;font-weight:600;color:var(--blue-lt);display:flex;align-items:center;gap:.3rem;margin-top:.25rem">View All Solutions →</a>
+        <a href="{{ url('/solutions') }}" style="font-size:.8rem;font-weight:600;color:var(--blue-lt);display:flex;align-items:center;gap:.3rem;margin-top:.25rem">View All Solutions ?</a>
       </div>
     </div>
   </div>
@@ -308,10 +308,10 @@
   <div class="cta-inner rv">
     <span class="tag">Book a Call</span>
     <h2>Want to see if DigiTexia fits your team or portfolio?</h2>
-    <p class="lead">Let’s talk about your goals, your constraints, and the fastest way to create value.</p>
+    <p class="lead">Let�s talk about your goals, your constraints, and the fastest way to create value.</p>
     <div class="cta-btns">
       <a href="{{ url('/contact-us') }}" class="btn-pri">Book a Consultation <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a href="{{ url('/solutions') }}" class="btn-sec">See the products →</a>
+      <a href="{{ url('/solutions') }}" class="btn-sec">See the products ?</a>
     </div>
   </div>
 </section>
@@ -337,4 +337,7 @@ if (navEl) {
 @endpush
 
 @endsection
+
+
+
 

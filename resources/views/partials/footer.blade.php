@@ -1,4 +1,41 @@
-﻿<footer>
+<style>
+  footer {
+    color: var(--text-main);
+    background: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+    transition: background-color .3s ease, color .3s ease, border-color .3s ease;
+  }
+
+  footer a {
+    color: var(--text-main);
+    transition: color .3s ease, opacity .3s ease;
+  }
+
+  footer a:hover {
+    color: var(--blue-lt);
+  }
+
+  footer .fbrand-bio,
+  footer .fcol ul a,
+  footer .fbot,
+  footer .muted-link,
+  footer .fc-row {
+    color: var(--text-muted);
+  }
+
+  footer .socials .soc,
+  footer .fc-ico {
+    color: var(--text-main);
+    background: var(--surface-bg);
+    border-color: var(--border-color);
+  }
+
+  footer .footer-logo {
+    filter: none;
+  }
+</style>
+
+<footer>
   <div class="footer-grid">
     <div>
       <img src="{{ asset('logo/logo-footer.png') }}" alt="DigiTexia" class="footer-logo">
@@ -37,7 +74,7 @@
       <div class="fcontact">
         <div class="fc-row"><span class="fc-ico"><i class="ti ti-mail"></i></span><a href="mailto:contact@digitexia.com">contact@digitexia.com</a></div>
         <div class="fc-row"><span class="fc-ico"><i class="ti ti-phone"></i></span>(+237) 650 94 5280</div>
-        <div class="fc-row"><span class="fc-ico"><i class="ti ti-map-pin"></i></span>Yaoundé, Cameroon</div>
+        <div class="fc-row"><span class="fc-ico"><i class="ti ti-map-pin"></i></span>Yaound�, Cameroon</div>
       </div>
     </div>
   </div>
@@ -47,4 +84,3 @@
     <span>Powered by <a href="https://groupsnowwhite.com/" class="muted-link">Snow White Group</a></span>
   </div>
 </footer>
-

@@ -1,21 +1,21 @@
 ﻿:root {
-    --blue: #1246f0;
-    --blue-lt: #2a5cf6;
-    --blue-dim: rgba(18, 70, 240, 0.14);
-    --blue-bdr: rgba(18, 70, 240, 0.28);
-    --green: #16c784;
-    --green-dim: rgba(22, 199, 132, 0.1);
-    --green-bdr: rgba(22, 199, 132, 0.25);
+    --blue: var(--accent);
+    --blue-lt: var(--accent-lt);
+    --blue-dim: var(--accent-dim);
+    --blue-bdr: var(--accent-border);
+    --green: var(--success);
+    --green-dim: var(--success-soft);
+    --green-bdr: var(--success-border);
     --gold: #f59e0b;
     --gold-dim: rgba(245, 158, 11, 0.1);
     --gold-bdr: rgba(245, 158, 11, 0.25);
-    --ink: #080c18;
-    --ink-2: #0e1422;
-    --ink-3: #161d30;
-    --white: #f2f5ff;
-    --muted: #5e6880;
-    --muted-lt: #8a94ab;
-    --bdr: rgba(255, 255, 255, 0.065);
+    --ink: var(--bg-primary);
+    --ink-2: var(--bg-secondary);
+    --ink-3: var(--bg-tertiary);
+    --white: var(--text-main);
+    --muted: var(--text-muted);
+    --muted-lt: var(--text-soft);
+    --bdr: var(--border-color);
 }
 *,
 *::before,
@@ -1291,3 +1291,5 @@ footer {
         width: 100%;
     }
 }
+
+

@@ -52,6 +52,7 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         $data = $this->validatePost($request);
+        $data['cover_image'] = $this->persistCoverImage($request, null, true);
         $data['author_id'] = Auth::id();
         $data['slug'] = $this->uniqueSlug($data['slug'] ?? $data['title']);
         $data['tags'] = $this->normalizeTags($request->input('tags'));
@@ -90,6 +91,7 @@ class BlogController extends Controller
         $this->authorizePostAccess($post);
 
         $data = $this->validatePost($request, $post->id);
+        $data['cover_image'] = $this->persistCoverImage($request, $post->cover_image, false);
         $data['slug'] = $request->filled('slug') ? $this->uniqueSlug($data['slug']) : $post->slug;
         $data['tags'] = $this->normalizeTags($request->input('tags'));
         $data['is_featured'] = $request->boolean('is_featured');
@@ -137,7 +139,8 @@ class BlogController extends Controller
             'content' => ['required', 'string'],
             'seo_title' => ['nullable', 'string', 'max:255'],
             'seo_description' => ['nullable', 'string', 'max:1000'],
-            'cover_image' => ['nullable', 'string', 'max:255'],
+            'cover_image' => ['nullable', 'string', 'max:255', 'required_without:cover_image_file'],
+            'cover_image_file' => ['nullable', 'image', 'mimes:jpg,jpeg,png,webp,avif', 'max:4096', 'required_without:cover_image'],
             'cover_image_alt' => ['nullable', 'string', 'max:255'],
             'tags' => ['nullable', 'string', 'max:255'],
             'status' => ['required', 'in:draft,pending_review,scheduled,published,archived'],
@@ -169,7 +172,30 @@ class BlogController extends Controller
             ],
         ], [
             'content.required' => 'The article body is required.',
+            'cover_image.required' => 'A cover image is required for every post.',
+            'cover_image.required_without' => 'A cover image is required for every post.',
+            'cover_image_file.image' => 'The uploaded cover image must be a valid image file.',
+            'cover_image_file.required_without' => 'A cover image is required for every post.',
         ]);
+    }
+
+    protected function persistCoverImage(Request $request, ?string $currentValue, bool $required): string
+    {
+        if ($request->hasFile('cover_image_file')) {
+            return $request->file('cover_image_file')->store('blog-covers', 'public');
+        }
+
+        $coverImage = trim((string) $request->input('cover_image'));
+
+        if ($coverImage !== '') {
+            return $coverImage;
+        }
+
+        if ($required) {
+            abort(422, 'A cover image is required for every post.');
+        }
+
+        return $currentValue ?? '';
     }
 
     protected function normalizeTags(?string $tags): array

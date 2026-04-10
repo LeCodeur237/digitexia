@@ -1,4 +1,4 @@
-html {
+﻿html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   font-family: sans-serif;
@@ -188,27 +188,27 @@ td, th {
 }
 
 .w-icon-slider-right:before {
-  content: "";
+  content: "î˜€";
 }
 
 .w-icon-slider-left:before {
-  content: "";
+  content: "î˜";
 }
 
 .w-icon-nav-menu:before {
-  content: "";
+  content: "î˜‚";
 }
 
 .w-icon-arrow-down:before, .w-icon-dropdown-toggle:before {
-  content: "";
+  content: "î˜ƒ";
 }
 
 .w-icon-file-upload-remove:before {
-  content: "";
+  content: "î¤€";
 }
 
 .w-icon-file-upload-icon:before {
-  content: "";
+  content: "î¤ƒ";
 }
 
 * {
@@ -2125,7 +2125,7 @@ textarea.w-input, textarea.w-select {
   --_typography---titles--h5: 24px;
   --_typography---titles--h6: 20px;
   --_colors-plates---transparent: transparent;
-  --_colors-plates---white: white;
+  --_colors-plates---white: var(--text-main);
   --_colors-plates---light-gray: #f6f6f9;
   --_fonts---line-height--120: 120%;
   --_typography---paragraphs--sm-body: 14px;
@@ -10554,3 +10554,5 @@ nav.sc {
     transform: none !important;
   }
 }
+
+

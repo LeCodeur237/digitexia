@@ -6,7 +6,7 @@
 <style>
   .show-shell {
     padding: 130px 5% 80px;
-    background: var(--ink);
+    background: var(--bg-primary);
   }
 
   .show-wrap {
@@ -17,27 +17,27 @@
   .show-card {
     padding: 2rem;
     border-radius: 20px;
-    border: 1px solid var(--bdr);
-    background: var(--ink-2);
+    border: 1px solid var(--border-color);
+    background: var(--card-bg);
   }
 
   .show-meta {
     display: flex;
     gap: .75rem;
     flex-wrap: wrap;
-    color: var(--muted);
+    color: var(--text-soft);
     font-size: .85rem;
     margin-bottom: 1rem;
   }
 
   .show-content {
-    color: var(--muted-lt);
+    color: var(--text-muted);
     line-height: 1.85;
   }
 
   .show-content h2,
   .show-content h3 {
-    color: var(--white);
+    color: var(--text-main);
     margin: 1.5rem 0 .75rem;
   }
 
@@ -45,8 +45,8 @@
     margin-top: 2rem;
     padding: 1.5rem;
     border-radius: 18px;
-    border: 1px solid var(--bdr);
-    background: rgba(255,255,255,.03);
+    border: 1px solid var(--border-color);
+    background: var(--surface-soft);
   }
 
   .comment-box textarea,
@@ -54,15 +54,25 @@
     width: 100%;
     padding: .9rem 1rem;
     border-radius: 12px;
-    border: 1px solid var(--bdr);
-    background: var(--ink-3);
-    color: var(--white);
+    border: 1px solid var(--border-color);
+    background: var(--input-bg);
+    color: var(--text-main);
     outline: none;
   }
 </style>
 @endpush
 
 @section('contain')
+@php
+  $coverImage = $post->cover_image
+    ? (
+      \Illuminate\Support\Str::startsWith($post->cover_image, ['http://', 'https://', '/'])
+        ? $post->cover_image
+        : asset('storage/' . $post->cover_image)
+    )
+    : null;
+@endphp
+
 <section class="show-shell">
   <div class="show-wrap">
     <div class="tag" style="margin-bottom:1rem">Blog article</div>
@@ -78,9 +88,9 @@
       <h1 style="font-family:'Clash Display',sans-serif;font-size:clamp(2rem,4vw,3.4rem);line-height:1.05;margin-bottom:1rem">{{ $post->title }}</h1>
       <p class="lead">{{ $post->excerpt }}</p>
 
-      @if (!empty($post->cover_image))
-        <div style="margin:1.5rem 0;border-radius:18px;overflow:hidden;border:1px solid var(--bdr)">
-          <img src="{{ $post->cover_image }}" alt="{{ $post->cover_image_alt ?: $post->title }}" style="width:100%;display:block">
+      @if (!empty($coverImage))
+        <div style="margin:1.5rem 0;border-radius:18px;overflow:hidden;border:1px solid var(--border-color)">
+          <img src="{{ $coverImage }}" alt="{{ $post->cover_image_alt ?: $post->title }}" style="width:100%;display:block">
         </div>
       @endif
 
@@ -111,3 +121,4 @@
   </div>
 </section>
 @endsection
+

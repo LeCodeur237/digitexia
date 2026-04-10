@@ -1,17 +1,17 @@
 ﻿:root {
-    --blue: #1246f0;
-    --blue-lt: #2a5cf6;
-    --blue-dim: rgba(18, 70, 240, 0.14);
-    --blue-bdr: rgba(18, 70, 240, 0.28);
-    --green: #16c784;
-    --ink: #080c18;
-    --ink-2: #0e1422;
-    --ink-3: #161d30;
-    --white: #f2f5ff;
-    --muted: #5e6880;
-    --muted-lt: #8a94ab;
-    --bdr: rgba(255, 255, 255, 0.065);
-    --bdr-lt: rgba(255, 255, 255, 0.035);
+    --blue: var(--accent);
+    --blue-lt: var(--accent-lt);
+    --blue-dim: var(--accent-dim);
+    --blue-bdr: var(--accent-border);
+    --green: var(--success);
+    --ink: var(--bg-primary);
+    --ink-2: var(--bg-secondary);
+    --ink-3: var(--bg-tertiary);
+    --white: var(--text-main);
+    --muted: var(--text-muted);
+    --muted-lt: var(--text-soft);
+    --bdr: var(--border-color);
+    --bdr-lt: var(--border-strong);
     --r: 12px;
 }
 
@@ -130,7 +130,7 @@ h2 {
 .lead {
     font-size: 1rem;
     font-weight: 300;
-    color: rgba(255,255,255,.78);
+    color: var(--text-muted);
     line-height: 1.75;
     max-width: 580px;
 }
@@ -247,7 +247,7 @@ nav.sc {
 #mainNav .nav-mid a {
     font-size: 0.85rem;
     font-weight: 400;
-    color: rgba(255,255,255,.78);
+    color: var(--text-muted);
     transition: color 0.2s;
 }
 #mainNav .nav-mid a:hover {
@@ -265,7 +265,7 @@ nav.sc {
     align-items: center;
     gap: 0.5rem;
     font-size: 0.8rem;
-    color: rgba(255,255,255,.78);
+    color: var(--text-muted);
     transition: color 0.2s;
 }
 .nav-tel:hover {
@@ -589,7 +589,7 @@ h1 em {
 }
 .msc-l {
     font-size: 0.56rem;
-    color: rgba(255,255,255,.72);
+    color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.07em;
     margin-bottom: 0.35rem;
@@ -616,7 +616,7 @@ h1 em {
 }
 .mkc-lbl {
     font-size: 0.6rem;
-    color: rgba(255,255,255,.72);
+    color: var(--text-muted);
     margin-bottom: 0.65rem;
     text-transform: uppercase;
     letter-spacing: 0.06em;
@@ -783,7 +783,7 @@ h1 em {
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: rgba(255,255,255,.72);
+    color: var(--text-muted);
     margin-bottom: 1.2rem;
 }
 .sev-row {
@@ -799,7 +799,7 @@ h1 em {
     display: flex;
     justify-content: space-between;
     font-size: 0.78rem;
-    color: rgba(255,255,255,.78);
+    color: var(--text-muted);
 }
 .sev-critical {
     color: #ffffff;
@@ -892,7 +892,7 @@ h1 em {
 }
 .pain-desc {
     font-size: 0.82rem;
-    color: rgba(255,255,255,.78);
+    color: var(--text-muted);
     line-height: 1.6;
 }
 .pain-bridge {
@@ -999,7 +999,7 @@ h1 em {
 }
 .solutions-note {
     font-size: 0.875rem;
-    color: rgba(255,255,255,.78);
+    color: var(--text-muted);
     line-height: 1.7;
     margin-top: 1rem;
 }
@@ -1085,7 +1085,7 @@ h1 em {
 }
 .pcard-desc {
     font-size: 0.855rem;
-    color: rgba(255,255,255,.78);
+    color: var(--text-muted);
     line-height: 1.65;
 }
 .pcard-badge {
@@ -1155,7 +1155,7 @@ h1 em {
 }
 .val-p {
     font-size: 0.85rem;
-    color: rgba(255,255,255,.78);
+    color: var(--text-muted);
     line-height: 1.65;
 }
 
@@ -1174,7 +1174,7 @@ h1 em {
     font-size: 1rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    color: rgba(255,255,255,.78);
+    color: var(--text-muted);
 }
 .wp-stat {
     background: var(--ink-2);
@@ -1193,7 +1193,7 @@ h1 em {
 }
 .wp-stat-lbl {
     font-size: 0.75rem;
-    color: rgba(255,255,255,.72);
+    color: var(--text-muted);
     margin-top: 0.15rem;
 }
 .wp-badge {
@@ -1277,7 +1277,7 @@ h1 em {
 }
 .wf-desc {
     font-size: 0.825rem;
-    color: rgba(255,255,255,.78);
+    color: var(--text-muted);
     line-height: 1.6;
 }
 
@@ -1332,7 +1332,7 @@ h1 em {
 }
 .imp-sub {
     font-size: 0.73rem;
-    color: rgba(255,255,255,.72);
+    color: var(--text-muted);
     line-height: 1.45;
 }
 
@@ -1567,7 +1567,7 @@ footer {
 .nav-dropdown > a {
     font-size: 0.85rem;
     font-weight: 400;
-    color: rgba(255,255,255,.78);
+    color: var(--text-muted);
     transition: color 0.2s;
     cursor: pointer;
     display: flex;
@@ -1634,7 +1634,7 @@ footer {
     border-radius: 8px;
     font-size: 0.825rem;
     font-weight: 400;
-    color: rgba(255,255,255,.78);
+    color: var(--text-muted);
     text-decoration: none;
     transition:
         background 0.15s,
@@ -1688,4 +1688,6 @@ footer {
         transform: none !important;
     }
 }
+
+
 

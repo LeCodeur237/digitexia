@@ -31,16 +31,16 @@
   .popular-title,
   .blog-empty h2,
   .blog-empty-card h4 {
-    color: var(--white) !important;
+    color: var(--text-main) !important;
   }
 
   .blog-empty {
     display: grid;
     gap: 1.25rem;
     padding: 2rem;
-    border: 1px solid var(--bdr);
+    border: 1px solid var(--border-color);
     border-radius: 18px;
-    background: linear-gradient(135deg, rgba(18,70,240,.08), rgba(22,199,132,.04));
+    background: linear-gradient(135deg, var(--accent-soft), var(--success-soft));
   }
 
   .blog-empty-grid {
@@ -52,8 +52,8 @@
   .blog-empty-card {
     padding: 1rem;
     border-radius: 14px;
-    border: 1px solid var(--bdr);
-    background: rgba(255,255,255,.03);
+    border: 1px solid var(--border-color);
+    background: var(--surface-soft);
   }
 
   .blog-empty-card h4 {
@@ -63,7 +63,7 @@
   }
 
   .blog-empty-card p {
-    color: var(--muted-lt);
+    color: var(--text-muted);
     font-size: .85rem;
     line-height: 1.6;
   }
@@ -133,14 +133,14 @@
         </div>
         <div class="feat-body">
           <div class="feat-meta">
-            <span class="feat-cat" style="background:var(--blue-dim);border-color:var(--blue-bdr);color:#93C5FD">{{ $featuredTag }}</span>
+            <span class="feat-cat" style="background:var(--blue-dim);border-color:var(--blue-bdr);color: var(--accent-fg)">{{ $featuredTag }}</span>
             <span class="feat-date">{{ optional($featuredPost->published_at)->format('F Y') ?? 'Coming soon' }}</span>
             <span class="feat-read">· {{ $featuredPost->reading_time_minutes ?? 5 }} min read</span>
           </div>
           <h3>{{ $featuredPost->title }}</h3>
           <p>{{ $featuredPost->excerpt ?: \Illuminate\Support\Str::limit(strip_tags($featuredPost->content), 150) }}</p>
           <div class="feat-author">
-            <div class="feat-av" style="background:rgba(18,70,240,.12)"><i class="ti ti-user"></i></div>
+            <div class="feat-av" style="background: var(--accent-soft)"><i class="ti ti-user"></i></div>
             <div>
               <div class="feat-author-name">{{ $featuredPost->author->name ?? 'DigiTexia' }}</div>
               <div class="feat-author-role">Author</div>
@@ -186,19 +186,19 @@
             @endphp
             <a href="{{ route('blog.show', $post) }}" class="post-card rv">
               <div class="post-thumb">
-                <div class="post-thumb-bg" style="background:linear-gradient(135deg,rgba(18,70,240,.12),rgba(99,102,241,.08))"></div>
+                <div class="post-thumb-bg" style="background:linear-gradient(135deg,var(--accent-soft),var(--success-soft))"></div>
                 <span style="position:relative;z-index:1"><i class="ti ti-article"></i></span>
               </div>
               <div class="post-body">
                 <div class="post-meta">
-                  <span class="post-cat" style="background:var(--blue-dim);border-color:var(--blue-bdr);color:#93C5FD">{{ $tag }}</span>
+                  <span class="post-cat" style="background:var(--blue-dim);border-color:var(--blue-bdr);color: var(--accent-fg)">{{ $tag }}</span>
                   <span class="post-date">{{ optional($post->published_at)->format('M Y') ?? 'Draft' }}</span>
                 </div>
                 <h4>{{ $post->title }}</h4>
                 <p>{{ $post->excerpt ?: \Illuminate\Support\Str::limit(strip_tags($post->content), 120) }}</p>
                 <div class="post-footer">
                   <div style="display:flex;align-items:center;gap:.5rem">
-                    <div class="post-av" style="background:rgba(22,199,132,.1)"><i class="ti ti-user"></i></div>
+                    <div class="post-av" style="background: var(--success-soft)"><i class="ti ti-user"></i></div>
                     <div>
                       <div class="post-author">{{ $post->author->name ?? 'DigiTexia' }}</div>
                       <div class="post-read">{{ $post->reading_time_minutes ?? 5 }} min read</div>
@@ -308,3 +308,5 @@ if (navEl) {
 </script>
 @endpush
 @endsection
+
+
