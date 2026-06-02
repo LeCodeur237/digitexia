@@ -5,6 +5,11 @@ use Illuminate\Http\Request;
 
 define('LARAVEL_START', microtime(true));
 
+// Ensure responses declare UTF-8 to avoid mojibake for special characters
+if (! headers_sent()) {
+    header('Content-Type: text/html; charset=utf-8');
+}
+
 // Determine if the application is in maintenance mode...
 if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php')) {
     require $maintenance;

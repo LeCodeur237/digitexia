@@ -62,7 +62,7 @@
             --green-bdr: var(--success-border);
         }
 
-        body.light-mode {
+        html.light-mode, body.light-mode {
             --bg-primary: #f5f7fb;
             --bg-secondary: #ffffff;
             --bg-tertiary: #f8fafc;
@@ -142,6 +142,7 @@
     <link rel="stylesheet" href="{{ asset('css/mystyles.css') }}?v={{ filemtime(public_path('css/mystyles.css')) }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     @stack('styles')
+    <link rel="stylesheet" href="{{ asset('css/theme-fixes.css') }}?v={{ filemtime(public_path('css/theme-fixes.css')) }}">
 </head>
 
 <body>
@@ -151,7 +152,8 @@
             const saved = localStorage.getItem(key);
             const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
             const useLight = saved ? saved === 'light' : prefersLight;
-            document.body.classList.toggle('light-mode', useLight);
+            // Run early: apply class on the root element so variables take effect before body exists
+            document.documentElement.classList.toggle('light-mode', useLight);
         })();
     </script>
     @if (trim($__env->yieldContent('fullpage')))
@@ -177,18 +179,21 @@
     <script>
         (() => {
             const key = 'digitexia-theme';
+            const root = document.documentElement;
             const body = document.body;
             const toggle = document.querySelector('[data-theme-toggle]');
             if (!toggle) return;
 
             const apply = (isLight) => {
+                root.classList.toggle('light-mode', isLight);
                 body.classList.toggle('light-mode', isLight);
                 localStorage.setItem(key, isLight ? 'light' : 'dark');
                 toggle.setAttribute('aria-pressed', String(isLight));
+                toggle.setAttribute('aria-label', isLight ? 'Switch to dark theme' : 'Switch to light theme');
             };
 
             toggle.addEventListener('click', () => {
-                apply(!body.classList.contains('light-mode'));
+                apply(!root.classList.contains('light-mode'));
             });
 
             const saved = localStorage.getItem(key);

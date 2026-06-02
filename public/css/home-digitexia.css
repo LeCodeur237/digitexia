@@ -480,6 +480,30 @@ h1 em {
     flex-wrap: wrap;
     animation: fadeUp 0.7s 0.35s ease both;
 }
+.hero-proof {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-top: 1.25rem;
+    animation: fadeUp 0.7s 0.45s ease both;
+}
+.hero-proof span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 0.75rem;
+    border: 1px solid var(--bdr);
+    border-radius: 999px;
+    background: var(--surface-soft);
+    color: var(--text-muted);
+    font-size: 0.76rem;
+    font-weight: 600;
+    line-height: 1;
+}
+.hero-proof i {
+    color: var(--green);
+    font-size: 0.9rem;
+}
 
 /* dashboard mockup */
 .hero-visual {
@@ -757,7 +781,98 @@ h1 em {
     }
 }
 
-/* ─── SECTION 2 — PROBLEM ─── */
+/* ─── SECTION 2 — NEEDS ─── */
+#needs {
+    padding: 90px 5%;
+    border-top: 1px solid var(--bdr);
+    background: var(--ink);
+}
+.needs-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+.needs-head {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 3rem;
+    align-items: end;
+    margin-bottom: 2rem;
+}
+.needs-head .lead {
+    margin-bottom: 1.25rem;
+}
+.needs-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+.need-card {
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+    border: 1px solid var(--bdr);
+    border-radius: 14px;
+    background: var(--ink-2);
+    color: var(--white);
+    transition:
+        border-color 0.2s,
+        transform 0.18s,
+        background 0.2s;
+}
+.need-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--blue-bdr);
+    background: var(--ink-3);
+}
+.need-ico {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 11px;
+    background: var(--blue-dim);
+    border: 1px solid var(--blue-bdr);
+    color: var(--blue-lt);
+    font-size: 1.15rem;
+    margin-bottom: 1.25rem;
+}
+.need-card h3 {
+    font-family: "Clash Display", sans-serif;
+    font-size: 1.02rem;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.75rem;
+    color: var(--white);
+}
+.need-card p {
+    color: var(--text-muted);
+    font-size: 0.84rem;
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+}
+.need-card strong {
+    margin-top: auto;
+    color: var(--blue-lt);
+    font-size: 0.78rem;
+}
+.need-card-primary {
+    background: linear-gradient(135deg, var(--blue), #0f766e);
+    border-color: var(--blue-lt);
+}
+.need-card-primary .need-ico {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.22);
+}
+.need-card-primary h3,
+.need-card-primary p,
+.need-card-primary strong {
+    color: #fff;
+}
+
+/* ─── SECTION 3 — PROBLEM ─── */
 #problem {
     padding: 100px 5%;
     background: var(--ink-2);
@@ -1517,6 +1632,13 @@ footer {
     .pain-grid {
         grid-template-columns: 1fr 1fr;
     }
+    .needs-head {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .needs-grid {
+        grid-template-columns: 1fr 1fr;
+    }
     .products-grid {
         grid-template-columns: 1fr 1fr;
     }
@@ -1540,8 +1662,12 @@ footer {
     .products-grid,
     .wf-steps,
     .impact-grid,
-    .pain-grid {
+    .pain-grid,
+    .needs-grid {
         grid-template-columns: 1fr;
+    }
+    .need-card {
+        min-height: auto;
     }
     .solutions-features {
         grid-template-columns: 1fr;
@@ -1688,6 +1814,4 @@ footer {
         transform: none !important;
     }
 }
-
-
 

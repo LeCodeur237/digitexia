@@ -36,7 +36,7 @@ h2{font-family:'Clash Display',sans-serif;font-size:clamp(1.9rem,3.2vw,3rem);fon
 .rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
 .rv.d4{transition-delay:.4s}.rv.d5{transition-delay:.5s}
 
-/* â”€â”€â”€ NAV â”€â”€â”€ */
+/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:500;height:72px;display:flex;align-items:center;padding:0 5%;justify-content:space-between;background:var(--card-bg);backdrop-filter:blur(22px);border-bottom:1px solid var(--bdr);transition:background .3s}
 nav.sc{background:var(--card-bg)}
 .nav-logo img{height:40px;width:auto}
@@ -63,9 +63,7 @@ nav.sc{background:var(--card-bg)}
 .dropdown-menu.is-open{opacity:1!important;visibility:visible!important;pointer-events:all!important;transform:translateX(-50%) translateY(0)!important}
 @media(max-width:900px){.nav-mid{display:none}}
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   HERO
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/* HERO */
 #hero{padding:130px 5% 80px;position:relative;overflow:hidden}
 .hero-bg{position:absolute;inset:0;pointer-events:none;
   background:radial-gradient(ellipse 60% 55% at 50% 30%,rgba(18,70,240,.1) 0%,transparent 65%),
@@ -94,9 +92,7 @@ nav.sc{background:var(--card-bg)}
 .cat-pill{font-size:.78rem;font-weight:500;padding:.5rem 1.1rem;border-radius:100px;border:1px solid var(--bdr);color:var(--muted-lt);background:var(--ink-2);cursor:pointer;transition:all .2s}
 .cat-pill:hover,.cat-pill.active{background:var(--blue-dim);border-color:var(--blue-bdr);color:var(--white)}
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   FEATURED POST
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/* FEATURED POST */
 #featured{padding:70px 5% 0}
 .feat-inner{max-width:1240px;margin:0 auto}
 .feat-card{
@@ -140,9 +136,7 @@ nav.sc{background:var(--card-bg)}
 .feat-link{margin-top:1.5rem;display:inline-flex;align-items:center;gap:.4rem;font-size:.85rem;font-weight:600;color:var(--blue-lt);transition:gap .2s}
 .feat-card:hover .feat-link{gap:.7rem}
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   BLOG GRID
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/* BLOG GRID */
 #blog-grid{padding:60px 5% 100px}
 .bg-inner{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1fr 320px;gap:3rem;align-items:start}
 
@@ -179,9 +173,7 @@ nav.sc{background:var(--card-bg)}
 /* load more */
 .load-more{display:flex;justify-content:center;margin-top:.75rem}
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   SIDEBAR
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/* SIDEBAR */
 .sidebar{display:flex;flex-direction:column;gap:1.5rem;position:sticky;top:96px}
 .sidebar-block{background:var(--ink-2);border:1px solid var(--bdr);border-radius:16px;padding:1.5rem}
 .sidebar-title{font-family:'Clash Display',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem}
@@ -212,9 +204,7 @@ nav.sc{background:var(--card-bg)}
 .nl-btn:hover{background:var(--blue-lt)}
 .nl-note{font-size:.65rem;color:var(--muted);margin-top:.6rem}
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   CTA
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/* CTA */
 #blog-cta{padding:100px 5%;background:var(--ink-2);border-top:1px solid var(--bdr);text-align:center;position:relative;overflow:hidden}
 #blog-cta::before{content:'';position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(18,70,240,.12) 0%,transparent 65%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
 .cta-inner{max-width:680px;margin:0 auto;position:relative;z-index:1}
@@ -222,7 +212,7 @@ nav.sc{background:var(--card-bg)}
 #blog-cta .lead{max-width:500px;margin:0 auto 2.5rem}
 .cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
 
-/* â”€â”€â”€ FOOTER â”€â”€â”€ */
+/* FOOTER */
 footer {
   background: var(--ink-2);
   border-top: 1px solid var(--bdr);
@@ -336,7 +326,7 @@ footer {
   gap: 1rem;
 }
 
-/* â”€â”€â”€ RESPONSIVE â”€â”€â”€ */
+/* RESPONSIVE */
 @media(max-width:1024px){
   .bg-inner{grid-template-columns:1fr}
   .sidebar{position:static}
@@ -349,5 +339,4 @@ footer {
   .footer-grid{grid-template-columns:1fr}
   .cat-pills{justify-content:flex-start;overflow-x:auto;padding-bottom:.25rem;flex-wrap:nowrap}
 }
-
 

@@ -1,6 +1,6 @@
 @extends('index')
 
-@section('page_title', 'Our Blogs — DigiTexia Technology & Innovation')
+@section('page_title', 'Blog | DigiTexia')
 
 @push('styles')
 <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -96,27 +96,27 @@
   <div class="hero-bg"></div><div class="hero-grid-ln"></div>
   <div class="hero-inner rv">
     <div class="hero-crumb">
-      <a href="{{ url('/') }}">Home</a><span>›</span>
+      <a href="{{ url('/') }}">Home</a><span>&rsaquo;</span>
       <span class="curr">Blog</span>
     </div>
-    <span class="tag" style="margin-bottom:1.25rem;display:inline-block">DigiTexia Blog</span>
-    <h1>Short reads on<br><em>digital growth.</em></h1>
-    <p class="lead">Practical insights on product, tech, and transformation for African organizations.</p>
+    <span class="tag" style="margin-bottom:1.25rem;display:inline-block">DigiTexia Insights</span>
+    <h1>Business insights for<br><em>digital operations.</em></h1>
+    <p class="lead">Practical articles on workflow digitalization, software delivery, operational control and technology decisions for growing organizations.</p>
 
     <div class="search-bar rv d1">
       <span class="search-icon"><i class="ti ti-search"></i></span>
-      <input type="text" placeholder="Search articles, topics, products..." aria-label="Search articles">
+      <input type="text" placeholder="Search digital operations, automation, products..." aria-label="Search articles">
       <kbd>Ctrl K</kbd>
     </div>
 
     <div class="cat-pills rv d2">
       <span class="cat-pill active">All</span>
       <span class="cat-pill">Digital Transformation</span>
-      <span class="cat-pill">Product Updates</span>
-      <span class="cat-pill">Africa & Tech</span>
-      <span class="cat-pill">How-to Guides</span>
+      <span class="cat-pill">Operations</span>
+      <span class="cat-pill">Software Delivery</span>
+      <span class="cat-pill">Business Automation</span>
       <span class="cat-pill">Innovation</span>
-      <span class="cat-pill">Company News</span>
+      <span class="cat-pill">Case Notes</span>
     </div>
   </div>
 </section>
@@ -135,7 +135,7 @@
           <div class="feat-meta">
             <span class="feat-cat" style="background:var(--blue-dim);border-color:var(--blue-bdr);color: var(--accent-fg)">{{ $featuredTag }}</span>
             <span class="feat-date">{{ optional($featuredPost->published_at)->format('F Y') ?? 'Coming soon' }}</span>
-            <span class="feat-read">· {{ $featuredPost->reading_time_minutes ?? 5 }} min read</span>
+            <span class="feat-read">&middot; {{ $featuredPost->reading_time_minutes ?? 5 }} min read</span>
           </div>
           <h3>{{ $featuredPost->title }}</h3>
           <p>{{ $featuredPost->excerpt ?: \Illuminate\Support\Str::limit(strip_tags($featuredPost->content), 150) }}</p>
@@ -151,21 +151,21 @@
       </div>
     @else
       <div class="blog-empty">
-        <div class="tag" style="width:max-content">No articles yet</div>
-        <h2 style="margin-bottom:.25rem">The blog is ready for its first publication.</h2>
-        <p class="lead" style="margin-bottom:0">We have the publishing pipeline in place. The first posts will appear here as soon as the editorial team begins publishing.</p>
+        <div class="tag" style="width:max-content">Insights coming soon</div>
+        <h2 style="margin-bottom:.25rem">Our business insight library is being prepared.</h2>
+        <p class="lead" style="margin-bottom:0">This space will share practical guidance for leaders who want to digitize operations, reduce manual work and choose better software decisions.</p>
         <div class="blog-empty-grid">
           <div class="blog-empty-card">
-            <h4>Editorial strategy</h4>
-            <p>Insights on product, operations, and digital transformation.</p>
+            <h4>Operational playbooks</h4>
+            <p>How to identify manual friction, prioritize workflows and improve execution.</p>
           </div>
           <div class="blog-empty-card">
-            <h4>Company updates</h4>
-            <p>Release notes, product launches, and project learnings.</p>
+            <h4>Product and case notes</h4>
+            <p>Lessons from DigiTexia products, client projects and implementation work.</p>
           </div>
           <div class="blog-empty-card">
-            <h4>Publishing workflow</h4>
-            <p>Articles will appear here once they are written, reviewed, and published.</p>
+            <h4>Decision guides</h4>
+            <p>Clear thinking for technology choices, automation and digital transformation.</p>
           </div>
         </div>
       </div>
@@ -204,7 +204,7 @@
                       <div class="post-read">{{ $post->reading_time_minutes ?? 5 }} min read</div>
                     </div>
                   </div>
-                  <span class="post-arrow">→</span>
+                  <span class="post-arrow">&rarr;</span>
                 </div>
               </div>
             </a>
@@ -218,8 +218,8 @@
       @else
         <div class="blog-empty">
           <div class="tag" style="width:max-content">Publishing coming soon</div>
-          <h2 style="margin-bottom:.25rem">There are no published articles yet.</h2>
-          <p class="lead" style="margin-bottom:0">This page is already wired to a full blog workflow. It will show published content as soon as the first article is created and approved.</p>
+          <h2 style="margin-bottom:.25rem">No articles are published yet.</h2>
+          <p class="lead" style="margin-bottom:0">The blog is ready for business insights, product notes and practical guides as soon as the first article is approved.</p>
         </div>
       @endif
     </div>
@@ -229,12 +229,12 @@
         <div class="sidebar-title">Topics</div>
         <div class="topic-list">
           <span class="topic-chip">Digital Transformation</span>
-          <span class="topic-chip">Product Updates</span>
-          <span class="topic-chip">Africa & Tech</span>
+          <span class="topic-chip">Operations</span>
+          <span class="topic-chip">Software Delivery</span>
           <span class="topic-chip">Innovation</span>
-          <span class="topic-chip">How-to Guides</span>
+          <span class="topic-chip">Automation</span>
           <span class="topic-chip">Strategy</span>
-          <span class="topic-chip">Company News</span>
+          <span class="topic-chip">Case Notes</span>
         </div>
       </div>
 
@@ -244,15 +244,15 @@
           <div class="popular-item">
             <div class="popular-num">01</div>
             <div>
-              <div class="popular-title">Practical content first</div>
-              <div class="popular-meta">Insights that help teams move faster</div>
+              <div class="popular-title">Operational content first</div>
+              <div class="popular-meta">Insights that help teams execute better</div>
             </div>
           </div>
           <div class="popular-item">
             <div class="popular-num">02</div>
             <div>
-              <div class="popular-title">Built for African realities</div>
-              <div class="popular-meta">Operational content, not filler</div>
+              <div class="popular-title">Built for real business constraints</div>
+              <div class="popular-meta">Practical content, not filler</div>
             </div>
           </div>
           <div class="popular-item">
@@ -267,8 +267,8 @@
 
       <div class="sidebar-block rv d3 newsletter-block">
         <div class="nl-ico"><i class="ti ti-pencil"></i></div>
-        <div class="nl-title">Editorial notes</div>
-        <div class="nl-desc">New articles will be published here as DigiTexia expands its knowledge base.</div>
+        <div class="nl-title">Need guidance now?</div>
+        <div class="nl-desc">Talk to DigiTexia about your operations, tools and digital priorities.</div>
         <a href="{{ url('/contact-us') }}" class="btn-pri" style="width:100%;justify-content:center">Contact DigiTexia</a>
       </div>
     </aside>
@@ -278,12 +278,12 @@
 <!-- CTA -->
 <section id="blog-cta">
   <div class="cta-inner rv">
-    <span class="tag" style="margin-bottom:1.5rem;display:inline-block">Transform Your Organization</span>
-    <h2>Ready to turn insight into action?</h2>
-    <p class="lead">Let DigiTexia help you implement the right solution.</p>
+    <span class="tag" style="margin-bottom:1.5rem;display:inline-block">From Insight To Execution</span>
+    <h2>Ready to turn operational ideas into a working system?</h2>
+    <p class="lead">Let DigiTexia help you assess your workflow and implement the right digital solution.</p>
     <div class="cta-btns">
-      <a href="{{ url('/contact-us') }}" class="btn-pri">Request a Free Consultation <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a href="{{ url('/solutions') }}" class="btn-sec">Explore Our Solutions →</a>
+      <a href="{{ url('/contact-us') }}" class="btn-pri">Request an Assessment <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="{{ url('/solutions') }}" class="btn-sec">Explore Our Solutions &rarr;</a>
     </div>
   </div>
 </section>
@@ -308,5 +308,3 @@ if (navEl) {
 </script>
 @endpush
 @endsection
-
-

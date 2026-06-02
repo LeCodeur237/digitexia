@@ -1,0 +1,205 @@
+html,
+body {
+    background: var(--bg-primary) !important;
+    color: var(--text-main) !important;
+    color-scheme: dark;
+}
+
+html.light-mode,
+html.light-mode body,
+body.light-mode {
+    color-scheme: light;
+}
+
+body {
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+main,
+section,
+footer,
+#mainNav {
+    color: var(--text-main);
+}
+
+#mainNav {
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+#mainNav .nav-panel {
+    background: transparent;
+}
+
+.theme-toggle {
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.18s ease;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-2px);
+}
+
+html.light-mode body::after {
+    opacity: 0.18;
+}
+
+html.light-mode *,
+html.light-mode *::before,
+html.light-mode *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none;
+}
+
+html.light-mode body,
+html.light-mode body :is(
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a,
+    span,
+    div,
+    li,
+    label,
+    small,
+    strong,
+    em,
+    button,
+    input,
+    textarea,
+    select
+) {
+    color: var(--text-main) !important;
+}
+
+html.light-mode :is(
+    .btn,
+    .btn-pri,
+    .btn-primary,
+    .btn-em,
+    .btn-gold,
+    .nav-btn,
+    .nl-btn,
+    .blue-digit,
+    .green-digit,
+    .red-digit,
+    .green-badge,
+    .sol-check,
+    .pc-feat-ico,
+    .reason-proof-ico,
+    .wf-num,
+    .step-num,
+    .bridge-step-num,
+    .sd-step-num,
+    .need-card-primary,
+    .id-logo-wrap,
+    .cs-logo,
+    .fs-logo,
+    .ws-check,
+    .value-ico,
+    .exp-card-ico,
+    .method-num,
+    .projects-cta
+),
+html.light-mode :is(
+    .btn,
+    .btn-pri,
+    .btn-primary,
+    .btn-em,
+    .btn-gold,
+    .nav-btn,
+    .nl-btn,
+    .blue-digit,
+    .green-digit,
+    .red-digit,
+    .green-badge,
+    .sol-check,
+    .pc-feat-ico,
+    .reason-proof-ico,
+    .wf-num,
+    .step-num,
+    .bridge-step-num,
+    .sd-step-num,
+    .need-card-primary,
+    .id-logo-wrap,
+    .cs-logo,
+    .fs-logo,
+    .ws-check,
+    .value-ico,
+    .exp-card-ico,
+    .method-num,
+    .projects-cta
+) * {
+    color: var(--on-accent) !important;
+}
+
+html.light-mode :is(.btn-sec, .btn-outline, .tag, .id-badge, .exp-tag) {
+    color: var(--text-main) !important;
+}
+
+html.light-mode .btn-sec:hover {
+    border-color: var(--border-strong);
+    background: var(--surface-strong);
+}
+
+html.light-mode :is(
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .hero-left,
+    .mkc-lbl,
+    .section-title,
+    .feat-title,
+    .post-title,
+    .aud-title,
+    .pc-title,
+    .ws-title,
+    .sol-title,
+    .pain-title,
+    .reason-title,
+    .team-name
+) {
+    color: var(--text-main);
+}
+
+html.light-mode :is(
+    p,
+    li,
+    .lead,
+    .body-text,
+    .hero-sub,
+    .msc-l,
+    .feat-excerpt,
+    .post-excerpt,
+    .aud-desc,
+    .pc-desc,
+    .ws-desc,
+    .sol-sub,
+    .pain-desc,
+    .reason-copy,
+    .team-role
+) {
+    color: var(--text-muted);
+}
+
+html.light-mode :is(.final-cta, #cta-final, #sol-cta, .cta-section, .cta-inner) :is(h1, h2, h3, p, a, span) {
+    color: inherit;
+}
+
+html.light-mode :is(.mockup, .card, .reason-card, .post-card, .feat-card, .partner-card, .team-card) {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+}

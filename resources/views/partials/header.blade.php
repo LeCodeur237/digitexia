@@ -10,8 +10,8 @@
     $isAboutPage = request()->is('about-us');
     $isServicesPage = request()->is('services') || request()->is('services-details');
     $isProjectsPage = request()->is('projects') || request()->is('project-details');
-    $isCarriersPage = request()->is('carriers');
-    $isSaasHeaderPage = $isHomePage || $isProblemPage || $isSolutionsPage || $isWhyUsPage || $isTeamPage || $isPartnersPage || $isBlogPage || $isContactPage;
+    $isCareersPage = request()->is('careers') || request()->is('carriers');
+    $isSaasHeaderPage = $isHomePage || $isProblemPage || $isSolutionsPage || $isWhyUsPage || $isTeamPage || $isPartnersPage || $isBlogPage || $isContactPage || $isProjectsPage;
 
     $currentPageLabel = 'Home';
     $currentPageUrl = '/';
@@ -22,11 +22,11 @@
         $currentPageLabel = 'Services';
         $currentPageUrl = '/services';
     } elseif ($isProjectsPage) {
-        $currentPageLabel = 'Products';
+        $currentPageLabel = 'Projects';
         $currentPageUrl = '/projects';
-    } elseif ($isCarriersPage) {
+    } elseif ($isCareersPage) {
         $currentPageLabel = 'Careers';
-        $currentPageUrl = '/carriers';
+        $currentPageUrl = '/careers';
     } elseif ($isProblemPage) {
         $currentPageLabel = 'Problem';
         $currentPageUrl = '/the-problem';
@@ -88,7 +88,28 @@
     #mainNav .dropdown-menu {
         background: var(--card-bg);
         border: 1px solid var(--border-color);
+        backdrop-filter: blur(20px);
         box-shadow: var(--shadow-lg);
+        top: calc(100% + 6px);
+        transform: translateX(-50%) translateY(0);
+    }
+
+    #mainNav .nav-dropdown:hover .dropdown-menu,
+    #mainNav .nav-dropdown:focus-within .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    #mainNav .dropdown-menu::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -10px;
+        height: 10px;
+        background: transparent;
     }
 
     #mainNav .dropdown-item {
@@ -144,6 +165,7 @@
             <li><a href="/" class="{{ $isHomePage ? 'active' : '' }}">Home</a></li>
             <li><a href="/the-problem" class="{{ $isProblemPage ? 'active' : '' }}">The Problem</a></li>
             <li><a href="/solutions" class="{{ $isSolutionsPage ? 'active' : '' }}">Solutions</a></li>
+            <li><a href="/projects" class="{{ $isProjectsPage ? 'active' : '' }}">Projects</a></li>
             <li><a href="/why-us" class="{{ $isWhyUsPage ? 'active' : '' }}">Why Us</a></li>
             <li class="nav-dropdown">
                 <a href="#" class="{{ ($isTeamPage || $isPartnersPage || $isBlogPage || $isContactPage) ? 'active' : '' }}">
@@ -158,22 +180,22 @@
                         class="dropdown-item {{ $isTeamPage ? 'active' : '' }}"><span class="dropdown-item-ico">TM</span>
                         Teams</a> --}}
                     <a href="/our-partners"
-                        class="dropdown-item {{ $isPartnersPage ? 'active' : '' }}"><span class="dropdown-item-ico">PR</span>
+                        class="dropdown-item {{ $isPartnersPage ? 'active' : '' }}"><span class="dropdown-item-ico"><i class="ti ti-users"></i></span>
                         Partners</a>
                     <a href="/life-at-digi"
-                        class="dropdown-item {{ $isBlogPage ? 'active' : '' }}"><span class="dropdown-item-ico">BL</span>
+                        class="dropdown-item {{ $isBlogPage ? 'active' : '' }}"><span class="dropdown-item-ico"><i class="ti ti-news"></i></span>
                         Blog</a>
                     <a href="/contact-us"
-                        class="dropdown-item {{ $isContactPage ? 'active' : '' }}"><span class="dropdown-item-ico">CT</span>
+                        class="dropdown-item {{ $isContactPage ? 'active' : '' }}"><span class="dropdown-item-ico"><i class="ti ti-mail"></i></span>
                         Contact</a>
                 </div>
             </li>
         </ul>
         <div class="nav-right">
             @if ($isHomePage)
-                <a href="#cta-final" class="nav-btn">Request a Demo</a>
+                <a href="#cta-final" class="nav-btn">Free Diagnostic</a>
             @else
-                <a href="/contact-us" class="nav-btn">Request a Demo</a>
+                <a href="/contact-us" class="nav-btn">Free Diagnostic</a>
             @endif
         </div>
     </div>

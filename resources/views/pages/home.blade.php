@@ -8,7 +8,7 @@
 @section('fullpage')
 @include('partials.header')
 
-<!-- --- SECTION 1 — HERO --- -->
+<!-- --- SECTION 1 â€” HERO --- -->
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
@@ -16,17 +16,24 @@
   <div class="hero-inner">
     <!-- Left -->
     <div class="hero-left">
+      <div class="hero-badge"><span class="bdot"></span> Free Operational Assessment</div>
 
-      <h1>Accelerate Your Business<br><em>Digital Transformation.</em></h1>
+      <h1>Transform manual operations into scalable digital systems.</h1>
 
-      <p class="hero-sub">DigiTexia designs and builds intelligent digital solutions that empower companies to automate processes, enhance internal management, and optimize team performance. Transition from manual workflows to scalable digital platforms that reduce operational errors and provide total visibility.</p>
+      <p class="hero-sub">DigiTexia helps organizations replace spreadsheets, paper-based approvals and scattered follow-ups with secure software, executive dashboards and automated workflows built for measurable operational performance.</p>
 
       <div class="hero-btns">
         <a href="#cta-final" class="btn-pri">
-          Request a Demo
+          Request a Free Assessment
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a href="#solutions" class="btn-sec">Explore Our Solutions</a>
+        <a href="#needs" class="btn-sec">Explore Business Use Cases</a>
+      </div>
+
+      <div class="hero-proof">
+        <span><i class="ti ti-check"></i> Process audit</span>
+        <span><i class="ti ti-check"></i> Implementation roadmap</span>
+        <span><i class="ti ti-check"></i> Product or custom build recommendation</span>
       </div>
     </div>
 
@@ -35,7 +42,7 @@
       <div class="mockup">
         <div class="mkbar">
           <div class="dot dr"></div><div class="dot dy"></div><div class="dot dg"></div>
-          <span class="mktitle">DigiTexia · Operations Dashboard</span>
+          <span class="mktitle">DigiTexia Â· Operations Dashboard</span>
         </div>
         <div class="mkbody">
           <div class="mksidebar">
@@ -48,13 +55,13 @@
           </div>
           <div class="mkcontent">
             <div class="mk-stats">
-              <div class="msc"><div class="msc-l">Tasks Done</div><div class="msc-v">2,847</div><div class="msc-g">? 18.2%</div></div>
-              <div class="msc"><div class="msc-l">Efficiency</div><div class="msc-v">94%</div><div class="msc-g">? 6.4%</div></div>
-              <div class="msc"><div class="msc-l">Errors</div><div class="msc-v">0.3%</div><div class="msc-g msc-g-blue">? 91%</div></div>
-              <div class="msc"><div class="msc-l">Active Users</div><div class="msc-v">312</div><div class="msc-g">? 24%</div></div>
+              <div class="msc"><div class="msc-l">Tasks Done</div><div class="msc-v">2,847</div><div class="msc-g">+18.2%</div></div>
+              <div class="msc"><div class="msc-l">Efficiency</div><div class="msc-v">94%</div><div class="msc-g">+6.4%</div></div>
+              <div class="msc"><div class="msc-l">Errors</div><div class="msc-v">0.3%</div><div class="msc-g msc-g-blue">-91%</div></div>
+              <div class="msc"><div class="msc-l">Active Users</div><div class="msc-v">312</div><div class="msc-g">+24%</div></div>
             </div>
             <div class="mk-chart">
-              <div class="mkc-lbl">Operational Performance — Last 12 Weeks</div>
+              <div class="mkc-lbl">Operational Performance â€” Last 12 Weeks</div>
               <div class="bars">
                 <div class="bar b0"></div><div class="bar b1"></div>
                 <div class="bar b2"></div><div class="bar b3"></div>
@@ -71,14 +78,52 @@
   </div>
 </section>
 
-<!-- --- SECTION 2 — THE PROBLEM --- -->
+<!-- --- SECTION 2 â€” NEEDS --- -->
+<section id="needs">
+  <div class="needs-inner">
+    <div class="needs-head rv">
+      <span class="tag">Business Needs</span>
+      <h2>Identify the workflow with the highest impact.</h2>
+      <p class="lead">Start with the operational challenge closest to your business. We recommend a ready-to-deploy DigiTexia product when it fits, or design a custom platform when your process requires it.</p>
+    </div>
+
+    <div class="needs-grid rv d1">
+      <a href="#solutions" class="need-card">
+        <span class="need-ico"><i class="ti ti-package"></i></span>
+        <h3>Inventory, internal requests and approvals</h3>
+        <p>Centralize resource tracking, validation workflows, delivery follow-up and accountability across teams or branches.</p>
+        <strong>Explore InventoryPro</strong>
+      </a>
+      <a href="#solutions" class="need-card">
+        <span class="need-ico"><i class="ti ti-chart-bar"></i></span>
+        <h3>Tasks, performance and team execution</h3>
+        <p>Assign work, monitor KPIs, reduce execution delays and give managers real-time visibility over team performance.</p>
+        <strong>Explore Perfomia</strong>
+      </a>
+      <a href="#solutions" class="need-card">
+        <span class="need-ico"><i class="ti ti-users"></i></span>
+        <h3>Services, field agents and providers</h3>
+        <p>Manage customer requests, verified providers, bookings and operational follow-up from a structured platform.</p>
+        <strong>Explore FlexiCare</strong>
+      </a>
+      <a href="#cta-final" class="need-card need-card-primary">
+        <span class="need-ico"><i class="ti ti-code"></i></span>
+        <h3>A business-specific workflow</h3>
+        <p>When your process is unique, we map your requirements and build a platform aligned with your operational model.</p>
+        <strong>Request an assessment</strong>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- --- SECTION 3 â€” THE PROBLEM --- -->
 <section id="problem">
   <div class="wrap">
     <div class="problem-intro">
       <div class="rv">
         <span class="tag">The Problem</span>
-        <h2>Why companies lose time and revenue with fragmented systems.</h2>
-        <p class="lead">Many organizations still manage internal operations using disconnected tools like Excel, email threads, or paper documents. As businesses grow, these limitations become a critical bottleneck for productivity, accuracy, and growth.</p>
+        <h2>The real cost is not software. It is operational inefficiency.</h2>
+        <p class="lead">When information is fragmented, approvals are manual and reporting arrives late, teams lose time, managers lose visibility and decisions slow down. DigiTexia helps you consolidate operations into one controlled digital environment.</p>
       </div>
       <div class="problem-severity rv d1">
         <div class="problem-severity-title">Impact Severity</div>
@@ -133,28 +178,24 @@
       </article>
       <article class="pain-card pain-bridge rv d3">
         <div class="pain-bridge-icon"><i class="ti ti-link"></i></div>
-        <h3 class="pain-title">DigiTexia bridges all these gaps</h3>
-        <p class="pain-desc">We centralize and automate your core operations, turning scattered tools into one intelligent platform.</p>
-        <a href="#solutions" class="btn-pri pain-bridge-btn">Explore Solutions</a>
+        <h3 class="pain-title">Need clarity before investing?</h3>
+        <p class="pain-desc">Start with an operational assessment. We identify the highest-impact workflow and recommend the most efficient digital path.</p>
+        <a href="#cta-final" class="btn-pri pain-bridge-btn">Request an Assessment</a>
       </article>
     </div>
-
-    <div class="bridge rv">
-      <strong>DigiTexia bridges these gaps</strong> by centralizing and automating your core operations, turning scattered tools into one intelligent, connected platform.
-      </div>
   </div>
 </section>
 
-<!-- --- SECTION 3 — SOLUTIONS --- -->
+<!-- --- SECTION 4 â€” SOLUTIONS --- -->
 <section id="solutions">
   <div class="sol-inner">
     <div class="sol-head rv" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 4rem; flex-wrap: wrap; margin-bottom: 3rem;">
       <div style="flex: 1.2; min-width: 300px;">
-        <span class="tag">Nos solutions</span>
-        <h2 style="margin-bottom: 0;">Une architecture numérique pour chaque pilier de votre entreprise.</h2>
+        <span class="tag">Solutions</span>
+        <h2 style="margin-bottom: 0;">Digital products and custom platforms for core operations.</h2>
       </div>
       <div style="flex: 1; min-width: 300px;">
-        <p class="lead lead-sm" style="margin-bottom: 0.5rem;">Nous avons conçu un écosystème de produits intelligents pour remplacer vos processus manuels par une efficacité automatisée.</p>
+        <p class="lead lead-sm" style="margin-bottom: 0.5rem;">Deploy a proven product when it matches your needs, or build a tailored platform when your operational model requires it.</p>
       </div>
     </div>
 
@@ -162,77 +203,77 @@
       <!-- Card 1: FlexiCare context -->
       <article class="pain-card">
         <div class="pain-card-head"><span class="pain-ico" style="color: var(--blue-lt);"><i class="ti ti-users"></i></span></div>
-        <h3 class="pain-title">Services & Main-d'œuvre</h3>
-        <p class="pain-desc">Matching intelligent et gestion des prestataires de services domestiques avec vérification de profil intégrée.</p>
+        <h3 class="pain-title">FlexiCare</h3>
+        <p class="pain-desc">A service and workforce platform for provider verification, booking management and customer follow-up.</p>
         <div class="solutions-bullets" style="margin-top: 1rem; border-top: 1px solid var(--bg-tertiary); padding-top: 1rem;">
-          <div class="solutions-bullet"><i class="ti ti-check"></i> Booking en temps réel</div>
-          <div class="solutions-bullet"><i class="ti ti-check"></i> Notation & Fiabilité</div>
+          <div class="solutions-bullet"><i class="ti ti-check"></i> Real-time booking</div>
+          <div class="solutions-bullet"><i class="ti ti-check"></i> Ratings and reliability</div>
         </div>
       </article>
 
       <!-- Card 2: Inventory context -->
       <article class="pain-card">
         <div class="pain-card-head"><span class="pain-ico" style="color: var(--blue-lt);"><i class="ti ti-package"></i></span></div>
-        <h3 class="pain-title">Stocks & Ressources</h3>
-        <p class="pain-desc">Contrôle rigoureux des inventaires multi-sites, gestion des demandes internes et alertes de stock bas.</p>
+        <h3 class="pain-title">InventoryPro</h3>
+        <p class="pain-desc">An inventory and internal request platform for organizations that need validation, visibility and traceability.</p>
         <div class="solutions-bullets" style="margin-top: 1rem; border-top: 1px solid var(--bg-tertiary); padding-top: 1rem;">
-          <div class="solutions-bullet"><i class="ti ti-check"></i> Traçabilité totale</div>
-          <div class="solutions-bullet"><i class="ti ti-check"></i> Analytics de consommation</div>
+          <div class="solutions-bullet"><i class="ti ti-check"></i> Full traceability</div>
+          <div class="solutions-bullet"><i class="ti ti-check"></i> Consumption analytics</div>
         </div>
       </article>
 
       <!-- Card 3: Performance context -->
       <article class="pain-card">
         <div class="pain-card-head"><span class="pain-ico" style="color: var(--orange);"><i class="ti ti-chart-bar"></i></span></div>
-        <h3 class="pain-title">Performance & RH</h3>
-        <p class="pain-desc">Suivi des KPIs, délégation de tâches et gestion des présences pour une productivité d'équipe optimale.</p>
+        <h3 class="pain-title">Perfomia</h3>
+        <p class="pain-desc">A performance and task management platform for leaders who need structured execution, follow-up and reporting.</p>
         <div class="solutions-bullets" style="margin-top: 1rem; border-top: 1px solid var(--bg-tertiary); padding-top: 1rem;">
-          <div class="solutions-bullet"><i class="ti ti-check"></i> Évaluations objectives</div>
-          <div class="solutions-bullet"><i class="ti ti-check"></i> Tableaux de bord live</div>
+          <div class="solutions-bullet"><i class="ti ti-check"></i> Objective evaluations</div>
+          <div class="solutions-bullet"><i class="ti ti-check"></i> Live dashboards</div>
         </div>
       </article>
     </div>
 
     <div class="sol-cta-row rv">
-      <a href="/solutions" class="btn-sec">Découvrir toutes nos solutions</a>
+      <a href="/solutions" class="btn-sec">View all solutions</a>
     </div>
   </div>
 </section>
 
-<!-- --- SECTION 4 — WHY CHOOSE DIGITEXIA --- -->
+<!-- --- SECTION 5 â€” WHY CHOOSE DIGITEXIA --- -->
 <section id="why">
   <div class="why-inner wrap">
     <!-- Values -->
     <div class="rv">
       <span class="tag">Why Choose DigiTexia</span>
-      <h2>Expertise Dedicated to Organizational Growth.</h2>
+      <h2>Built around your operating model.</h2>
       <div class="value-list value-list-spaced">
         <div class="val-item">
           <div class="val-num">01</div>
           <div>
-            <div class="val-h">Market-Specific Solutions</div>
-            <p class="val-p">We build platforms specifically tailored to the unique operational challenges of the African business landscape.</p>
+            <div class="val-h">Workflow-first approach</div>
+            <p class="val-p">We analyze how your teams operate before recommending a product or custom platform.</p>
           </div>
         </div>
         <div class="val-item">
           <div class="val-num">02</div>
           <div>
-            <div class="val-h">Simplicity & Efficiency</div>
-            <p class="val-p">User interfaces designed to be intuitive, ensuring high adoption rates across all departments.</p>
+            <div class="val-h">User adoption by design</div>
+            <p class="val-p">Interfaces are designed for daily operational users, helping teams adopt the platform quickly.</p>
           </div>
         </div>
         <div class="val-item">
           <div class="val-num">03</div>
           <div>
-            <div class="val-h">Custom Development</div>
-            <p class="val-p">We don't just provide software; we adapt our technology to fit your specific organizational DNA.</p>
+            <div class="val-h">Product speed, custom precision</div>
+            <p class="val-p">We use existing products where they accelerate delivery and customize only where it creates business value.</p>
           </div>
         </div>
         <div class="val-item">
           <div class="val-num">04</div>
           <div>
-            <div class="val-h">Dedicated Support</div>
-            <p class="val-p">Comprehensive guidance from deployment through long-term maintenance.</p>
+            <div class="val-h">Implementation and support</div>
+            <p class="val-p">Deployment, training and continuous support are integrated into the delivery process.</p>
           </div>
         </div>
       </div>
@@ -243,7 +284,7 @@
       <div class="wp-title">DigiTexia by the numbers</div>
       <div class="wp-stat">
         <div><div class="wp-stat-val">10+</div><div class="wp-stat-lbl">Digital Solutions Delivered</div></div>
-        <span class="wp-badge green-badge">? Growing</span>
+        <span class="wp-badge green-badge">Growing</span>
       </div>
       <div class="wp-stat">
         <div><div class="wp-stat-val">5+</div><div class="wp-stat-lbl">Years of Combined Experience</div></div>
@@ -261,47 +302,47 @@
   </div>
 </section>
 
-<!-- --- SECTION 5 — WORKFLOW --- -->
+<!-- --- SECTION 6 â€” WORKFLOW --- -->
 <section id="workflow">
   <div class="wf-inner">
     <div class="rv">
       <span class="tag">Our Workflow</span>
-      <h2>A Structured Path to Performance.</h2>
+      <h2>From process assessment to operational deployment.</h2>
     </div>
     <div class="wf-steps">
       <div class="wf-card rv d1">
         <div class="wf-num">01</div>
         <div class="wf-title">Needs Analysis</div>
-        <div class="wf-desc">We audit your existing processes to identify bottlenecks and digitization opportunities.</div>
+        <div class="wf-desc">We identify the workflow creating the highest operational cost, delay or risk.</div>
       </div>
       <div class="wf-card rv d2">
         <div class="wf-num">02</div>
         <div class="wf-title">Solution Design</div>
-        <div class="wf-desc">We architect a software framework specifically mapped to your business goals.</div>
+        <div class="wf-desc">We define the roles, data flows, approval rules and user interfaces required for adoption.</div>
       </div>
       <div class="wf-card rv d3">
         <div class="wf-num">03</div>
         <div class="wf-title">Development & Testing</div>
-        <div class="wf-desc">Our engineering team builds your solution with a focus on security, speed, and reliability.</div>
+        <div class="wf-desc">We build, test and validate the platform with your team before operational launch.</div>
       </div>
       <div class="wf-card rv d4">
         <div class="wf-num">04</div>
         <div class="wf-title">Deployment & Training</div>
-        <div class="wf-desc">We manage the "Go-Live" phase and train your teams to ensure a seamless transition.</div>
+        <div class="wf-desc">We train users, support adoption and optimize the platform after deployment.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- --- SECTION 6 — IMPACT --- -->
+<!-- --- SECTION 7 â€” IMPACT --- -->
 <section id="impact">
   <div class="impact-inner">
     <div class="impact-top">
       <div class="rv">
         <span class="tag">The Impact</span>
-        <h2>Tangible Benefits for Your Organization.</h2>
+        <h2>Operational outcomes your leadership can measure.</h2>
       </div>
-      <p class="lead rv d1">The measurable outcomes our platforms deliver — from day one through long-term operation.</p>
+      <p class="lead rv d1">Fewer manual checks, clearer accountability, faster reporting and stronger decision-making visibility.</p>
     </div>
     <div class="impact-grid rv">
       <div class="imp-cell">
@@ -310,12 +351,12 @@
         <div class="imp-sub">Eliminate repetitive manual processes entirely</div>
       </div>
       <div class="imp-cell">
-        <span class="imp-emoji"><i class="ti ti-bullseye"></i></span>
+        <span class="imp-emoji"><i class="ti ti-target"></i></span>
         <div class="imp-title">Significant Reduction in Operational Errors</div>
         <div class="imp-sub">Near-zero human errors in day-to-day operations</div>
       </div>
       <div class="imp-cell">
-        <span class="imp-emoji"><i class="ti ti-handshake"></i></span>
+        <span class="imp-emoji"><i class="ti ti-users"></i></span>
         <div class="imp-title">Enhanced Cross-Departmental Collaboration</div>
         <div class="imp-sub">Seamless information flow between all teams</div>
       </div>
@@ -333,18 +374,18 @@
   </div>
 </section>
 
-<!-- --- SECTION 7 — FINAL CTA --- -->
+<!-- --- SECTION 8 â€” FINAL CTA --- -->
 <section id="cta-final">
   <div class="cta-inner rv">
-    <span class="tag">Get Started</span>
-    <h2>Transform Your Business<br>Management Today.</h2>
-    <p class="lead">Top-performing companies leverage digital tools to stay competitive. Discover how DigiTexia can modernize your operations.</p>
+    <span class="tag">Free Operational Assessment</span>
+    <h2>Share your current process.<br>We will identify the first workflow to digitize.</h2>
+    <p class="lead">In a focused assessment, we clarify bottlenecks, identify the workflow with the strongest business impact and recommend either a DigiTexia product or a custom implementation.</p>
     <div class="cta-btns">
       <a href="tel:+237650945280" class="btn-pri">
-        Request a Demo
+        Call (+237) 650 945 280
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
-      <a href="/contact-us" class="btn-sec">Contact Our Experts</a>
+      <a href="/contact-us" class="btn-sec">Request a Consultation</a>
     </div>
   </div>
 </section>
@@ -431,4 +472,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 @endpush
+
+
 

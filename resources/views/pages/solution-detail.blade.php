@@ -278,7 +278,7 @@
         <p class="sd-lead">{{ $solution['summary'] }}</p>
         <div class="sd-ctas">
           <a href="{{ url('/contact-us') }}" class="btn-pri">
-            Request a Demo
+            Request an Assessment
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
           <a href="{{ url('/solutions') }}" class="btn-sec">Back to Solutions</a>
@@ -315,11 +315,11 @@
   </div>
   <div class="sd-card">
     <h3>Why teams adopt it</h3>
-    <p>It replaces fragmented files, manual approvals, and slow follow-up with one clean workflow that teams can actually keep up with.</p>
+    <p>It replaces fragmented files, manual approvals and slow follow-up with a structured workflow that improves control and day-to-day execution.</p>
   </div>
   <div class="sd-card">
     <h3>How it helps</h3>
-    <p>Less rework, less guessing, less waiting. More traceability, more visibility, and a process your team can trust every day.</p>
+    <p>Less rework, less uncertainty and less waiting. More traceability, more visibility and a process your team can rely on every day.</p>
   </div>
 </section>
 
@@ -327,7 +327,7 @@
   <div class="sd-section-inner">
     <div class="sd-section-title rv">
       <span class="tag">Key Features</span>
-      <h2>Built around the work your team actually does.</h2>
+      <h2>Built around the operational workflow your team needs to control.</h2>
     </div>
     <div class="sd-feature-list rv d1">
       @foreach ($solution['features'] as $feature)
@@ -335,7 +335,7 @@
           <div class="sd-feature-ico"><i class="ti ti-check"></i></div>
           <div>
             <div class="sd-feature-title">{{ $feature }}</div>
-            <div class="sd-feature-desc">Designed to reduce friction, speed up decisions, and keep information moving in one trusted place.</div>
+            <div class="sd-feature-desc">Designed to reduce friction, accelerate decisions and keep operational information in one trusted environment.</div>
           </div>
         </div>
       @endforeach
@@ -347,14 +347,14 @@
   <div class="sd-section-inner">
     <div class="sd-section-title rv">
       <span class="tag">How It Works</span>
-      <h2>Simple workflow, less manual effort.</h2>
+      <h2>Structured workflow, less manual effort.</h2>
     </div>
     <div class="sd-steps rv d1">
       @foreach ($solution['workflow'] as $index => $step)
         <div class="sd-step">
           <div class="sd-step-num">{{ str_pad((string) ($index + 1), 2, '0', STR_PAD_LEFT) }}</div>
           <div class="sd-step-title">{{ $step }}</div>
-          <div class="sd-step-desc">This step is built to make the process predictable, visible, and much easier to manage across teams.</div>
+          <div class="sd-step-desc">This step is designed to make execution predictable, visible and easier to manage across teams.</div>
         </div>
       @endforeach
     </div>
@@ -363,12 +363,12 @@
 
 <section class="sd-cta">
   <div class="sd-cta-inner rv">
-    <span class="tag">Get Started</span>
-    <h2>Want this solution tailored to your organization?</h2>
-    <p class="lead">We can adapt the platform to your context, your teams, and your workflow without starting from zero.</p>
+    <span class="tag">Free Operational Assessment</span>
+    <h2>Want this solution aligned with your organization?</h2>
+    <p class="lead">We can assess your workflow and adapt the platform to your operating model, teams and priorities without starting from zero.</p>
     <div class="cta-btns">
       <a href="{{ url('/contact-us') }}" class="btn-pri">
-        Request a Free Consultation
+        Request an Assessment
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
       <a href="{{ url('/solutions') }}" class="btn-sec">View All Solutions</a>

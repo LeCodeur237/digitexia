@@ -1,6 +1,6 @@
 @extends('index')
 
-@section('page_title', 'Solutions � DigiTexia')
+@section('page_title', 'Solutions | DigiTexia')
 
 @push('styles')
 <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -18,30 +18,30 @@
       <span class="curr">Our Solutions</span>
     </div>
 
-    <span class="tag">Our Digital Solutions</span>
-    <h1>Digital tools that help teams<br><em>work faster and sell better.</em></h1>
-    <p class="lead">Four focused products for organizations that need clearer operations, better visibility, and a smoother experience for users, staff, and partners.</p>
+    <span class="tag">Digital Operations Suite</span>
+    <h1>Deploy the right platform for the workflow<br><em>that limits your business performance.</em></h1>
+    <p class="lead">DigiTexia solutions help organizations digitize critical operations, reduce manual follow-up and give leadership the visibility needed to control execution at scale.</p>
 
     <div class="ph-btns">
       <a href="#flexicare" class="btn-pri">
-        Explore Products
+        Explore Business Solutions
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
-      <a href="{{ url('/contact-us') }}" class="btn-sec">Request a Demo</a>
+      <a href="{{ url('/contact-us') }}" class="btn-sec">Request an Assessment</a>
     </div>
 
     <div class="proof-strip">
       <div class="proof-item">
-        <strong>4 products</strong>
-        <span>One ecosystem, built for different operational needs.</span>
+        <strong>4 business platforms</strong>
+        <span>Focused products for inventory, performance, services and healthcare workflows.</span>
       </div>
       <div class="proof-item">
-        <strong>Partner ready</strong>
-        <span>Designed to support demos, rollout, and long-term collaboration.</span>
+        <strong>Implementation ready</strong>
+        <span>Designed for rollout, training, user adoption and continuous support.</span>
       </div>
       <div class="proof-item">
-        <strong>Clear outcomes</strong>
-        <span>Less manual work, more control, and better visibility from day one.</span>
+        <strong>Measurable outcomes</strong>
+        <span>Less manual work, stronger control and better management visibility.</span>
       </div>
     </div>
 
@@ -55,66 +55,108 @@
 </section>
 
 <section id="overview">
-  <div class="ov-inner">
-    <div class="ov-grid rv">
-      <div class="ov-card span2" style="--accent-grad:linear-gradient(90deg,var(--blue-lt),transparent);border-color:var(--accent-border)">
-        <div class="ov-card-badge" style="background:var(--accent-soft);border:1px solid var(--accent-border);color:var(--accent-fg)"><i class="ti ti-heart-handshake"></i> Care Services Platform</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center">
-          <div>
-            <div class="ov-card-ico"><i class="ti ti-heart-handshake"></i></div>
-            <div class="ov-card-name">FlexiCare</div>
-            <div class="ov-card-desc">A smart matching platform for vetted domestic help and childcare, with booking and verification built in.</div>
-            <div class="ov-card-features">
-              <span class="feat-chip">Smart Matching</span><span class="feat-chip">Profile Verification</span><span class="feat-chip">Scheduling</span><span class="feat-chip">Ratings</span><span class="feat-chip">Real-Time Booking</span>
-            </div>
-          </div>
-          <div style="background:var(--bg-tertiary);border:1px solid var(--accent-border);border-radius:12px;padding:1.25rem;display:flex;flex-direction:column;gap:.65rem">
-            <div style="font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--accent-fg);margin-bottom:.25rem">Live Matching Feed</div>
-            <div class="pv-row"><div class="pv-row-ico" style="background:var(--accent-soft)"><i class="ti ti-scan"></i></div><div><div class="pv-row-title">Amina K. &mdash; Cook</div><div class="pv-row-sub">4.9 &bull; 3km away &bull; Available now</div></div><div class="pv-row-tag" style="background:var(--success-soft);color:var(--green);border:1px solid var(--success-border)">Match</div></div>
-            <div class="pv-row"><div class="pv-row-ico" style="background:var(--accent-soft)"><i class="ti ti-baby-carriage"></i></div><div><div class="pv-row-title">Marie T. &mdash; Childcare</div><div class="pv-row-sub">4.8 &bull; 1.2km away &bull; Available now</div></div><div class="pv-row-tag" style="background:var(--success-soft);color:var(--green);border:1px solid var(--success-border)">Match</div></div>
-            <div class="pv-row"><div class="pv-row-ico" style="background:var(--accent-soft)"><i class="ti ti-broom"></i></div><div><div class="pv-row-title">Paul M. &mdash; Cleaner</div><div class="pv-row-sub">4.7 &bull; 2km away &bull; Booked today</div></div><div class="pv-row-tag" style="background:var(--accent-soft);color:var(--accent-fg);border:1px solid var(--accent-border)">Busy</div></div>
+  <div class="prod-section" id="flexicare">
+    <div class="prod-inner rv">
+      <div>
+        <span class="prod-tag">Service Operations</span>
+        <div class="prod-num">01</div>
+        <h3>FlexiCare</h3>
+        <p class="lead">A service operations platform for organizations that manage providers, bookings, customer requests and field execution.</p>
+        <div class="feat-list">
+          <div class="feat-item"><div class="feat-item-ico" style="background:var(--c1d);color:var(--c1)"><i class="ti ti-users"></i></div><div class="feat-item-body"><div class="feat-item-title">Provider matching</div><div class="feat-item-desc">Match client demand with available and qualified providers.</div></div></div>
+          <div class="feat-item"><div class="feat-item-ico" style="background:var(--c1d);color:var(--c1)"><i class="ti ti-shield-check"></i></div><div class="feat-item-body"><div class="feat-item-title">Verified credentials</div><div class="feat-item-desc">Keep provider screening and approval in one secure system.</div></div></div>
+          <div class="feat-item"><div class="feat-item-ico" style="background:var(--c1d);color:var(--c1)"><i class="ti ti-calendar"></i></div><div class="feat-item-body"><div class="feat-item-title">Scheduling and follow-up</div><div class="feat-item-desc">Manage bookings, availability and service follow-up in one workflow.</div></div></div>
+        </div>
+        <div class="prod-ctas"><a href="{{ url('/solutions/flexicare') }}" class="btn-pri">View FlexiCare</a></div>
+      </div>
+      <div class="prod-visual">
+        <div class="pv-card">
+          <div class="pv-topbar"><span class="pv-dot" style="background:var(--c1)"></span><div class="pv-title">FlexiCare availability</div></div>
+          <div class="pv-body">
+            <div class="pv-row"><div class="pv-row-ico" style="background:var(--c1d)"><i class="ti ti-user-check"></i></div><div><div class="pv-row-title">Verified provider</div><div class="pv-row-sub">Available now · High satisfaction score</div></div><div class="pv-row-tag" style="background:var(--success-soft);color:var(--green);border:1px solid var(--success-border)">Match</div></div>
+            <div class="pv-row"><div class="pv-row-ico" style="background:var(--c1d)"><i class="ti ti-calendar-check"></i></div><div><div class="pv-row-title">Client booking</div><div class="pv-row-sub">Confirmed slot · Follow-up required</div></div><div class="pv-row-tag" style="background:var(--success-soft);color:var(--green);border:1px solid var(--success-border)">Ready</div></div>
+            <div class="pv-row"><div class="pv-row-ico" style="background:var(--c1d)"><i class="ti ti-clock"></i></div><div><div class="pv-row-title">Service queue</div><div class="pv-row-sub">3 requests pending assignment</div></div><div class="pv-row-tag" style="background:var(--ink-3);color:var(--muted);border:1px solid var(--bdr)">Pending</div></div>
           </div>
         </div>
-        <a href="{{ url('/solutions/flexicare') }}" class="ov-card-cta">View full details &rarr;</a>
       </div>
+    </div>
+  </div>
 
-      <div class="ov-card" style="--accent-grad:linear-gradient(90deg,var(--blue-lt),transparent);border-color:var(--accent-border)">
-        <div class="ov-card-badge" style="background:var(--accent-soft);border:1px solid var(--accent-border);color:var(--accent-fg)"><i class="ti ti-box"></i> Stock Management</div>
-        <div class="ov-card-ico"><i class="ti ti-box"></i></div>
-        <div class="ov-card-name">InventoryPro</div>
-        <div class="ov-card-desc">Track stock, control requests, and keep every location aligned from one place.</div>
-        <div class="ov-card-features"><span class="feat-chip">Multi-location</span><span class="feat-chip">Auto Alerts</span><span class="feat-chip">Request Mgmt</span></div>
-        <a href="{{ url('/solutions/inventorypro') }}" class="ov-card-cta">View full details &rarr;</a>
+  <div class="prod-section reverse" id="inventorypro">
+    <div class="prod-inner rv">
+      <div>
+        <span class="prod-tag">Inventory Control</span>
+        <div class="prod-num">02</div>
+        <h3>InventoryPro</h3>
+        <p class="lead">Control stock levels, internal requests, approvals and consumption data across locations from one operational hub.</p>
+        <div class="feat-list">
+          <div class="feat-item"><div class="feat-item-ico" style="background:var(--c2d);color:var(--c2)"><i class="ti ti-box"></i></div><div class="feat-item-body"><div class="feat-item-title">Multi-location stock</div><div class="feat-item-desc">See inventory levels across all sites in one view.</div></div></div>
+          <div class="feat-item"><div class="feat-item-ico" style="background:var(--c2d);color:var(--c2)"><i class="ti ti-bell"></i></div><div class="feat-item-body"><div class="feat-item-title">Auto alerts</div><div class="feat-item-desc">Get notified when supplies need replenishing.</div></div></div>
+          <div class="feat-item"><div class="feat-item-ico" style="background:var(--c2d);color:var(--c2)"><i class="ti ti-list-check"></i></div><div class="feat-item-body"><div class="feat-item-title">Approval workflows</div><div class="feat-item-desc">Approve stock requests with visibility and full traceability.</div></div></div>
+        </div>
+        <div class="prod-ctas"><a href="{{ url('/solutions/inventorypro') }}" class="btn-pri">View InventoryPro</a></div>
       </div>
-
-      <div class="ov-card" style="--accent-grad:linear-gradient(90deg,var(--accent-fg),transparent);border-color:var(--accent-border)">
-        <div class="ov-card-badge" style="background:var(--accent-soft);border:1px solid var(--accent-border);color:var(--accent-fg)"><i class="ti ti-chart-bar"></i> HR & Performance</div>
-        <div class="ov-card-ico"><i class="ti ti-chart-bar"></i></div>
-        <div class="ov-card-name">Perfomia</div>
-        <div class="ov-card-desc">A clear view of tasks, attendance, and staff performance for day-to-day management.</div>
-        <div class="ov-card-features"><span class="feat-chip">KPI Tracking</span><span class="feat-chip">Attendance</span><span class="feat-chip">Evaluations</span></div>
-        <a href="{{ url('/solutions/perfomia') }}" class="ov-card-cta">View full details &rarr;</a>
-      </div>
-
-      <div class="ov-card span2" style="--accent-grad:linear-gradient(90deg,var(--green),transparent);border-color:var(--success-border)">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center">
-          <div>
-            <div class="ov-card-badge" style="background:var(--success-soft);border:1px solid var(--success-border);color:var(--green)"><i class="ti ti-heart-pulse"></i> Healthcare Innovation</div>
-            <div class="ov-card-ico"><i class="ti ti-heart-pulse"></i></div>
-            <div class="ov-card-name">MedTrace</div>
-            <div class="ov-card-desc">A QR-based medical record system that gives practitioners fast access to critical patient data.</div>
-            <div class="ov-card-features"><span class="feat-chip">QR Wearable</span><span class="feat-chip">Instant Records</span><span class="feat-chip">Emergency Data</span><span class="feat-chip">Secure</span></div>
-            <a href="{{ url('/solutions/medtrace') }}" class="ov-card-cta" style="margin-top:1rem">View full details &rarr;</a>
+      <div class="prod-visual">
+        <div class="pv-card">
+          <div class="pv-topbar"><span class="pv-dot" style="background:var(--c2)"></span><div class="pv-title">Inventory dashboard</div></div>
+          <div class="pv-body">
+            <div class="pv-row"><div class="pv-row-ico" style="background:var(--c2d)"><i class="ti ti-package"></i></div><div><div class="pv-row-title">Warehouse A</div><div class="pv-row-sub">Low stock on 3 key items</div></div><div class="pv-row-tag" style="background:var(--c2d);color:var(--c2);border:1px solid var(--c2b)">Alert</div></div>
+            <div class="pv-row"><div class="pv-row-ico" style="background:var(--c2d)"><i class="ti ti-building-store"></i></div><div><div class="pv-row-title">Retail outlet</div><div class="pv-row-sub">Stock steady · 95% fill rate</div></div><div class="pv-row-tag" style="background:var(--success-soft);color:var(--green);border:1px solid var(--success-border)">Good</div></div>
+            <div class="pv-row"><div class="pv-row-ico" style="background:var(--c2d)"><i class="ti ti-arrow-up-right"></i></div><div><div class="pv-row-title">Requests pending</div><div class="pv-row-sub">12 approval actions</div></div><div class="pv-row-tag" style="background:var(--c2d);color:var(--c2);border:1px solid var(--c2b)">Action</div></div>
           </div>
-          <div style="background:var(--bg-tertiary);border:1px solid var(--success-border);border-radius:12px;padding:1.5rem;text-align:center">
-            <div style="font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--green);margin-bottom:1.25rem">Patient Record via QR Scan</div>
-            <div style="font-size:2.5rem;margin-bottom:.75rem"><i class="ti ti-qrcode"></i></div>
-            <div style="background:var(--success-soft);border:1px solid var(--success-border);border-radius:8px;padding:.85rem;font-size:.75rem;color:var(--success-fg);line-height:1.6;text-align:left">
-              <div style="font-weight:600;color:var(--green);margin-bottom:.5rem">Jean-Paul M., 42 ans</div>
-              <div><i class="ti ti-blood-off"></i> Type O+ &nbsp;&middot;&nbsp; <i class="ti ti-alert-triangle"></i> Penicillin allergy</div>
-              <div style="margin-top:.35rem"><i class="ti ti-pill"></i> Metformin 500mg/day</div>
-              <div style="margin-top:.35rem"><i class="ti ti-clipboard"></i> Last visit: 12 Jan 2025</div>
-            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-section" id="perfomia">
+    <div class="prod-inner rv">
+      <div>
+        <span class="prod-tag">Performance Management</span>
+        <div class="prod-num">03</div>
+        <h3>Perfomia</h3>
+        <p class="lead">A management platform for task delegation, attendance, KPI visibility and staff performance follow-up.</p>
+        <div class="feat-list">
+          <div class="feat-item"><div class="feat-item-ico" style="background:var(--c3d);color:var(--c3)"><i class="ti ti-chart-bar"></i></div><div class="feat-item-body"><div class="feat-item-title">KPI visibility</div><div class="feat-item-desc">Track the metrics that matter for performance and delivery.</div></div></div>
+          <div class="feat-item"><div class="feat-item-ico" style="background:var(--c3d);color:var(--c3)"><i class="ti ti-clock"></i></div><div class="feat-item-body"><div class="feat-item-title">Attendance tracking</div><div class="feat-item-desc">Monitor presence and punctuality across teams.</div></div></div>
+          <div class="feat-item"><div class="feat-item-ico" style="background:var(--c3d);color:var(--c3)"><i class="ti ti-clipboard-list"></i></div><div class="feat-item-body"><div class="feat-item-title">Performance reviews</div><div class="feat-item-desc">Document progress, goals and improvement actions.</div></div></div>
+        </div>
+        <div class="prod-ctas"><a href="{{ url('/solutions/perfomia') }}" class="btn-pri">View Perfomia</a></div>
+      </div>
+      <div class="prod-visual">
+        <div class="pv-card">
+          <div class="pv-topbar"><span class="pv-dot" style="background:var(--c3)"></span><div class="pv-title">Performance overview</div></div>
+          <div class="pv-body">
+            <div class="pv-row"><div class="pv-row-ico" style="background:var(--c3d)"><i class="ti ti-users"></i></div><div><div class="pv-row-title">Team productivity</div><div class="pv-row-sub">82% target completion</div></div><div class="pv-row-tag" style="background:var(--success-soft);color:var(--green);border:1px solid var(--success-border)">On track</div></div>
+            <div class="pv-row"><div class="pv-row-ico" style="background:var(--c3d)"><i class="ti ti-clock-check"></i></div><div><div class="pv-row-title">Attendance</div><div class="pv-row-sub">98% present today</div></div><div class="pv-row-tag" style="background:var(--success-soft);color:var(--green);border:1px solid var(--success-border)">Stable</div></div>
+            <div class="pv-row"><div class="pv-row-ico" style="background:var(--c3d)"><i class="ti ti-arrow-up-right"></i></div><div><div class="pv-row-title">Review cycle</div><div class="pv-row-sub">4 pending evaluations</div></div><div class="pv-row-tag" style="background:var(--c3d);color:var(--c3);border:1px solid var(--c3b)">Action</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-section reverse" id="medtrace">
+    <div class="prod-inner rv">
+      <div>
+        <span class="prod-tag">Healthcare Records</span>
+        <div class="prod-num">04</div>
+        <h3>MedTrace</h3>
+        <p class="lead">A secure medical record platform that gives authorized healthcare staff fast access to critical patient data.</p>
+        <div class="feat-list">
+          <div class="feat-item"><div class="feat-item-ico" style="background:var(--c5d);color:var(--c5)"><i class="ti ti-qrcode"></i></div><div class="feat-item-body"><div class="feat-item-title">QR access</div><div class="feat-item-desc">Instantly retrieve the patient record at the point of care.</div></div></div>
+          <div class="feat-item"><div class="feat-item-ico" style="background:var(--c5d);color:var(--c5)"><i class="ti ti-shield-lock"></i></div><div class="feat-item-body"><div class="feat-item-title">Secure data</div><div class="feat-item-desc">Only authorized staff see the medical history they need.</div></div></div>
+          <div class="feat-item"><div class="feat-item-ico" style="background:var(--c5d);color:var(--c5)"><i class="ti ti-ambulance"></i></div><div class="feat-item-body"><div class="feat-item-title">Emergency readiness</div><div class="feat-item-desc">Critical details remain visible when seconds matter.</div></div></div>
+        </div>
+        <div class="prod-ctas"><a href="{{ url('/solutions/medtrace') }}" class="btn-pri">View MedTrace</a></div>
+      </div>
+      <div class="prod-visual">
+        <div class="pv-card">
+          <div class="pv-topbar"><span class="pv-dot" style="background:var(--c5)"></span><div class="pv-title">Patient summary</div></div>
+          <div class="pv-body">
+            <div class="pv-row"><div class="pv-row-ico" style="background:var(--c5d)"><i class="ti ti-user"></i></div><div><div class="pv-row-title">John P., 42</div><div class="pv-row-sub">Type O+ · Penicillin allergy</div></div><div class="pv-row-tag" style="background:var(--danger);color:#fff;border:1px solid rgba(255,0,0,.16)">Alert</div></div>
+            <div class="pv-row"><div class="pv-row-ico" style="background:var(--c5d)"><i class="ti ti-pill"></i></div><div><div class="pv-row-title">Medication</div><div class="pv-row-sub">Metformin 500mg/day</div></div></div>
+            <div class="pv-row"><div class="pv-row-ico" style="background:var(--c5d)"><i class="ti ti-clipboard"></i></div><div><div class="pv-row-title">Last visit</div><div class="pv-row-sub">12 Jan 2025</div></div></div>
           </div>
         </div>
       </div>
@@ -125,14 +167,14 @@
 <section id="compare">
   <div class="cmp-inner">
     <div class="cmp-header rv">
-      <span class="tag">At a Glance</span>
-      <h2>Compare All Solutions</h2>
-      <p class="lead" style="max-width:500px;margin:.75rem auto 0">Find the right product for your organization's specific needs.</p>
+      <span class="tag">Decision Guide</span>
+      <h2>Compare the operational capabilities</h2>
+      <p class="lead" style="max-width:560px;margin:.75rem auto 0">Choose the platform that best matches your workflow, visibility and control priorities.</p>
     </div>
     <div class="cmp-table rv d1">
       <div class="cmp-head-row">
         <div style="font-size:.75rem;color:var(--muted)">Features</div>
-        <div class="cmp-prod-head"><div class="cmp-prod-ico"><i class="ti ti-heart-handshake"></i></div><div class="cmp-prod-name">FlexiCare</div></div>
+        <div class="cmp-prod-head"><div class="cmp-prod-ico"><i class="ti ti-users"></i></div><div class="cmp-prod-name">FlexiCare</div></div>
         <div class="cmp-prod-head"><div class="cmp-prod-ico"><i class="ti ti-box"></i></div><div class="cmp-prod-name">InventoryPro</div></div>
         <div class="cmp-prod-head"><div class="cmp-prod-ico"><i class="ti ti-chart-bar"></i></div><div class="cmp-prod-name">Perfomia</div></div>
         <div class="cmp-prod-head"><div class="cmp-prod-ico"><i class="ti ti-heart-pulse"></i></div><div class="cmp-prod-name">MedTrace</div></div>
@@ -151,12 +193,12 @@
 
 <section id="sol-cta">
   <div class="sol-cta-inner rv">
-    <span class="tag">Get Started</span>
-    <h2>Not sure which solution fits your needs?</h2>
-    <p class="lead">Our experts will analyze your current operations and recommend the right combination of DigiTexia products for your organization &mdash; at no cost.</p>
+    <span class="tag">Free Operational Assessment</span>
+    <h2>Need help choosing the right platform?</h2>
+    <p class="lead">We review your current workflow and recommend the DigiTexia product or custom implementation that creates the strongest business impact.</p>
     <div class="cta-btns">
-      <a href="{{ url('/contact-us') }}" class="btn-pri">Request a Free Consultation <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a href="{{ url('/the-problem') }}" class="btn-sec">See The Problem &rarr;</a>
+      <a href="{{ url('/contact-us') }}" class="btn-pri">Request an Assessment <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="{{ url('/the-problem') }}" class="btn-sec">Review The Problem &rarr;</a>
     </div>
   </div>
 </section>
@@ -198,8 +240,6 @@ if (ddToggle && ddMenu) {
 </script>
 @endpush
 @endsection
-
-
 
 
 
