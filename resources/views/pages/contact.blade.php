@@ -1,6 +1,6 @@
 @extends('index')
 
-@section('page_title', 'Contact | DigiTexia')
+@section('page_title', __('Contact | DigiTexia'))
 
 @push('styles')
 <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -306,32 +306,32 @@
   <div class="contact-grid">
     <div class="contact-copy rv">
       <div class="breadcrumb">
-        <a href="{{ url('/') }}">Home</a><span>&rsaquo;</span>
-        <span class="curr">Contact</span>
+        <a href="{{ url('/') }}">{{ __('Home') }}</a><span>&rsaquo;</span>
+        <span class="curr">{{ __('Contact') }}</span>
       </div>
-      <span class="tag">Contact DigiTexia</span>
-      <h1>Let's assess your <em>digital priority.</em></h1>
-      <p class="lead">Tell us what you want to improve: manual workflows, visibility, customer experience, reporting, or a custom digital platform.</p>
+      <span class="tag">{{ __('Contact DigiTexia') }}</span>
+      <h1>{{ __("Let's assess your digital priority.") }}</h1>
+      <p class="lead">{{ __('Tell us what you want to improve: manual workflows, visibility, customer experience, reporting, or a custom digital platform.') }}</p>
 
       <div class="contact-points">
         <a class="contact-point" href="tel:+237650945280">
           <div class="contact-point-ico"><i class="ti ti-phone"></i></div>
           <div>
-            <div class="contact-point-title">Call us</div>
+            <div class="contact-point-title">{{ __('Call us') }}</div>
             <div class="contact-point-desc">(+237) 650 945 280 or (+237) 691 095 590</div>
           </div>
         </a>
         <a class="contact-point" href="mailto:contactdigitexia@gmail.com">
           <div class="contact-point-ico"><i class="ti ti-mail"></i></div>
           <div>
-            <div class="contact-point-title">Email</div>
+            <div class="contact-point-title">{{ __('Email') }}</div>
             <div class="contact-point-desc">contactdigitexia@gmail.com</div>
           </div>
         </a>
         <div class="contact-point">
           <div class="contact-point-ico"><i class="ti ti-map-pin"></i></div>
           <div>
-            <div class="contact-point-title">Location</div>
+            <div class="contact-point-title">{{ __('Location') }}</div>
             <div class="contact-point-desc">Yaounde, Cameroon</div>
           </div>
         </div>
@@ -339,58 +339,58 @@
 
       <div class="contact-mini-row">
         <div class="contact-mini">
-          <div class="label">Response time</div>
-          <div class="value">Within 24 hours</div>
+          <div class="label">{{ __('Response time') }}</div>
+          <div class="value">{{ __('Within 24 hours') }}</div>
         </div>
         <div class="contact-mini">
-          <div class="label">Availability</div>
-          <div class="value">Mon - Fri, 8:00 - 18:00</div>
+          <div class="label">{{ __('Availability') }}</div>
+          <div class="value">{{ __('Mon - Fri, 8:00 - 18:00') }}</div>
         </div>
         <div class="contact-mini">
-          <div class="label">Best for</div>
-          <div class="value">Assessments, projects, partnerships</div>
+          <div class="label">{{ __('Best for') }}</div>
+          <div class="value">{{ __('Assessments, projects, partnerships') }}</div>
         </div>
       </div>
     </div>
 
     <div class="contact-card rv d2">
       <div class="form-head">
-        <div class="tag" style="margin-bottom:1rem">Request assessment</div>
-        <h2>Tell us what you want to solve</h2>
-        <p class="sub">Share the business context. We will reply with the clearest next step.</p>
+        <div class="tag" style="margin-bottom:1rem">{{ __('Request assessment') }}</div>
+        <h2>{{ __('Tell us what you want to solve') }}</h2>
+        <p class="sub">{{ __('Share the business context. We will reply with the clearest next step.') }}</p>
       </div>
 
       <form id="contactForm">
         <div class="form-grid">
           <div class="form-field">
-            <label class="form-label">First name</label>
-            <input type="text" id="firstName" class="form-input" placeholder="Jean">
+            <label class="form-label">{{ __('First name') }}</label>
+            <input type="text" id="firstName" class="form-input" placeholder="{{ __('Jean') }}">
           </div>
           <div class="form-field">
-            <label class="form-label">Last name</label>
-            <input type="text" id="lastName" class="form-input" placeholder="Kamga">
+            <label class="form-label">{{ __('Last name') }}</label>
+            <input type="text" id="lastName" class="form-input" placeholder="{{ __('Kamga') }}">
           </div>
           <div class="form-field">
-            <label class="form-label">Email</label>
-            <input type="email" id="email" class="form-input" placeholder="you@company.com">
+            <label class="form-label">{{ __('Email') }}</label>
+            <input type="email" id="email" class="form-input" placeholder="{{ __('you@company.com') }}">
           </div>
           <div class="form-field">
-            <label class="form-label">Phone</label>
-            <input type="tel" id="phone" class="form-input" placeholder="(+237) 6XX XXX XXX">
+            <label class="form-label">{{ __('Phone') }}</label>
+            <input type="tel" id="phone" class="form-input" placeholder="{{ __('(+237) 6XX XXX XXX') }}">
           </div>
           <div class="form-field full">
-            <label class="form-label">Subject</label>
-            <input type="text" id="subject" class="form-input" placeholder="Assessment request, project brief, or partnership">
+            <label class="form-label">{{ __('Subject') }}</label>
+            <input type="text" id="subject" class="form-input" placeholder="{{ __('Assessment request, project brief, or partnership') }}">
           </div>
           <div class="form-field full">
-            <label class="form-label">Message</label>
-            <textarea id="message" class="form-textarea" placeholder="Tell us what you need to improve, what currently slows your team down, and what result you expect."></textarea>
+            <label class="form-label">{{ __('Message') }}</label>
+            <textarea id="message" class="form-textarea" placeholder="{{ __('Tell us what you need to improve, what currently slows your team down, and what result you expect.') }}"></textarea>
           </div>
         </div>
 
         <div class="form-submit-row">
-          <button type="submit" class="btn-pri">Send message</button>
-          <div class="form-secure"><i class="ti ti-shield-lock"></i> Private and confidential.</div>
+          <button type="submit" class="btn-pri">{{ __('Send message') }}</button>
+          <div class="form-secure"><i class="ti ti-shield-lock"></i> {{ __('Private and confidential.') }}</div>
         </div>
       </form>
     </div>
@@ -410,20 +410,20 @@ document.addEventListener('DOMContentLoaded', function () {
     const lastName = document.getElementById('lastName').value.trim();
     const email = document.getElementById('email').value.trim();
     const phone = document.getElementById('phone').value.trim();
-    const subject = document.getElementById('subject').value.trim() || 'Assessment request';
+    const subject = document.getElementById('subject').value.trim() || '{{ __('Request assessment') }}';
     const message = document.getElementById('message').value.trim();
 
     const body = [
-      'Hello DigiTexia,',
+      '{{ __('Hello DigiTexia,') }}',
       '',
-      'I would like to discuss a digital assessment.',
+      '{{ __('I would like to discuss a digital assessment.') }}',
       '',
-      `Name: ${firstName} ${lastName}`.trim(),
-      `Email: ${email}`,
-      `Phone: ${phone}`,
+      `{{ __('Name:') }} ${firstName} ${lastName}`.trim(),
+      `{{ __('Email:') }} ${email}`,
+      `{{ __('Phone:') }} ${phone}`,
       '',
-      'Message:',
-      message || 'Please contact me to discuss my project.'
+      '{{ __('Message:') }}',
+      message || '{{ __('Please contact me to discuss my project.') }}'
     ].join('\n');
 
     window.location.href = `mailto:contactdigitexia@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;

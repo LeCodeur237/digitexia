@@ -1,806 +1,568 @@
 @extends('index')
 
-@section('page_title', 'Projets | DigiTexia')
+@section('page_title', __('Projects | DigiTexia'))
 
 @push('styles')
 <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('css/problem-digitexia.css') }}">
 <style>
-    #page-hero {
-        position: relative;
-        overflow: hidden;
-        padding: 6.5rem 0 3.5rem;
-        isolation: isolate;
-        background: linear-gradient(135deg, rgba(56, 189, 248, .04) 0%, rgba(34, 197, 94, .03) 100%);
-    }
+  #page-hero,
+  #portfolio,
+  #workflows,
+  #final-cta {
+    padding: 5rem 0;
+  }
 
-    #page-hero::before,
-    #page-hero::after {
-        content: "";
-        position: absolute;
-        inset: auto;
-        border-radius: 999px;
-        pointer-events: none;
-        z-index: -1;
-        filter: blur(12px);
-    }
+  #page-hero {
+    padding-top: 6.25rem;
+    background:
+      linear-gradient(180deg, rgba(56, 189, 248, .04), transparent 35%),
+      linear-gradient(135deg, rgba(34, 197, 94, .03), transparent 50%);
+    border-bottom: 1px solid var(--border-color);
+  }
 
-    #page-hero::before {
-        width: 32rem;
-        height: 32rem;
-        top: -14rem;
-        right: -12rem;
-        background: radial-gradient(circle, rgba(56, 189, 248, .12), transparent 70%);
-        opacity: .7;
-    }
+  .section-wrap {
+    width: min(1200px, calc(100% - 2.5rem));
+    margin: 0 auto;
+  }
 
-    #page-hero::after {
-        width: 24rem;
-        height: 24rem;
-        bottom: -10rem;
-        left: -8rem;
-        background: radial-gradient(circle, rgba(34, 197, 94, .1), transparent 70%);
-        opacity: .6;
-    }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(320px, .9fr);
+    gap: 2rem;
+    align-items: center;
+  }
 
-    .projects-shell {
-        display: grid;
-        grid-template-columns: minmax(0, 1.1fr) minmax(320px, .9fr);
-        gap: 3rem;
-        align-items: center;
-    }
+  .hero-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
 
-    .ph-left {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        max-width: 42rem;
-    }
+  .eyebrow {
+    display: inline-flex;
+    width: fit-content;
+    padding: .42rem .85rem;
+    border-radius: 999px;
+    background: var(--blue-dim);
+    border: 1px solid var(--blue-bdr);
+    color: var(--blue-lt);
+    text-transform: uppercase;
+    font-size: .72rem;
+    letter-spacing: .12em;
+    font-weight: 800;
+  }
 
-    .ph-breadcrumb {
-        display: flex;
-        align-items: center;
-        gap: .55rem;
-        flex-wrap: wrap;
-        color: var(--text-muted);
-        font-size: .85rem;
-    }
+  .projects-title {
+    font-family: 'Clash Display', sans-serif;
+    font-size: clamp(2.9rem, 5vw, 5rem);
+    line-height: .94;
+    letter-spacing: -.04em;
+    color: var(--text-main);
+    max-width: 12ch;
+    font-weight: 700;
+  }
 
-    .ph-breadcrumb a {
-        color: var(--text-muted);
-        text-decoration: none;
-        transition: color .2s ease;
-    }
+  .projects-title em {
+    font-style: normal;
+    background: linear-gradient(135deg, var(--blue-lt), var(--green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 
-    .ph-breadcrumb a:hover {
-        color: var(--blue-lt);
-    }
+  .projects-lead {
+    max-width: 60ch;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    font-weight: 500;
+  }
 
-    .tag-blue {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: fit-content;
-        padding: .42rem .9rem;
-        border-radius: 999px;
-        background: var(--blue-dim);
-        border: 1px solid var(--blue-bdr);
-        color: var(--blue-lt);
-        font-size: .7rem;
-        font-weight: 800;
-        letter-spacing: .12em;
-        text-transform: uppercase;
-        margin-bottom: .1rem;
-        box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  .hero-actions,
+  .section-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .9rem;
+  }
+
+  .hero-panel {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 28px;
+    padding: 1.25rem;
+  }
+
+  .hero-board {
+    min-height: 320px;
+    border-radius: 22px;
+    border: 1px solid var(--border-color);
+    background:
+      radial-gradient(circle at 18% 18%, rgba(56, 189, 248, .12), transparent 28%),
+      radial-gradient(circle at 82% 78%, rgba(34, 197, 94, .1), transparent 28%),
+      var(--surface-bg);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .board-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .board-label {
+    display: inline-flex;
+    padding: .32rem .75rem;
+    border-radius: 999px;
+    background: var(--surface-soft);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    font-size: .68rem;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    font-weight: 800;
+  }
+
+  .board-note {
+    color: var(--text-soft);
+    font-size: .82rem;
+    font-weight: 600;
+  }
+
+  .logo-wall {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .9rem;
+    align-items: stretch;
+  }
+
+  .logo-tile {
+    min-height: 120px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    background: var(--card-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .logo-tile img {
+    max-width: 100%;
+    max-height: 52px;
+    object-fit: contain;
+  }
+
+  .logo-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .4rem;
+    text-align: center;
+    color: var(--text-soft);
+    font-size: .74rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  .logo-placeholder i {
+    font-size: 1.5rem;
+    color: var(--blue-lt);
+  }
+
+  .metric-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .85rem;
+  }
+
+  .metric-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    padding: 1rem .95rem;
+  }
+
+  .metric-value {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 1.45rem;
+    line-height: 1;
+    margin-bottom: .35rem;
+    font-weight: 700;
+    color: var(--text-main);
+  }
+
+  .metric-value.blue { color: var(--blue-lt); }
+  .metric-value.green { color: var(--green); }
+  .metric-value.orange { color: var(--orange); }
+
+  .metric-label {
+    color: var(--text-soft);
+    font-size: .72rem;
+    line-height: 1.45;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-weight: 800;
+  }
+
+  .section-head {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    margin-bottom: 1.5rem;
+    max-width: 64rem;
+  }
+
+  .section-head h2 {
+    font-family: 'Clash Display', sans-serif;
+    color: var(--text-main);
+    font-size: clamp(2rem, 3.6vw, 3.15rem);
+    line-height: 1.06;
+    letter-spacing: -.04em;
+    font-weight: 700;
+  }
+
+  .section-head .lead {
+    color: var(--text-muted);
+    max-width: 70ch;
+    line-height: 1.8;
+    font-size: 1.02rem;
+    font-weight: 500;
+  }
+
+  .logo-strip {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .logo-strip-item {
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    background: var(--card-bg);
+    padding: 1.1rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+    min-height: 92px;
+  }
+
+  .logo-strip-item img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  .logo-strip-copy {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    min-width: 0;
+  }
+
+  .logo-strip-title {
+    color: var(--text-main);
+    font-size: .95rem;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .logo-strip-meta {
+    color: var(--text-soft);
+    font-size: .8rem;
+    line-height: 1.5;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 22px;
+    overflow: hidden;
+    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+
+  .project-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--blue-bdr);
+    box-shadow: 0 20px 44px rgba(0, 0, 0, .08);
+  }
+
+  .project-card-top {
+    min-height: 160px;
+    padding: 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(56, 189, 248, .08), transparent 36%),
+      radial-gradient(circle at 80% 80%, rgba(34, 197, 94, .08), transparent 36%),
+      var(--surface-soft);
+  }
+
+  .project-card-top img {
+    max-width: 100%;
+    max-height: 78px;
+    object-fit: contain;
+  }
+
+  .project-card-body {
+    padding: 1.35rem;
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+    flex-grow: 1;
+  }
+
+  .project-kicker {
+    display: inline-flex;
+    width: fit-content;
+    padding: .32rem .7rem;
+    border-radius: 999px;
+    background: var(--blue-dim);
+    border: 1px solid var(--blue-bdr);
+    color: var(--blue-lt);
+    font-size: .68rem;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    font-weight: 800;
+  }
+
+  .project-card h3 {
+    font-family: 'Clash Display', sans-serif;
+    color: var(--text-main);
+    font-size: 1.45rem;
+    line-height: 1.12;
+    letter-spacing: -.03em;
+    font-weight: 700;
+  }
+
+  .project-card p {
+    color: var(--text-muted);
+    line-height: 1.75;
+    font-size: .98rem;
+    font-weight: 500;
+  }
+
+  .project-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+  }
+
+  .project-chip {
+    display: inline-flex;
+    padding: .38rem .7rem;
+    border-radius: 999px;
+    background: var(--surface-soft);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    font-size: .72rem;
+    font-weight: 700;
+  }
+
+  .project-link-row {
+    margin-top: auto;
+    display: flex;
+    gap: .75rem;
+    flex-wrap: wrap;
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .step-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 1.25rem;
+  }
+
+  .step-num {
+    font-family: 'Clash Display', sans-serif;
+    color: var(--blue-lt);
+    font-size: 1.45rem;
+    line-height: 1;
+    margin-bottom: .6rem;
+    font-weight: 700;
+  }
+
+  .step-title {
+    color: var(--text-main);
+    font-size: 1.08rem;
+    font-weight: 700;
+    margin-bottom: .45rem;
+  }
+
+  .step-desc {
+    color: var(--text-muted);
+    font-size: .96rem;
+    line-height: 1.7;
+  }
+
+  .cta-panel {
+    background: linear-gradient(135deg, rgba(56, 189, 248, .06), rgba(34, 197, 94, .05));
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 1.5rem;
+  }
+
+  .cta-panel h2 {
+    font-family: 'Clash Display', sans-serif;
+    color: var(--text-main);
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    line-height: 1.06;
+    letter-spacing: -.03em;
+    margin-bottom: .6rem;
+    font-weight: 700;
+  }
+
+  .cta-panel .lead {
+    max-width: 70ch;
+    margin-bottom: 1rem;
+  }
+
+  html.light-mode .hero-panel,
+  html.light-mode .project-card,
+  html.light-mode .step-card,
+  html.light-mode .cta-panel,
+  html.light-mode .logo-strip-item,
+  html.light-mode .metric-card {
+    box-shadow: none;
+  }
+
+  @media (max-width: 1100px) {
+    .hero-grid,
+    .projects-grid,
+    .logo-strip,
+    .steps-grid {
+      grid-template-columns: 1fr 1fr;
     }
 
     .projects-title {
-        font-family: 'Clash Display', sans-serif;
-        font-size: clamp(2.65rem, 5.5vw, 5.2rem);
-        line-height: .95;
-        letter-spacing: -.04em;
-        color: var(--text-main);
-        max-width: 12ch;
-        font-weight: 700;
+      max-width: 14ch;
     }
+  }
 
-    .projects-title em {
-        font-style: normal;
-        background: linear-gradient(135deg, var(--blue-lt), var(--green));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+  @media (max-width: 780px) {
+    #page-hero,
+    #portfolio,
+    #workflows,
+    #final-cta {
+      padding: 3.75rem 0;
     }
 
-    .projects-lead {
-        color: var(--text-muted);
-        font-size: 1.1rem;
-        line-height: 1.8;
-        max-width: 58ch;
-        font-weight: 500;
+    .hero-grid,
+    .projects-grid,
+    .logo-strip,
+    .steps-grid {
+      grid-template-columns: 1fr;
     }
 
-    .ph-btns {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        margin-top: .75rem;
+    .hero-panel {
+      padding: 1rem;
     }
 
-    .projects-hero-panel {
-        background: var(--card-bg);
-        border: 1px solid var(--border-color);
-        border-radius: 32px;
-        padding: 1.5rem;
-        box-shadow: 0 20px 50px rgba(0, 0, 0, .08);
-        backdrop-filter: blur(20px);
-        transition: transform .3s ease, box-shadow .3s ease;
-        animation: slideUpFade .6s ease-out .2s both;
+    .hero-board {
+      min-height: 280px;
     }
 
-    .projects-hero-panel:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 30px 70px rgba(0, 0, 0, .12);
+    .logo-wall {
+      grid-template-columns: 1fr;
     }
 
-    @keyframes slideUpFade {
-        from {
-            opacity: 0;
-            transform: translateY(24px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    .metric-row {
+      grid-template-columns: 1fr;
     }
 
-    .hero-art {
-        position: relative;
-        height: 310px;
-        border-radius: 24px;
-        overflow: hidden;
-        border: 1px solid var(--border-color);
-        background:
-            radial-gradient(circle at 15% 20%, rgba(56, 189, 248, .2), transparent 32%),
-            radial-gradient(circle at 85% 78%, rgba(34, 197, 94, .16), transparent 34%),
-            var(--surface-bg);
+    .project-card-top {
+      min-height: 140px;
     }
 
-    .hero-art::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background:
-            linear-gradient(90deg, transparent 49.5%, var(--border-color) 50%, transparent 50.5%),
-            linear-gradient(180deg, transparent 49.5%, var(--border-color) 50%, transparent 50.5%);
-        opacity: .35;
+    .section-wrap {
+      width: min(1200px, calc(100% - 1.5rem));
     }
-
-    .hero-art::after {
-        content: "";
-        position: absolute;
-        inset: 1.2rem;
-        border-radius: 20px;
-        border: 1px dashed color-mix(in srgb, var(--border-color) 60%, transparent);
-        opacity: .7;
-    }
-
-    .hero-art-icons {
-        position: relative;
-        z-index: 2;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        height: 100%;
-    }
-
-    .hero-icon-card {
-        width: 64px;
-        height: 64px;
-        border-radius: 16px;
-        display: grid;
-        place-items: center;
-        background: var(--card-bg);
-        border: 1px solid var(--border-color);
-        box-shadow: 0 14px 30px rgba(0,0,0,.14);
-    }
-
-    .hero-icon-card i {
-        font-size: 1.6rem;
-        color: var(--blue-lt);
-    }
-
-    .hero-icon-card.alt i {
-        color: var(--green);
-    }
-
-    .hero-icon-card.third i {
-        color: var(--orange);
-    }
-
-    .hero-icon-card.big {
-        width: 74px;
-        height: 74px;
-        transform: translateY(-14px);
-    }
-
-    .hero-metrics {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1rem;
-        margin-top: 1.2rem;
-    }
-
-    .metric-card {
-        padding: 1.15rem 1rem;
-        border-radius: 20px;
-        background: var(--surface-soft);
-        border: 1px solid var(--border-color);
-        text-align: center;
-        transition: all .3s ease;
-        cursor: pointer;
-    }
-
-    .metric-card:hover {
-        transform: translateY(-4px);
-        border-color: var(--blue-bdr);
-        background: var(--card-bg);
-        box-shadow: 0 12px 32px rgba(0, 0, 0, .08);
-    }
-
-    .metric-value {
-        font-family: 'Clash Display', sans-serif;
-        font-size: 1.75rem;
-        line-height: 1;
-        margin-bottom: .45rem;
-        color: var(--text-main);
-        font-weight: 700;
-    }
-
-    .metric-value.blue { color: var(--blue-lt); }
-    .metric-value.green { color: var(--green); }
-    .metric-value.orange { color: var(--orange); }
-
-    .metric-label {
-        font-size: .68rem;
-        text-transform: uppercase;
-        letter-spacing: .12em;
-        font-weight: 800;
-        color: var(--text-soft);
-    }
-
-    #stats-banner {
-        padding: 0.5rem 0 1.5rem;
-        background: linear-gradient(180deg, rgba(56, 189, 248, .02) 0%, rgba(34, 197, 94, .02) 100%);
-    }
-
-    .stats-inner {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 1.2rem;
-        animation: slideUpFade .7s ease-out .3s both;
-    }
-
-    .stat-cell {
-        background: var(--card-bg);
-        border: 1px solid var(--border-color);
-        border-radius: 24px;
-        padding: 1.45rem 1.35rem;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, .04);
-        transition: all .3s cubic-bezier(.25, .46, .45, .94);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .stat-cell::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(135deg, rgba(56, 189, 248, .05), transparent);
-        opacity: 0;
-        transition: opacity .3s ease;
-    }
-
-    .stat-cell:hover {
-        transform: translateY(-6px);
-        border-color: var(--blue-bdr);
-        box-shadow: 0 16px 40px rgba(0, 0, 0, .08);
-    }
-
-    .stat-cell:hover::before {
-        opacity: 1;
-    }
-
-    .stat-num {
-        font-family: 'Clash Display', sans-serif;
-        font-size: 1.55rem;
-        line-height: 1;
-        margin-bottom: .55rem;
-        letter-spacing: -.03em;
-        font-weight: 700;
-        position: relative;
-        z-index: 1;
-    }
-
-    .stat-num.blue { color: var(--blue-lt); }
-    .stat-num.green { color: var(--green); }
-    .stat-num.orange { color: var(--orange); }
-
-    .stat-label {
-        color: var(--text-main);
-        font-size: .92rem;
-        line-height: 1.6;
-        margin-bottom: .35rem;
-    }
-
-    .stat-src {
-        color: var(--text-soft);
-        font-size: .74rem;
-        text-transform: uppercase;
-        letter-spacing: .12em;
-        font-weight: 800;
-    }
-
-    #pain-points,
-    #bridge {
-        padding: 5rem 0;
-    }
-
-    .wrap {
-        width: min(1200px, calc(100% - 2.5rem));
-        margin: 0 auto;
-    }
-
-    .pain-intro {
-        margin-bottom: 2.5rem;
-        animation: slideUpFade .6s ease-out .2s both;
-    }
-
-    .tag {
-        display: inline-flex;
-        align-items: center;
-        gap: .45rem;
-        width: fit-content;
-        padding: .4rem .85rem;
-        border-radius: 999px;
-        border: 1px solid var(--border-color);
-        background: var(--surface-soft);
-        color: var(--text-main);
-        font-size: .72rem;
-        text-transform: uppercase;
-        letter-spacing: .12em;
-        font-weight: 800;
-        margin-bottom: .85rem;
-    }
-
-    .pain-intro h2,
-    .bridge-inner h2 {
-        font-family: 'Clash Display', sans-serif;
-        color: var(--text-main);
-        font-size: clamp(2rem, 3.5vw, 3.2rem);
-        line-height: 1.1;
-        letter-spacing: -.04em;
-        margin-bottom: .8rem;
-        font-weight: 700;
-    }
-
-    .lead {
-        color: var(--text-muted);
-        max-width: 68ch;
-        line-height: 1.8;
-        font-size: 1.05rem;
-        font-weight: 500;
-    }
-
-    .pain-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1.5rem;
-        animation: slideUpFade .7s ease-out .3s both;
-    }
-
-    .project-card {
-        background: var(--card-bg);
-        border: 1px solid var(--border-color);
-        border-radius: 28px;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
-        transition: all .3s cubic-bezier(.25, .46, .45, .94);
-        display: flex;
-        flex-direction: column;
-        position: relative;
-    }
-
-    .project-card::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(135deg, rgba(56, 189, 248, .05), transparent);
-        opacity: 0;
-        transition: opacity .3s ease;
-        pointer-events: none;
-        z-index: 1;
-    }
-
-    .project-card:hover {
-        transform: translateY(-8px);
-        border-color: var(--blue-bdr);
-        box-shadow: 0 24px 60px rgba(0, 0, 0, .12);
-    }
-
-    .project-card:hover::before {
-        opacity: 1;
-    }
-
-    .project-card-image {
-        position: relative;
-        height: 240px;
-        overflow: hidden;
-        border-bottom: 1px solid var(--border-color);
-    }
-
-    .project-card-image::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, .12));
-        pointer-events: none;
-    }
-
-    .project-card-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        transition: transform .5s cubic-bezier(.25, .46, .45, .94);
-    }
-
-    .project-card:hover .project-card-image img {
-        transform: scale(1.08);
-    }
-
-    .project-card-body {
-        padding: 1.65rem;
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-        position: relative;
-        z-index: 2;
-    }
-
-    .project-card-body h3 {
-        font-family: 'Clash Display', sans-serif;
-        color: var(--text-main);
-        font-size: 1.55rem;
-        line-height: 1.15;
-        letter-spacing: -.03em;
-        margin: .3rem 0 .9rem;
-        font-weight: 700;
-    }
-
-    .project-card-body p {
-        color: var(--text-muted);
-        font-size: 1rem;
-        line-height: 1.75;
-        margin-bottom: 1.35rem;
-        flex-grow: 1;
-        font-weight: 500;
-    }
-
-    .card-actions {
-        display: flex;
-        gap: .75rem;
-        flex-wrap: wrap;
-        margin-top: auto;
-    }
-
-    .card-pill {
-        display: inline-flex;
-        align-items: center;
-        width: fit-content;
-        padding: .45rem .95rem;
-        border-radius: 999px;
-        background: var(--blue-dim);
-        border: 1px solid var(--blue-bdr);
-        color: var(--blue-lt);
-        font-size: .75rem;
-        text-transform: uppercase;
-        letter-spacing: .12em;
-        font-weight: 800;
-        transition: all .2s ease;
-    }
-
-    .card-pill:hover {
-        background: var(--blue);
-        color: white;
-        border-color: var(--blue);
-    }
-
-    .bridge-inner {
-        background: var(--card-bg);
-        border: 1px solid var(--border-color);
-        border-radius: 32px;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, .08);
-        padding: 2.5rem;
-        animation: slideUpFade .7s ease-out .4s both;
-    }
-
-    .bridge-steps {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1.5rem;
-        margin: 2rem 0 1.8rem;
-    }
-
-    .bridge-step {
-        position: relative;
-        padding: 1.6rem;
-        border-radius: 24px;
-        border: 1px solid var(--border-color);
-        background: var(--surface-soft);
-        overflow: hidden;
-        transition: all .3s cubic-bezier(.25, .46, .45, .94);
-    }
-
-    .bridge-step::before {
-        content: "";
-        position: absolute;
-        inset: auto auto 0 0;
-        width: 100%;
-        height: 5px;
-        background: linear-gradient(90deg, var(--blue-lt), var(--green));
-        opacity: .8;
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform .4s cubic-bezier(.25, .46, .45, .94);
-    }
-
-    .bridge-step:hover {
-        transform: translateY(-4px);
-        border-color: var(--blue-bdr);
-        background: var(--card-bg);
-    }
-
-    .bridge-step:hover::before {
-        transform: scaleX(1);
-    }
-
-    .bridge-step-num {
-        font-family: 'Clash Display', sans-serif;
-        font-size: 1.65rem;
-        color: var(--blue-lt);
-        margin-bottom: .65rem;
-        font-weight: 700;
-    }
-
-    .bridge-step-title {
-        color: var(--text-main);
-        font-size: 1.15rem;
-        font-weight: 700;
-        margin-bottom: .55rem;
-    }
-
-    .bridge-step-desc {
-        color: var(--text-muted);
-        line-height: 1.75;
-        font-size: 1rem;
-        font-weight: 500;
-    }
-
-    .bridge-ctas {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        margin-top: .8rem;
-    }
-
-    html.light-mode .projects-hero-panel,
-    html.light-mode .stat-cell,
-    html.light-mode .project-card,
-    html.light-mode .bridge-inner,
-    html.light-mode .metric-card,
-    html.light-mode .bridge-step {
-        box-shadow: 0 16px 40px rgba(15, 23, 42, .08);
-    }
-
-    html.light-mode .hero-art {
-        background:
-            radial-gradient(circle at 15% 20%, rgba(59, 130, 246, .16), transparent 32%),
-            radial-gradient(circle at 85% 78%, rgba(16, 185, 129, .14), transparent 34%),
-            var(--surface-bg);
-    }
-
-    html.light-mode .hero-icon-card,
-    html.light-mode .metric-card,
-    html.light-mode .stat-cell,
-    html.light-mode .bridge-step {
-        background: var(--card-bg);
-    }
-
-    @media (max-width: 1100px) {
-        .projects-shell,
-        .pain-grid,
-        .stats-inner,
-        .bridge-steps {
-            grid-template-columns: 1fr 1fr;
-        }
-
-        .projects-shell {
-            gap: 2rem;
-        }
-
-        .hero-metrics {
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
-
-        .pain-grid {
-            gap: 1.2rem;
-        }
-
-        .projects-title {
-            max-width: 15ch;
-        }
-    }
-
-    @media (max-width: 768px) {
-        #page-hero {
-            padding-top: 4.5rem;
-            padding-bottom: 2rem;
-        }
-
-        .projects-shell,
-        .pain-grid,
-        .stats-inner,
-        .bridge-steps {
-            grid-template-columns: 1fr;
-        }
-
-        .projects-hero-panel,
-        .bridge-inner {
-            border-radius: 24px;
-            padding: 1.25rem;
-        }
-
-        .hero-art {
-            height: 260px;
-        }
-
-        .hero-metrics {
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
-
-        .stat-cell,
-        .project-card,
-        .bridge-step {
-            border-radius: 20px;
-        }
-
-        .project-card-image {
-            height: 220px;
-        }
-
-        .bridge-inner {
-            padding: 1.5rem;
-        }
-
-        .ph-btns,
-        .bridge-ctas,
-        .card-actions {
-            flex-direction: column;
-        }
-
-        .ph-btns > a,
-        .bridge-ctas > a,
-        .card-actions > a {
-            width: 100%;
-            justify-content: center;
-        }
-
-        #pain-points,
-        #bridge {
-            padding: 3.5rem 0;
-        }
-    }
-
-    @media (max-width: 480px) {
-        #page-hero,
-        #pain-points,
-        #bridge {
-            padding-left: 0;
-            padding-right: 0;
-        }
-
-        .projects-title {
-            font-size: 2.3rem;
-        }
-
-        .projects-lead,
-        .lead {
-            font-size: 1rem;
-        }
-
-        .hero-art {
-            height: 230px;
-        }
-
-        .hero-icon-card {
-            width: 58px;
-            height: 58px;
-            border-radius: 14px;
-        }
-
-        .hero-icon-card.big {
-            width: 66px;
-            height: 66px;
-        }
-
-        .project-card-body {
-            padding: 1.3rem;
-        }
-
-        .project-card-body h3 {
-            font-size: 1.3rem;
-        }
-
-        .stats-inner {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-    }
+  }
 </style>
 @endpush
 
 @section('contain')
 <section id="page-hero">
-  <div class="wrap">
-    <div class="projects-shell">
-      <div class="ph-left">
+  <div class="section-wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
         <div class="ph-breadcrumb">
-          <a href="{{ url('/') }}">Home</a>
+          <a href="{{ url('/') }}">{{ __('Home') }}</a>
           <span>&rsaquo;</span>
-          <span class="curr">Projects</span>
+          <span class="curr">{{ __('Projects') }}</span>
         </div>
 
-        <span class="tag-blue">Portfolio</span>
-        <h1 class="projects-title">Projects delivered with clarity and <em>visual direction.</em></h1>
-        <p class="projects-lead">Discover selected work that reflects DigiTexia’s approach to digital delivery: useful interfaces, polished storytelling, and results aligned with business goals.</p>
+        <span class="eyebrow">{{ __('Portfolio') }}</span>
+        <h1 class="projects-title">{{ __('Projects delivered with clarity and') }} <em>{{ __('business direction.') }}</em></h1>
+        <p class="projects-lead">
+          {{ __('Selected work that reflects how DigiTexia presents organizations online: clear positioning, credible interfaces, and delivery that supports real business goals.') }}
+        </p>
 
-        <div class="ph-btns">
+        <div class="hero-actions">
           <a href="{{ url('/contact-us') }}" class="btn-pri">
-            Book a Consultation
+            {{ __('Book a Consultation') }}
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a href="{{ url('/services') }}" class="btn-sec">Explore Services</a>
+          <a href="{{ url('/solutions') }}" class="btn-sec">{{ __('Explore Solutions') }}</a>
         </div>
       </div>
 
-      <div class="projects-hero-panel rv d1">
-        <div class="hero-art">
-          <div class="hero-art-icons">
-            <div class="hero-icon-card">
-              <i class="ti ti-layout-2" aria-hidden="true"></i>
-            </div>
-            <div class="hero-icon-card big alt">
-              <i class="ti ti-stack-2" aria-hidden="true"></i>
-            </div>
-            <div class="hero-icon-card third">
-              <i class="ti ti-device-mobile" aria-hidden="true"></i>
-            </div>
+      <div class="hero-panel rv d1">
+        <div class="hero-board">
+          <div class="board-top">
+            <span class="board-label">{{ __('Selected Clients') }}</span>
+            <span class="board-note">{{ __('Portfolio highlights') }}</span>
           </div>
-        </div>
 
-        <div class="hero-metrics">
-          <div class="metric-card">
-            <div class="metric-value blue">03</div>
-            <div class="metric-label">Case studies</div>
+          <div class="logo-wall">
+            <div class="logo-tile">
+              <img src="{{ asset('partners/partner-2.png') }}" alt="CREMIN-CAM logo">
+            </div>
+            <div class="logo-tile">
+              <img src="{{ asset('partners/apec-logo-white--BtJLi1d.svg') }}" alt="APEC logo">
+            </div>
+            <div class="logo-tile">
+              <img src="{{ asset('partners/partner-1.png') }}" alt="Light Group logo">
+            </div>
           </div>
-          <div class="metric-card">
-            <div class="metric-value green">100%</div>
-            <div class="metric-label">Design focus</div>
-          </div>
-          <div class="metric-card">
-            <div class="metric-value orange">24/7</div>
-            <div class="metric-label">Visibility</div>
+
+          <div class="metric-row">
+            <div class="metric-card">
+              <div class="metric-value blue">03</div>
+              <div class="metric-label">{{ __('Client stories') }}</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-value green">100%</div>
+              <div class="metric-label">{{ __('Business-focused') }}</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-value orange">24/7</div>
+              <div class="metric-label">{{ __('Accessible online') }}</div>
+            </div>
           </div>
         </div>
       </div>
@@ -808,78 +570,96 @@
   </div>
 </section>
 
-<section id="stats-banner">
-  <div class="stats-inner rv">
-    <div class="stat-cell">
-      <div class="stat-num blue">Polished</div>
-      <div class="stat-label">Visual consistency for stronger perception</div>
-      <div class="stat-src">Brand Identity</div>
-    </div>
-    <div class="stat-cell">
-      <div class="stat-num green">Mobile</div>
-      <div class="stat-label">Interfaces optimized for all devices</div>
-      <div class="stat-src">Responsive Design</div>
-    </div>
-    <div class="stat-cell">
-      <div class="stat-num orange">Useful</div>
-      <div class="stat-label">Tools aligned with business goals</div>
-      <div class="stat-src">Digital Delivery</div>
-    </div>
-    <div class="stat-cell">
-      <div class="stat-num blue">Fast</div>
-      <div class="stat-label">Short cycles from brief to live result</div>
-      <div class="stat-src">Agile Workflow</div>
-    </div>
-  </div>
-</section>
-
-<section id="pain-points">
-  <div class="wrap">
-    <div class="pain-intro rv">
-      <span class="tag">Selected Work</span>
-      <h2>Built to strengthen trust.</h2>
-      <p class="lead">Each case study combines branding and delivery quality to help clients present themselves more professionally.</p>
+<section id="portfolio">
+  <div class="section-wrap">
+    <div class="section-head rv">
+      <span class="tag">{{ __('Selected Work') }}</span>
+      <h2>{{ __('Client-facing work that feels credible at a glance.') }}</h2>
+      <p class="lead">
+        {{ __('These examples are presented with the logos and links that matter, so visitors can see the relationship, the output, and the business context without noise.') }}
+      </p>
     </div>
 
-    <div class="pain-grid">
+    <div class="logo-strip rv d1">
+      <div class="logo-strip-item">
+        <img src="{{ asset('partners/partner-2.png') }}" alt="CREMIN-CAM logo">
+        <div class="logo-strip-copy">
+          <div class="logo-strip-title">CREMIN-CAM</div>
+          <div class="logo-strip-meta">{{ __('Website project and digital presence') }}</div>
+        </div>
+      </div>
+      <div class="logo-strip-item">
+        <img src="{{ asset('partners/apec-logo-white--BtJLi1d.svg') }}" alt="APEC logo">
+        <div class="logo-strip-copy">
+          <div class="logo-strip-title">APEC</div>
+          <div class="logo-strip-meta">{{ __('Social presence and event communication') }}</div>
+        </div>
+      </div>
+      <div class="logo-strip-item">
+        <img src="{{ asset('partners/partner-1.png') }}" alt="Light Group logo">
+        <div class="logo-strip-copy">
+          <div class="logo-strip-title">Light Group</div>
+          <div class="logo-strip-meta">{{ __('Platform and brand presentation') }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="height:1.25rem"></div>
+
+    <div class="projects-grid">
       <article class="project-card rv d1">
-        <div class="project-card-image">
-          <img src="{{ asset('images/service-2.jpg') }}" alt="CREMIN-CAM website">
+        <div class="project-card-top">
+          <img src="{{ asset('partners/partner-2.png') }}" alt="CREMIN-CAM logo">
         </div>
         <div class="project-card-body">
-          <div class="card-pill">Website design</div>
-          <h3>CREMIN-CAM website</h3>
-          <p>Modern, mobile-first website created to showcase services and simplify lead capture.</p>
-          <div class="card-actions">
-            <a href="{{ url('/contact-us') }}" class="btn-pri" style="font-size:.82rem; padding:.75rem 1.1rem;">View Project</a>
+          <span class="project-kicker">{{ __('Website design') }}</span>
+          <h3>{{ __('CREMIN-CAM website') }}</h3>
+          <p>{{ __('Modern, mobile-first website created to present the organization clearly and guide visitors toward action.') }}</p>
+          <div class="project-chips">
+            <span class="project-chip">{{ __('Business presence') }}</span>
+            <span class="project-chip">{{ __('Lead capture') }}</span>
+            <span class="project-chip">{{ __('Mobile-first') }}</span>
+          </div>
+          <div class="project-link-row">
+            <a href="https://www.cremin-cam.org" target="_blank" rel="noreferrer" class="btn-pri" style="font-size:.82rem; padding:.75rem 1.05rem;">{{ __('Visit site') }}</a>
           </div>
         </div>
       </article>
 
       <article class="project-card rv d2">
-        <div class="project-card-image">
-          <img src="{{ asset('images/service-3.jpg') }}" alt="APEC Facebook posters">
+        <div class="project-card-top">
+          <img src="{{ asset('partners/apec-logo-white--BtJLi1d.svg') }}" alt="APEC logo">
         </div>
         <div class="project-card-body">
-          <div class="card-pill">Social design</div>
-          <h3>APEC Facebook posters</h3>
-          <p>Strategic visuals developed to boost event awareness and community presence.</p>
-          <div class="card-actions">
-            <a href="{{ url('/contact-us') }}" class="btn-sec" style="font-size:.82rem; padding:.75rem 1.1rem;">View Details</a>
+          <span class="project-kicker">{{ __('Social design') }}</span>
+          <h3>{{ __('APEC Facebook content') }}</h3>
+          <p>{{ __('Visual content crafted to support communication, strengthen recognition and keep the brand active online.') }}</p>
+          <div class="project-chips">
+            <span class="project-chip">{{ __('Content design') }}</span>
+            <span class="project-chip">{{ __('Community awareness') }}</span>
+            <span class="project-chip">{{ __('Brand consistency') }}</span>
+          </div>
+          <div class="project-link-row">
+            <a href="https://web.facebook.com/profile.php?id=61575062085703&locale=fr_FR" target="_blank" rel="noreferrer" class="btn-sec" style="font-size:.82rem; padding:.75rem 1.05rem;">{{ __('Open profile') }}</a>
           </div>
         </div>
       </article>
 
       <article class="project-card rv d3">
-        <div class="project-card-image">
-          <img src="{{ asset('images/service-4.jpg') }}" alt="Light Group platform">
+        <div class="project-card-top">
+          <img src="{{ asset('partners/partner-1.png') }}" alt="Light Group logo">
         </div>
         <div class="project-card-body">
-          <div class="card-pill">UX/UI design</div>
-          <h3>Light Group platform</h3>
-          <p>A clean, branded platform with refined layouts to reflect company values.</p>
-          <div class="card-actions">
-            <a href="{{ url('/contact-us') }}" class="btn-pri" style="font-size:.82rem; padding:.75rem 1.1rem;">View Project</a>
+          <span class="project-kicker">{{ __('UX / UI') }}</span>
+          <h3>{{ __('Light Group platform') }}</h3>
+          <p>{{ __('A clean digital presentation with refined layouts and a more structured experience for visitors and stakeholders.') }}</p>
+          <div class="project-chips">
+            <span class="project-chip">{{ __('Interface clarity') }}</span>
+            <span class="project-chip">{{ __('Visual hierarchy') }}</span>
+            <span class="project-chip">{{ __('Business-facing') }}</span>
+          </div>
+          <div class="project-link-row">
+            <a href="https://www.lightgroup.co.com/" target="_blank" rel="noreferrer" class="btn-pri" style="font-size:.82rem; padding:.75rem 1.05rem;">{{ __('Visit site') }}</a>
           </div>
         </div>
       </article>
@@ -887,37 +667,46 @@
   </div>
 </section>
 
-<section id="bridge">
-  <div class="wrap">
-    <div class="bridge-inner rv">
-      <span class="tag">How we work</span>
-      <h2>From brief to polished result.</h2>
-      <p class="lead">We align design with your audience and business objectives.</p>
+<section id="workflows">
+  <div class="section-wrap">
+    <div class="section-head rv">
+      <span class="tag">{{ __('How we work') }}</span>
+      <h2>{{ __('From brief to polished result.') }}</h2>
+      <p class="lead">{{ __('We keep the process straightforward: understand the audience, structure the message, and deliver a result that reads as professional from the first glance.') }}</p>
+    </div>
 
-      <div class="bridge-steps">
-        <div class="bridge-step">
-          <div class="bridge-step-num">01</div>
-          <div class="bridge-step-title">Understand</div>
-          <div class="bridge-step-desc">We align the design with your message and target audience.</div>
-        </div>
-        <div class="bridge-step">
-          <div class="bridge-step-num">02</div>
-          <div class="bridge-step-title">Structure</div>
-          <div class="bridge-step-desc">We craft layouts and typography that feel clean and professional.</div>
-        </div>
-        <div class="bridge-step">
-          <div class="bridge-step-num">03</div>
-          <div class="bridge-step-title">Deliver</div>
-          <div class="bridge-step-desc">We finish with responsive output that supports your real-world needs.</div>
-        </div>
+    <div class="steps-grid rv d1">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <div class="step-title">{{ __('Understand') }}</div>
+        <div class="step-desc">{{ __('We align the design with your message, audience and business priorities.') }}</div>
       </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <div class="step-title">{{ __('Structure') }}</div>
+        <div class="step-desc">{{ __('We craft layouts, spacing and visual hierarchy that feel clean and intentional.') }}</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <div class="step-title">{{ __('Deliver') }}</div>
+        <div class="step-desc">{{ __('We finish with responsive output that works across desktop and mobile screens.') }}</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <div class="bridge-ctas">
+<section id="final-cta">
+  <div class="section-wrap">
+    <div class="cta-panel rv">
+      <span class="tag">{{ __('Ready to move forward?') }}</span>
+      <h2>{{ __('Need a project presentation that feels more credible?') }}</h2>
+      <p class="lead">{{ __('Let us shape the next project page so it looks less like a placeholder and more like a real business asset.') }}</p>
+      <div class="section-actions">
         <a href="{{ url('/contact-us') }}" class="btn-pri">
-          Start Your Project
+          {{ __('Start Your Project') }}
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a href="{{ url('/solutions') }}" class="btn-sec">View Solutions</a>
+        <a href="{{ url('/solutions') }}" class="btn-sec">{{ __('View Solutions') }}</a>
       </div>
     </div>
   </div>

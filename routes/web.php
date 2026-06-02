@@ -5,6 +5,18 @@ use App\Http\Controllers\BlogCommentController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\SolutionController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Redirect;
+
+
+
+Route::get('lang/{locale}', function ($locale) {
+    if (in_array($locale, ['en', 'fr', 'es', 'it', 'zh'])) {
+        Session::put('locale', $locale);
+    }
+    return Redirect::back();
+})->name('lang.switch');
+
 
 Route::get('/', function () {
     return view('pages.home');

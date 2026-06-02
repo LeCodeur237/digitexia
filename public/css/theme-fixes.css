@@ -108,6 +108,7 @@ html.light-mode :is(
     .ws-check,
     .value-ico,
     .exp-card-ico,
+    .footer-newsletter-button,
     .method-num,
     .projects-cta
 ),
@@ -137,6 +138,7 @@ html.light-mode :is(
     .ws-check,
     .value-ico,
     .exp-card-ico,
+    .footer-newsletter-button,
     .method-num,
     .projects-cta
 ) * {
