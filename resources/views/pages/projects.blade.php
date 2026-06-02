@@ -6,26 +6,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('css/problem-digitexia.css') }}">
 <style>
+  /* ── Section spacing ──────────────────────────────────────────
+     Aligné sur les autres pages : padding: 5rem 0 pour toutes
+     les sections. On NE redéfinit PAS .section-wrap (déjà dans
+     le CSS global). ──────────────────────────────────────────── */
   #page-hero,
   #portfolio,
   #workflows,
   #final-cta {
-    padding: 5rem 0;
+    padding: 5rem;
   }
 
   #page-hero {
-    padding-top: 6.25rem;
     background:
       linear-gradient(180deg, rgba(56, 189, 248, .04), transparent 35%),
       linear-gradient(135deg, rgba(34, 197, 94, .03), transparent 50%);
     border-bottom: 1px solid var(--border-color);
   }
 
-  .section-wrap {
-    width: min(1200px, calc(100% - 2.5rem));
-    margin: 0 auto;
-  }
-
+  /* ── Hero layout ──────────────────────────────────────────── */
   .hero-grid {
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(320px, .9fr);
@@ -39,20 +38,9 @@
     gap: 1.25rem;
   }
 
-  .eyebrow {
-    display: inline-flex;
-    width: fit-content;
-    padding: .42rem .85rem;
-    border-radius: 999px;
-    background: var(--blue-dim);
-    border: 1px solid var(--blue-bdr);
-    color: var(--blue-lt);
-    text-transform: uppercase;
-    font-size: .72rem;
-    letter-spacing: .12em;
-    font-weight: 800;
-  }
-
+  /* ── Typography ───────────────────────────────────────────────
+     .tag est la classe globale ; on ne redéfinit pas .eyebrow.
+     On utilise uniquement .tag partout dans la page. ─────────── */
   .projects-title {
     font-family: 'Clash Display', sans-serif;
     font-size: clamp(2.9rem, 5vw, 5rem);
@@ -79,6 +67,8 @@
     font-weight: 500;
   }
 
+  /* ── CTA button rows ─────────────────────────────────────────
+     Réutilise .btn-pri / .btn-sec du CSS global sans surcharge. */
   .hero-actions,
   .section-actions {
     display: flex;
@@ -86,6 +76,7 @@
     gap: .9rem;
   }
 
+  /* ── Hero panel (right column) ────────────────────────────── */
   .hero-panel {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
@@ -134,6 +125,7 @@
     font-weight: 600;
   }
 
+  /* ── Logo wall (hero) ────────────────────────────────────── */
   .logo-wall {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -158,24 +150,7 @@
     object-fit: contain;
   }
 
-  .logo-placeholder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: .4rem;
-    text-align: center;
-    color: var(--text-soft);
-    font-size: .74rem;
-    font-weight: 700;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-  }
-
-  .logo-placeholder i {
-    font-size: 1.5rem;
-    color: var(--blue-lt);
-  }
-
+  /* ── Metric row (hero) ───────────────────────────────────── */
   .metric-row {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -198,8 +173,8 @@
     color: var(--text-main);
   }
 
-  .metric-value.blue { color: var(--blue-lt); }
-  .metric-value.green { color: var(--green); }
+  .metric-value.blue   { color: var(--blue-lt); }
+  .metric-value.green  { color: var(--green); }
   .metric-value.orange { color: var(--orange); }
 
   .metric-label {
@@ -211,6 +186,8 @@
     font-weight: 800;
   }
 
+  /* ── Section head ────────────────────────────────────────────
+     On n'override PAS .lead ici — la classe globale s'applique. */
   .section-head {
     display: flex;
     flex-direction: column;
@@ -228,18 +205,12 @@
     font-weight: 700;
   }
 
-  .section-head .lead {
-    color: var(--text-muted);
-    max-width: 70ch;
-    line-height: 1.8;
-    font-size: 1.02rem;
-    font-weight: 500;
-  }
-
+  /* ── Logo strip ──────────────────────────────────────────── */
   .logo-strip {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
+    margin-bottom: 1.25rem;
   }
 
   .logo-strip-item {
@@ -253,9 +224,13 @@
     min-height: 92px;
   }
 
+  /* Correction : largeur/hauteur max plutôt que fixe pour les
+     logos de proportions différentes (SVG APEC vs PNG partenaires) */
   .logo-strip-item img {
-    width: 72px;
-    height: 72px;
+    width: 64px;
+    height: 64px;
+    max-width: 64px;
+    max-height: 64px;
     object-fit: contain;
     flex-shrink: 0;
   }
@@ -280,6 +255,7 @@
     line-height: 1.5;
   }
 
+  /* ── Projects grid ───────────────────────────────────────── */
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -330,6 +306,7 @@
     flex-grow: 1;
   }
 
+  /* .project-kicker aligne sur .tag global (même rôle visuel) */
   .project-kicker {
     display: inline-flex;
     width: fit-content;
@@ -377,6 +354,8 @@
     font-weight: 700;
   }
 
+  /* Correction : suppression des styles inline sur les boutons ;
+     on laisse .btn-pri / .btn-sec s'appliquer tel quel (CSS global). */
   .project-link-row {
     margin-top: auto;
     display: flex;
@@ -384,6 +363,7 @@
     flex-wrap: wrap;
   }
 
+  /* ── Workflow steps ──────────────────────────────────────── */
   .steps-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -419,6 +399,7 @@
     line-height: 1.7;
   }
 
+  /* ── CTA panel ────────────────────────────────────────────── */
   .cta-panel {
     background: linear-gradient(135deg, rgba(56, 189, 248, .06), rgba(34, 197, 94, .05));
     border: 1px solid var(--border-color);
@@ -436,20 +417,13 @@
     font-weight: 700;
   }
 
+  /* Correction : .cta-panel .lead hérite de .lead global.
+     On ajoute seulement la marge spécifique au contexte CTA. */
   .cta-panel .lead {
-    max-width: 70ch;
     margin-bottom: 1rem;
   }
 
-  html.light-mode .hero-panel,
-  html.light-mode .project-card,
-  html.light-mode .step-card,
-  html.light-mode .cta-panel,
-  html.light-mode .logo-strip-item,
-  html.light-mode .metric-card {
-    box-shadow: none;
-  }
-
+  /* ── Responsive ──────────────────────────────────────────── */
   @media (max-width: 1100px) {
     .hero-grid,
     .projects-grid,
@@ -497,27 +471,34 @@
     .project-card-top {
       min-height: 140px;
     }
-
-    .section-wrap {
-      width: min(1200px, calc(100% - 1.5rem));
-    }
   }
 </style>
 @endpush
 
 @section('contain')
+
+{{-- ═══════════════════════════════════════════════════════════
+     HERO
+     ═══════════════════════════════════════════════════════════ --}}
 <section id="page-hero">
   <div class="section-wrap">
     <div class="hero-grid">
+
       <div class="hero-copy">
+        {{-- Breadcrumb — classe globale ph-breadcrumb --}}
         <div class="ph-breadcrumb">
           <a href="{{ url('/') }}">{{ __('Home') }}</a>
           <span>&rsaquo;</span>
           <span class="curr">{{ __('Projects') }}</span>
         </div>
 
-        <span class="eyebrow">{{ __('Portfolio') }}</span>
-        <h1 class="projects-title">{{ __('Projects delivered with clarity and') }} <em>{{ __('business direction.') }}</em></h1>
+        {{-- Eyebrow : classe globale .tag (cohérent avec toutes les pages) --}}
+        <span class="tag">{{ __('Portfolio') }}</span>
+
+        <h1 class="projects-title">
+          {{ __('Projects delivered with clarity and business direction.') }}
+        </h1>
+
         <p class="projects-lead">
           {{ __('Selected work that reflects how DigiTexia presents organizations online: clear positioning, credible interfaces, and delivery that supports real business goals.') }}
         </p>
@@ -525,7 +506,9 @@
         <div class="hero-actions">
           <a href="{{ url('/contact-us') }}" class="btn-pri">
             {{ __('Book a Consultation') }}
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </a>
           <a href="{{ url('/solutions') }}" class="btn-sec">{{ __('Explore Solutions') }}</a>
         </div>
@@ -566,15 +549,22 @@
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
+{{-- ═══════════════════════════════════════════════════════════
+     PORTFOLIO
+     ═══════════════════════════════════════════════════════════ --}}
 <section id="portfolio">
   <div class="section-wrap">
+
     <div class="section-head rv">
+      {{-- .tag : classe globale, cohérente avec les autres pages --}}
       <span class="tag">{{ __('Selected Work') }}</span>
       <h2>{{ __('Client-facing work that feels credible at a glance.') }}</h2>
+      {{-- .lead : classe globale — pas besoin de la redéfinir --}}
       <p class="lead">
         {{ __('These examples are presented with the logos and links that matter, so visitors can see the relationship, the output, and the business context without noise.') }}
       </p>
@@ -604,9 +594,8 @@
       </div>
     </div>
 
-    <div style="height:1.25rem"></div>
-
     <div class="projects-grid">
+
       <article class="project-card rv d1">
         <div class="project-card-top">
           <img src="{{ asset('partners/partner-2.png') }}" alt="CREMIN-CAM logo">
@@ -620,8 +609,11 @@
             <span class="project-chip">{{ __('Lead capture') }}</span>
             <span class="project-chip">{{ __('Mobile-first') }}</span>
           </div>
+          {{-- Correction : suppression des styles inline sur les boutons --}}
           <div class="project-link-row">
-            <a href="https://www.cremin-cam.org" target="_blank" rel="noreferrer" class="btn-pri" style="font-size:.82rem; padding:.75rem 1.05rem;">{{ __('Visit site') }}</a>
+            <a href="https://www.cremin-cam.org" target="_blank" rel="noreferrer" class="btn-pri">
+              {{ __('Visit site') }}
+            </a>
           </div>
         </div>
       </article>
@@ -640,7 +632,9 @@
             <span class="project-chip">{{ __('Brand consistency') }}</span>
           </div>
           <div class="project-link-row">
-            <a href="https://web.facebook.com/profile.php?id=61575062085703&locale=fr_FR" target="_blank" rel="noreferrer" class="btn-sec" style="font-size:.82rem; padding:.75rem 1.05rem;">{{ __('Open profile') }}</a>
+            <a href="https://web.facebook.com/profile.php?id=61575062085703&locale=fr_FR" target="_blank" rel="noreferrer" class="btn-sec">
+              {{ __('Open profile') }}
+            </a>
           </div>
         </div>
       </article>
@@ -659,20 +653,29 @@
             <span class="project-chip">{{ __('Business-facing') }}</span>
           </div>
           <div class="project-link-row">
-            <a href="https://www.lightgroup.co.com/" target="_blank" rel="noreferrer" class="btn-pri" style="font-size:.82rem; padding:.75rem 1.05rem;">{{ __('Visit site') }}</a>
+            <a href="https://www.lightgroup.co.com/" target="_blank" rel="noreferrer" class="btn-pri">
+              {{ __('Visit site') }}
+            </a>
           </div>
         </div>
       </article>
+
     </div>
   </div>
 </section>
 
+{{-- ═══════════════════════════════════════════════════════════
+     WORKFLOWS
+     ═══════════════════════════════════════════════════════════ --}}
 <section id="workflows">
   <div class="section-wrap">
+
     <div class="section-head rv">
       <span class="tag">{{ __('How we work') }}</span>
       <h2>{{ __('From brief to polished result.') }}</h2>
-      <p class="lead">{{ __('We keep the process straightforward: understand the audience, structure the message, and deliver a result that reads as professional from the first glance.') }}</p>
+      <p class="lead">
+        {{ __('We keep the process straightforward: understand the audience, structure the message, and deliver a result that reads as professional from the first glance.') }}
+      </p>
     </div>
 
     <div class="steps-grid rv d1">
@@ -692,25 +695,35 @@
         <div class="step-desc">{{ __('We finish with responsive output that works across desktop and mobile screens.') }}</div>
       </div>
     </div>
+
   </div>
 </section>
 
+{{-- ═══════════════════════════════════════════════════════════
+     FINAL CTA
+     ═══════════════════════════════════════════════════════════ --}}
 <section id="final-cta">
   <div class="section-wrap">
     <div class="cta-panel rv">
       <span class="tag">{{ __('Ready to move forward?') }}</span>
       <h2>{{ __('Need a project presentation that feels more credible?') }}</h2>
-      <p class="lead">{{ __('Let us shape the next project page so it looks less like a placeholder and more like a real business asset.') }}</p>
+      {{-- .lead hérite du CSS global — .cta-panel .lead n'ajoute que la marge --}}
+      <p class="lead">
+        {{ __('Let us shape the next project page so it looks less like a placeholder and more like a real business asset.') }}
+      </p>
       <div class="section-actions">
         <a href="{{ url('/contact-us') }}" class="btn-pri">
           {{ __('Start Your Project') }}
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </a>
         <a href="{{ url('/solutions') }}" class="btn-sec">{{ __('View Solutions') }}</a>
       </div>
     </div>
   </div>
 </section>
+
 @endsection
 
 @push('scripts')
@@ -735,7 +748,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   const ddToggle = document.querySelector('.nav-dropdown > a');
-  const ddMenu = document.querySelector('.dropdown-menu');
+  const ddMenu   = document.querySelector('.dropdown-menu');
   if (ddToggle && ddMenu) {
     ddToggle.addEventListener('click', function (e) {
       if (window.innerWidth <= 900) {
@@ -743,7 +756,6 @@ document.addEventListener('DOMContentLoaded', function () {
         ddMenu.classList.toggle('is-open');
       }
     });
-
     document.addEventListener('click', function (e) {
       if (!e.target.closest('.nav-dropdown')) {
         ddMenu.classList.remove('is-open');
