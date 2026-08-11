@@ -1,0 +1,248 @@
+.dx-projects .page-hero {
+  position: relative;
+  padding: 168px 0 88px;
+  overflow: hidden;
+}
+
+.dx-projects .page-hero .dx-container {
+  max-width: 780px;
+}
+
+.dx-projects .page-hero h1 {
+  margin-bottom: 22px;
+  font-size: clamp(34px, 4.6vw, 52px);
+  line-height: 1.08;
+}
+
+.dx-projects .page-hero-subtitle {
+  max-width: 620px;
+  margin-bottom: 32px;
+  color: var(--dx-text-muted);
+  font-size: 18px;
+}
+
+.dx-projects .page-hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.dx-projects .company-intro {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.dx-projects .company-intro .dx-container {
+  max-width: 840px;
+}
+
+.dx-projects .company-intro h2 {
+  margin-bottom: 32px;
+  font-size: clamp(26px, 3.4vw, 36px);
+  line-height: 1.35;
+  font-weight: 600;
+}
+
+.dx-projects .company-intro .lead {
+  color: var(--dx-text-muted);
+  font-size: 19px;
+}
+
+.dx-projects .brand-signature {
+  margin-top: 40px;
+  color: var(--dx-gold);
+  font-family: var(--dx-font-display);
+  font-size: clamp(22px, 2.6vw, 30px);
+  font-weight: 700;
+}
+
+.dx-projects .portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 24px;
+}
+
+.dx-projects .project-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 32px 28px;
+  border: 1px solid var(--dx-line);
+  border-radius: var(--dx-radius);
+  background: var(--dx-ink);
+  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.dx-projects .project-card:hover {
+  border-color: var(--dx-line-strong);
+  background: var(--dx-panel);
+  transform: translateY(-4px);
+}
+
+.dx-projects .project-tag {
+  margin-bottom: 16px;
+  color: var(--dx-teal);
+  font-family: var(--dx-font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.dx-projects .project-card h3 {
+  margin-bottom: 10px;
+}
+
+.dx-projects .project-card .positioning {
+  margin-bottom: 18px;
+  color: var(--dx-text-muted);
+  font-size: 14.5px;
+}
+
+.dx-projects .field-list {
+  margin-top: 18px;
+}
+
+.dx-projects .field-row {
+  display: flex;
+  gap: 10px;
+  padding: 8px 0;
+  border-top: 1px solid var(--dx-line);
+  color: var(--dx-text-muted);
+  font-size: 13px;
+}
+
+.dx-projects .field-row:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.dx-projects .field-label {
+  min-width: 96px;
+  flex-shrink: 0;
+  padding-top: 1px;
+  color: var(--dx-gold);
+  font-family: var(--dx-font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.dx-projects .project-link {
+  margin-top: auto;
+  padding-top: 22px;
+}
+
+.dx-projects .dx-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  color: var(--dx-teal);
+  font-family: var(--dx-font-mono);
+  font-size: 12.5px;
+  font-weight: 500;
+}
+
+.dx-projects .dx-card-link:hover {
+  color: var(--dx-gold);
+}
+
+.dx-projects .innovation-panel {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 24px;
+  align-items: start;
+  padding: 44px;
+  border: 1px solid var(--dx-line);
+  border-radius: var(--dx-radius);
+  background:
+    radial-gradient(circle at 8% 10%, rgba(227, 167, 60, 0.10), transparent 28%),
+    var(--dx-panel);
+}
+
+.dx-projects .innovation-panel svg {
+  width: 42px;
+  height: 42px;
+  color: var(--dx-gold);
+}
+
+.dx-projects .innovation-panel h3 {
+  margin-bottom: 12px;
+}
+
+.dx-projects .innovation-panel p {
+  max-width: 760px;
+  color: var(--dx-text-muted);
+  font-size: 16px;
+}
+
+.dx-projects .industries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  background: var(--dx-line);
+  border: 1px solid var(--dx-line);
+  border-radius: var(--dx-radius);
+}
+
+.dx-projects .industry-card {
+  padding: 26px 24px;
+  background: var(--dx-ink);
+}
+
+.dx-projects .industry-card:hover {
+  background: var(--dx-panel);
+}
+
+.dx-projects .industry-card h3 {
+  margin-bottom: 8px;
+  font-size: 16.5px;
+}
+
+.dx-projects .industry-card p {
+  color: var(--dx-text-muted);
+  font-size: 13.5px;
+}
+
+@media (max-width: 1080px) {
+  .dx-projects .industries-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .dx-projects .page-hero {
+    padding: 132px 0 68px;
+  }
+
+  .dx-projects .page-hero-subtitle,
+  .dx-projects .company-intro .lead,
+  .dx-projects .innovation-panel p {
+    font-size: 16px;
+  }
+
+  .dx-projects .page-hero-cta .dx-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .dx-projects .company-intro,
+  .dx-projects .dx-section {
+    padding: 76px 0;
+  }
+
+  .dx-projects .project-card,
+  .dx-projects .industry-card {
+    padding: 26px 22px;
+  }
+
+  .dx-projects .industries-grid,
+  .dx-projects .innovation-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .dx-projects .innovation-panel {
+    padding: 30px 24px;
+  }
+}

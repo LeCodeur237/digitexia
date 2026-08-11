@@ -123,13 +123,13 @@
 
   .login-card .btn-pri {
     background: var(--accent) !important;
-    color: var(--text-main) !important;
+    color: var(--on-accent) !important;
     box-shadow: 0 0 24px var(--accent-soft);
   }
 
   .login-card .btn-pri:hover {
     background: var(--accent-lt) !important;
-    color: var(--text-main) !important;
+    color: var(--on-accent) !important;
   }
 
   .login-card input::placeholder {

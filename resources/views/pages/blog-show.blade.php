@@ -75,14 +75,14 @@
 
 <section class="show-shell">
   <div class="show-wrap">
-    <div class="tag" style="margin-bottom:1rem">Blog article</div>
+    <div class="tag" style="margin-bottom:1rem">{{ __('Blog article') }}</div>
     <div class="show-card">
       <div class="show-meta">
         <span>{{ $post->author->name ?? 'DigiTexia' }}</span>
-        <span>•</span>
-        <span>{{ optional($post->published_at)->format('d M Y') ?? 'Draft' }}</span>
-        <span>•</span>
-        <span>{{ $post->reading_time_minutes ?? 5 }} min read</span>
+        <span>&bull;</span>
+        <span>{{ optional($post->published_at)->format('d M Y') ?? __('Draft') }}</span>
+        <span>&bull;</span>
+        <span>{{ $post->reading_time_minutes ?? 5 }} {{ __('min read') }}</span>
       </div>
 
       <h1 style="font-family:'Clash Display',sans-serif;font-size:clamp(2rem,4vw,3.4rem);line-height:1.05;margin-bottom:1rem">{{ $post->title }}</h1>
@@ -100,25 +100,24 @@
     </div>
 
     <div class="comment-box">
-      <h2 style="margin-bottom:1rem">Comments</h2>
+      <h2 style="margin-bottom:1rem">{{ __('Comments') }}</h2>
       @if ($post->allow_comments)
         @auth
           <form method="POST" action="{{ route('blog.comments.store', $post) }}">
             @csrf
             <div style="margin-bottom:1rem">
-              <textarea name="body" rows="5" placeholder="Write your comment..." required>{{ old('body') }}</textarea>
+              <textarea name="body" rows="5" placeholder="{{ __('Write your comment...') }}" required>{{ old('body') }}</textarea>
             </div>
-            <button type="submit" class="btn-pri">Submit comment</button>
+            <button type="submit" class="btn-pri">{{ __('Submit comment') }}</button>
           </form>
         @else
-          <p class="lead">Please login to leave a comment.</p>
-          <a href="{{ route('login') }}" class="btn-pri">Login</a>
+          <p class="lead">{{ __('Please login to leave a comment.') }}</p>
+          <a href="{{ route('login') }}" class="btn-pri">{{ __('Login') }}</a>
         @endauth
       @else
-        <p class="lead">Comments are disabled for this article.</p>
+        <p class="lead">{{ __('Comments are disabled for this article.') }}</p>
       @endif
     </div>
   </div>
 </section>
 @endsection
-

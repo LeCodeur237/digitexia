@@ -17,6 +17,23 @@ body {
         color 0.25s ease;
 }
 
+:is(
+    .btn-pri,
+    .btn-primary,
+    .nav-btn,
+    .nl-btn,
+    .footer-newsletter-button
+),
+:is(
+    .btn-pri,
+    .btn-primary,
+    .nav-btn,
+    .nl-btn,
+    .footer-newsletter-button
+) * {
+    color: var(--on-accent) !important;
+}
+
 main,
 section,
 footer,

@@ -1,432 +1,293 @@
 @extends('index')
 
-@section('page_title', __('The Problem | DigiTexia'))
+@section('page_title', __('DigiTexia | The Problem - The Cost of Operational Fragmentation'))
+@section('digitexia_v2', true)
 
 @push('styles')
-<link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ asset('css/problem-digitexia.css') }}">
+<link rel="stylesheet" href="{{ asset('css/problem-v2.css') }}?v={{ filemtime(public_path('css/problem-v2.css')) }}">
 @endpush
 
-@section('contain')
-<section id="page-hero">
-  <div class="ph-bg"></div>
-  <div class="ph-grid"></div>
-  <div class="ph-inner">
+@section('fullpage')
+@php
+    $warningIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4M12 17h.01"/></svg>';
+    $xCircleIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6M9 9l6 6"/></svg>';
+    $checkCircleIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>';
+@endphp
 
-    <div class="ph-left">
-      <div class="ph-breadcrumb">
-        <a href="{{ url('/') }}">{{ __('Home') }}</a>
-        <span>&rsaquo;</span>
-        <span class="curr">{{ __('The Problem') }}</span>
-      </div>
-      <span class="tag-red">{{ __('Operational Risk') }}</span>
-      <h1>{{ __('Manual workflows are costing your business time, control and visibility.') }}</h1>
-      <p class="lead">{{ __('When core operations depend on spreadsheets, chat threads and paper approvals, leaders lose real-time visibility, teams repeat work and decisions move slower than the business requires.') }}</p>
-      <div class="ph-btns">
-        <a href="{{ url('/solutions') }}" class="btn-pri">
-          {{ __('Explore Digital Solutions') }}
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <a href="{{ url('/contact-us') }}" class="btn-sec">{{ __('Request an Assessment') }}</a>
-      </div>
-    </div>
+@include('partials.v2.header')
 
-    <div class="ph-chaos rv d1">
-      <span class="ph-chaos-title"><i class="ti ti-alert-triangle"></i> {{ __('Before DigiTexia') }}</span>
-      <div class="chaos-tools">
-        <div class="chaos-tool">
-          <div class="chaos-tool-ico"><i class="ti ti-table"></i></div>
-          <div class="chaos-tool-body">
-            <div class="chaos-tool-name">{{ __('Uncontrolled spreadsheets') }}</div>
-            <div class="chaos-tool-issue"><i class="ti ti-alert-triangle"></i> {{ __('Multiple versions create conflicting business data') }}</div>
-          </div>
-        </div>
-        <div class="chaos-tool">
-          <div class="chaos-tool-ico"><i class="ti ti-mail"></i></div>
-          <div class="chaos-tool-body">
-            <div class="chaos-tool-name">{{ __('Chat and email approvals') }}</div>
-            <div class="chaos-tool-issue"><i class="ti ti-alert-triangle"></i> {{ __('Decisions are buried in conversations') }}</div>
-          </div>
-        </div>
-        <div class="chaos-tool">
-          <div class="chaos-tool-ico"><i class="ti ti-file-text"></i></div>
-          <div class="chaos-tool-body">
-            <div class="chaos-tool-name">{{ __('Paper-based records') }}</div>
-            <div class="chaos-tool-issue"><i class="ti ti-alert-triangle"></i> {{ __('Information is difficult to retrieve and verify') }}</div>
-          </div>
-        </div>
-        <div class="chaos-tool">
-          <div class="chaos-tool-ico"><i class="ti ti-message-circle"></i></div>
-          <div class="chaos-tool-body">
-            <div class="chaos-tool-name">{{ __('Manual activity logs') }}</div>
-            <div class="chaos-tool-issue"><i class="ti ti-alert-triangle"></i> {{ __('Operational updates arrive too late to act on') }}</div>
-          </div>
-        </div>
-      </div>
-      <div class="chaos-arrow">
-        <span class="chaos-arr-label">{{ __('Impact') }}</span>
-      </div>
-      <div class="chaos-result">
-        <div class="chaos-result-ico"><i class="ti ti-trending-down"></i></div>
-        <div class="chaos-result-text">{{ __('Slower execution, higher operational risk and weaker growth capacity') }}</div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- Stats Banner -->
-<section id="stats-banner">
-  <div class="stats-inner rv">
-    <div class="stat-cell">
-      <div class="stat-num red">{{ __('Delayed') }}</div>
-      <div class="stat-label">{{ __('approvals remain blocked in messages, calls and inboxes') }}</div>
-      <div class="stat-src">{{ __('Execution speed') }}</div>
-    </div>
-    <div class="stat-cell">
-      <div class="stat-num orange">{{ __('Rework') }}</div>
-      <div class="stat-label">{{ __('teams enter the same information repeatedly across tools') }}</div>
-      <div class="stat-src">{{ __('Team productivity') }}</div>
-    </div>
-    <div class="stat-cell">
-      <div class="stat-num blue">{{ __('Hidden') }}</div>
-      <div class="stat-label">{{ __('documents, decisions and responsibilities are difficult to trace') }}</div>
-      <div class="stat-src">{{ __('Management control') }}</div>
-    </div>
-    <div class="stat-cell">
-      <div class="stat-num green">{{ __('Connected') }}</div>
-      <div class="stat-label">{{ __('digital workflows improve execution, control and accountability') }}</div>
-      <div class="stat-src">{{ __('DigiTexia outcome') }}</div>
-    </div>
-  </div>
-</section>
-
-<!-- Pain Points -->
-<section id="pain-points">
-  <div class="wrap">
-
-    <div class="pain-intro">
-      <div class="rv">
-        <span class="tag-red">{{ __('Operational Gaps') }}</span>
-        <h2>{{ __('Manual work creates risks leadership cannot ignore.') }}</h2>
-        <p class="lead">{{ __('The issue is not only productivity. Manual operations reduce accountability, weaken reporting quality and make it harder to scale with confidence.') }}</p>
-      </div>
-      <div class="rv d1">
-        <div style="background:var(--card-bg);border:1px solid var(--bdr);border-radius:16px;padding:2rem;">
-          <div style="font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem;">{{ __('Impact Severity') }}</div>
-          <div style="display:flex;flex-direction:column;gap:1rem;">
-            <div>
-              <div style="display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted-lt);margin-bottom:.4rem"><span>{{ __('Time Loss') }}</span><span style="color:var(--danger-fg);font-weight:600">{{ __('High') }}</span></div>
-              <div style="height:6px;background:var(--surface-bg);border-radius:100px;overflow:hidden"><div style="width:92%;height:100%;background:linear-gradient(90deg,var(--danger),var(--danger-fg));border-radius:100px"></div></div>
+<main class="dx-problem">
+    <section class="page-hero">
+        <div class="dx-blueprint"></div>
+        <div class="dx-container dx-reveal">
+            <div class="dx-eyebrow">{{ __('The problem') }}</div>
+            <h1>{{ __('Operational fragmentation is quietly costing you the advantage.') }}</h1>
+            <p class="page-hero-subtitle">
+                {{ __('Most organizations do not lose ground in one dramatic failure. They lose it gradually in disconnected spreadsheets, delayed approvals and decisions made on data that is already out of date. DigiTexia exists to close that gap.') }}
+            </p>
+            <div class="page-hero-cta">
+                <a href="#assessment" class="dx-btn dx-btn-primary">
+                    {{ __('Request an Assessment') }}
+                    <span class="dx-btn-arrow" aria-hidden="true">&rarr;</span>
+                </a>
+                <a href="{{ url('/solutions') }}" class="dx-btn dx-btn-secondary">{{ __('See Our Solutions') }}</a>
             </div>
-            <div>
-              <div style="display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted-lt);margin-bottom:.4rem"><span>{{ __('Data Errors') }}</span><span style="color:var(--danger-fg);font-weight:600">{{ __('High') }}</span></div>
-              <div style="height:6px;background:var(--surface-bg);border-radius:100px;overflow:hidden"><div style="width:88%;height:100%;background:linear-gradient(90deg,var(--danger),var(--danger-fg));border-radius:100px"></div></div>
+        </div>
+    </section>
+
+    <section class="dx-section problem-diagram-section">
+        <div class="dx-container">
+            <div class="dx-section-head center dx-reveal">
+                <div class="dx-eyebrow">{{ __('How fragmentation happens') }}</div>
+                <h2>{{ __('When systems do not talk to each other, everything slows down.') }}</h2>
+                <p class="dx-section-intro">
+                    {{ __('Every disconnected tool creates a small delay. Together, they compound into an organization that reacts instead of leads.') }}
+                </p>
             </div>
-            <div>
-              <div style="display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted-lt);margin-bottom:.4rem"><span>{{ __('Visibility') }}</span><span style="color:var(--orange);font-weight:600">{{ __('High') }}</span></div>
-              <div style="height:6px;background:var(--surface-bg);border-radius:100px;overflow:hidden"><div style="width:78%;height:100%;background:linear-gradient(90deg,var(--accent-fg),var(--accent-fg));border-radius:100px"></div></div>
+
+            <div class="diagram-panel dx-reveal">
+                <div class="diagram-col bad">
+                    <div class="diagram-label">{{ __('Fragmented operations') }}</div>
+                    <svg class="diagram-svg" viewBox="0 0 240 180" width="100%" height="auto" role="img" aria-label="{{ __('Fragmented operations diagram') }}">
+                        <g stroke="#E2665A" stroke-width="1.2" stroke-dasharray="3 4" opacity="0.6">
+                            <line x1="40" y1="30" x2="110" y2="70"/>
+                            <line x1="200" y1="35" x2="150" y2="80"/>
+                            <line x1="30" y1="140" x2="95" y2="100"/>
+                            <line x1="210" y1="145" x2="160" y2="105"/>
+                        </g>
+                        <g fill="none" stroke="#E2665A" stroke-width="1.4">
+                            <rect x="12" y="14" width="56" height="32" rx="6"/>
+                            <rect x="172" y="18" width="56" height="32" rx="6"/>
+                            <rect x="4" y="124" width="56" height="32" rx="6"/>
+                            <rect x="182" y="128" width="56" height="32" rx="6"/>
+                            <circle cx="122" cy="90" r="18"/>
+                        </g>
+                        <g font-family="IBM Plex Mono" font-size="8" fill="#94A1C2" text-anchor="middle">
+                            <text x="40" y="34">{{ __('Sheets') }}</text>
+                            <text x="200" y="38">{{ __('Email') }}</text>
+                            <text x="32" y="144">{{ __('Paper') }}</text>
+                            <text x="210" y="148">{{ __('Apps') }}</text>
+                            <text x="122" y="94">?</text>
+                        </g>
+                    </svg>
+                </div>
+
+                <div class="diagram-divider" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+                        <path d="M5 12h14M13 6l6 6-6 6"/>
+                    </svg>
+                    <span>DigiTexia</span>
+                </div>
+
+                <div class="diagram-col good">
+                    <div class="diagram-label">{{ __('Unified infrastructure') }}</div>
+                    <svg class="diagram-svg" viewBox="0 0 240 180" width="100%" height="auto" role="img" aria-label="{{ __('Unified infrastructure diagram') }}">
+                        <g stroke="#39D6B4" stroke-width="1.4">
+                            <line x1="40" y1="30" x2="122" y2="90"/>
+                            <line x1="200" y1="35" x2="122" y2="90"/>
+                            <line x1="30" y1="140" x2="122" y2="90"/>
+                            <line x1="210" y1="145" x2="122" y2="90"/>
+                        </g>
+                        <g fill="none" stroke="#E3A73C" stroke-width="1.4">
+                            <rect x="12" y="14" width="56" height="32" rx="6"/>
+                            <rect x="172" y="18" width="56" height="32" rx="6"/>
+                            <rect x="4" y="124" width="56" height="32" rx="6"/>
+                            <rect x="182" y="128" width="56" height="32" rx="6"/>
+                        </g>
+                        <circle cx="122" cy="90" r="20" fill="#0F1728" stroke="#39D6B4" stroke-width="1.6"/>
+                        <g font-family="IBM Plex Mono" font-size="8" fill="#94A1C2" text-anchor="middle">
+                            <text x="40" y="34">{{ __('Inventory') }}</text>
+                            <text x="200" y="38">{{ __('Reports') }}</text>
+                            <text x="32" y="144">{{ __('Approvals') }}</text>
+                            <text x="210" y="148">{{ __('Records') }}</text>
+                        </g>
+                        <text x="122" y="94" font-family="IBM Plex Mono" font-size="9" fill="#39D6B4" text-anchor="middle">DGX</text>
+                    </svg>
+                </div>
             </div>
-            <div>
-              <div style="display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted-lt);margin-bottom:.4rem"><span>{{ __('Collaboration') }}</span><span style="color:var(--orange);font-weight:600">{{ __('High') }}</span></div>
-              <div style="height:6px;background:var(--surface-bg);border-radius:100px;overflow:hidden"><div style="width:72%;height:100%;background:linear-gradient(90deg,var(--accent-fg),var(--accent-fg));border-radius:100px"></div></div>
+        </div>
+    </section>
+
+    <section class="dx-section dx-section-alt">
+        <div class="dx-container">
+            <div class="dx-section-head dx-reveal">
+                <div class="dx-eyebrow">{{ __('The breakdown') }}</div>
+                <h2>{{ __('Five ways fragmentation erodes your organization') }}</h2>
+                <p class="dx-section-intro">
+                    {{ __('When critical systems are not connected, organizations lose visibility, speed and competitive edge. Fragmentation compounds across teams, departments and systems.') }}
+                </p>
             </div>
-            <div>
-              <div style="display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted-lt);margin-bottom:.4rem"><span>{{ __('Traceability') }}</span><span style="color:var(--blue-lt);font-weight:600">{{ __('Medium') }}</span></div>
-              <div style="height:6px;background:var(--surface-bg);border-radius:100px;overflow:hidden"><div style="width:62%;height:100%;background:linear-gradient(90deg,var(--blue),var(--blue-lt));border-radius:100px"></div></div>
+
+            <div class="problem-detail-grid dx-reveal">
+                <div class="problem-detail">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                    <div>
+                        <h3>{{ __('Delayed Decision-Making') }}</h3>
+                        <p>{{ __('Leaders make decisions on outdated data. When real-time visibility does not exist, response times slow, risks compound and market opportunities disappear.') }}</p>
+                    </div>
+                    <div>
+                        <div class="signals-label">{{ __('Signals to watch for') }}</div>
+                        <ul class="signals-list">
+                            <li>{!! $warningIcon !!}{{ __('Reports are assembled manually before every leadership meeting') }}</li>
+                            <li>{!! $warningIcon !!}{{ __('Different teams work from different versions of the current numbers') }}</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="problem-detail">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4M12 17h.01"/></svg>
+                    <div>
+                        <h3>{{ __('Preventable Operational Errors') }}</h3>
+                        <p>{{ __('Manual processes create errors. Duplicate entry, misaligned data and disconnected systems produce costly correction cycles and compliance exposure.') }}</p>
+                    </div>
+                    <div>
+                        <div class="signals-label">{{ __('Signals to watch for') }}</div>
+                        <ul class="signals-list">
+                            <li>{!! $warningIcon !!}{{ __('The same data is entered into more than one system by hand') }}</li>
+                            <li>{!! $warningIcon !!}{{ __('Errors are usually caught downstream, not at the point of entry') }}</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="problem-detail">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 8l8 8M8 16 12 12"/></svg>
+                    <div>
+                        <h3>{{ __('Wasted Execution Capacity') }}</h3>
+                        <p>{{ __('Teams drown in manual work. Repetitive data entry, cross-checking and report assembly consume hours that could drive strategic impact.') }}</p>
+                    </div>
+                    <div>
+                        <div class="signals-label">{{ __('Signals to watch for') }}</div>
+                        <ul class="signals-list">
+                            <li>{!! $warningIcon !!}{{ __('Skilled staff spend recurring blocks of time on repetitive administration') }}</li>
+                            <li>{!! $warningIcon !!}{{ __('Month-end or quarter-end work requires a scramble every cycle') }}</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="problem-detail">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><path d="m4 4 16 16"/></svg>
+                    <div>
+                        <h3>{{ __('Lost Organizational Visibility') }}</h3>
+                        <p>{{ __('No single source of truth. When workflows live in scattered email, chat and files, approval delays and execution gaps multiply across teams.') }}</p>
+                    </div>
+                    <div>
+                        <div class="signals-label">{{ __('Signals to watch for') }}</div>
+                        <ul class="signals-list">
+                            <li>{!! $warningIcon !!}{{ __('Finding the status of a task means asking someone directly') }}</li>
+                            <li>{!! $warningIcon !!}{{ __('Leadership finds out about problems after they have already grown') }}</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="problem-detail">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 2 4 5v6c0 5.2 3.4 8.7 8 10 4.6-1.3 8-4.8 8-10V5l-8-3z"/><path d="M9 12h6M9 15h4"/></svg>
+                    <div>
+                        <h3>{{ __('Compliance and Audit Risk') }}</h3>
+                        <p>{{ __('Regulatory exposure grows. Fragmented data across spreadsheets and email creates audit trails that are incomplete, unreliable and difficult to produce on demand.') }}</p>
+                    </div>
+                    <div>
+                        <div class="signals-label">{{ __('Signals to watch for') }}</div>
+                        <ul class="signals-list">
+                            <li>{!! $warningIcon !!}{{ __('Preparing for an audit takes days of reconstructing records') }}</li>
+                            <li>{!! $warningIcon !!}{{ __('No one can say with confidence who approved what, or when') }}</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
+    </section>
 
-    <!-- 5 Pain Point Cards -->
-    <div class="pain-grid">
-      <div class="pain-card rv d1">
-        <div class="pain-card-num">01</div>
-        <div class="pain-card-ico"><i class="ti ti-clock"></i></div>
-        <div class="pain-card-title">{{ __('Repetitive manual work') }}</div>
-        <div class="pain-card-desc">{{ __('Employees spend valuable time copying data, chasing approvals and rebuilding reports manually.') }}</div>
-        <div class="pain-card-impact">{{ __('Administrative effort consumes core business capacity.') }}</div>
-      </div>
-      <div class="pain-card rv d2">
-        <div class="pain-card-num">02</div>
-        <div class="pain-card-ico"><i class="ti ti-eye"></i></div>
-        <div class="pain-card-title">{{ __('No live operational visibility') }}</div>
-        <div class="pain-card-desc">{{ __('Leaders discover issues after they happen because data is not consolidated in real time.') }}</div>
-        <div class="pain-card-impact">{{ __('Management becomes reactive instead of proactive.') }}</div>
-      </div>
-      <div class="pain-card rv d3">
-        <div class="pain-card-num">03</div>
-        <div class="pain-card-ico"><i class="ti ti-alert-triangle"></i></div>
-        <div class="pain-card-title">{{ __('Data inconsistency') }}</div>
-        <div class="pain-card-desc">{{ __('Information is entered in multiple places, creating conflicting versions and correction cycles.') }}</div>
-        <div class="pain-card-impact">{{ __('Small errors become costly operational cleanup.') }}</div>
-      </div>
-      <div class="pain-card rv d1">
-        <div class="pain-card-num">04</div>
-        <div class="pain-card-ico"><i class="ti ti-message-circle"></i></div>
-        <div class="pain-card-title">{{ __('Teams operate in silos') }}</div>
-        <div class="pain-card-desc">{{ __('Work moves through informal channels, and context disappears between departments or handoffs.') }}</div>
-        <div class="pain-card-impact">{{ __('Collaboration slows and execution mistakes increase.') }}</div>
-      </div>
-      <div class="pain-card rv d2">
-        <div class="pain-card-num">05</div>
-        <div class="pain-card-ico"><i class="ti ti-search"></i></div>
-        <div class="pain-card-title">{{ __('Weak traceability') }}</div>
-        <div class="pain-card-desc">{{ __('Approval history is scattered across inboxes, notebooks, files and chat logs.') }}</div>
-        <div class="pain-card-impact">{{ __('Audits become time-consuming and difficult to defend.') }}</div>
-      </div>
-      <div class="pain-card rv d3" style="background:linear-gradient(135deg,var(--accent-soft),var(--accent-soft));border-color:var(--blue-bdr);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:1.25rem">
-        <div style="font-size:2.5rem"><i class="ti ti-link"></i></div>
-        <div class="pain-card-title" style="color:var(--white)">{{ __('DigiTexia restores operational control.') }}</div>
-        <div class="pain-card-desc">{{ __('One digital environment aligns data, workflows and approvals so teams execute with clarity.') }}</div>
-      <a href="{{ url('/solutions') }}" class="btn-pri" style="margin-top:.5rem;font-size:.82rem;padding:.7rem 1.5rem">
-          {{ __('Explore Digital Solutions') }} &rarr;
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+    <section class="dx-section">
+        <div class="dx-container">
+            <div class="dx-section-head center dx-reveal">
+                <div class="dx-eyebrow">{{ __('Before and after') }}</div>
+                <h2>{{ __('What changes when operations are unified') }}</h2>
+                <p class="dx-section-intro">
+                    {{ __('The same organization, running on connected infrastructure instead of scattered systems.') }}
+                </p>
+            </div>
 
-<!-- Cost of Inaction -->
-<section id="cost">
-  <div class="cost-inner">
-        <div class="cost-header">
-      <div class="rv">
-        <span class="tag">{{ __('Cost of Inaction') }}</span>
-        <h2>{{ __('Delaying digital transformation increases operational debt.') }}</h2>
-        <p class="lead">{{ __('The longer critical workflows remain manual, the more your organization pays through lost time, avoidable errors and slower service delivery.') }}</p>
-      </div>
-      <div class="cost-visual rv d1">
-        <div class="cost-visual-title"><i class="ti ti-zap"></i>{{ __('Where operational time is lost') }}</div>
-        <div class="cost-bars-wrap">
-          <div class="cost-bar-row">
-            <div class="cost-bar-label">{{ __('Manual data entry') }}</div>
-            <div class="cost-bar-track"><div class="cost-bar-fill" style="--w:85%;background:linear-gradient(90deg,var(--danger),var(--danger-fg))"></div></div>
-            <div class="cost-bar-val">85%</div>
-          </div>
-          <div class="cost-bar-row">
-            <div class="cost-bar-label">{{ __('Email and chat') }}</div>
-            <div class="cost-bar-track"><div class="cost-bar-fill" style="--w:72%;background:linear-gradient(90deg,var(--accent-fg),var(--accent-fg))"></div></div>
-            <div class="cost-bar-val">72%</div>
-          </div>
-          <div class="cost-bar-row">
-            <div class="cost-bar-label">{{ __('Searching for information') }}</div>
-            <div class="cost-bar-track"><div class="cost-bar-fill" style="--w:64%;background:linear-gradient(90deg,var(--accent-fg),var(--accent-fg))"></div></div>
-            <div class="cost-bar-val">64%</div>
-          </div>
-          <div class="cost-bar-row">
-            <div class="cost-bar-label">{{ __('Duplicate effort') }}</div>
-            <div class="cost-bar-track"><div class="cost-bar-fill" style="--w:58%;background:linear-gradient(90deg,var(--blue),var(--blue-lt))"></div></div>
-            <div class="cost-bar-val">58%</div>
-          </div>
-          <div class="cost-bar-row">
-            <div class="cost-bar-label">{{ __('Error correction') }}</div>
-            <div class="cost-bar-track"><div class="cost-bar-fill" style="--w:47%;background:linear-gradient(90deg,var(--blue),var(--blue-lt))"></div></div>
-            <div class="cost-bar-val">47%</div>
-          </div>
+            <div class="compare-grid dx-reveal">
+                <div class="compare-col without">
+                    <div class="compare-head">
+                        {!! $xCircleIcon !!}
+                        <span>{{ __('Without unified infrastructure') }}</span>
+                    </div>
+                    <ul class="compare-list">
+                        <li>{!! $xCircleIcon !!}<span><b>{{ __('Decisions lag behind reality.') }}</b> {{ __('Leaders act on previous-week numbers.') }}</span></li>
+                        <li>{!! $xCircleIcon !!}<span><b>{{ __('Errors surface late.') }}</b> {{ __('Corrections cost more the longer they go unnoticed.') }}</span></li>
+                        <li>{!! $xCircleIcon !!}<span><b>{{ __('Teams work in silos.') }}</b> {{ __('Information stalls between departments.') }}</span></li>
+                        <li>{!! $xCircleIcon !!}<span><b>{{ __('Reporting is reactive.') }}</b> {{ __('Dashboards are rebuilt by hand, after the fact.') }}</span></li>
+                        <li>{!! $xCircleIcon !!}<span><b>{{ __('Capacity leaks away.') }}</b> {{ __('High-value staff do low-value work.') }}</span></li>
+                    </ul>
+                </div>
+
+                <div class="compare-col with">
+                    <div class="compare-head">
+                        {!! $checkCircleIcon !!}
+                        <span>{{ __('With DigiTexia') }}</span>
+                    </div>
+                    <ul class="compare-list">
+                        <li>{!! $checkCircleIcon !!}<span><b>{{ __('Automated Decision-Making.') }}</b> {{ __('Critical workflows run in real time, without manual intervention.') }}</span></li>
+                        <li>{!! $checkCircleIcon !!}<span><b>{{ __('Near-Zero Operational Errors.') }}</b> {{ __('Automated validation and audit trails catch issues at the source.') }}</span></li>
+                        <li>{!! $checkCircleIcon !!}<span><b>{{ __('Unified Team Intelligence.') }}</b> {{ __('Information flows across departments without friction.') }}</span></li>
+                        <li>{!! $checkCircleIcon !!}<span><b>{{ __('Real-Time Executive Visibility.') }}</b> {{ __('Live dashboards replace outdated reports.') }}</span></li>
+                        <li>{!! $checkCircleIcon !!}<span><b>{{ __('Sustainable Productivity Gains.') }}</b> {{ __('Teams reclaim hours for strategic, high-value work.') }}</span></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="cost-note">{{ __('Operational inefficiency consumes your best people before it affects your numbers.') }}</div>
-      </div>
-    </div>
+    </section>
 
-    <div class="cost-list rv">
-      <div class="cost-item">
-        <div class="cost-item-ico"><i class="ti ti-cash"></i></div>
-        <div>
-          <div class="cost-item-title">{{ __('Direct Financial Leakage') }}</div>
-          <div class="cost-item-desc">{{ __('Wrong invoices, missing stock and payroll mistakes create avoidable losses.') }}</div>
+    <section class="dx-section dx-section-alt">
+        <div class="dx-container">
+            <div class="dx-section-head center dx-reveal">
+                <div class="dx-eyebrow">{{ __('In plain terms') }}</div>
+                <h2>{{ __('What fragmentation costs organizations') }}</h2>
+            </div>
+
+            <div class="stats-grid dx-reveal">
+                <div class="stat-card">
+                    <div class="stat-number">{{ __('Hours') }}</div>
+                    <div class="stat-label">{{ __('Lost weekly to manual cross-checking and duplicate data entry') }}</div>
+                    <div class="stat-descriptor">{{ __('Capacity') }}</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">{{ __('Days') }}</div>
+                    <div class="stat-label">{{ __('Spent reconstructing records ahead of an audit or review') }}</div>
+                    <div class="stat-descriptor">{{ __('Compliance') }}</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">{{ __('Weeks') }}</div>
+                    <div class="stat-label">{{ __('Between an issue occurring and leadership becoming aware of it') }}</div>
+                    <div class="stat-descriptor">{{ __('Visibility') }}</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">{{ __('Growing') }}</div>
+                    <div class="stat-label">{{ __('Regulatory and reputational exposure with every disconnected system') }}</div>
+                    <div class="stat-descriptor">{{ __('Risk') }}</div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="cost-item">
-        <div class="cost-item-ico"><i class="ti ti-rocket"></i></div>
-        <div>
-          <div class="cost-item-title">{{ __('Slower Market Response') }}</div>
-          <div class="cost-item-desc">{{ __('Manual processes keep your team reacting while faster competitors improve execution.') }}</div>
+    </section>
+
+    <section class="dx-final-cta problem-final-cta" id="assessment">
+        <div class="dx-container dx-reveal">
+            <div class="dx-eyebrow">{{ __('Clarity before investment') }}</div>
+            <h2>{{ __('We identify the highest-impact problem before recommending a solution') }}</h2>
+            <p class="dx-cta-subheading">
+                {{ __('No organization needs to fix everything at once. A strategic assessment shows exactly where fragmentation is costing the most and the fastest path to closing that gap.') }}
+            </p>
+            <p class="dx-cta-description">
+                {{ __('In a working session with your team, we map your current operational model, identify the highest-impact workflow and recommend the optimal digital path: product, custom build or hybrid.') }}
+            </p>
+            <div class="dx-cta-buttons">
+                <a href="tel:+237650945280" class="dx-btn dx-btn-primary">{{ __('Call (+237) 650 945 280') }}</a>
+                <a href="{{ url('/contact-us') }}" class="dx-btn dx-btn-secondary">{{ __('Request an Assessment') }}</a>
+            </div>
         </div>
-      </div>
-      <div class="cost-item">
-        <div class="cost-item-ico"><i class="ti ti-mood-sad"></i></div>
-        <div>
-          <div class="cost-item-title">{{ __('Staff Frustration') }}</div>
-          <div class="cost-item-desc">{{ __('Talented employees lose motivation when their work becomes file chasing, error correction and repeated manual steps.') }}</div>
-        </div>
-      </div>
-      <div class="cost-item">
-        <div class="cost-item-ico"><i class="ti ti-clipboard-list"></i></div>
-        <div>
-          <div class="cost-item-title">{{ __('Audit and Compliance Risk') }}</div>
-          <div class="cost-item-desc">{{ __('When records are scattered, audits become slower, stressful and harder to defend.') }}</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
+</main>
 
-<!-- Before vs After -->
-<section id="before-after">
-  <div class="ba-inner">
-    <div class="ba-header rv">
-      <span class="tag">{{ __('Before vs After') }}</span>
-      <h2>{{ __('Manual operations vs controlled digital execution.') }}</h2>
-      <p class="lead">{{ __('A clear view of how work changes when processes, data and approvals run through one system.') }}</p>
-    </div>
-
-    <div class="ba-grid">
-      <!-- Before -->
-      <div class="rv">
-        <div class="ba-col-title before">
-          <span>&times;</span> {{ __('Manual Operations') }}
-        </div>
-        <div class="ba-items">
-          <div class="ba-item before-item"><span class="ba-item-ico"><i class="ti ti-x"></i></span>{{ __('Excel, WhatsApp and paper everywhere') }}</div>
-          <div class="ba-item before-item"><span class="ba-item-ico"><i class="ti ti-x"></i></span>{{ __('Reports built by hand, one by one') }}</div>
-          <div class="ba-item before-item"><span class="ba-item-ico"><i class="ti ti-x"></i></span>{{ __('No live view of tasks or staff') }}</div>
-          <div class="ba-item before-item"><span class="ba-item-ico"><i class="ti ti-x"></i></span>{{ __('Approvals stuck in messages and calls') }}</div>
-          <div class="ba-item before-item"><span class="ba-item-ico"><i class="ti ti-x"></i></span>{{ __('Stock and records checked manually') }}</div>
-          <div class="ba-item before-item"><span class="ba-item-ico"><i class="ti ti-x"></i></span>{{ __('Questions take too long to answer') }}</div>
-          <div class="ba-item before-item"><span class="ba-item-ico"><i class="ti ti-x"></i></span>{{ __('No clear trail for audits') }}</div>
-          <div class="ba-item before-item"><span class="ba-item-ico"><i class="ti ti-x"></i></span>{{ __('More staff often means more confusion') }}</div>
-        </div>
-      </div>
-
-      <!-- VS -->
-      <div class="ba-divider">
-        <div class="ba-vs">{{ __('VS') }}</div>
-      </div>
-
-      <!-- After -->
-      <div class="rv d2">
-        <div class="ba-col-title after">
-          <span>&check;</span> {{ __('Digital Operations') }}
-        </div>
-        <div class="ba-items">
-          <div class="ba-item after-item"><span class="ba-item-ico"><i class="ti ti-check"></i></span>{{ __('One system for all the data') }}</div>
-          <div class="ba-item after-item"><span class="ba-item-ico"><i class="ti ti-check"></i></span>{{ __('Live dashboards without manual work') }}</div>
-          <div class="ba-item after-item"><span class="ba-item-ico"><i class="ti ti-check"></i></span>{{ __('Clear view of tasks, attendance and KPIs') }}</div>
-          <div class="ba-item after-item"><span class="ba-item-ico"><i class="ti ti-check"></i></span>{{ __('Approvals move fast and stay visible') }}</div>
-          <div class="ba-item after-item"><span class="ba-item-ico"><i class="ti ti-check"></i></span>{{ __('Stock alerts when items run low') }}</div>
-          <div class="ba-item after-item"><span class="ba-item-ico"><i class="ti ti-check"></i></span>{{ __('One communication hub for all teams') }}</div>
-          <div class="ba-item after-item"><span class="ba-item-ico"><i class="ti ti-check"></i></span>{{ __('Searchable history for every action') }}</div>
-          <div class="ba-item after-item"><span class="ba-item-ico"><i class="ti ti-check"></i></span>{{ __('Easy to grow as the team grows') }}</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Who is Affected -->
-<section id="who">
-  <div class="who-inner">
-    <div class="who-header">
-      <div class="rv">
-        <span class="tag">{{ __('Who is Affected') }}</span>
-        <h2>{{ __('Any organization with critical workflows still handled manually.') }}</h2>
-        <p class="lead" style="margin-top:.75rem">{{ __('This challenge is not limited to one sector. Companies, hospitals, schools, retailers and institutions all lose speed when operational data is scattered.') }}</p>
-      </div>
-      <div class="rv d1">
-        <p class="body-text">{{ __('DigiTexia is designed for practical operational environments: busy teams, mixed devices, approval chains and the need for fast, accurate execution.') }}</p>
-        <a href="{{ url('/solutions') }}" class="btn-sec" style="margin-top:1.5rem">{{ __('Explore Solutions') }} &rarr;</a>
-      </div>
-    </div>
-
-    <div class="sector-grid rv">
-      <div class="sector-card">
-        <span class="sector-ico"><i class="ti ti-building-skyscraper"></i></span>
-        <div class="sector-name">{{ __('Enterprises & Corporates') }}</div>
-        <div class="sector-issue">{{ __('Too many departments, too many spreadsheets, too many follow-ups') }}</div>
-      </div>
-      <div class="sector-card">
-        <span class="sector-ico"><i class="ti ti-hospital"></i></span>
-        <div class="sector-name">{{ __('Healthcare Providers') }}</div>
-        <div class="sector-issue">{{ __('Paper patient records and slow access at the point of care') }}</div>
-      </div>
-      <div class="sector-card">
-        <span class="sector-ico"><i class="ti ti-crane"></i></span>
-        <div class="sector-name">{{ __('Construction & Projects') }}</div>
-        <div class="sector-issue">{{ __('Site reporting, materials and attendance tracked on WhatsApp') }}</div>
-      </div>
-      <div class="sector-card">
-        <span class="sector-ico"><i class="ti ti-package"></i></span>
-        <div class="sector-name">{{ __('Retail & Distribution') }}</div>
-        <div class="sector-issue">{{ __('Stock across locations tracked in disconnected sheets') }}</div>
-      </div>
-      <div class="sector-card">
-        <span class="sector-ico"><i class="ti ti-building"></i></span>
-        <div class="sector-name">{{ __('Public Institutions') }}</div>
-        <div class="sector-issue">{{ __('Internal mail and files slowed by paper chains') }}</div>
-      </div>
-      <div class="sector-card">
-        <span class="sector-ico"><i class="ti ti-briefcase"></i></span>
-        <div class="sector-name">{{ __('Service Providers') }}</div>
-        <div class="sector-issue">{{ __('Clients and providers still matched manually') }}</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Bridge -->
-<section id="bridge">
-  <div class="bridge-inner rv">
-    <span class="tag">{{ __('The DigiTexia Solution') }}</span>
-    <h2>{{ __('Move from fragmented execution to controlled digital operations.') }}</h2>
-    <p class="lead">{{ __('DigiTexia standardizes workflows, centralizes operational data and gives teams one place to execute with accountability.') }}</p>
-
-    <div class="bridge-steps">
-      <div class="bridge-step">
-        <div class="bridge-step-num">01</div>
-        <div class="bridge-step-title">{{ __('We assess your workflow') }}</div>
-        <div class="bridge-step-desc">{{ __('We identify where delays, errors, duplication and control gaps occur.') }}</div>
-      </div>
-      <div class="bridge-step">
-        <div class="bridge-step-num">02</div>
-        <div class="bridge-step-title">{{ __('We recommend the right solution') }}</div>
-        <div class="bridge-step-desc">{{ __('We align an existing DigiTexia product or a custom platform with your priorities.') }}</div>
-      </div>
-      <div class="bridge-step">
-        <div class="bridge-step-num">03</div>
-        <div class="bridge-step-title">{{ __('We deploy and support adoption') }}</div>
-        <div class="bridge-step-desc">{{ __('We help your team launch, adopt and continuously improve the platform.') }}</div>
-      </div>
-    </div>
-
-    <div class="bridge-ctas">
-      <a href="{{ url('/solutions') }}" class="btn-pri">
-        {{ __('Explore Digital Solutions') }}
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <a href="{{ url('/contact-us') }}" class="btn-sec">{{ __('Request an Assessment') }}</a>
-    </div>
-  </div>
-</section>
-
-
-@push('scripts')
-<script>
-// Scroll reveal
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('vis'); obs.unobserve(e.target); } });
-}, { threshold: 0.1 });
-document.querySelectorAll('.rv').forEach(el => obs.observe(el));
-
-// Nav scroll
-const navEl = document.getElementById('mainNav');
-if (navEl) {
-  window.addEventListener('scroll', () => navEl.classList.toggle('sc', window.scrollY > 50));
-}
-
-// Dropdown mobile
-const ddToggle = document.querySelector('.nav-dropdown > a');
-const ddMenu   = document.querySelector('.dropdown-menu');
-if (ddToggle && ddMenu) {
-  ddToggle.addEventListener('click', function(e) {
-    if (window.innerWidth <= 900) { e.preventDefault(); ddMenu.classList.toggle('is-open'); }
-  });
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('.nav-dropdown')) ddMenu.classList.remove('is-open');
-  });
-}
-</script>
-@endpush
+@include('partials.v2.footer')
 @endsection

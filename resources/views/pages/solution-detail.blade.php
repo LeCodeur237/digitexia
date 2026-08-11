@@ -1,6 +1,6 @@
 @extends('index')
 
-@section('page_title', $solution['page_title'])
+@section('page_title', __($solution['page_title']))
 
 @push('styles')
 <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -264,24 +264,24 @@
 <section class="sd-hero">
   <div class="sd-inner">
     <div class="sd-breadcrumb">
-      <a href="{{ url('/') }}">Home</a>
+      <a href="{{ url('/') }}">{{ __('Home') }}</a>
       <span>&rsaquo;</span>
-      <a href="{{ url('/solutions') }}">Solutions</a>
+      <a href="{{ url('/solutions') }}">{{ __('Solutions') }}</a>
       <span>&rsaquo;</span>
-      <span>{{ $solution['title'] }}</span>
+      <span>{{ __($solution['title']) }}</span>
     </div>
 
     <div class="sd-hero-grid rv">
       <div>
-        <span class="sd-badge"><i class="ti {{ $solution['icon'] }}"></i> {{ $solution['eyebrow'] }}</span>
-        <h1 class="sd-title">{{ $solution['title'] }}<br><em>Built for operational clarity.</em></h1>
-        <p class="sd-lead">{{ $solution['summary'] }}</p>
+        <span class="sd-badge"><i class="ti {{ $solution['icon'] }}"></i> {{ __($solution['eyebrow']) }}</span>
+        <h1 class="sd-title">{{ __($solution['title']) }}<br><em>{{ __('Built for operational clarity.') }}</em></h1>
+        <p class="sd-lead">{{ __($solution['summary']) }}</p>
         <div class="sd-ctas">
           <a href="{{ url('/contact-us') }}" class="btn-pri">
-            Request an Assessment
+            {{ __('Request an Assessment') }}
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a href="{{ url('/solutions') }}" class="btn-sec">Back to Solutions</a>
+          <a href="{{ url('/solutions') }}" class="btn-sec">{{ __('Back to Solutions') }}</a>
         </div>
       </div>
 
@@ -291,17 +291,17 @@
           @foreach ($solution['stats'] as $stat)
             <div class="sd-stat">
               <div class="sd-stat-val">{{ $stat['value'] }}</div>
-              <div class="sd-stat-lbl">{{ $stat['label'] }}</div>
+              <div class="sd-stat-lbl">{{ __($stat['label']) }}</div>
             </div>
           @endforeach
         </div>
         <div class="sd-card" style="margin-bottom:1rem;background:var(--ink-3)">
-          <h3>What it solves</h3>
-          <p>{{ $solution['problem'] }}</p>
+          <h3>{{ __('What it solves') }}</h3>
+          <p>{{ __($solution['problem']) }}</p>
         </div>
         <div class="sd-card" style="background:var(--ink-3)">
-          <h3>The outcome</h3>
-          <p>{{ $solution['solution'] }}</p>
+          <h3>{{ __('The outcome') }}</h3>
+          <p>{{ __($solution['solution']) }}</p>
         </div>
       </div>
     </div>
@@ -310,32 +310,32 @@
 
 <section class="sd-copy-grid rv">
   <div class="sd-card">
-    <h3>Who it is for</h3>
-    <p>{{ $solution['audience'] }}</p>
+    <h3>{{ __('Who it is for') }}</h3>
+    <p>{{ __($solution['audience']) }}</p>
   </div>
   <div class="sd-card">
-    <h3>Why teams adopt it</h3>
-    <p>It replaces fragmented files, manual approvals and slow follow-up with a structured workflow that improves control and day-to-day execution.</p>
+    <h3>{{ __('Why teams adopt it') }}</h3>
+    <p>{{ __('It replaces fragmented files, manual approvals and slow follow-up with a structured workflow that improves control and day-to-day execution.') }}</p>
   </div>
   <div class="sd-card">
-    <h3>How it helps</h3>
-    <p>Less rework, less uncertainty and less waiting. More traceability, more visibility and a process your team can rely on every day.</p>
+    <h3>{{ __('How it helps') }}</h3>
+    <p>{{ __('Less rework, less uncertainty and less waiting. More traceability, more visibility and a process your team can rely on every day.') }}</p>
   </div>
 </section>
 
 <section class="sd-section">
   <div class="sd-section-inner">
     <div class="sd-section-title rv">
-      <span class="tag">Key Features</span>
-      <h2>Built around the operational workflow your team needs to control.</h2>
+      <span class="tag">{{ __('Key Features') }}</span>
+      <h2>{{ __('Built around the operational workflow your team needs to control.') }}</h2>
     </div>
     <div class="sd-feature-list rv d1">
       @foreach ($solution['features'] as $feature)
         <div class="sd-feature">
           <div class="sd-feature-ico"><i class="ti ti-check"></i></div>
           <div>
-            <div class="sd-feature-title">{{ $feature }}</div>
-            <div class="sd-feature-desc">Designed to reduce friction, accelerate decisions and keep operational information in one trusted environment.</div>
+            <div class="sd-feature-title">{{ __($feature) }}</div>
+            <div class="sd-feature-desc">{{ __('Designed to reduce friction, accelerate decisions and keep operational information in one trusted environment.') }}</div>
           </div>
         </div>
       @endforeach
@@ -346,15 +346,15 @@
 <section class="sd-section">
   <div class="sd-section-inner">
     <div class="sd-section-title rv">
-      <span class="tag">How It Works</span>
-      <h2>Structured workflow, less manual effort.</h2>
+      <span class="tag">{{ __('How It Works') }}</span>
+      <h2>{{ __('Structured workflow, less manual effort.') }}</h2>
     </div>
     <div class="sd-steps rv d1">
       @foreach ($solution['workflow'] as $index => $step)
         <div class="sd-step">
           <div class="sd-step-num">{{ str_pad((string) ($index + 1), 2, '0', STR_PAD_LEFT) }}</div>
-          <div class="sd-step-title">{{ $step }}</div>
-          <div class="sd-step-desc">This step is designed to make execution predictable, visible and easier to manage across teams.</div>
+          <div class="sd-step-title">{{ __($step) }}</div>
+          <div class="sd-step-desc">{{ __('This step is designed to make execution predictable, visible and easier to manage across teams.') }}</div>
         </div>
       @endforeach
     </div>
@@ -363,15 +363,15 @@
 
 <section class="sd-cta">
   <div class="sd-cta-inner rv">
-    <span class="tag">Free Operational Assessment</span>
-    <h2>Want this solution aligned with your organization?</h2>
-    <p class="lead">We can assess your workflow and adapt the platform to your operating model, teams and priorities without starting from zero.</p>
+    <span class="tag">{{ __('Free Operational Assessment') }}</span>
+    <h2>{{ __('Want this solution aligned with your organization?') }}</h2>
+    <p class="lead">{{ __('We can assess your workflow and adapt the platform to your operating model, teams and priorities without starting from zero.') }}</p>
     <div class="cta-btns">
       <a href="{{ url('/contact-us') }}" class="btn-pri">
-        Request an Assessment
+        {{ __('Request an Assessment') }}
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
-      <a href="{{ url('/solutions') }}" class="btn-sec">View All Solutions</a>
+      <a href="{{ url('/solutions') }}" class="btn-sec">{{ __('View All Solutions') }}</a>
     </div>
   </div>
 </section>

@@ -27,16 +27,16 @@
             --shadow-lg: 0 30px 100px rgba(0, 0, 0, .32);
             --shadow-toast: 0 18px 48px rgba(0, 0, 0, .32);
             --overlay: rgba(3, 7, 18, .72);
-            --accent: #1246f0;
-            --accent-lt: #4b7cff;
-            --accent-soft: rgba(18, 70, 240, .12);
-            --accent-dim: rgba(18, 70, 240, .08);
-            --accent-border: rgba(18, 70, 240, .22);
+            --accent: #004aac;
+            --accent-lt: #0064d8;
+            --accent-soft: rgba(0, 74, 172, .12);
+            --accent-dim: rgba(0, 74, 172, .08);
+            --accent-border: rgba(0, 74, 172, .22);
             --accent-fg: #bfdbfe;
             --on-accent: #ffffff;
-            --success: #16c784;
-            --success-soft: rgba(22, 199, 132, .1);
-            --success-border: rgba(22, 199, 132, .18);
+            --success: #00bf63;
+            --success-soft: rgba(0, 191, 99, .1);
+            --success-border: rgba(0, 191, 99, .18);
             --success-fg: #bbf7d0;
             --orange: #f59e0b;
             --danger: #dc2626;
@@ -81,13 +81,13 @@
             --shadow-lg: 0 30px 100px rgba(15, 23, 42, .12);
             --shadow-toast: 0 18px 48px rgba(15, 23, 42, .16);
             --overlay: rgba(15, 23, 42, .18);
-            --accent-soft: rgba(18, 70, 240, .05);
-            --accent-dim: rgba(18, 70, 240, .08);
-            --accent-border: rgba(18, 70, 240, .18);
+            --accent-soft: rgba(0, 74, 172, .05);
+            --accent-dim: rgba(0, 74, 172, .08);
+            --accent-border: rgba(0, 74, 172, .18);
             --accent-fg: #1d4ed8;
             --on-accent: #ffffff;
-            --success-soft: rgba(22, 199, 132, .1);
-            --success-border: rgba(22, 199, 132, .18);
+            --success-soft: rgba(0, 191, 99, .1);
+            --success-border: rgba(0, 191, 99, .18);
             --success-fg: #15803d;
             --orange: #f59e0b;
             --danger-soft: rgba(220, 38, 38, .1);
@@ -126,6 +126,10 @@
             backdrop-filter: blur(16px);
         }
 
+        body.light-mode .theme-toggle {
+            box-shadow: none;
+        }
+
         .theme-toggle .ti-sun {
             display: none;
         }
@@ -141,37 +145,68 @@
     <link rel="stylesheet" href="{{ asset('css/digitexiastyles.css') }}?v={{ filemtime(public_path('css/digitexiastyles.css')) }}">
     <link rel="stylesheet" href="{{ asset('css/mystyles.css') }}?v={{ filemtime(public_path('css/mystyles.css')) }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-    @stack('styles')
-    <link rel="stylesheet" href="{{ asset('css/theme-fixes.css') }}?v={{ filemtime(public_path('css/theme-fixes.css')) }}">
+    @hasSection('digitexia_v2')
+        <link rel="stylesheet" href="{{ asset('css/theme-fixes.css') }}?v={{ filemtime(public_path('css/theme-fixes.css')) }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('css/digitexia-v2.css') }}?v={{ filemtime(public_path('css/digitexia-v2.css')) }}">
+    @else
+        @stack('styles')
+        <link rel="stylesheet" href="{{ asset('css/theme-fixes.css') }}?v={{ filemtime(public_path('css/theme-fixes.css')) }}">
+    @endif
+    @hasSection('digitexia_v2')
+        @stack('styles')
+        <style>
+            .dx-page :is(
+                .dx-btn-primary,
+                .dx-blog .featured-badge,
+                .dx-home .step-number,
+                .dx-why .pstep-number
+            ),
+            .dx-page :is(
+                .dx-btn-primary,
+                .dx-blog .featured-badge,
+                .dx-home .step-number,
+                .dx-why .pstep-number
+            ) * {
+                color: #ffffff !important;
+            }
+        </style>
+    @endif
 </head>
 
-<body>
+<body class="@hasSection('digitexia_v2') dx-page @endif">
     <script>
         (() => {
             const key = 'digitexia-theme';
             const saved = localStorage.getItem(key);
             const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
             const useLight = saved ? saved === 'light' : prefersLight;
-            // Run early: apply class on the root element so variables take effect before body exists
+            // Run early so theme variables and body-scoped fallbacks are aligned before content renders.
             document.documentElement.classList.toggle('light-mode', useLight);
+            document.body.classList.toggle('light-mode', useLight);
         })();
     </script>
     @if (trim($__env->yieldContent('fullpage')))
         @yield('fullpage')
     @else
-        @include('partials.header')
+        @include('partials.v2.header')
 
         <main>
             @yield('contain')
         </main>
 
-        @include('partials.footer')
+        @include('partials.v2.footer')
     @endif
 
     <script src="{{ asset('js/digitexiajs001.js') }}"></script>
     <script src="{{ asset('js/digitexiajs002.js') }}"></script>
     <script src="{{ asset('js/digitexiajs003.js') }}"></script>
     <script src="{{ asset('js/myjs.js') }}"></script>
+    @hasSection('digitexia_v2')
+        <script src="{{ asset('js/digitexia-v2.js') }}?v={{ filemtime(public_path('js/digitexia-v2.js')) }}"></script>
+    @endif
     <button type="button" class="theme-toggle" aria-label="Toggle color theme" data-theme-toggle>
         <i class="ti ti-moon"></i>
         <i class="ti ti-sun"></i>

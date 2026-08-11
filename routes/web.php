@@ -22,21 +22,11 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
-Route::get('/about-us', function () {
-    return view('pages.about');
-});
-
-Route::get('/about', function () {
-    return view('pages.about');
-});
-
-Route::get('/services', function () {
-    return view('pages.services');
-});
-
-Route::get('/services-details', function () {
-    return view('pages.service-details');
-});
+Route::redirect('/about-us', '/why-us', 301);
+Route::redirect('/about', '/why-us', 301);
+Route::redirect('/services', '/solutions', 301);
+Route::redirect('/services-details', '/solutions', 301);
+Route::redirect('/services/{slug}', '/solutions', 301);
 
 Route::get('/the-problem', function () {
     return view('pages.problem');
@@ -57,17 +47,13 @@ Route::get('/projects', function () {
     return view('pages.projects');
 });
 
-Route::get('/project-details', function () {
-    return view('pages.project-details');
-});
+Route::redirect('/project-details', '/projects', 301);
 
 Route::get('/our-partners', function () {
     return view('pages.partners');
 });
 
-Route::get('/team-members', function () {
-    return view('pages.teams');
-});
+Route::redirect('/team-members', '/why-us', 301);
 
 Route::get('/life-at-digi', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/life-at-digi/{post:slug}', [BlogController::class, 'show'])->name('blog.show');
@@ -91,9 +77,7 @@ Route::prefix('admin/blog')
         Route::delete('/{post}', [BlogController::class, 'destroy'])->name('destroy');
     });
 
-Route::get('/life-at-digi-details', function () {
-    return view('pages.blog-details');
-});
+Route::redirect('/life-at-digi-details', '/life-at-digi', 301);
 
 Route::get('/contact-us', function () {
     return view('pages.contact');
@@ -103,6 +87,4 @@ Route::get('/contact', function () {
     return view('pages.contact');
 });
 
-Route::get('/careers', function () {
-    return view('pages.careers');
-});
+Route::redirect('/careers', '/contact-us', 301);

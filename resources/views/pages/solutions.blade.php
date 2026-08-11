@@ -1,242 +1,335 @@
 @extends('index')
 
-@section('page_title', __('Solutions | DigiTexia'))
+@section('page_title', __('DigiTexia | Intelligent Digital Solutions'))
+@section('digitexia_v2', true)
 
 @push('styles')
-<link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ asset('css/solutions-digitexia.css') }}">
+<link rel="stylesheet" href="{{ asset('css/solutions-v2.css') }}?v={{ filemtime(public_path('css/solutions-v2.css')) }}">
 @endpush
 
-@section('contain')
-<section id="page-hero">
-  <div class="ph-bg"></div>
-  <div class="ph-grid"></div>
-  <div class="ph-inner">
-    <div class="ph-breadcrumb">
-      <a href="{{ url('/') }}">{{ __('Home') }}</a>
-      <span>&rsaquo;</span>
-      <span class="curr">{{ __('Our Solutions') }}</span>
-    </div>
+@php
+    $icons = [
+        'grid' => '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.2"/><rect x="14" y="3" width="7" height="7" rx="1.2"/><rect x="3" y="14" width="7" height="7" rx="1.2"/><rect x="14" y="14" width="7" height="7" rx="1.2"/></svg>',
+        'bolt' => '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg>',
+        'sync' => '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg>',
+        'mobile' => '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>',
+        'cloud' => '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M7 18a4.5 4.5 0 0 1-.5-8.98A5.5 5.5 0 0 1 17 8a4 4 0 0 1 .5 7.98"/></svg>',
+        'chart' => '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 19V10M11 19V5M18 19v-7"/><path d="M2 19h20"/></svg>',
+        'eye' => '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>',
+        'check' => '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>',
+        'shield' => '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 2 4 5v6c0 5.2 3.4 8.7 8 10 4.6-1.3 8-4.8 8-10V5l-8-3z"/></svg>',
+    ];
 
-    <span class="tag">{{ __('Digital Operations Suite') }}</span>
-    <h1>{{ __('Deploy the right platform for the workflow') }}<br><em>{{ __('that limits your business performance.') }}</em></h1>
-    <p class="lead">{{ __('DigiTexia solutions help organizations digitize critical operations, reduce manual follow-up and give leadership the visibility needed to control execution at scale.') }}</p>
+    $capabilities = [
+        [
+            'icon' => $icons['grid'],
+            'title' => __('Enterprise Software'),
+            'rows' => [
+                [__('Challenge'), __('Manual, disconnected operations slow decisions and growth.')],
+                [__('Solution'), __('Secure, scalable business applications built around your workflows.')],
+                [__('Value'), __('Streamlined operations and measurably stronger performance.')],
+            ],
+        ],
+        [
+            'icon' => $icons['bolt'],
+            'title' => __('Artificial Intelligence'),
+            'rows' => [
+                [__('Challenge'), __('Teams spend hours on decisions that data could support instantly.')],
+                [__('Solution'), __('AI-powered systems that automate processes and generate insight.')],
+                [__('Value'), __('Faster, smarter decision-making across the organization.')],
+            ],
+        ],
+        [
+            'icon' => $icons['sync'],
+            'title' => __('Digital Transformation'),
+            'rows' => [
+                [__('Challenge'), __('Legacy processes cannot keep pace with growing demand.')],
+                [__('Solution'), __('Process automation and connected digital platforms.')],
+                [__('Value'), __('Operations that modernize without disrupting the business.')],
+            ],
+        ],
+        [
+            'icon' => $icons['mobile'],
+            'title' => __('Mobile Solutions'),
+            'rows' => [
+                [__('Challenge'), __('Field teams and citizens need access beyond the desktop.')],
+                [__('Solution'), __('Intuitive mobile applications built for real-world conditions.')],
+                [__('Value'), __('Greater accessibility, engagement and operational reach.')],
+            ],
+        ],
+        [
+            'icon' => $icons['cloud'],
+            'title' => __('Cloud and Infrastructure'),
+            'rows' => [
+                [__('Challenge'), __('Growth exposes fragile, hard-to-scale technical foundations.')],
+                [__('Solution'), __('Resilient cloud architectures and secure digital environments.')],
+                [__('Value'), __('Infrastructure that supports growth instead of limiting it.')],
+            ],
+        ],
+        [
+            'icon' => $icons['chart'],
+            'title' => __('Data and Analytics'),
+            'rows' => [
+                [__('Challenge'), __('Operational data exists but rarely informs real decisions.')],
+                [__('Solution'), __('Analytics that turn raw data into actionable insight.')],
+                [__('Value'), __('Sharper planning and stronger strategic decision-making.')],
+            ],
+        ],
+    ];
 
-    <div class="ph-btns">
-      <a href="#flexicare" class="btn-pri">
-        {{ __('Explore Business Solutions') }}
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <a href="{{ url('/contact-us') }}" class="btn-sec">{{ __('Request an Assessment') }}</a>
-    </div>
+    $impacts = [
+        [$icons['sync'], __('Operational Efficiency'), __('Fewer manual steps, less duplicated work.')],
+        [$icons['eye'], __('Faster Decision Making'), __('Real-time data instead of week-old reports.')],
+        [$icons['check'], __('Process Automation'), __('Workflows that run without manual chasing.')],
+        [$icons['chart'], __('Cost Optimization'), __('Capacity redirected to higher-value work.')],
+        [$icons['cloud'], __('Scalability'), __('Systems that grow with the organization.')],
+        [$icons['shield'], __('Security'), __('Data integrity and access control by design.')],
+        [$icons['check'], __('Sustainability'), __('Platforms built to be maintained, not replaced.')],
+    ];
 
-    <div class="proof-strip">
-      <div class="proof-item">
-        <strong>{{ __('4 business platforms') }}</strong>
-        <span>{{ __('Focused products for inventory, performance, services and healthcare workflows.') }}</span>
-      </div>
-      <div class="proof-item">
-        <strong>{{ __('Implementation ready') }}</strong>
-        <span>{{ __('Designed for rollout, training, user adoption and continuous support.') }}</span>
-      </div>
-      <div class="proof-item">
-        <strong>{{ __('Measurable outcomes') }}</strong>
-        <span>{{ __('Less manual work, stronger control and better management visibility.') }}</span>
-      </div>
-    </div>
+    $products = [
+        [
+            'tag' => __('FLAGSHIP / AQUAWATCH AI'),
+            'name' => 'AquaWatch AI',
+            'positioning' => __('IoT and AI-powered monitoring for water and hydraulic infrastructure.'),
+            'link' => url('/solutions/aquawatch-ai'),
+            'rows' => [
+                [__('Industry'), __('Water utilities and public infrastructure')],
+                [__('Challenge'), __('Manual monitoring makes leaks and failures costly to detect.')],
+                [__('Impact'), __('Real-time infrastructure visibility that reduces water loss and response time.')],
+            ],
+        ],
+        [
+            'tag' => __('FLAGSHIP / WASTEPAY'),
+            'name' => 'WastePay',
+            'positioning' => __('Smart waste management with QR tracking and recycling incentives.'),
+            'link' => url('/solutions/wastepay'),
+            'rows' => [
+                [__('Industry'), __('Cities, waste operators and circular economy programs')],
+                [__('Challenge'), __('Waste flows are hard to verify, reward and optimize without structured data.')],
+                [__('Impact'), __('Transparent collection, stronger recycling participation and better operational accountability.')],
+            ],
+        ],
+        [
+            'tag' => __('FLAGSHIP / CARBON AFRICA EXCHANGE'),
+            'name' => 'Carbon Africa Exchange',
+            'positioning' => __('Carbon tracking and marketplace infrastructure for forests, agriculture and climate programs.'),
+            'link' => url('/solutions/carbon-africa-exchange'),
+            'rows' => [
+                [__('Industry'), __('Climate, forestry, agriculture and ESG programs')],
+                [__('Challenge'), __('Carbon data is fragmented, difficult to verify and hard to convert into trusted value.')],
+                [__('Impact'), __('Structured climate intelligence and a stronger foundation for carbon credit workflows.')],
+            ],
+        ],
+        [
+            'tag' => __('FLAGSHIP / DIGITAL TWIN PLATFORM'),
+            'name' => 'Digital Twin Platform',
+            'positioning' => __('Territorial intelligence systems for governments, NGOs and infrastructure operators.'),
+            'link' => url('/solutions/digital-twin-platform'),
+            'rows' => [
+                [__('Industry'), __('Government, cities and development agencies')],
+                [__('Challenge'), __('Infrastructure data lives across isolated tools, reports and field systems.')],
+                [__('Impact'), __('A live intelligence layer for planning, monitoring and better public decisions.')],
+            ],
+        ],
+    ];
 
-    <div class="product-nav">
-      <a href="#flexicare" class="pnav-pill"><span class="pdot" style="background:var(--blue-lt)"></span>FlexiCare</a>
-      <a href="#inventorypro" class="pnav-pill"><span class="pdot" style="background:var(--blue-lt)"></span>InventoryPro</a>
-      <a href="#perfomia" class="pnav-pill"><span class="pdot" style="background:var(--accent-fg)"></span>Perfomia</a>
-      <a href="#medtrace" class="pnav-pill"><span class="pdot" style="background:var(--green)"></span>MedTrace</a>
-    </div>
-  </div>
-</section>
+    $industries = [
+        [__('Financial Services'), __('Secure, compliant systems for high-stakes, high-volume operations.')],
+        [__('Healthcare'), __('Traceability and compliance where patient safety is non-negotiable.')],
+        [__('Smart Water Management'), __('Infrastructure monitoring for critical, hard-to-access systems.')],
+        [__('Government'), __('Transparent, auditable platforms for public institutions.')],
+        [__('Education'), __('Digital systems that scale across institutions and regions.')],
+        [__('NGOs'), __('Lean, accountable tools built for constrained budgets and broad reach.')],
+        [__('SMEs'), __('Enterprise-grade capability sized for growing businesses.')],
+        [__('Enterprise'), __('Custom infrastructure for complex, large-scale operations.')],
+        [__('Industrial Operations'), __('Real-time visibility into physical, distributed workflows.')],
+    ];
 
-<section id="overview">
-  <div class="prod-section" id="flexicare">
-    <div class="prod-inner rv">
-      <div>
-        <span class="prod-tag">{{ __('Service Operations') }}</span>
-        <div class="prod-num">01</div>
-        <h3>FlexiCare</h3>
-        <p class="lead">{{ __('A service operations platform for organizations that manage providers, bookings, customer requests and field execution.') }}</p>
-        <div class="feat-list">
-          <div class="feat-item"><div class="feat-item-ico" style="background:var(--c1d);color:var(--c1)"><i class="ti ti-users"></i></div><div class="feat-item-body"><div class="feat-item-title">{{ __('Provider matching') }}</div><div class="feat-item-desc">{{ __('Match client demand with available and qualified providers.') }}</div></div></div>
-          <div class="feat-item"><div class="feat-item-ico" style="background:var(--c1d);color:var(--c1)"><i class="ti ti-shield-check"></i></div><div class="feat-item-body"><div class="feat-item-title">{{ __('Verified credentials') }}</div><div class="feat-item-desc">{{ __('Keep provider screening and approval in one secure system.') }}</div></div></div>
-          <div class="feat-item"><div class="feat-item-ico" style="background:var(--c1d);color:var(--c1)"><i class="ti ti-calendar"></i></div><div class="feat-item-body"><div class="feat-item-title">{{ __('Scheduling and follow-up') }}</div><div class="feat-item-desc">{{ __('Manage bookings, availability and service follow-up in one workflow.') }}</div></div></div>
+    $reasons = [
+        [__('Engineering Excellence'), __('Every platform is built to enterprise standards, not assembled from templates.')],
+        [__('Innovation'), __('We apply AI and modern engineering where it creates real operational value.')],
+        [__('Business-Focused Approach'), __('Every technical decision is weighed against the business outcome it serves.')],
+        [__('Long-Term Partnership'), __('We stay invested from assessment through deployment and beyond.')],
+        [__('Secure Digital Platforms'), __('Security and data integrity are built in, not added afterward.')],
+        [__('Scalable Solutions'), __('Infrastructure designed to grow with your organization, not against it.')],
+    ];
+@endphp
+
+@section('fullpage')
+@include('partials.v2.header')
+
+<main class="dx-solutions">
+    <section class="page-hero">
+        <div class="dx-blueprint"></div>
+        <div class="dx-container dx-reveal">
+            <div class="dx-eyebrow">{{ __('Solutions') }}</div>
+            <h1>{{ __('Intelligent digital solutions, built around how your organization actually operates.') }}</h1>
+            <p class="page-hero-subtitle">
+                {{ __('DigiTexia designs, engineers and deploys the platforms that help organizations modernize operations, improve efficiency and accelerate growth: infrastructure built to move your business forward, not software for its own sake.') }}
+            </p>
+            <div class="page-hero-cta">
+                <a href="#cta-final" class="dx-btn dx-btn-primary">
+                    {{ __('Schedule a Consultation') }}
+                    <span class="dx-btn-arrow" aria-hidden="true">&rarr;</span>
+                </a>
+                <a href="#flagship" class="dx-btn dx-btn-secondary">{{ __('View Flagship Products') }}</a>
+            </div>
         </div>
-        <div class="prod-ctas"><a href="{{ url('/solutions/flexicare') }}" class="btn-pri">{{ __('View FlexiCare') }}</a></div>
-      </div>
-      <div class="prod-visual">
-        <div class="pv-card">
-          <div class="pv-topbar"><span class="pv-dot" style="background:var(--c1)"></span><div class="pv-title">{{ __('FlexiCare availability') }}</div></div>
-          <div class="pv-body">
-            <div class="pv-row"><div class="pv-row-ico" style="background:var(--c1d)"><i class="ti ti-user-check"></i></div><div><div class="pv-row-title">{{ __('Verified provider') }}</div><div class="pv-row-sub">{{ __('Available now · High satisfaction score') }}</div></div><div class="pv-row-tag" style="background:var(--success-soft);color:var(--green);border:1px solid var(--success-border)">{{ __('Match') }}</div></div>
-            <div class="pv-row"><div class="pv-row-ico" style="background:var(--c1d)"><i class="ti ti-calendar-check"></i></div><div><div class="pv-row-title">{{ __('Client booking') }}</div><div class="pv-row-sub">{{ __('Confirmed slot · Follow-up required') }}</div></div><div class="pv-row-tag" style="background:var(--success-soft);color:var(--green);border:1px solid var(--success-border)">{{ __('Ready') }}</div></div>
-            <div class="pv-row"><div class="pv-row-ico" style="background:var(--c1d)"><i class="ti ti-clock"></i></div><div><div class="pv-row-title">{{ __('Service queue') }}</div><div class="pv-row-sub">{{ __('3 requests pending assignment') }}</div></div><div class="pv-row-tag" style="background:var(--ink-3);color:var(--muted);border:1px solid var(--bdr)">{{ __('Pending') }}</div></div>
-          </div>
+    </section>
+
+    <section class="company-intro">
+        <div class="dx-container dx-reveal">
+            <div class="dx-eyebrow">{{ __('Our approach') }}</div>
+            <h2>{{ __('Every solution starts with a real operational need, never a template.') }}</h2>
+            <p class="lead">
+                {{ __('We combine technology, engineering and innovation to design digital ecosystems that scale with your organization. Each platform is shaped around how your teams actually work today, and where your operations need to go next.') }}
+            </p>
+            <div class="brand-signature">{{ __('Building AI-powered digital infrastructure for Africa.') }}</div>
         </div>
-      </div>
-    </div>
-  </div>
+    </section>
 
-  <div class="prod-section reverse" id="inventorypro">
-    <div class="prod-inner rv">
-      <div>
-        <span class="prod-tag">{{ __('Inventory Control') }}</span>
-        <div class="prod-num">02</div>
-        <h3>InventoryPro</h3>
-        <p class="lead">{{ __('Control stock levels, internal requests, approvals and consumption data across locations from one operational hub.') }}</p>
-        <div class="feat-list">
-          <div class="feat-item"><div class="feat-item-ico" style="background:var(--c2d);color:var(--c2)"><i class="ti ti-box"></i></div><div class="feat-item-body"><div class="feat-item-title">{{ __('Multi-location stock') }}</div><div class="feat-item-desc">{{ __('See inventory levels across all sites in one view.') }}</div></div></div>
-          <div class="feat-item"><div class="feat-item-ico" style="background:var(--c2d);color:var(--c2)"><i class="ti ti-bell"></i></div><div class="feat-item-body"><div class="feat-item-title">{{ __('Auto alerts') }}</div><div class="feat-item-desc">{{ __('Get notified when supplies need replenishing.') }}</div></div></div>
-          <div class="feat-item"><div class="feat-item-ico" style="background:var(--c2d);color:var(--c2)"><i class="ti ti-list-check"></i></div><div class="feat-item-body"><div class="feat-item-title">{{ __('Approval workflows') }}</div><div class="feat-item-desc">{{ __('Approve stock requests with visibility and full traceability.') }}</div></div></div>
+    <section class="dx-section">
+        <div class="dx-container">
+            <div class="dx-section-head dx-reveal">
+                <div class="dx-eyebrow">{{ __('What we build') }}</div>
+                <h2>{{ __('Digital solutions engineered for business outcomes') }}</h2>
+                <p class="dx-section-intro">
+                    {{ __('Six capability areas, one goal: turning operational complexity into a system your organization can run on with confidence.') }}
+                </p>
+            </div>
+
+            <div class="cat-grid dx-reveal">
+                @foreach ($capabilities as $capability)
+                    <article class="capability-card">
+                        {!! $capability['icon'] !!}
+                        <h3>{{ $capability['title'] }}</h3>
+                        <div class="field-list">
+                            @foreach ($capability['rows'] as $row)
+                                <div class="field-row">
+                                    <span class="field-label">{{ $row[0] }}</span>
+                                    <span>{{ $row[1] }}</span>
+                                </div>
+                            @endforeach
+                        </div>
+                    </article>
+                @endforeach
+            </div>
         </div>
-        <div class="prod-ctas"><a href="{{ url('/solutions/inventorypro') }}" class="btn-pri">{{ __('View InventoryPro') }}</a></div>
-      </div>
-      <div class="prod-visual">
-        <div class="pv-card">
-          <div class="pv-topbar"><span class="pv-dot" style="background:var(--c2)"></span><div class="pv-title">{{ __('Inventory dashboard') }}</div></div>
-          <div class="pv-body">
-            <div class="pv-row"><div class="pv-row-ico" style="background:var(--c2d)"><i class="ti ti-package"></i></div><div><div class="pv-row-title">{{ __('Warehouse A') }}</div><div class="pv-row-sub">{{ __('Low stock on 3 key items') }}</div></div><div class="pv-row-tag" style="background:var(--c2d);color:var(--c2);border:1px solid var(--c2b)">{{ __('Alert') }}</div></div>
-            <div class="pv-row"><div class="pv-row-ico" style="background:var(--c2d)"><i class="ti ti-building-store"></i></div><div><div class="pv-row-title">{{ __('Retail outlet') }}</div><div class="pv-row-sub">{{ __('Stock steady · 95% fill rate') }}</div></div><div class="pv-row-tag" style="background:var(--success-soft);color:var(--green);border:1px solid var(--success-border)">{{ __('Good') }}</div></div>
-            <div class="pv-row"><div class="pv-row-ico" style="background:var(--c2d)"><i class="ti ti-arrow-up-right"></i></div><div><div class="pv-row-title">{{ __('Requests pending') }}</div><div class="pv-row-sub">{{ __('12 approval actions') }}</div></div><div class="pv-row-tag" style="background:var(--c2d);color:var(--c2);border:1px solid var(--c2b)">{{ __('Action') }}</div></div>
-          </div>
+    </section>
+
+    <section class="dx-section dx-section-alt">
+        <div class="dx-container">
+            <div class="dx-section-head center dx-reveal">
+                <div class="dx-eyebrow">{{ __('Business impact') }}</div>
+                <h2>{{ __('Measurable outcomes across every engagement') }}</h2>
+                <p class="dx-section-intro">
+                    {{ __('We design toward outcomes leadership can track, not features that look good in a demo.') }}
+                </p>
+            </div>
+
+            <div class="impact-mini-grid dx-reveal">
+                @foreach ($impacts as $impact)
+                    <article class="impact-card">
+                        {!! $impact[0] !!}
+                        <h3>{{ $impact[1] }}</h3>
+                        <p>{{ $impact[2] }}</p>
+                    </article>
+                @endforeach
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
+    </section>
 
-  <div class="prod-section" id="perfomia">
-    <div class="prod-inner rv">
-      <div>
-        <span class="prod-tag">{{ __('Performance Management') }}</span>
-        <div class="prod-num">03</div>
-        <h3>Perfomia</h3>
-        <p class="lead">{{ __('A management platform for task delegation, attendance, KPI visibility and staff performance follow-up.') }}</p>
-        <div class="feat-list">
-          <div class="feat-item"><div class="feat-item-ico" style="background:var(--c3d);color:var(--c3)"><i class="ti ti-chart-bar"></i></div><div class="feat-item-body"><div class="feat-item-title">{{ __('KPI visibility') }}</div><div class="feat-item-desc">{{ __('Track the metrics that matter for performance and delivery.') }}</div></div></div>
-          <div class="feat-item"><div class="feat-item-ico" style="background:var(--c3d);color:var(--c3)"><i class="ti ti-clock"></i></div><div class="feat-item-body"><div class="feat-item-title">{{ __('Attendance tracking') }}</div><div class="feat-item-desc">{{ __('Monitor presence and punctuality across teams.') }}</div></div></div>
-          <div class="feat-item"><div class="feat-item-ico" style="background:var(--c3d);color:var(--c3)"><i class="ti ti-clipboard-list"></i></div><div class="feat-item-body"><div class="feat-item-title">{{ __('Performance reviews') }}</div><div class="feat-item-desc">{{ __('Document progress, goals and improvement actions.') }}</div></div></div>
+    <section class="dx-section" id="flagship">
+        <div class="dx-container">
+            <div class="dx-section-head dx-reveal">
+                <div class="dx-eyebrow">{{ __('Flagship products') }}</div>
+                <h2>{{ __('Our AI-powered digital products at work') }}</h2>
+                <p class="dx-section-intro">
+                    {{ __('Proven platforms deployed across critical sectors, each engineered around a specific operational challenge.') }}
+                </p>
+            </div>
+
+            <div class="flagship-grid dx-reveal">
+                @foreach ($products as $product)
+                    <article class="product-card">
+                        <div class="product-tag">{{ $product['tag'] }}</div>
+                        <h3>{{ $product['name'] }}</h3>
+                        <p class="positioning">{{ $product['positioning'] }}</p>
+                        <div class="field-list">
+                            @foreach ($product['rows'] as $row)
+                                <div class="field-row">
+                                    <span class="field-label">{{ $row[0] }}</span>
+                                    <span>{{ $row[1] }}</span>
+                                </div>
+                            @endforeach
+                        </div>
+                        <div class="product-link">
+                            <a href="{{ $product['link'] }}" class="dx-card-link">{{ __('Learn more') }} <span aria-hidden="true">&rarr;</span></a>
+                        </div>
+                    </article>
+                @endforeach
+            </div>
         </div>
-        <div class="prod-ctas"><a href="{{ url('/solutions/perfomia') }}" class="btn-pri">{{ __('View Perfomia') }}</a></div>
-      </div>
-      <div class="prod-visual">
-        <div class="pv-card">
-          <div class="pv-topbar"><span class="pv-dot" style="background:var(--c3)"></span><div class="pv-title">{{ __('Performance overview') }}</div></div>
-          <div class="pv-body">
-            <div class="pv-row"><div class="pv-row-ico" style="background:var(--c3d)"><i class="ti ti-users"></i></div><div><div class="pv-row-title">{{ __('Team productivity') }}</div><div class="pv-row-sub">{{ __('82% target completion') }}</div></div><div class="pv-row-tag" style="background:var(--success-soft);color:var(--green);border:1px solid var(--success-border)">{{ __('On track') }}</div></div>
-            <div class="pv-row"><div class="pv-row-ico" style="background:var(--c3d)"><i class="ti ti-clock-check"></i></div><div><div class="pv-row-title">{{ __('Attendance') }}</div><div class="pv-row-sub">{{ __('98% present today') }}</div></div><div class="pv-row-tag" style="background:var(--success-soft);color:var(--green);border:1px solid var(--success-border)">{{ __('Stable') }}</div></div>
-            <div class="pv-row"><div class="pv-row-ico" style="background:var(--c3d)"><i class="ti ti-arrow-up-right"></i></div><div><div class="pv-row-title">{{ __('Review cycle') }}</div><div class="pv-row-sub">{{ __('4 pending evaluations') }}</div></div><div class="pv-row-tag" style="background:var(--c3d);color:var(--c3);border:1px solid var(--c3b)">{{ __('Action') }}</div></div>
-          </div>
+    </section>
+
+    <section class="dx-section dx-section-alt">
+        <div class="dx-container">
+            <div class="dx-section-head dx-reveal">
+                <div class="dx-eyebrow">{{ __('Industries served') }}</div>
+                <h2>{{ __('Built for the sectors driving African growth') }}</h2>
+                <p class="dx-section-intro">
+                    {{ __('We understand the specific digital challenges each sector faces and design accordingly.') }}
+                </p>
+            </div>
+
+            <div class="industries-grid dx-reveal">
+                @foreach ($industries as $industry)
+                    <article class="industry-card">
+                        <h3>{{ $industry[0] }}</h3>
+                        <p>{{ $industry[1] }}</p>
+                    </article>
+                @endforeach
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
+    </section>
 
-  <div class="prod-section reverse" id="medtrace">
-    <div class="prod-inner rv">
-      <div>
-        <span class="prod-tag">{{ __('Healthcare Records') }}</span>
-        <div class="prod-num">04</div>
-        <h3>MedTrace</h3>
-        <p class="lead">{{ __('A secure medical record platform that gives authorized healthcare staff fast access to critical patient data.') }}</p>
-        <div class="feat-list">
-          <div class="feat-item"><div class="feat-item-ico" style="background:var(--c5d);color:var(--c5)"><i class="ti ti-qrcode"></i></div><div class="feat-item-body"><div class="feat-item-title">{{ __('QR access') }}</div><div class="feat-item-desc">{{ __('Instantly retrieve the patient record at the point of care.') }}</div></div></div>
-          <div class="feat-item"><div class="feat-item-ico" style="background:var(--c5d);color:var(--c5)"><i class="ti ti-shield-lock"></i></div><div class="feat-item-body"><div class="feat-item-title">{{ __('Secure data') }}</div><div class="feat-item-desc">{{ __('Only authorized staff see the medical history they need.') }}</div></div></div>
-          <div class="feat-item"><div class="feat-item-ico" style="background:var(--c5d);color:var(--c5)"><i class="ti ti-ambulance"></i></div><div class="feat-item-body"><div class="feat-item-title">{{ __('Emergency readiness') }}</div><div class="feat-item-desc">{{ __('Critical details remain visible when seconds matter.') }}</div></div></div>
+    <section class="dx-section">
+        <div class="dx-container">
+            <div class="dx-section-head dx-reveal">
+                <div class="dx-eyebrow">{{ __('Why DigiTexia') }}</div>
+                <h2>{{ __('A technology partner you can build on') }}</h2>
+            </div>
+
+            <div class="reasons-grid-6 dx-reveal">
+                @foreach ($reasons as $reason)
+                    <article class="reason-card">
+                        <div class="reason-number">{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}</div>
+                        <h3>{{ $reason[0] }}</h3>
+                        <p>{{ $reason[1] }}</p>
+                    </article>
+                @endforeach
+            </div>
         </div>
-        <div class="prod-ctas"><a href="{{ url('/solutions/medtrace') }}" class="btn-pri">{{ __('View MedTrace') }}</a></div>
-      </div>
-      <div class="prod-visual">
-        <div class="pv-card">
-          <div class="pv-topbar"><span class="pv-dot" style="background:var(--c5)"></span><div class="pv-title">{{ __('Patient summary') }}</div></div>
-          <div class="pv-body">
-            <div class="pv-row"><div class="pv-row-ico" style="background:var(--c5d)"><i class="ti ti-user"></i></div><div><div class="pv-row-title">John P., 42</div><div class="pv-row-sub">{{ __('Type O+ · Penicillin allergy') }}</div></div><div class="pv-row-tag" style="background:var(--danger);color:#fff;border:1px solid rgba(255,0,0,.16)">{{ __('Alert') }}</div></div>
-            <div class="pv-row"><div class="pv-row-ico" style="background:var(--c5d)"><i class="ti ti-pill"></i></div><div><div class="pv-row-title">{{ __('Medication') }}</div><div class="pv-row-sub">Metformin 500mg/day</div></div></div>
-            <div class="pv-row"><div class="pv-row-ico" style="background:var(--c5d)"><i class="ti ti-clipboard"></i></div><div><div class="pv-row-title">{{ __('Last visit') }}</div><div class="pv-row-sub">12 Jan 2025</div></div></div>
-          </div>
+    </section>
+
+    <section class="dx-final-cta" id="cta-final">
+        <div class="dx-container dx-reveal">
+            <div class="dx-eyebrow">{{ __('Let us talk') }}</div>
+            <h2>{{ __('Let us discuss your digital transformation goals') }}</h2>
+            <p class="dx-cta-subheading">
+                {{ __('Whatever stage your organization is at, we can talk through what digital transformation could look like for you.') }}
+            </p>
+            <p class="dx-cta-description">
+                {{ __('In a short conversation, we listen to your operational challenges and share how similar organizations have approached them: no pressure, no obligation.') }}
+            </p>
+            <div class="dx-cta-buttons">
+                <a href="tel:+237650945280" class="dx-btn dx-btn-primary">{{ __('Call (+237) 650 945 280') }}</a>
+                <a href="{{ url('/contact-us') }}" class="dx-btn dx-btn-secondary">{{ __('Send a Message') }}</a>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
+</main>
 
-<section id="compare">
-  <div class="cmp-inner">
-    <div class="cmp-header rv">
-      <span class="tag">{{ __('Decision Guide') }}</span>
-      <h2>{{ __('Compare the operational capabilities') }}</h2>
-      <p class="lead" style="max-width:560px;margin:.75rem auto 0">{{ __('Choose the platform that best matches your workflow, visibility and control priorities.') }}</p>
-    </div>
-    <div class="cmp-table rv d1">
-      <div class="cmp-head-row">
-        <div style="font-size:.75rem;color:var(--muted)">{{ __('Features') }}</div>
-        <div class="cmp-prod-head"><div class="cmp-prod-ico"><i class="ti ti-users"></i></div><div class="cmp-prod-name">FlexiCare</div></div>
-        <div class="cmp-prod-head"><div class="cmp-prod-ico"><i class="ti ti-box"></i></div><div class="cmp-prod-name">InventoryPro</div></div>
-        <div class="cmp-prod-head"><div class="cmp-prod-ico"><i class="ti ti-chart-bar"></i></div><div class="cmp-prod-name">Perfomia</div></div>
-        <div class="cmp-prod-head"><div class="cmp-prod-ico"><i class="ti ti-heart-pulse"></i></div><div class="cmp-prod-name">MedTrace</div></div>
-      </div>
-      <div class="cmp-row"><div class="cmp-feature">{{ __('Real-time Dashboard') }}</div><div class="cmp-cell"><span class="check">&check;</span></div><div class="cmp-cell"><span class="check">&check;</span></div><div class="cmp-cell"><span class="check">&check;</span></div><div class="cmp-cell"><span class="check">&check;</span></div></div>
-      <div class="cmp-row"><div class="cmp-feature">{{ __('Mobile Access') }}</div><div class="cmp-cell"><span class="check">&check;</span></div><div class="cmp-cell"><span class="check">&check;</span></div><div class="cmp-cell"><span class="check">&check;</span></div><div class="cmp-cell"><span class="check">&check;</span></div></div>
-      <div class="cmp-row"><div class="cmp-feature">{{ __('Automated Alerts') }}</div><div class="cmp-cell"><span class="check">&check;</span></div><div class="cmp-cell"><span class="check">&check;</span></div><div class="cmp-cell"><span class="check">&check;</span></div><div class="cmp-cell"><span class="dash">&mdash;</span></div></div>
-      <div class="cmp-row"><div class="cmp-feature">{{ __('Full Audit Trail') }}</div><div class="cmp-cell"><span class="dash">&mdash;</span></div><div class="cmp-cell"><span class="check">&check;</span></div><div class="cmp-cell"><span class="check">&check;</span></div><div class="cmp-cell"><span class="check">&check;</span></div></div>
-      <div class="cmp-row"><div class="cmp-feature">{{ __('Multi-User Roles') }}</div><div class="cmp-cell"><span class="check">&check;</span></div><div class="cmp-cell"><span class="check">&check;</span></div><div class="cmp-cell"><span class="check">&check;</span></div><div class="cmp-cell"><span class="check">&check;</span></div></div>
-      <div class="cmp-row"><div class="cmp-feature">{{ __('Analytics & Reports') }}</div><div class="cmp-cell"><span class="check">&check;</span></div><div class="cmp-cell"><span class="check">&check;</span></div><div class="cmp-cell"><span class="check">&check;</span></div><div class="cmp-cell"><span class="dash">&mdash;</span></div></div>
-      <div class="cmp-row"><div class="cmp-feature">{{ __('Custom Workflows') }}</div><div class="cmp-cell"><span class="dash">&mdash;</span></div><div class="cmp-cell"><span class="check">&check;</span></div><div class="cmp-cell"><span class="check">&check;</span></div><div class="cmp-cell"><span class="dash">&mdash;</span></div></div>
-      <div class="cmp-row"><div class="cmp-feature">{{ __('QR / Wearable Integration') }}</div><div class="cmp-cell"><span class="dash">&mdash;</span></div><div class="cmp-cell"><span class="dash">&mdash;</span></div><div class="cmp-cell"><span class="dash">&mdash;</span></div><div class="cmp-cell"><span class="check">&check;</span></div></div>
-    </div>
-  </div>
-</section>
-
-<section id="sol-cta">
-  <div class="sol-cta-inner rv">
-    <span class="tag">{{ __('Free Operational Assessment') }}</span>
-    <h2>{{ __('Need help choosing the right platform?') }}</h2>
-    <p class="lead">{{ __('We review your current workflow and recommend the DigiTexia product or custom implementation that creates the strongest business impact.') }}</p>
-    <div class="cta-btns">
-      <a href="{{ url('/contact-us') }}" class="btn-pri">{{ __('Request an Assessment') }} <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a href="{{ url('/the-problem') }}" class="btn-sec">{{ __('Review The Problem') }} &rarr;</a>
-    </div>
-  </div>
-</section>
-
-@push('scripts')
-<script>
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('vis');
-      obs.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.rv').forEach(el => obs.observe(el));
-
-const navEl = document.getElementById('mainNav');
-if (navEl) {
-  window.addEventListener('scroll', () => navEl.classList.toggle('sc', window.scrollY > 50));
-}
-
-const ddToggle = document.querySelector('.nav-dropdown > a');
-const ddMenu = document.querySelector('.dropdown-menu');
-if (ddToggle && ddMenu) {
-  ddToggle.addEventListener('click', function (e) {
-    if (window.innerWidth <= 900) {
-      e.preventDefault();
-      ddMenu.classList.toggle('is-open');
-    }
-  });
-
-  document.addEventListener('click', function (e) {
-    if (!e.target.closest('.nav-dropdown')) {
-      ddMenu.classList.remove('is-open');
-    }
-  });
-}
-</script>
-@endpush
+@include('partials.v2.footer')
 @endsection
