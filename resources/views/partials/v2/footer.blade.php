@@ -2,8 +2,18 @@
     <div class="dx-container">
         <h3>{{ __('Stay informed with the latest digital infrastructure insights.') }}</h3>
         <p>{{ __('Subscribe for practical perspectives on AI, data systems, infrastructure monitoring and digital transformation across Africa.') }}</p>
-        <form class="dx-newsletter-form" onsubmit="event.preventDefault(); window.location.href='mailto:contactdigitexia@gmail.com?subject=Newsletter subscription - DigiTexia';">
-            <input type="email" name="email" placeholder="{{ __('Your email address') }}" aria-label="{{ __('Your email address') }}" required>
+
+        @if (session('newsletter_success'))
+            <div class="dx-newsletter-alert success">{{ session('newsletter_success') }}</div>
+        @endif
+
+        @if ($errors->newsletter->any())
+            <div class="dx-newsletter-alert error">{{ __('Please enter a valid email address.') }}</div>
+        @endif
+
+        <form class="dx-newsletter-form" method="post" action="{{ route('newsletter.subscribe') }}">
+            @csrf
+            <input type="email" name="newsletter_email" value="{{ old('newsletter_email') }}" placeholder="{{ __('Your email address') }}" aria-label="{{ __('Your email address') }}" required>
             <button type="submit" class="dx-btn dx-btn-primary">{{ __('Subscribe') }}</button>
         </form>
     </div>

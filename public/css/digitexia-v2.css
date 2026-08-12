@@ -603,6 +603,28 @@ html.light-mode .dx-header {
   color: var(--dx-text-muted);
 }
 
+.dx-newsletter-alert {
+  max-width: 420px;
+  margin: 0 auto 14px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+.dx-newsletter-alert.success {
+  background: rgba(16, 185, 129, .12);
+  border: 1px solid rgba(16, 185, 129, .28);
+  color: #047857;
+}
+
+.dx-newsletter-alert.error {
+  background: rgba(239, 68, 68, .1);
+  border: 1px solid rgba(239, 68, 68, .28);
+  color: #b91c1c;
+}
+
 .dx-newsletter-form {
   display: flex;
   gap: 10px;
