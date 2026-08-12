@@ -31,10 +31,11 @@
 
             <div>
                 <h4>{{ __('Products') }}</h4>
-                <p><a href="{{ url('/solutions') }}">AquaWatch AI</a></p>
-                <p><a href="{{ url('/solutions') }}">WastePay</a></p>
-                <p><a href="{{ url('/solutions') }}">Carbon Africa Exchange</a></p>
-                <p><a href="{{ url('/solutions') }}">Digital Twin Platform</a></p>
+                <p><a href="{{ url('/solutions/medtrace') }}">MedTrace</a></p>
+                <p><a href="{{ url('/solutions/aquawatch-ai') }}">AquaWatch AI</a></p>
+                <p><a href="{{ url('/solutions/wastepay') }}">WastePay</a></p>
+                <p><a href="{{ url('/solutions/flexicare') }}">Flexicare</a></p>
+                <p><a href="{{ url('/solutions/performia') }}">Performia</a></p>
             </div>
 
             <div>

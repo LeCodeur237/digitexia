@@ -1,43 +1,34 @@
 <?php
 
-namespace App\Http\Controllers;
+$root = dirname(__DIR__);
+$path = $root . '/app/Http/Controllers/SolutionController.php';
+$text = file_get_contents($path);
 
-use Illuminate\Http\Request;
+$text = str_replace(
+    [
+        "'inventorypro' => 'aquawatch-ai',",
+        "'digicourier' => 'digital-twin-platform',",
+        "'digihealth' => 'aquawatch-ai',",
+        "360Â°",
+        "360Ã‚Â°",
+    ],
+    [
+        "'inventorypro' => 'aquawatch-ai',",
+        "'digicourier' => 'flexicare',",
+        "'digihealth' => 'medtrace',",
+        "360°",
+        "360°",
+    ],
+    $text
+);
 
-class SolutionController extends Controller
-{
-    public function index()
-    {
-        return view('pages.solutions');
-    }
+$start = strpos($text, '    private function getSolutionsData(): array');
+if ($start === false) {
+    fwrite(STDERR, "getSolutionsData not found.\n");
+    exit(1);
+}
 
-    public function show(string $slug)
-    {
-        $aliases = [
-            'inventorypro' => 'aquawatch-ai',
-            'perfomia' => 'performia',
-            'digiperformance' => 'performia',
-            'digicourier' => 'flexicare',
-            
-            'digihealth' => 'medtrace',
-        ];
-
-        $slug = $aliases[$slug] ?? $slug;
-
-        // Si une vue spécifique existe pour cette solution, on l'affiche directement
-        if (view()->exists("pages.$slug")) {
-            return view("pages.$slug");
-        }
-
-        $solutions = $this->getSolutionsData();
-
-        abort_unless(isset($solutions[$slug]), 404);
-
-        $solution = $solutions[$slug];
-
-        return view('pages.solution-detail', compact('solution'));
-    }
-
+$replacement = <<<'PHP'
     private function getSolutionsData(): array
     {
         return [
@@ -412,3 +403,9 @@ class SolutionController extends Controller
         ];
     }
 }
+PHP;
+
+$text = substr($text, 0, $start) . $replacement . "\n";
+file_put_contents($path, $text);
+
+echo "Solution detail data enriched.\n";

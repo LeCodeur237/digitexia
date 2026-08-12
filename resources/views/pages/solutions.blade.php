@@ -89,7 +89,18 @@
 
     $products = [
         [
-            'tag' => __('FLAGSHIP / AQUAWATCH AI'),
+            'tag' => __('PRODUCT / MEDTRACE'),
+            'name' => 'MedTrace',
+            'positioning' => __('Secure healthcare traceability with QR-based access to critical patient information.'),
+            'link' => url('/solutions/medtrace'),
+            'rows' => [
+                [__('Industry'), __('Healthcare providers, emergency responders and public health programs')],
+                [__('Challenge'), __('Patient information is often unavailable when medical teams need it most.')],
+                [__('Impact'), __('Faster identification, better emergency response and safer continuity of care.')],
+            ],
+        ],
+        [
+            'tag' => __('PRODUCT / AQUAWATCH AI'),
             'name' => 'AquaWatch AI',
             'positioning' => __('IoT and AI-powered monitoring for water and hydraulic infrastructure.'),
             'link' => url('/solutions/aquawatch-ai'),
@@ -100,7 +111,7 @@
             ],
         ],
         [
-            'tag' => __('FLAGSHIP / WASTEPAY'),
+            'tag' => __('PRODUCT / WASTEPAY'),
             'name' => 'WastePay',
             'positioning' => __('Smart waste management with QR tracking and recycling incentives.'),
             'link' => url('/solutions/wastepay'),
@@ -111,29 +122,28 @@
             ],
         ],
         [
-            'tag' => __('FLAGSHIP / CARBON AFRICA EXCHANGE'),
-            'name' => 'Carbon Africa Exchange',
-            'positioning' => __('Carbon tracking and marketplace infrastructure for forests, agriculture and climate programs.'),
-            'link' => url('/solutions/carbon-africa-exchange'),
+            'tag' => __('PRODUCT / FLEXICARE'),
+            'name' => 'Flexicare',
+            'positioning' => __('Service operations platform for verified providers, bookings, customer requests and field execution.'),
+            'link' => url('/solutions/flexicare'),
             'rows' => [
-                [__('Industry'), __('Climate, forestry, agriculture and ESG programs')],
-                [__('Challenge'), __('Carbon data is fragmented, difficult to verify and hard to convert into trusted value.')],
-                [__('Impact'), __('Structured climate intelligence and a stronger foundation for carbon credit workflows.')],
+                [__('Industry'), __('Service companies, field providers and customer support teams')],
+                [__('Challenge'), __('Manual service coordination creates delays, weak follow-up and inconsistent customer visibility.')],
+                [__('Impact'), __('Structured booking, provider verification and operational follow-up from one platform.')],
             ],
         ],
         [
-            'tag' => __('FLAGSHIP / DIGITAL TWIN PLATFORM'),
-            'name' => 'Digital Twin Platform',
-            'positioning' => __('Territorial intelligence systems for governments, NGOs and infrastructure operators.'),
-            'link' => url('/solutions/digital-twin-platform'),
+            'tag' => __('PRODUCT / PERFORMIA'),
+            'name' => 'Performia',
+            'positioning' => __('Performance and workforce execution platform for task delegation, attendance, KPIs and staff evaluation.'),
+            'link' => url('/solutions/performia'),
             'rows' => [
-                [__('Industry'), __('Government, cities and development agencies')],
-                [__('Challenge'), __('Infrastructure data lives across isolated tools, reports and field systems.')],
-                [__('Impact'), __('A live intelligence layer for planning, monitoring and better public decisions.')],
+                [__('Industry'), __('Microfinance institutions, HR teams and distributed operations')],
+                [__('Challenge'), __('Manual task tracking and scattered evaluations limit visibility into team execution.')],
+                [__('Impact'), __('Real-time performance visibility, structured accountability and faster management decisions.')],
             ],
         ],
     ];
-
     $industries = [
         [__('Financial Services'), __('Secure, compliant systems for high-stakes, high-volume operations.')],
         [__('Healthcare'), __('Traceability and compliance where patient safety is non-negotiable.')],

@@ -20,14 +20,14 @@
             'cta' => __('Discover WastePay'),
         ],
         [
-            'title' => __('Carbon & Climate Data Systems'),
-            'text' => __('Structure carbon measurement, forest data and agriculture signals into trustworthy climate intelligence.'),
-            'cta' => __('Discover Carbon Africa Exchange'),
+            'title' => __('Service Operations Management'),
+            'text' => __('Coordinate verified providers, customer requests, bookings and field execution from one structured platform.'),
+            'cta' => __('Discover Flexicare'),
         ],
         [
-            'title' => __('Territorial Digital Twins'),
-            'text' => __('Aggregate infrastructure, services and field data into one intelligence layer for governments and institutions.'),
-            'cta' => __('Explore Digital Twin Platform'),
+            'title' => __('Performance Execution Systems'),
+            'text' => __('Structure tasks, attendance, KPI visibility and staff evaluation for distributed teams.'),
+            'cta' => __('Explore Performia'),
         ],
     ];
 
@@ -57,20 +57,20 @@
             'outcome' => __('Improve collection transparency and increase circular economy participation.'),
         ],
         [
-            'tag' => __('PRODUCT / CARBON-03'),
-            'name' => 'Carbon Africa Exchange',
-            'link' => url('/solutions/carbon-africa-exchange'),
-            'text' => __('Carbon tracking and marketplace infrastructure for forests, agriculture and climate reporting workflows.'),
-            'features' => [__('Carbon data'), __('Marketplace layer')],
-            'outcome' => __('Turn climate data into measurable, verifiable and exchange-ready assets.'),
+            'tag' => __('PRODUCT / SERVICE-03'),
+            'name' => 'Flexicare',
+            'link' => url('/solutions/flexicare'),
+            'text' => __('Service operations platform for verified providers, bookings, customer requests and field execution.'),
+            'features' => [__('Provider verification'), __('Booking follow-up')],
+            'outcome' => __('Improve service coordination, provider accountability and customer visibility.'),
         ],
         [
-            'tag' => __('PRODUCT / TWIN-04'),
-            'name' => 'Digital Twin Platform',
-            'link' => url('/solutions/digital-twin-platform'),
-            'text' => __('A territorial digital twin that aggregates infrastructure data for governments, NGOs and enterprise stakeholders.'),
-            'features' => [__('Asset mapping'), __('Decision dashboards')],
-            'outcome' => __('Give leaders one operational picture of infrastructure, services and territory performance.'),
+            'tag' => __('PRODUCT / PERFORMANCE-04'),
+            'name' => 'Performia',
+            'link' => url('/solutions/performia'),
+            'text' => __('Performance and workforce execution platform for task delegation, attendance, KPIs and staff evaluation.'),
+            'features' => [__('KPI dashboards'), __('Staff evaluation')],
+            'outcome' => __('Give managers clearer execution visibility and faster performance decisions.'),
         ],
     ];
 @endphp
@@ -149,13 +149,13 @@
         <div class="ticker-track">
             <span>AquaWatch AI <b>{{ __('monitoring') }}</b></span>
             <span>WastePay <b>{{ __('traceability') }}</b></span>
-            <span>Carbon Africa Exchange <b>{{ __('verification') }}</b></span>
-            <span>Digital Twin Platform <b>{{ __('governance') }}</b></span>
+            <span>Flexicare <b>{{ __('services') }}</b></span>
+            <span>Performia <b>{{ __('performance') }}</b></span>
             <span>{{ __('Built for African operations') }} <b>99.98%</b></span>
             <span>AquaWatch AI <b>{{ __('monitoring') }}</b></span>
             <span>WastePay <b>{{ __('traceability') }}</b></span>
-            <span>Carbon Africa Exchange <b>{{ __('verification') }}</b></span>
-            <span>Digital Twin Platform <b>{{ __('governance') }}</b></span>
+            <span>Flexicare <b>{{ __('services') }}</b></span>
+            <span>Performia <b>{{ __('performance') }}</b></span>
             <span>{{ __('Built for African operations') }} <b>99.98%</b></span>
         </div>
     </div>
