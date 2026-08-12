@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BlogCommentController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SolutionController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
@@ -82,6 +83,8 @@ Route::redirect('/life-at-digi-details', '/life-at-digi', 301);
 Route::get('/contact-us', function () {
     return view('pages.contact');
 });
+
+Route::post('/contact-us', [ContactController::class, 'send'])->name('contact.send');
 
 Route::get('/contact', function () {
     return view('pages.contact');

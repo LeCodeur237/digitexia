@@ -71,26 +71,43 @@
                         {{ __('Share a few details about your organization and what you hope to build. The more context you give us, the more useful our first conversation will be.') }}
                     </p>
 
-                    <form id="contactForm" method="post" action="mailto:contactdigitexia@gmail.com">
+                    @if (session('contact_success'))
+                        <div class="contact-alert contact-alert-success">
+                            {{ session('contact_success') }}
+                        </div>
+                    @endif
+
+                    @if ($errors->any())
+                        <div class="contact-alert contact-alert-error">
+                            {{ __('Please check the form and try again.') }}
+                        </div>
+                    @endif
+
+                    <form id="contactForm" method="post" action="{{ route('contact.send') }}">
+                        @csrf
                         <div class="form-row">
                             <div class="form-field">
                                 <label for="fullname">{{ __('Full name') }}</label>
-                                <input type="text" id="fullname" name="fullname" placeholder="{{ __('Your name') }}" autocomplete="name" required>
+                                <input type="text" id="fullname" name="fullname" value="{{ old('fullname') }}" placeholder="{{ __('Your name') }}" autocomplete="name" required>
+                                @error('fullname')<span class="field-error">{{ $message }}</span>@enderror
                             </div>
                             <div class="form-field">
                                 <label for="organization">{{ __('Organization') }}</label>
-                                <input type="text" id="organization" name="organization" placeholder="{{ __('Company, institution or organization') }}" autocomplete="organization">
+                                <input type="text" id="organization" name="organization" value="{{ old('organization') }}" placeholder="{{ __('Company, institution or organization') }}" autocomplete="organization">
+                                @error('organization')<span class="field-error">{{ $message }}</span>@enderror
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-field">
                                 <label for="email">{{ __('Email') }}</label>
-                                <input type="email" id="email" name="email" placeholder="you@organization.com" autocomplete="email" required>
+                                <input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="you@organization.com" autocomplete="email" required>
+                                @error('email')<span class="field-error">{{ $message }}</span>@enderror
                             </div>
                             <div class="form-field">
                                 <label for="phone">{{ __('Phone') }}</label>
-                                <input type="tel" id="phone" name="phone" placeholder="+237 6XX XXX XXX" autocomplete="tel">
+                                <input type="tel" id="phone" name="phone" value="{{ old('phone') }}" placeholder="+237 6XX XXX XXX" autocomplete="tel">
+                                @error('phone')<span class="field-error">{{ $message }}</span>@enderror
                             </div>
                         </div>
 
@@ -98,21 +115,19 @@
                             <div class="form-field full">
                                 <label for="topic">{{ __('What would you like to discuss?') }}</label>
                                 <select id="topic" name="topic">
-                                    <option>{{ __('Digital Transformation') }}</option>
-                                    <option>{{ __('Enterprise Software') }}</option>
-                                    <option>{{ __('Artificial Intelligence') }}</option>
-                                    <option>{{ __('Digital Infrastructure') }}</option>
-                                    <option>{{ __('Technology Partnership') }}</option>
-                                    <option>{{ __('Product Development') }}</option>
-                                    <option>{{ __('Other') }}</option>
+                                    @foreach ([__('Digital Transformation'), __('Enterprise Software'), __('Artificial Intelligence'), __('Digital Infrastructure'), __('Technology Partnership'), __('Product Development'), __('Other')] as $topic)
+                                        <option @selected(old('topic') === $topic)>{{ $topic }}</option>
+                                    @endforeach
                                 </select>
+                                @error('topic')<span class="field-error">{{ $message }}</span>@enderror
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-field full">
                                 <label for="message">{{ __('Tell us about your challenge and objectives') }}</label>
-                                <textarea id="message" name="message" placeholder="{{ __('What are you trying to solve, and what would success look like?') }}" required></textarea>
+                                <textarea id="message" name="message" placeholder="{{ __('What are you trying to solve, and what would success look like?') }}" required>{{ old('message') }}</textarea>
+                                @error('message')<span class="field-error">{{ $message }}</span>@enderror
                             </div>
                         </div>
 
@@ -148,37 +163,3 @@
 
 @include('partials.v2.footer')
 @endsection
-
-@push('scripts')
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('contactForm');
-  if (!form) return;
-
-  form.addEventListener('submit', function (event) {
-    event.preventDefault();
-
-    const fullName = document.getElementById('fullname').value.trim();
-    const organization = document.getElementById('organization').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const topic = document.getElementById('topic').value.trim();
-    const message = document.getElementById('message').value.trim();
-
-    const subject = @json(__('Project inquiry')) + ' - ' + (organization || fullName || 'DigiTexia website');
-    const body = [
-      @json(__('Name')) + ': ' + fullName,
-      @json(__('Organization')) + ': ' + (organization || @json(__('Not specified'))),
-      @json(__('Email')) + ': ' + email,
-      @json(__('Phone')) + ': ' + (phone || @json(__('Not specified'))),
-      @json(__('Topic')) + ': ' + topic,
-      '',
-      @json(__('Message')) + ':',
-      message
-    ].join('\n');
-
-    window.location.href = 'mailto:contactdigitexia@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-  });
-});
-</script>
-@endpush
