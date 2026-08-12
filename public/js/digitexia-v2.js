@@ -102,5 +102,23 @@
         countObserver.observe(el);
       });
     }
+
+    var toasts = document.querySelectorAll("[data-dx-toast]");
+    toasts.forEach(function (toast) {
+      var close = toast.querySelector("[data-dx-toast-close]");
+      var removeToast = function () {
+        toast.style.opacity = "0";
+        toast.style.transform = "translateY(12px)";
+        setTimeout(function () {
+          toast.remove();
+        }, 180);
+      };
+
+      if (close) {
+        close.addEventListener("click", removeToast);
+      }
+
+      setTimeout(removeToast, 5200);
+    });
   });
 })();

@@ -51,9 +51,9 @@
                     <a href="{{ route('blog.show', $featuredPost) }}" class="featured-media" aria-label="{{ $featuredPost->title }}">
                         @if ($featuredPost->cover_image)
                             @php
-                                $featuredCover = \Illuminate\Support\Str::startsWith($featuredPost->cover_image, ['http://', 'https://'])
+                                $featuredCover = \Illuminate\Support\Str::startsWith($featuredPost->cover_image, ['http://', 'https://', '/'])
                                     ? $featuredPost->cover_image
-                                    : asset($featuredPost->cover_image);
+                                    : asset('storage/' . $featuredPost->cover_image);
                             @endphp
                             <img src="{{ $featuredCover }}" alt="{{ $featuredPost->cover_image_alt ?: $featuredPost->title }}">
                         @else
@@ -122,9 +122,9 @@
                     @foreach ($otherPosts->take(9) as $post)
                         @php
                             $tag = !empty($post->tags) ? ($post->tags[0] ?? 'Blog') : 'Blog';
-                            $cover = $post->cover_image && \Illuminate\Support\Str::startsWith($post->cover_image, ['http://', 'https://'])
+                            $cover = $post->cover_image && \Illuminate\Support\Str::startsWith($post->cover_image, ['http://', 'https://', '/'])
                                 ? $post->cover_image
-                                : ($post->cover_image ? asset($post->cover_image) : null);
+                                : ($post->cover_image ? asset('storage/' . $post->cover_image) : null);
                         @endphp
                         <article class="article-card">
                             <a href="{{ route('blog.show', $post) }}" class="article-media" aria-label="{{ $post->title }}">

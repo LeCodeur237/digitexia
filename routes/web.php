@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Admin\NewsletterSubscriberController;
 use App\Http\Controllers\BlogCommentController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
@@ -77,6 +78,14 @@ Route::prefix('admin/blog')
         Route::get('/{post}/edit', [BlogController::class, 'edit'])->name('edit');
         Route::match(['put', 'patch'], '/{post}', [BlogController::class, 'update'])->name('update');
         Route::delete('/{post}', [BlogController::class, 'destroy'])->name('destroy');
+    });
+
+Route::prefix('admin/newsletter')
+    ->middleware('auth')
+    ->name('newsletter.admin.')
+    ->group(function () {
+        Route::get('/', [NewsletterSubscriberController::class, 'index'])->name('index');
+        Route::delete('/{subscriber}', [NewsletterSubscriberController::class, 'destroy'])->name('destroy');
     });
 
 Route::redirect('/life-at-digi-details', '/life-at-digi', 301);

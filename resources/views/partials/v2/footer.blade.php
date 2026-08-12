@@ -3,14 +3,6 @@
         <h3>{{ __('Stay informed with the latest digital infrastructure insights.') }}</h3>
         <p>{{ __('Subscribe for practical perspectives on AI, data systems, infrastructure monitoring and digital transformation across Africa.') }}</p>
 
-        @if (session('newsletter_success'))
-            <div class="dx-newsletter-alert success">{{ session('newsletter_success') }}</div>
-        @endif
-
-        @if ($errors->newsletter->any())
-            <div class="dx-newsletter-alert error">{{ __('Please enter a valid email address.') }}</div>
-        @endif
-
         <form class="dx-newsletter-form" method="post" action="{{ route('newsletter.subscribe') }}">
             @csrf
             <input type="email" name="newsletter_email" value="{{ old('newsletter_email') }}" placeholder="{{ __('Your email address') }}" aria-label="{{ __('Your email address') }}" required>
@@ -63,3 +55,18 @@
         </div>
     </div>
 </footer>
+
+@if (session('newsletter_success') || $errors->newsletter->any())
+    <div class="dx-toast-wrap" id="newsletterToast" role="alert" aria-live="assertive" data-dx-toast>
+        <div class="dx-toast {{ session('newsletter_success') ? 'success' : 'error' }}">
+            <div class="dx-toast-icon" aria-hidden="true">
+                <i class="ti {{ session('newsletter_success') ? 'ti-check' : 'ti-alert-triangle' }}"></i>
+            </div>
+            <div class="dx-toast-content">
+                <strong>{{ session('newsletter_success') ? __('Newsletter subscription') : __('Newsletter error') }}</strong>
+                <span>{{ session('newsletter_success') ?: __('Please enter a valid email address.') }}</span>
+            </div>
+            <button type="button" class="dx-toast-close" aria-label="{{ __('Dismiss notification') }}" data-dx-toast-close>&times;</button>
+        </div>
+    </div>
+@endif

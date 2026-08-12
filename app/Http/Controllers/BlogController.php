@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\BlogPost;
+use App\Models\NewsletterSubscriber;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
@@ -38,7 +39,19 @@ class BlogController extends Controller
             ->latest()
             ->paginate(15);
 
-        return view('admin.blog.index', compact('posts'));
+        $stats = [
+            'total' => BlogPost::count(),
+            'published' => BlogPost::where('status', 'published')->count(),
+            'drafts' => BlogPost::where('status', 'draft')->count(),
+            'subscribers' => NewsletterSubscriber::count(),
+        ];
+
+        $recentSubscribers = NewsletterSubscriber::query()
+            ->latest('subscribed_at')
+            ->take(5)
+            ->get();
+
+        return view('admin.blog.index', compact('posts', 'stats', 'recentSubscribers'));
     }
 
     public function create()

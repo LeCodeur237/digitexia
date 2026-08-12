@@ -95,7 +95,7 @@
       @endif
 
       <div class="show-content">
-        {!! nl2br(e($post->content)) !!}
+        {!! $post->content !!}
       </div>
     </div>
 
