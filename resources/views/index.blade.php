@@ -200,10 +200,12 @@
         @include('partials.v2.footer')
     @endif
 
-    <script src="{{ asset('js/digitexiajs001.js') }}"></script>
-    <script src="{{ asset('js/digitexiajs002.js') }}"></script>
-    <script src="{{ asset('js/digitexiajs003.js') }}"></script>
-    <script src="{{ asset('js/myjs.js') }}"></script>
+    @if (! trim($__env->yieldContent('skip_frontend_scripts')))
+        <script src="{{ asset('js/digitexiajs001.js') }}"></script>
+        <script src="{{ asset('js/digitexiajs002.js') }}"></script>
+        <script src="{{ asset('js/digitexiajs003.js') }}"></script>
+        <script src="{{ asset('js/myjs.js') }}"></script>
+    @endif
     @hasSection('digitexia_v2')
         <script src="{{ asset('js/digitexia-v2.js') }}?v={{ filemtime(public_path('js/digitexia-v2.js')) }}"></script>
     @endif

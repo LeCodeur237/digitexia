@@ -1,6 +1,7 @@
 @extends('index')
 
 @section('page_title', $pageTitle ?? 'DigiTexia Admin')
+@section('skip_frontend_scripts', true)
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/admin-v2.css') }}?v={{ filemtime(public_path('css/admin-v2.css')) }}">
@@ -74,10 +75,10 @@
 @push('scripts')
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('form[data-admin-submit]').forEach(function (form) {
-        form.addEventListener('submit', function () {
+    window.AdminUI = {
+        showLoading: function (form) {
             var loading = document.querySelector('[data-admin-loading]');
-            var submitters = form.querySelectorAll('[type="submit"]');
+            var submitters = form ? form.querySelectorAll('[type="submit"]') : [];
 
             if (loading) {
                 loading.classList.add('active');
@@ -88,6 +89,30 @@ document.addEventListener('DOMContentLoaded', function () {
                 button.disabled = true;
                 button.classList.add('loading');
             });
+        },
+        hideLoading: function (form) {
+            var loading = document.querySelector('[data-admin-loading]');
+            var submitters = form ? form.querySelectorAll('[type="submit"]') : [];
+
+            if (loading) {
+                loading.classList.remove('active');
+                loading.setAttribute('aria-hidden', 'true');
+            }
+
+            submitters.forEach(function (button) {
+                button.disabled = false;
+                button.classList.remove('loading');
+            });
+        }
+    };
+
+    document.querySelectorAll('form[data-admin-submit]').forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            setTimeout(function () {
+                if (!event.defaultPrevented && window.AdminUI) {
+                    window.AdminUI.showLoading(form);
+                }
+            }, 0);
         });
     });
 

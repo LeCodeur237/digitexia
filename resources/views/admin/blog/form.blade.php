@@ -173,6 +173,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (!contentText) {
             event.preventDefault();
+            if (window.AdminUI) {
+                window.AdminUI.hideLoading(form);
+            }
             if (contentError) {
                 contentError.hidden = false;
             }

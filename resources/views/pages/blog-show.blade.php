@@ -1,190 +1,123 @@
 @extends('index')
 
 @section('page_title', $post->seo_title ?: $post->title)
+@section('digitexia_v2', true)
 
 @push('styles')
-<style>
-  .show-shell {
-    padding: 130px 5% 80px;
-    background: var(--bg-primary);
-  }
-
-  .show-wrap {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .show-card {
-    padding: 2rem;
-    border-radius: 20px;
-    border: 1px solid var(--border-color);
-    background: var(--card-bg);
-  }
-
-  .show-meta {
-    display: flex;
-    gap: .75rem;
-    flex-wrap: wrap;
-    color: var(--text-soft);
-    font-size: .85rem;
-    margin-bottom: 1rem;
-  }
-
-  .show-share {
-    display: flex;
-    align-items: center;
-    gap: .75rem;
-    flex-wrap: wrap;
-    margin: 1.25rem 0 1.5rem;
-    padding: .85rem;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    background: var(--surface-soft);
-  }
-
-  .show-share-label {
-    color: var(--text-main);
-    font-size: .82rem;
-    font-weight: 800;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-  }
-
-  .show-share-links {
-    display: flex;
-    gap: .55rem;
-    flex-wrap: wrap;
-  }
-
-  .show-share-link {
-    width: 38px;
-    height: 38px;
-    display: grid;
-    place-items: center;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    background: var(--card-bg);
-    color: var(--text-main);
-    transition: transform .18s ease, border-color .18s ease, background .18s ease;
-  }
-
-  .show-share-link:hover {
-    transform: translateY(-2px);
-    border-color: var(--accent-border);
-    background: var(--accent);
-    color: var(--on-accent);
-  }
-
-  .show-content {
-    color: var(--text-muted);
-    line-height: 1.85;
-  }
-
-  .show-content h2,
-  .show-content h3 {
-    color: var(--text-main);
-    margin: 1.5rem 0 .75rem;
-  }
-
-  .comment-box {
-    margin-top: 2rem;
-    padding: 1.5rem;
-    border-radius: 18px;
-    border: 1px solid var(--border-color);
-    background: var(--surface-soft);
-  }
-
-  .comment-box textarea,
-  .comment-box input {
-    width: 100%;
-    padding: .9rem 1rem;
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-    background: var(--input-bg);
-    color: var(--text-main);
-    outline: none;
-  }
-</style>
+<link rel="stylesheet" href="{{ asset('css/blog-v2.css') }}?v={{ filemtime(public_path('css/blog-v2.css')) }}">
 @endpush
 
-@section('contain')
 @php
-  $coverImage = $post->cover_image
-    ? (
-      \Illuminate\Support\Str::startsWith($post->cover_image, ['http://', 'https://', '/'])
-        ? $post->cover_image
-        : asset('storage/' . $post->cover_image)
-    )
-    : null;
-  $shareUrl = route('blog.show', $post);
-  $shareTitle = $post->title;
-  $encodedShareUrl = rawurlencode($shareUrl);
-  $encodedShareTitle = rawurlencode($shareTitle);
+    $coverImage = $post->cover_image
+        ? (
+            \Illuminate\Support\Str::startsWith($post->cover_image, ['http://', 'https://', '/'])
+                ? $post->cover_image
+                : asset('storage/' . $post->cover_image)
+        )
+        : null;
+    $shareUrl = route('blog.show', $post);
+    $shareTitle = $post->title;
+    $encodedShareUrl = rawurlencode($shareUrl);
+    $encodedShareTitle = rawurlencode($shareTitle);
+    $primaryTag = !empty($post->tags) ? ($post->tags[0] ?? 'Blog') : 'Blog';
 @endphp
 
-<section class="show-shell">
-  <div class="show-wrap">
-    <div class="tag" style="margin-bottom:1rem">{{ __('Blog article') }}</div>
-    <div class="show-card">
-      <div class="show-meta">
-        <span>{{ $post->author->name ?? 'DigiTexia' }}</span>
-        <span>&bull;</span>
-        <span>{{ optional($post->published_at)->format('d M Y') ?? __('Draft') }}</span>
-        <span>&bull;</span>
-        <span>{{ $post->reading_time_minutes ?? 5 }} {{ __('min read') }}</span>
-      </div>
+@section('fullpage')
+@include('partials.v2.header')
 
-      <h1 style="font-family:'Clash Display',sans-serif;font-size:clamp(2rem,4vw,3.4rem);line-height:1.05;margin-bottom:1rem">{{ $post->title }}</h1>
-      <p class="lead">{{ $post->excerpt }}</p>
+<main class="dx-blog dx-blog-show">
+    <section class="article-hero">
+        <div class="dx-blueprint"></div>
+        <div class="dx-container article-hero-grid">
+            <div class="article-hero-copy dx-reveal">
+                <a href="{{ route('blog.index') }}" class="article-back">
+                    <i class="ti ti-arrow-left"></i>
+                    <span>{{ __('Back to Blog') }}</span>
+                </a>
 
-      <div class="show-share" aria-label="{{ __('Share this article') }}">
-        <span class="show-share-label">{{ __('Share') }}</span>
-        <div class="show-share-links">
-          <a class="show-share-link" href="https://www.facebook.com/sharer/sharer.php?u={{ $encodedShareUrl }}" target="_blank" rel="noopener noreferrer" aria-label="{{ __('Share on Facebook') }}">
-            <i class="ti ti-brand-facebook"></i>
-          </a>
-          <a class="show-share-link" href="https://twitter.com/intent/tweet?url={{ $encodedShareUrl }}&text={{ $encodedShareTitle }}" target="_blank" rel="noopener noreferrer" aria-label="{{ __('Share on X') }}">
-            <i class="ti ti-brand-x"></i>
-          </a>
-          <a class="show-share-link" href="https://www.linkedin.com/sharing/share-offsite/?url={{ $encodedShareUrl }}" target="_blank" rel="noopener noreferrer" aria-label="{{ __('Share on LinkedIn') }}">
-            <i class="ti ti-brand-linkedin"></i>
-          </a>
-          <a class="show-share-link" href="https://wa.me/?text={{ $encodedShareTitle }}%20{{ $encodedShareUrl }}" target="_blank" rel="noopener noreferrer" aria-label="{{ __('Share on WhatsApp') }}">
-            <i class="ti ti-brand-whatsapp"></i>
-          </a>
-        </div>
-      </div>
+                <div class="post-meta">
+                    <span class="post-tag">{{ $primaryTag }}</span>
+                    <span>{{ optional($post->published_at)->format('M d, Y') ?? __('Draft') }}</span>
+                    <span>{{ $post->reading_time_minutes ?? 5 }} {{ __('min read') }}</span>
+                </div>
 
-      @if (!empty($coverImage))
-        <div style="margin:1.5rem 0;border-radius:18px;overflow:hidden;border:1px solid var(--border-color)">
-          <img src="{{ $coverImage }}" alt="{{ $post->cover_image_alt ?: $post->title }}" style="width:100%;display:block">
-        </div>
-      @endif
+                <h1>{{ $post->title }}</h1>
 
-      <div class="show-content">
-        {!! $post->content !!}
-      </div>
-    </div>
+                @if ($post->excerpt)
+                    <p class="article-excerpt">{{ $post->excerpt }}</p>
+                @endif
 
-    <div class="comment-box">
-      <h2 style="margin-bottom:1rem">{{ __('Comments') }}</h2>
-      @if ($post->allow_comments)
-        @auth
-          <form method="POST" action="{{ route('blog.comments.store', $post) }}">
-            @csrf
-            <div style="margin-bottom:1rem">
-              <textarea name="body" rows="5" placeholder="{{ __('Write your comment...') }}" required>{{ old('body') }}</textarea>
+                <div class="article-author-row">
+                    <div class="post-avatar">DX</div>
+                    <div>
+                        <div class="post-author">{{ $post->author->name ?? 'DigiTexia' }}</div>
+                        <div class="post-role">{{ __('Author') }}</div>
+                    </div>
+                </div>
             </div>
-            <button type="submit" class="btn-pri">{{ __('Submit comment') }}</button>
-          </form>
-        @else
-          <p class="lead">{{ __('Please login to leave a comment.') }}</p>
-          <a href="{{ route('login') }}" class="btn-pri">{{ __('Login') }}</a>
-        @endauth
-      @else
-        <p class="lead">{{ __('Comments are disabled for this article.') }}</p>
-      @endif
-    </div>
-  </div>
-</section>
+
+            <div class="article-hero-media dx-reveal">
+                @if ($coverImage)
+                    <img src="{{ $coverImage }}" alt="{{ $post->cover_image_alt ?: $post->title }}">
+                @else
+                    <div class="media-placeholder">DGX</div>
+                @endif
+            </div>
+        </div>
+    </section>
+
+    <section class="article-body-section">
+        <div class="dx-container article-layout">
+            <aside class="article-aside dx-reveal">
+                <div class="article-share-card">
+                    <div class="share-title">{{ __('Share this article') }}</div>
+                    <div class="share-links">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ $encodedShareUrl }}" target="_blank" rel="noopener noreferrer" aria-label="{{ __('Share on Facebook') }}">
+                            <i class="ti ti-brand-facebook"></i>
+                        </a>
+                        <a href="https://twitter.com/intent/tweet?url={{ $encodedShareUrl }}&text={{ $encodedShareTitle }}" target="_blank" rel="noopener noreferrer" aria-label="{{ __('Share on X') }}">
+                            <i class="ti ti-brand-x"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ $encodedShareUrl }}" target="_blank" rel="noopener noreferrer" aria-label="{{ __('Share on LinkedIn') }}">
+                            <i class="ti ti-brand-linkedin"></i>
+                        </a>
+                        <a href="https://wa.me/?text={{ $encodedShareTitle }}%20{{ $encodedShareUrl }}" target="_blank" rel="noopener noreferrer" aria-label="{{ __('Share on WhatsApp') }}">
+                            <i class="ti ti-brand-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+            <article class="article-content-card dx-reveal">
+                <div class="article-content">
+                    {!! $post->content !!}
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="article-comments-section">
+        <div class="dx-container article-comments-wrap dx-reveal">
+            <div class="article-comments-card">
+                <h2>{{ __('Comments') }}</h2>
+                @if ($post->allow_comments)
+                    @auth
+                        <form method="POST" action="{{ route('blog.comments.store', $post) }}">
+                            @csrf
+                            <textarea name="body" rows="5" placeholder="{{ __('Write your comment...') }}" required>{{ old('body') }}</textarea>
+                            <button type="submit" class="dx-btn dx-btn-primary">{{ __('Submit comment') }}</button>
+                        </form>
+                    @else
+                        <p>{{ __('Please login to leave a comment.') }}</p>
+                        <a href="{{ route('login') }}" class="dx-btn dx-btn-primary">{{ __('Login') }}</a>
+                    @endauth
+                @else
+                    <p>{{ __('Comments are disabled for this article.') }}</p>
+                @endif
+            </div>
+        </div>
+    </section>
+</main>
+
+@include('partials.v2.footer')
 @endsection
