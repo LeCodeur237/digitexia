@@ -26,21 +26,21 @@
             <div class="contact-grid dx-reveal">
                 <div class="info-panel">
                     <h2>{{ __('About Flexicare') }}</h2>
-                    <p>{{ __('Flexicare is being designed as a practical healthcare platform for patient records, appointment management, care coordination and service follow-up.') }}</p>
-                    <p>{{ __('Your answers will help identify the realities that matter most for clinics, healthcare teams, patients and partner organizations.') }}</p>
+                    <p>{{ __('Flexicare is a smart digital platform that connects companies, individuals and qualified service providers.') }}</p>
+                    <p>{{ __('It supports mission management, service tracking, secure payments, performance evaluation and the professionalization of independent workers.') }}</p>
 
                     <div class="topics-label">{{ __('Flexicare focus areas') }}</div>
                     <div class="topics-list">
-                        <span>{{ __('Patient records') }}</span>
-                        <span>{{ __('Appointments') }}</span>
-                        <span>{{ __('Care coordination') }}</span>
-                        <span>{{ __('Service follow-up') }}</span>
-                        <span>{{ __('Operational reporting') }}</span>
+                        <span>{{ __('Qualified providers') }}</span>
+                        <span>{{ __('Mission management') }}</span>
+                        <span>{{ __('Service tracking') }}</span>
+                        <span>{{ __('Secure payments') }}</span>
+                        <span>{{ __('Performance evaluation') }}</span>
                     </div>
                 </div>
 
                 <div class="form-panel">
-                    <p class="form-lead">{{ __('Answer a few questions about your healthcare environment, current practices and expectations for a solution like Flexicare.') }}</p>
+                    <p class="form-lead">{{ __('Answer a few questions about how you request, provide, manage or supervise services today.') }}</p>
 
                     @if (session('survey_success'))
                         <div class="contact-alert contact-alert-success">{{ session('survey_success') }}</div>
@@ -88,7 +88,7 @@
                             <div class="form-field">
                                 <label for="participant_type">{{ __('Participant type') }}</label>
                                 <select id="participant_type" name="participant_type" required>
-                                    @foreach ([__('Healthcare professional'), __('Clinic or hospital manager'), __('Patient or caregiver'), __('NGO or public actor'), __('Technology partner'), __('Other')] as $option)
+                                    @foreach ([__('Company or organization'), __('Individual client'), __('Independent service provider'), __('Service agency'), __('Technology or payment partner'), __('Other')] as $option)
                                         <option value="{{ $option }}" @selected(old('participant_type') === $option)>{{ $option }}</option>
                                     @endforeach
                                 </select>
@@ -112,14 +112,14 @@
                         <div class="form-row">
                             <div class="form-field full">
                                 <label for="sector">{{ __('Sector or activity') }}</label>
-                                <input id="sector" name="sector" value="{{ old('sector') }}" placeholder="{{ __('Healthcare, insurance, public health, NGO, technology, other...') }}">
+                                <input id="sector" name="sector" value="{{ old('sector') }}" placeholder="{{ __('Home services, maintenance, cleaning, care services, logistics, events, other...') }}">
                                 @error('sector')<span class="field-error">{{ $message }}</span>@enderror
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-field full">
-                                <label for="current_challenges">{{ __('What are the main difficulties in managing patient information, appointments or follow-up today?') }}</label>
+                                <label for="current_challenges">{{ __('What are the main difficulties when requesting, delivering or supervising services today?') }}</label>
                                 <textarea id="current_challenges" name="current_challenges">{{ old('current_challenges') }}</textarea>
                                 @error('current_challenges')<span class="field-error">{{ $message }}</span>@enderror
                             </div>
@@ -127,7 +127,7 @@
 
                         <div class="form-row">
                             <div class="form-field full">
-                                <label for="expected_features">{{ __('Which Flexicare features would be most useful for you or your organization?') }}</label>
+                                <label for="expected_features">{{ __('Which Flexicare features would be most useful: provider verification, mission tracking, payments, ratings or reporting?') }}</label>
                                 <textarea id="expected_features" name="expected_features">{{ old('expected_features') }}</textarea>
                                 @error('expected_features')<span class="field-error">{{ $message }}</span>@enderror
                             </div>
@@ -135,7 +135,7 @@
 
                         <div class="form-row">
                             <div class="form-field full">
-                                <label for="deployment_context">{{ __('In what type of healthcare setting could Flexicare be deployed first?') }}</label>
+                                <label for="deployment_context">{{ __('Where could Flexicare be deployed first: companies, households, agencies, institutions or local communities?') }}</label>
                                 <textarea id="deployment_context" name="deployment_context">{{ old('deployment_context') }}</textarea>
                                 @error('deployment_context')<span class="field-error">{{ $message }}</span>@enderror
                             </div>

@@ -15,8 +15,8 @@ class ProjectSurveyController extends Controller
             'name' => 'Flexicare',
             'title' => 'Flexicare Registration',
             'eyebrow' => 'Flexicare',
-            'headline' => 'A digital healthcare platform designed for better coordination, records and patient follow-up.',
-            'intro' => 'Flexicare aims to help clinics, care teams and health organizations manage appointments, patient records, care coordination and operational reporting in a simpler digital environment.',
+            'headline' => 'A smart services platform connecting clients with qualified independent providers.',
+            'intro' => 'Flexicare connects businesses, individuals and qualified service providers. It supports mission management, service tracking, secure payments, performance evaluation and the professionalization of independent workers.',
         ],
     ];
 
