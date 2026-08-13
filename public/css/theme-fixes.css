@@ -222,3 +222,79 @@ html.light-mode :is(.mockup, .card, .reason-card, .post-card, .feat-card, .partn
     background: var(--card-bg);
     border-color: var(--border-color);
 }
+
+/*
+  Global contrast rule:
+  any solid blue action/background must keep readable white foreground.
+  This intentionally targets solid brand-blue surfaces only, not pale blue
+  "dim" badges/cards where dark or blue text is expected.
+*/
+:is(
+    .btn-pri,
+    .btn-primary,
+    .btn-em,
+    .btn-gold,
+    .nav-btn,
+    .nl-btn,
+    .dx-btn-primary,
+    .dx-blog .featured-badge,
+    .dx-blog-show .share-links a:hover,
+    .dx-home .step-number,
+    .dx-why .pstep-number,
+    .admin-btn.primary,
+    .admin-segmented input:checked + span,
+    .login-card .btn-pri,
+    .footer-newsletter-button,
+    [style*="background: var(--blue)"],
+    [style*="background:var(--blue)"],
+    [style*="background: var(--blue-lt)"],
+    [style*="background:var(--blue-lt)"],
+    [style*="background: var(--accent)"],
+    [style*="background:var(--accent)"],
+    [style*="background: var(--dx-gold)"],
+    [style*="background:var(--dx-gold)"],
+    [style*="background: #004aac"],
+    [style*="background:#004aac"],
+    [style*="background: #0064d8"],
+    [style*="background:#0064d8"],
+    [style*="background-color: #004aac"],
+    [style*="background-color:#004aac"],
+    [style*="background-color: #0064d8"],
+    [style*="background-color:#0064d8"]
+),
+:is(
+    .btn-pri,
+    .btn-primary,
+    .btn-em,
+    .btn-gold,
+    .nav-btn,
+    .nl-btn,
+    .dx-btn-primary,
+    .dx-blog .featured-badge,
+    .dx-blog-show .share-links a:hover,
+    .dx-home .step-number,
+    .dx-why .pstep-number,
+    .admin-btn.primary,
+    .admin-segmented input:checked + span,
+    .login-card .btn-pri,
+    .footer-newsletter-button,
+    [style*="background: var(--blue)"],
+    [style*="background:var(--blue)"],
+    [style*="background: var(--blue-lt)"],
+    [style*="background:var(--blue-lt)"],
+    [style*="background: var(--accent)"],
+    [style*="background:var(--accent)"],
+    [style*="background: var(--dx-gold)"],
+    [style*="background:var(--dx-gold)"],
+    [style*="background: #004aac"],
+    [style*="background:#004aac"],
+    [style*="background: #0064d8"],
+    [style*="background:#0064d8"],
+    [style*="background-color: #004aac"],
+    [style*="background-color:#004aac"],
+    [style*="background-color: #0064d8"],
+    [style*="background-color:#0064d8"]
+) * {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
