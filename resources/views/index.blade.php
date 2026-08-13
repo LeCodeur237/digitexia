@@ -6,6 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('page_title', 'DigiTexia | Transformation digitale des entreprises')</title>
+    @hasSection('seo_noindex')
+        <meta name="robots" content="noindex, nofollow">
+    @else
+        <meta name="robots" content="index, follow">
+    @endif
+    <meta name="description" content="@yield('seo_description', 'DigiTexia builds AI, data, IoT and digital infrastructure systems for African organizations, governments, NGOs and enterprises.')">
+    <link rel="canonical" href="@yield('canonical_url', url()->current())">
+    <meta property="og:type" content="@yield('og_type', 'website')">
+    <meta property="og:site_name" content="DigiTexia">
+    <meta property="og:title" content="@yield('og_title', trim($__env->yieldContent('page_title', 'DigiTexia')))">
+    <meta property="og:description" content="@yield('og_description', trim($__env->yieldContent('seo_description', 'DigiTexia builds AI, data, IoT and digital infrastructure systems for African organizations.')))">
+    <meta property="og:url" content="@yield('canonical_url', url()->current())">
+    <meta property="og:image" content="@yield('og_image', asset('images/hero-home.jpg'))">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="@yield('twitter_title', trim($__env->yieldContent('og_title', $__env->yieldContent('page_title', 'DigiTexia'))))">
+    <meta name="twitter:description" content="@yield('twitter_description', trim($__env->yieldContent('og_description', $__env->yieldContent('seo_description', 'DigiTexia builds AI, data, IoT and digital infrastructure systems for African organizations.'))))">
+    <meta name="twitter:image" content="@yield('twitter_image', asset('images/hero-home.jpg'))">
     @stack('meta')
     <link rel="shortcut icon" href="{{ asset('logo/icon.png') }}" type="image/x-icon">
     <style>

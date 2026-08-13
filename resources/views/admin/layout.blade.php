@@ -2,6 +2,7 @@
 
 @section('page_title', $pageTitle ?? 'DigiTexia Admin')
 @section('skip_frontend_scripts', true)
+@section('seo_noindex', true)
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/admin-v2.css') }}?v={{ filemtime(public_path('css/admin-v2.css')) }}">

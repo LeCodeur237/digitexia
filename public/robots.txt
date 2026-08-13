@@ -1,2 +1,9 @@
 User-agent: *
-Disallow:
+Disallow: /admin/
+Disallow: /login
+Disallow: /logout
+Disallow: /lang/
+
+Allow: /
+
+Sitemap: https://digitexia.org/sitemap.xml

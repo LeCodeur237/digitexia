@@ -1,6 +1,7 @@
 @extends('index')
 
 @section('page_title', 'Login — DigiTexia')
+@section('seo_noindex', true)
 
 @push('styles')
 <style>

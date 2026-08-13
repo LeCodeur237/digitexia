@@ -13,33 +13,32 @@
     var mobilePanel = document.getElementById("mobilePanel") || document.querySelector("[data-dx-mobile-panel]");
 
     if (burger && mobilePanel) {
-      burger.addEventListener("click", function () {
-        var isOpen = mobilePanel.classList.toggle("open");
+      function setMobileOpen(isOpen) {
+        mobilePanel.classList.toggle("open", isOpen);
         burger.classList.toggle("open", isOpen);
         burger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        document.body.classList.toggle("dx-mobile-open", isOpen);
+      }
+
+      burger.addEventListener("click", function () {
+        setMobileOpen(!mobilePanel.classList.contains("open"));
       });
 
       mobilePanel.querySelectorAll("a").forEach(function (link) {
         link.addEventListener("click", function () {
-          mobilePanel.classList.remove("open");
-          burger.classList.remove("open");
-          burger.setAttribute("aria-expanded", "false");
+          setMobileOpen(false);
         });
       });
 
       document.addEventListener("keydown", function (event) {
         if (event.key === "Escape") {
-          mobilePanel.classList.remove("open");
-          burger.classList.remove("open");
-          burger.setAttribute("aria-expanded", "false");
+          setMobileOpen(false);
         }
       });
 
       window.addEventListener("resize", function () {
         if (window.innerWidth > 1100) {
-          mobilePanel.classList.remove("open");
-          burger.classList.remove("open");
-          burger.setAttribute("aria-expanded", "false");
+          setMobileOpen(false);
         }
       });
     }

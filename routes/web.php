@@ -7,6 +7,7 @@ use App\Http\Controllers\BlogCommentController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\SolutionController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
@@ -25,6 +26,8 @@ Route::get('lang/{locale}', function ($locale) {
 Route::get('/', function () {
     return view('pages.home');
 });
+
+Route::get('/sitemap.xml', SitemapController::class)->name('sitemap');
 
 Route::redirect('/about-us', '/why-us', 301);
 Route::redirect('/about', '/why-us', 301);

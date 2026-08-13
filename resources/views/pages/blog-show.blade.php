@@ -19,20 +19,25 @@
     $primaryTag = !empty($post->tags) ? ($post->tags[0] ?? 'Blog') : 'Blog';
 @endphp
 
+@section('seo_description', $shareDescription)
+@section('canonical_url', $shareUrl)
+@section('og_type', 'article')
+@section('og_title', $shareTitle)
+@section('og_description', $shareDescription)
+@section('og_image', $coverImage)
+@section('twitter_title', $shareTitle)
+@section('twitter_description', $shareDescription)
+@section('twitter_image', $coverImage)
+
 @push('meta')
-<meta name="description" content="{{ $shareDescription }}">
-<meta property="og:type" content="article">
-<meta property="og:site_name" content="DigiTexia">
-<meta property="og:title" content="{{ $shareTitle }}">
-<meta property="og:description" content="{{ $shareDescription }}">
-<meta property="og:url" content="{{ $shareUrl }}">
-<meta property="og:image" content="{{ $coverImage }}">
 <meta property="og:image:secure_url" content="{{ $coverImage }}">
 <meta property="og:image:alt" content="{{ $post->cover_image_alt ?: $post->title }}">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ $shareTitle }}">
-<meta name="twitter:description" content="{{ $shareDescription }}">
-<meta name="twitter:image" content="{{ $coverImage }}">
+@if ($post->published_at)
+<meta property="article:published_time" content="{{ $post->published_at->toAtomString() }}">
+@endif
+@if ($post->updated_at)
+<meta property="article:modified_time" content="{{ $post->updated_at->toAtomString() }}">
+@endif
 @endpush
 
 @push('styles')
