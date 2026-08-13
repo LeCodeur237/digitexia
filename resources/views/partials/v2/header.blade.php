@@ -50,6 +50,11 @@
             <a href="{{ $isHomePage ? '#cta-final' : url('/contact-us') }}" class="dx-btn dx-btn-primary">
                 {{ __('Request Demo') }}
             </a>
+            @auth
+                <a href="{{ route('blog.admin.index') }}" class="dx-admin-shortcut" aria-label="{{ __('Go to administration') }}" title="{{ __('Administration') }}">
+                    <i class="ti ti-user" aria-hidden="true"></i>
+                </a>
+            @endauth
         </div>
 
         <button id="burger" class="dx-burger" type="button" aria-label="{{ __('Open navigation') }}" aria-expanded="false" data-dx-burger>
@@ -68,6 +73,9 @@
         <a href="{{ url('/team') }}">{{ __('Team') }}</a>
         <a href="{{ url('/our-partners') }}">{{ __('Partners') }}</a>
         <a href="{{ url('/life-at-digi') }}">{{ __('Blog') }}</a>
+        @auth
+            <a href="{{ route('blog.admin.index') }}">{{ __('Administration') }}</a>
+        @endauth
         <div class="dx-mobile-langs" aria-label="{{ __('Languages') }}">
             <a href="{{ route('lang.switch', 'en') }}" class="{{ app()->getLocale() === 'en' ? 'active' : '' }}">EN</a>
             <a href="{{ route('lang.switch', 'fr') }}" class="{{ app()->getLocale() === 'fr' ? 'active' : '' }}">FR</a>

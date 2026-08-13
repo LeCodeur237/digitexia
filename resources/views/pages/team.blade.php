@@ -16,6 +16,7 @@
             'positioning' => __('Co-founder and CEO, setting DigiTexia strategic direction.'),
             'bio' => __('Anne Marie NTAP co-founded DigiTexia and leads the company as CEO, guiding its strategic direction and vision as it builds digital infrastructure for organizations across Africa.'),
             'expertise' => [__('Business Strategy'), __('Leadership')],
+            'image' => 'images/team/CEO-4.png',
             'image_size' => '900 x 1100',
         ],
         [
@@ -25,6 +26,7 @@
             'positioning' => __('Co-founder and CTO, leading technology and engineering.'),
             'bio' => __('Lucien co-founded DigiTexia and leads its technology and engineering direction as CTO. His work spans full-stack development, AI-powered product design, IoT and digital transformation.'),
             'expertise' => [__('Software Engineering'), __('Artificial Intelligence'), __('IoT'), __('Product Development')],
+            'image' => 'images/team/CTO.png',
             'image_size' => '900 x 1100',
         ],
     ];
@@ -92,10 +94,14 @@
             </div>
 
             <div class="team-hero-media dx-reveal d1">
-                <div class="team-image-placeholder hero-placeholder">
-                    <span>{{ __('Team image placeholder') }}</span>
-                    <strong>1600 x 1000</strong>
-                </div>
+                @if (file_exists(public_path('images/team/hero-team-2.png')))
+                    <img class="team-hero-image" src="{{ asset('images/team/hero-team-2.png') }}" alt="{{ __('DigiTexia team collaboration') }}">
+                @else
+                    <div class="team-image-placeholder hero-placeholder">
+                        <span>{{ __('Team image placeholder') }}</span>
+                        <strong>1600 x 1000</strong>
+                    </div>
+                @endif
                 <div class="team-floating-card card-top">
                     <strong>{{ __('AI & Data') }}</strong>
                     <span>{{ __('Decision systems for real operations') }}</span>
@@ -131,10 +137,14 @@
                 @foreach ($leaders as $leader)
                     <article class="team-card">
                         <div class="team-photo">
-                            <div class="team-image-placeholder">
-                                <span>{{ __('Profile image placeholder') }}</span>
-                                <strong>{{ $leader['image_size'] }}</strong>
-                            </div>
+                            @if (! empty($leader['image']) && file_exists(public_path($leader['image'])))
+                                <img src="{{ asset($leader['image']) }}" alt="{{ $leader['name'] }}">
+                            @else
+                                <div class="team-image-placeholder">
+                                    <span>{{ __('Profile image placeholder') }}</span>
+                                    <strong>{{ $leader['image_size'] }}</strong>
+                                </div>
+                            @endif
                         </div>
                         <div class="team-card-body">
                             <div class="role-badge">{{ $leader['role'] }}</div>

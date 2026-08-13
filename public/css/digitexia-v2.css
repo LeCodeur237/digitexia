@@ -213,6 +213,30 @@ html.light-mode {
   transform: translateX(3px);
 }
 
+.dx-admin-shortcut {
+  width: 42px;
+  height: 42px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid var(--dx-line-strong);
+  border-radius: var(--dx-radius-sm);
+  background: var(--dx-panel);
+  color: var(--dx-text);
+  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.dx-admin-shortcut:hover {
+  transform: translateY(-2px);
+  border-color: var(--dx-gold);
+  background: var(--dx-gold);
+  color: #ffffff;
+}
+
+.dx-admin-shortcut i {
+  color: currentColor;
+  font-size: 20px;
+}
+
 .dx-header {
   position: fixed;
   top: 0;

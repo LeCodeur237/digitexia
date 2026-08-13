@@ -17,6 +17,7 @@ $translations = [
     'en' => [],
     'fr' => [
         'DigiTexia | Team' => 'DigiTexia | Equipe',
+        'DigiTexia team collaboration' => 'Collaboration de l equipe DigiTexia',
         'Team' => 'Equipe',
         'Chief Executive Officer & Co-Founder' => 'Directrice generale et cofondatrice',
         'Co-founder and CEO, setting DigiTexia strategic direction.' => 'Cofondatrice et CEO, responsable de l orientation strategique de DigiTexia.',
@@ -82,14 +83,17 @@ $translations = [
     ],
     'es' => [
         'DigiTexia | Team' => 'DigiTexia | Equipo',
+        'DigiTexia team collaboration' => 'Colaboracion del equipo DigiTexia',
         'Team' => 'Equipo',
     ],
     'it' => [
         'DigiTexia | Team' => 'DigiTexia | Team',
+        'DigiTexia team collaboration' => 'Collaborazione del team DigiTexia',
         'Team' => 'Team',
     ],
     'zh' => [
         'DigiTexia | Team' => 'DigiTexia | 团队',
+        'DigiTexia team collaboration' => 'DigiTexia 团队协作',
         'Team' => '团队',
     ],
 ];
