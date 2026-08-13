@@ -28,6 +28,10 @@
                 <i class="ti ti-mail"></i>
                 <span>Subscribers</span>
             </a>
+            <a href="{{ route('admin.profile.edit') }}" class="{{ request()->routeIs('admin.profile.*') ? 'active' : '' }}">
+                <i class="ti ti-user-cog"></i>
+                <span>Profile</span>
+            </a>
             <a href="{{ route('blog.index') }}">
                 <i class="ti ti-world"></i>
                 <span>Public Blog</span>
@@ -39,7 +43,7 @@
         </nav>
 
         <div class="admin-user">
-            <span>{{ auth()->user()->name ?? 'Admin' }}</span>
+            <a href="{{ route('admin.profile.edit') }}">{{ auth()->user()->name ?? 'Admin' }}</a>
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
                 <button type="submit">Logout</button>

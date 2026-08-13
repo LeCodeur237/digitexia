@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\NewsletterSubscriberController;
+use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\BlogCommentController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
@@ -89,6 +90,14 @@ Route::prefix('admin/newsletter')
     ->group(function () {
         Route::get('/', [NewsletterSubscriberController::class, 'index'])->name('index');
         Route::delete('/{subscriber}', [NewsletterSubscriberController::class, 'destroy'])->name('destroy');
+    });
+
+Route::prefix('admin/profile')
+    ->middleware('auth')
+    ->name('admin.profile.')
+    ->group(function () {
+        Route::get('/', [ProfileController::class, 'edit'])->name('edit');
+        Route::patch('/', [ProfileController::class, 'update'])->name('update');
     });
 
 Route::redirect('/life-at-digi-details', '/life-at-digi', 301);

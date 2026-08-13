@@ -123,6 +123,11 @@
   backdrop-filter: blur(14px);
 }
 
+.team-floating-card,
+.team-floating-card * {
+  color: #fff;
+}
+
 .team-floating-card strong,
 .team-floating-card span {
   display: block;
@@ -137,18 +142,18 @@
 
 .team-floating-card span {
   margin-top: 6px;
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.82);
   font-size: 13px;
   line-height: 1.45;
 }
 
 .card-top {
   top: 46px;
-  left: -26px;
+  left: 24px;
 }
 
 .card-bottom {
-  right: -26px;
+  right: 24px;
   bottom: 54px;
 }
 
@@ -398,6 +403,13 @@ html.light-mode .products-panel {
 html.light-mode .team-floating-card {
   background: var(--dx-logo-blue);
   border-color: var(--dx-logo-blue);
+}
+
+html.light-mode .team-floating-card,
+html.light-mode .team-floating-card *,
+html.light-mode .team-floating-card strong,
+html.light-mode .team-floating-card span {
+  color: #fff;
 }
 
 html.light-mode .cap-card,

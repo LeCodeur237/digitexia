@@ -98,6 +98,16 @@
   font-size: 14px;
 }
 
+.admin-user > a {
+  min-width: 0;
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 800;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .admin-user button,
 .admin-btn {
   border: 1px solid var(--border-color);
@@ -160,6 +170,26 @@
 .admin-page-head p {
   margin: 0;
   color: var(--text-muted);
+}
+
+.admin-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.admin-card-head h2 {
+  margin: 0 0 6px;
+  color: var(--text-main);
+  font-size: 22px;
+}
+
+.admin-card-head p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
 }
 
 .admin-stats {
@@ -258,6 +288,55 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr) 320px;
   gap: 16px;
+}
+
+.admin-profile-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 16px;
+}
+
+.admin-password-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.admin-profile-summary {
+  min-height: 100%;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.admin-profile-avatar {
+  width: 78px;
+  height: 78px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.admin-profile-summary strong {
+  color: var(--text-main);
+  font-size: 18px;
+}
+
+.admin-profile-summary span {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.admin-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .admin-field {
