@@ -30,6 +30,51 @@
     margin-bottom: 1rem;
   }
 
+  .show-share {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    flex-wrap: wrap;
+    margin: 1.25rem 0 1.5rem;
+    padding: .85rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--surface-soft);
+  }
+
+  .show-share-label {
+    color: var(--text-main);
+    font-size: .82rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  .show-share-links {
+    display: flex;
+    gap: .55rem;
+    flex-wrap: wrap;
+  }
+
+  .show-share-link {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background: var(--card-bg);
+    color: var(--text-main);
+    transition: transform .18s ease, border-color .18s ease, background .18s ease;
+  }
+
+  .show-share-link:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-border);
+    background: var(--accent);
+    color: var(--on-accent);
+  }
+
   .show-content {
     color: var(--text-muted);
     line-height: 1.85;
@@ -71,6 +116,10 @@
         : asset('storage/' . $post->cover_image)
     )
     : null;
+  $shareUrl = route('blog.show', $post);
+  $shareTitle = $post->title;
+  $encodedShareUrl = rawurlencode($shareUrl);
+  $encodedShareTitle = rawurlencode($shareTitle);
 @endphp
 
 <section class="show-shell">
@@ -87,6 +136,24 @@
 
       <h1 style="font-family:'Clash Display',sans-serif;font-size:clamp(2rem,4vw,3.4rem);line-height:1.05;margin-bottom:1rem">{{ $post->title }}</h1>
       <p class="lead">{{ $post->excerpt }}</p>
+
+      <div class="show-share" aria-label="{{ __('Share this article') }}">
+        <span class="show-share-label">{{ __('Share') }}</span>
+        <div class="show-share-links">
+          <a class="show-share-link" href="https://www.facebook.com/sharer/sharer.php?u={{ $encodedShareUrl }}" target="_blank" rel="noopener noreferrer" aria-label="{{ __('Share on Facebook') }}">
+            <i class="ti ti-brand-facebook"></i>
+          </a>
+          <a class="show-share-link" href="https://twitter.com/intent/tweet?url={{ $encodedShareUrl }}&text={{ $encodedShareTitle }}" target="_blank" rel="noopener noreferrer" aria-label="{{ __('Share on X') }}">
+            <i class="ti ti-brand-x"></i>
+          </a>
+          <a class="show-share-link" href="https://www.linkedin.com/sharing/share-offsite/?url={{ $encodedShareUrl }}" target="_blank" rel="noopener noreferrer" aria-label="{{ __('Share on LinkedIn') }}">
+            <i class="ti ti-brand-linkedin"></i>
+          </a>
+          <a class="show-share-link" href="https://wa.me/?text={{ $encodedShareTitle }}%20{{ $encodedShareUrl }}" target="_blank" rel="noopener noreferrer" aria-label="{{ __('Share on WhatsApp') }}">
+            <i class="ti ti-brand-whatsapp"></i>
+          </a>
+        </div>
+      </div>
 
       @if (!empty($coverImage))
         <div style="margin:1.5rem 0;border-radius:18px;overflow:hidden;border:1px solid var(--border-color)">
