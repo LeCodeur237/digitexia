@@ -47,19 +47,67 @@
     </aside>
 
     <main class="admin-main">
-        @if (session('status'))
-            <div class="admin-alert success">{{ session('status') }}</div>
-        @endif
-
-        @if ($errors->any())
-            <div class="admin-alert error">{{ $errors->first() }}</div>
-        @endif
-
         @yield('admin_content')
     </main>
 </section>
+
+<div class="admin-loading" data-admin-loading aria-hidden="true">
+    <div class="admin-loading-card">
+        <span class="admin-spinner" aria-hidden="true"></span>
+        <strong>Processing request...</strong>
+    </div>
+</div>
+
+@if (session('status') || $errors->any())
+    <div class="admin-toast-wrap" data-admin-toast role="alert" aria-live="assertive">
+        <div class="admin-toast {{ session('status') ? 'success' : 'error' }}">
+            <span class="admin-toast-icon">
+                <i class="ti {{ session('status') ? 'ti-check' : 'ti-alert-triangle' }}"></i>
+            </span>
+            <span class="admin-toast-text">{{ session('status') ?: $errors->first() }}</span>
+            <button type="button" class="admin-toast-close" data-admin-toast-close aria-label="Dismiss notification">&times;</button>
+        </div>
+    </div>
+@endif
 @endsection
 
 @push('scripts')
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('form[data-admin-submit]').forEach(function (form) {
+        form.addEventListener('submit', function () {
+            var loading = document.querySelector('[data-admin-loading]');
+            var submitters = form.querySelectorAll('[type="submit"]');
+
+            if (loading) {
+                loading.classList.add('active');
+                loading.setAttribute('aria-hidden', 'false');
+            }
+
+            submitters.forEach(function (button) {
+                button.disabled = true;
+                button.classList.add('loading');
+            });
+        });
+    });
+
+    document.querySelectorAll('[data-admin-toast]').forEach(function (toast) {
+        var close = toast.querySelector('[data-admin-toast-close]');
+        var removeToast = function () {
+            toast.style.opacity = '0';
+            toast.style.transform = 'translateY(12px)';
+            setTimeout(function () {
+                toast.remove();
+            }, 180);
+        };
+
+        if (close) {
+            close.addEventListener('click', removeToast);
+        }
+
+        setTimeout(removeToast, 5200);
+    });
+});
+</script>
 @stack('admin_scripts')
 @endpush

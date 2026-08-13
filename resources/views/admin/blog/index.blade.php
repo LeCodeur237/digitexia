@@ -58,7 +58,7 @@
                             <div class="admin-actions">
                                 <a href="{{ route('blog.admin.edit', $post) }}" class="admin-btn">Edit</a>
                                 <a href="{{ route('blog.show', $post) }}" class="admin-btn">View</a>
-                                <form action="{{ route('blog.admin.destroy', $post) }}" method="POST" onsubmit="return confirm('Delete this post?')">
+                                <form action="{{ route('blog.admin.destroy', $post) }}" method="POST" data-admin-submit onsubmit="return confirm('Delete this post?')">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="admin-btn danger">Delete</button>

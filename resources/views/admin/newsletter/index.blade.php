@@ -28,7 +28,7 @@
                     <td>{{ optional($subscriber->subscribed_at)->format('d M Y H:i') }}</td>
                     <td>{{ $subscriber->ip_address ?: '-' }}</td>
                     <td>
-                        <form method="POST" action="{{ route('newsletter.admin.destroy', $subscriber) }}" onsubmit="return confirm('Remove this subscriber?')">
+                        <form method="POST" action="{{ route('newsletter.admin.destroy', $subscriber) }}" data-admin-submit onsubmit="return confirm('Remove this subscriber?')">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="admin-btn danger">Remove</button>

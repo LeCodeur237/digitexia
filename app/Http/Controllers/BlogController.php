@@ -146,14 +146,15 @@ class BlogController extends Controller
 
     protected function validatePost(Request $request, ?int $ignoreId = null): array
     {
-        return $request->validate([
+        $rules = [
             'title' => ['required', 'string', 'max:255'],
             'excerpt' => ['nullable', 'string', 'max:500'],
             'content' => ['required', 'string'],
             'seo_title' => ['nullable', 'string', 'max:255'],
             'seo_description' => ['nullable', 'string', 'max:1000'],
-            'cover_image' => ['nullable', 'string', 'max:255', 'required_without:cover_image_file'],
-            'cover_image_file' => ['nullable', 'image', 'mimes:jpg,jpeg,png,webp,avif', 'max:4096', 'required_without:cover_image'],
+            'cover_mode' => ['nullable', 'in:upload,path'],
+            'cover_image' => ['nullable', 'string', 'max:255'],
+            'cover_image_file' => ['nullable', 'image', 'mimes:jpg,jpeg,png,webp,avif', 'max:4096'],
             'cover_image_alt' => ['nullable', 'string', 'max:255'],
             'tags' => ['nullable', 'string', 'max:255'],
             'status' => ['required', 'in:draft,pending_review,scheduled,published,archived'],
@@ -183,13 +184,31 @@ class BlogController extends Controller
                     }
                 },
             ],
-        ], [
+        ];
+
+        $coverMode = $request->input('cover_mode', 'upload');
+        $hasExistingCover = $ignoreId
+            ? BlogPost::query()->whereKey($ignoreId)->whereNotNull('cover_image')->where('cover_image', '!=', '')->exists()
+            : false;
+
+        if (! $hasExistingCover) {
+            if ($coverMode === 'path') {
+                $rules['cover_image'][] = 'required';
+            } else {
+                $rules['cover_image_file'][] = 'required';
+            }
+        }
+
+        $data = $request->validate($rules, [
             'content.required' => 'The article body is required.',
             'cover_image.required' => 'A cover image is required for every post.',
-            'cover_image.required_without' => 'A cover image is required for every post.',
             'cover_image_file.image' => 'The uploaded cover image must be a valid image file.',
-            'cover_image_file.required_without' => 'A cover image is required for every post.',
+            'cover_image_file.required' => 'Please upload a cover image.',
         ]);
+
+        unset($data['cover_mode'], $data['cover_image_file']);
+
+        return $data;
     }
 
     protected function persistCoverImage(Request $request, ?string $currentValue, bool $required): string
