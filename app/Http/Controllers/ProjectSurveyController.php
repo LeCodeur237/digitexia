@@ -13,10 +13,10 @@ class ProjectSurveyController extends Controller
     private array $projects = [
         'flexicare' => [
             'name' => 'Flexicare',
-            'title' => 'Flexicare Research Registration',
-            'eyebrow' => 'Healthcare Field Research',
-            'headline' => 'Help us understand how Flexicare should be developed and deployed.',
-            'intro' => 'We are collecting input from healthcare actors, institutions, patients, caregivers and partners to shape a practical digital healthcare solution for real operational needs.',
+            'title' => 'Flexicare Registration',
+            'eyebrow' => 'Flexicare',
+            'headline' => 'A digital healthcare platform designed for better coordination, records and patient follow-up.',
+            'intro' => 'Flexicare aims to help clinics, care teams and health organizations manage appointments, patient records, care coordination and operational reporting in a simpler digital environment.',
         ],
     ];
 
@@ -67,10 +67,10 @@ class ProjectSurveyController extends Controller
         $slug = Str::slug($project);
         $data = $this->projects[$slug] ?? [
             'name' => Str::headline($slug),
-            'title' => Str::headline($slug) . ' Research Registration',
-            'eyebrow' => 'Project Research',
-            'headline' => 'Help us understand how this project should be developed and deployed.',
-            'intro' => 'We are collecting field input to understand real needs, deployment constraints and expected value before building the solution.',
+            'title' => Str::headline($slug) . ' Registration',
+            'eyebrow' => Str::headline($slug),
+            'headline' => 'A DigiTexia project designed around real field needs.',
+            'intro' => 'Share your experience and expectations so the project can be shaped around real operational conditions.',
         ];
 
         return ['slug' => $slug, ...$data];

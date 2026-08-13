@@ -25,21 +25,22 @@
         <div class="dx-container">
             <div class="contact-grid dx-reveal">
                 <div class="info-panel">
-                    <h2>{{ __('Why this form exists') }}</h2>
-                    <p>{{ __('This is not a commercial registration form. It helps DigiTexia understand real users, field constraints, priorities and deployment conditions before building the product.') }}</p>
+                    <h2>{{ __('About Flexicare') }}</h2>
+                    <p>{{ __('Flexicare is being designed as a practical healthcare platform for patient records, appointment management, care coordination and service follow-up.') }}</p>
+                    <p>{{ __('Your answers will help identify the realities that matter most for clinics, healthcare teams, patients and partner organizations.') }}</p>
 
-                    <div class="topics-label">{{ __('What we want to learn') }}</div>
+                    <div class="topics-label">{{ __('Flexicare focus areas') }}</div>
                     <div class="topics-list">
-                        <span>{{ __('User needs') }}</span>
-                        <span>{{ __('Operational problems') }}</span>
-                        <span>{{ __('Deployment constraints') }}</span>
-                        <span>{{ __('Expected features') }}</span>
-                        <span>{{ __('Pilot readiness') }}</span>
+                        <span>{{ __('Patient records') }}</span>
+                        <span>{{ __('Appointments') }}</span>
+                        <span>{{ __('Care coordination') }}</span>
+                        <span>{{ __('Service follow-up') }}</span>
+                        <span>{{ __('Operational reporting') }}</span>
                     </div>
                 </div>
 
                 <div class="form-panel">
-                    <p class="form-lead">{{ __('Fill in the form below. The information will help us design a better solution and identify the right pilot conditions.') }}</p>
+                    <p class="form-lead">{{ __('Answer a few questions about your healthcare environment, current practices and expectations for a solution like Flexicare.') }}</p>
 
                     @if (session('survey_success'))
                         <div class="contact-alert contact-alert-success">{{ session('survey_success') }}</div>
@@ -118,7 +119,7 @@
 
                         <div class="form-row">
                             <div class="form-field full">
-                                <label for="current_challenges">{{ __('What problems should this project solve?') }}</label>
+                                <label for="current_challenges">{{ __('What are the main difficulties in managing patient information, appointments or follow-up today?') }}</label>
                                 <textarea id="current_challenges" name="current_challenges">{{ old('current_challenges') }}</textarea>
                                 @error('current_challenges')<span class="field-error">{{ $message }}</span>@enderror
                             </div>
@@ -126,7 +127,7 @@
 
                         <div class="form-row">
                             <div class="form-field full">
-                                <label for="expected_features">{{ __('Which features would be most useful?') }}</label>
+                                <label for="expected_features">{{ __('Which Flexicare features would be most useful for you or your organization?') }}</label>
                                 <textarea id="expected_features" name="expected_features">{{ old('expected_features') }}</textarea>
                                 @error('expected_features')<span class="field-error">{{ $message }}</span>@enderror
                             </div>
@@ -134,7 +135,7 @@
 
                         <div class="form-row">
                             <div class="form-field full">
-                                <label for="deployment_context">{{ __('Where and how could this solution be deployed?') }}</label>
+                                <label for="deployment_context">{{ __('In what type of healthcare setting could Flexicare be deployed first?') }}</label>
                                 <textarea id="deployment_context" name="deployment_context">{{ old('deployment_context') }}</textarea>
                                 @error('deployment_context')<span class="field-error">{{ $message }}</span>@enderror
                             </div>
