@@ -119,5 +119,39 @@
 
       setTimeout(removeToast, 5200);
     });
+
+    window.addEventListener("dx:toast", function (event) {
+      var detail = event.detail || {};
+      var wrap = document.createElement("div");
+      var type = detail.type === "success" ? "success" : "error";
+      wrap.className = "dx-toast-wrap";
+      wrap.setAttribute("role", "alert");
+      wrap.setAttribute("aria-live", "assertive");
+      wrap.innerHTML =
+        '<div class="dx-toast ' + type + '">' +
+          '<div class="dx-toast-icon" aria-hidden="true"><i class="ti ' + (type === "success" ? "ti-check" : "ti-alert-triangle") + '"></i></div>' +
+          '<div class="dx-toast-content">' +
+            '<strong></strong>' +
+            '<span></span>' +
+          '</div>' +
+          '<button type="button" class="dx-toast-close" aria-label="Dismiss notification">&times;</button>' +
+        '</div>';
+
+      wrap.querySelector("strong").textContent = detail.title || "";
+      wrap.querySelector("span").textContent = detail.message || "";
+      document.body.appendChild(wrap);
+
+      var close = wrap.querySelector(".dx-toast-close");
+      var removeToast = function () {
+        wrap.style.opacity = "0";
+        wrap.style.transform = "translateY(12px)";
+        setTimeout(function () {
+          wrap.remove();
+        }, 180);
+      };
+
+      close.addEventListener("click", removeToast);
+      setTimeout(removeToast, 5200);
+    });
   });
 })();

@@ -12,6 +12,7 @@ class ProjectSurveySubmission extends Model
         'full_name',
         'email',
         'phone',
+        'phone_country_code',
         'organization',
         'role',
         'city',

@@ -21,7 +21,7 @@
         ],
         [
             'title' => __('Service Operations Management'),
-            'text' => __('Coordinate verified providers, customer requests, bookings and field execution from one structured platform.'),
+            'text' => __('Help households discover, compare and connect with trusted domestic and care professionals.'),
             'cta' => __('Discover Flexicare'),
         ],
         [
@@ -60,9 +60,9 @@
             'tag' => __('PRODUCT / SERVICE-03'),
             'name' => 'Flexicare',
             'link' => url('/solutions/flexicare'),
-            'text' => __('Service operations platform for verified providers, bookings, customer requests and field execution.'),
-            'features' => [__('Provider verification'), __('Booking follow-up')],
-            'outcome' => __('Improve service coordination, provider accountability and customer visibility.'),
+            'text' => __('Trusted household services platform for childcare, domestic support and care professionals.'),
+            'features' => [__('Professional profiles'), __('Trust mechanisms')],
+            'outcome' => __('Create safer connections between households and qualified professionals.'),
         ],
         [
             'tag' => __('PRODUCT / PERFORMANCE-04'),

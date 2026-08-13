@@ -124,12 +124,12 @@
         [
             'tag' => __('PRODUCT / FLEXICARE'),
             'name' => 'Flexicare',
-            'positioning' => __('Service operations platform for verified providers, bookings, customer requests and field execution.'),
+            'positioning' => __('Trusted household services platform connecting families with qualified care and domestic professionals.'),
             'link' => url('/solutions/flexicare'),
             'rows' => [
-                [__('Industry'), __('Service companies, field providers and customer support teams')],
-                [__('Challenge'), __('Manual service coordination creates delays, weak follow-up and inconsistent customer visibility.')],
-                [__('Impact'), __('Structured booking, provider verification and operational follow-up from one platform.')],
+                [__('Industry'), __('Households, families and household support professionals')],
+                [__('Challenge'), __('Finding reliable childcare, housekeeping and care support often depends on informal networks.')],
+                [__('Impact'), __('More transparent discovery, professional profiles and trust-centered service requests.')],
             ],
         ],
         [

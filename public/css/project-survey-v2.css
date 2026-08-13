@@ -25,8 +25,27 @@
   accent-color: var(--dx-gold);
 }
 
+.dx-survey .phone-field {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.55fr) minmax(0, 1fr);
+  gap: 10px;
+}
+
+.dx-survey .form-submit:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+  filter: grayscale(0.2);
+}
+
 @media (max-width: 900px) {
   .dx-survey .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .dx-survey .phone-field {
     grid-template-columns: 1fr;
   }
 }
