@@ -16,7 +16,8 @@
         <div class="dx-footer-content">
             <div>
                 <a href="{{ url('/') }}" class="dx-logo" aria-label="DigiTexia">
-                    <img src="{{ asset('logo/logo-footer.png') }}" alt="DigiTexia" class="dx-footer-logo-img">
+                    <img src="{{ asset('logo/logo-footer.png') }}" alt="DigiTexia" class="dx-footer-logo-img dx-footer-logo-dark">
+                    <img src="{{ asset('logo/logo-footer-light.png') }}" alt="DigiTexia" class="dx-footer-logo-img dx-footer-logo-light">
                 </a>
                 <p class="dx-footer-about">
                     {{ __('DigiTexia builds AI-powered digital infrastructure for organizations that need stronger visibility, better operations and scalable technology.') }}

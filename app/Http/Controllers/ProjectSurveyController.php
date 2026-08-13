@@ -1,0 +1,78 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\ProjectSurveySubmission;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use Illuminate\View\View;
+
+class ProjectSurveyController extends Controller
+{
+    private array $projects = [
+        'flexicare' => [
+            'name' => 'Flexicare',
+            'title' => 'Flexicare Research Registration',
+            'eyebrow' => 'Healthcare Field Research',
+            'headline' => 'Help us understand how Flexicare should be developed and deployed.',
+            'intro' => 'We are collecting input from healthcare actors, institutions, patients, caregivers and partners to shape a practical digital healthcare solution for real operational needs.',
+        ],
+    ];
+
+    public function create(string $project = 'flexicare'): View
+    {
+        $surveyProject = $this->resolveProject($project);
+
+        return view('pages.project-survey', [
+            'project' => $surveyProject,
+        ]);
+    }
+
+    public function store(Request $request, string $project = 'flexicare'): RedirectResponse
+    {
+        $surveyProject = $this->resolveProject($project);
+
+        $data = $request->validate([
+            'full_name' => ['required', 'string', 'max:140'],
+            'email' => ['required', 'email', 'max:160'],
+            'phone' => ['nullable', 'string', 'max:60'],
+            'organization' => ['nullable', 'string', 'max:160'],
+            'role' => ['nullable', 'string', 'max:120'],
+            'city' => ['nullable', 'string', 'max:120'],
+            'country' => ['nullable', 'string', 'max:120'],
+            'participant_type' => ['required', 'string', 'max:120'],
+            'sector' => ['nullable', 'string', 'max:120'],
+            'current_challenges' => ['nullable', 'string', 'max:5000'],
+            'expected_features' => ['nullable', 'string', 'max:5000'],
+            'deployment_context' => ['nullable', 'string', 'max:5000'],
+            'contact_preference' => ['nullable', 'string', 'max:80'],
+            'consent' => ['accepted'],
+        ]);
+
+        ProjectSurveySubmission::create([
+            ...$data,
+            'project_slug' => $surveyProject['slug'],
+            'project_name' => $surveyProject['name'],
+            'consent' => $request->boolean('consent'),
+            'ip_address' => $request->ip(),
+            'user_agent' => Str::limit((string) $request->userAgent(), 1000, ''),
+        ]);
+
+        return back()->with('survey_success', __('Thank you. Your registration has been saved successfully.'));
+    }
+
+    private function resolveProject(string $project): array
+    {
+        $slug = Str::slug($project);
+        $data = $this->projects[$slug] ?? [
+            'name' => Str::headline($slug),
+            'title' => Str::headline($slug) . ' Research Registration',
+            'eyebrow' => 'Project Research',
+            'headline' => 'Help us understand how this project should be developed and deployed.',
+            'intro' => 'We are collecting field input to understand real needs, deployment constraints and expected value before building the solution.',
+        ];
+
+        return ['slug' => $slug, ...$data];
+    }
+}

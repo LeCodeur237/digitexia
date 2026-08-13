@@ -7,6 +7,7 @@ use App\Http\Controllers\BlogCommentController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\ProjectSurveyController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\SolutionController;
 use Illuminate\Support\Facades\Route;
@@ -115,5 +116,9 @@ Route::post('/newsletter', [NewsletterController::class, 'subscribe'])->name('ne
 Route::get('/contact', function () {
     return view('pages.contact');
 });
+
+Route::get('/research/{project}', [ProjectSurveyController::class, 'create'])->name('project-survey.create');
+Route::post('/research/{project}', [ProjectSurveyController::class, 'store'])->name('project-survey.store');
+Route::redirect('/flexicare-survey', '/research/flexicare', 301);
 
 Route::redirect('/careers', '/contact-us', 301);

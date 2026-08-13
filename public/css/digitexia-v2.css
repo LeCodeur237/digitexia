@@ -669,6 +669,18 @@ html.light-mode .dx-header {
   height: 40px;
 }
 
+.dx-footer-logo-light {
+  display: none;
+}
+
+html.light-mode .dx-footer-logo-dark {
+  display: none;
+}
+
+html.light-mode .dx-footer-logo-light {
+  display: block;
+}
+
 .dx-footer-about {
   max-width: 310px;
   margin-top: 16px;
