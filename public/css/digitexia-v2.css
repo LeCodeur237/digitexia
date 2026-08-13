@@ -664,20 +664,22 @@ html.light-mode .dx-header {
   padding-bottom: 56px;
 }
 
-.dx-footer-logo-img {
+.dx-footer .dx-footer-logo-img {
   width: auto;
   height: 40px;
+  display: block;
 }
 
-.dx-footer-logo-light {
+.dx-footer .dx-footer-logo-light,
+html:not(.light-mode) .dx-footer .dx-footer-logo-light {
   display: none;
 }
 
-html.light-mode .dx-footer-logo-dark {
+html.light-mode .dx-footer .dx-footer-logo-dark {
   display: none;
 }
 
-html.light-mode .dx-footer-logo-light {
+html.light-mode .dx-footer .dx-footer-logo-light {
   display: block;
 }
 

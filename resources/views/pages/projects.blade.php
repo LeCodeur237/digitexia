@@ -33,44 +33,9 @@
                 [__('Why innovative'), __('Connects field collection, QR verification and incentive logic in one digital workflow.')],
             ],
         ],
-        [
-            'tag' => __('FLAGSHIP / CARBON AFRICA EXCHANGE'),
-            'name' => 'Carbon Africa Exchange',
-            'positioning' => __('Carbon tracking and marketplace infrastructure for climate programs.'),
-            'link' => url('/solutions/carbon-africa-exchange'),
-            'rows' => [
-                [__('Problem'), __('Forest, agriculture and carbon data are difficult to structure, verify and monetize responsibly.')],
-                [__('Designed for'), __('Climate programs, land projects, development agencies and ESG teams.')],
-                [__('Value created'), __('Structured carbon intelligence and a foundation for trusted carbon credit workflows.')],
-                [__('Why innovative'), __('Builds climate data infrastructure designed for African territory realities.')],
-            ],
-        ],
-        [
-            'tag' => __('FLAGSHIP / DIGITAL TWIN PLATFORM'),
-            'name' => 'Digital Twin Platform',
-            'positioning' => __('A territorial intelligence layer for infrastructure, services and field data.'),
-            'link' => url('/solutions/digital-twin-platform'),
-            'rows' => [
-                [__('Problem'), __('Governments and institutions lack real-time intelligence across distributed infrastructure.')],
-                [__('Designed for'), __('Governments, cities, NGOs and infrastructure operators.')],
-                [__('Value created'), __('Better planning, live monitoring and data-backed public decisions.')],
-                [__('Why innovative'), __('Turns fragmented field data into a digital nervous system for territories.')],
-            ],
-        ],
     ];
 
     $clientProjects = [
-        [
-            'tag' => __('CLIENT / GOVERNMENT'),
-            'name' => 'YouthConnekt Cameroun',
-            'positioning' => __('A national digital platform connecting Cameroonian youth to opportunity.'),
-            'link' => url('/contact-us'),
-            'rows' => [
-                [__('Challenge'), __('No centralized digital platform existed to connect youth with government programs and opportunities.')],
-                [__('Objective'), __('Build a modern, scalable public platform reflecting national identity and government standards.')],
-                [__('Value delivered'), __('An accessible digital front door connecting youth across Cameroon to opportunity, on infrastructure ready to scale nationally.')],
-            ],
-        ],
         [
             'tag' => __('CLIENT / FINANCIAL SERVICES'),
             'name' => 'CREMIN-CAM Performance Deployment',
@@ -158,7 +123,7 @@
                 <div class="dx-eyebrow">{{ __('Flagship solutions') }}</div>
                 <h2>{{ __('Proprietary digital products, deployed and proven') }}</h2>
                 <p class="dx-section-intro">
-                    {{ __('Four platforms engineered for critical infrastructure challenges across Africa.') }}
+                    {{ __('Proprietary products engineered for real infrastructure and operational challenges across Africa.') }}
                 </p>
             </div>
 

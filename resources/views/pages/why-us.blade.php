@@ -29,7 +29,7 @@
             'num' => __('02 / INNOVATION'),
             'title' => __('Innovation-Driven Approach'),
             'text' => __('We do more than execute projects. We create digital products that address real challenges across strategic sectors.'),
-            'tags' => ['AquaWatch AI', 'WastePay', 'Carbon Africa Exchange', 'Digital Twin Platform'],
+            'tags' => ['AquaWatch AI', 'WastePay', 'MedTrace', 'FlexiCare'],
         ],
         [
             'icon' => $icons['chart'],
