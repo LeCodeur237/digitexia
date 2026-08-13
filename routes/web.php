@@ -56,7 +56,11 @@ Route::get('/our-partners', function () {
     return view('pages.partners');
 });
 
-Route::redirect('/team-members', '/why-us', 301);
+Route::get('/team', function () {
+    return view('pages.team');
+});
+
+Route::redirect('/team-members', '/team', 301);
 
 Route::get('/life-at-digi', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/life-at-digi/{post:slug}', [BlogController::class, 'show'])->name('blog.show');

@@ -13,6 +13,7 @@ $pages = [
         'app/Http/Controllers/SolutionController.php',
     ],
     'Why Us' => ['resources/views/pages/why-us.blade.php'],
+    'Team' => ['resources/views/pages/team.blade.php'],
     'Projects' => ['resources/views/pages/projects.blade.php'],
     'Partners' => ['resources/views/pages/partners.blade.php'],
     'Blog' => ['resources/views/pages/blog.blade.php', 'resources/views/pages/blog-show.blade.php'],

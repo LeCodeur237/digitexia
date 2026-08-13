@@ -4,10 +4,11 @@
     $isSolutionsPage = request()->is('solutions') || request()->is('solutions/*');
     $isProjectsPage = request()->is('projects');
     $isWhyUsPage = request()->is('why-us');
+    $isTeamPage = request()->is('team') || request()->is('team-members');
     $isPartnersPage = request()->is('our-partners');
     $isBlogPage = request()->is('life-at-digi') || request()->is('life-at-digi/*');
     $isContactPage = request()->is('contact-us') || request()->is('contact');
-    $isCompanyPage = $isPartnersPage || $isBlogPage || $isContactPage;
+    $isCompanyPage = $isTeamPage || $isPartnersPage || $isBlogPage || $isContactPage;
 @endphp
 
 <header class="dx-header">
@@ -25,6 +26,7 @@
             <div class="dx-dropdown">
                 <a href="#" class="{{ $isCompanyPage ? 'active' : '' }}">{{ __('Company') }}</a>
                 <div class="dx-dropdown-menu">
+                    <a href="{{ url('/team') }}">{{ __('Team') }}</a>
                     <a href="{{ url('/our-partners') }}">{{ __('Partners') }}</a>
                     <a href="{{ url('/life-at-digi') }}">{{ __('Blog') }}</a>
                     <a href="{{ url('/contact-us') }}">{{ __('Contact') }}</a>
@@ -63,6 +65,7 @@
         <a href="{{ url('/solutions') }}">{{ __('Solutions') }}</a>
         <a href="{{ url('/projects') }}">{{ __('Projects') }}</a>
         <a href="{{ url('/why-us') }}">{{ __('Why Us') }}</a>
+        <a href="{{ url('/team') }}">{{ __('Team') }}</a>
         <a href="{{ url('/our-partners') }}">{{ __('Partners') }}</a>
         <a href="{{ url('/life-at-digi') }}">{{ __('Blog') }}</a>
         <div class="dx-mobile-langs" aria-label="{{ __('Languages') }}">

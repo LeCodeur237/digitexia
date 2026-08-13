@@ -3,10 +3,6 @@
 @section('page_title', $post->seo_title ?: $post->title)
 @section('digitexia_v2', true)
 
-@push('styles')
-<link rel="stylesheet" href="{{ asset('css/blog-v2.css') }}?v={{ filemtime(public_path('css/blog-v2.css')) }}">
-@endpush
-
 @php
     $coverImage = $post->cover_image
         ? (
@@ -14,13 +10,34 @@
                 ? $post->cover_image
                 : asset('storage/' . $post->cover_image)
         )
-        : null;
+        : asset('images/hero-home.jpg');
     $shareUrl = route('blog.show', $post);
     $shareTitle = $post->title;
+    $shareDescription = $post->seo_description ?: ($post->excerpt ?: \Illuminate\Support\Str::limit(strip_tags($post->content), 180));
     $encodedShareUrl = rawurlencode($shareUrl);
     $encodedShareTitle = rawurlencode($shareTitle);
     $primaryTag = !empty($post->tags) ? ($post->tags[0] ?? 'Blog') : 'Blog';
 @endphp
+
+@push('meta')
+<meta name="description" content="{{ $shareDescription }}">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DigiTexia">
+<meta property="og:title" content="{{ $shareTitle }}">
+<meta property="og:description" content="{{ $shareDescription }}">
+<meta property="og:url" content="{{ $shareUrl }}">
+<meta property="og:image" content="{{ $coverImage }}">
+<meta property="og:image:secure_url" content="{{ $coverImage }}">
+<meta property="og:image:alt" content="{{ $post->cover_image_alt ?: $post->title }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $shareTitle }}">
+<meta name="twitter:description" content="{{ $shareDescription }}">
+<meta name="twitter:image" content="{{ $coverImage }}">
+@endpush
+
+@push('styles')
+<link rel="stylesheet" href="{{ asset('css/blog-v2.css') }}?v={{ filemtime(public_path('css/blog-v2.css')) }}">
+@endpush
 
 @section('fullpage')
 @include('partials.v2.header')
