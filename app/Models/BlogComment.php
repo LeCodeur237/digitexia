@@ -13,6 +13,8 @@ class BlogComment extends Model
     protected $fillable = [
         'blog_post_id',
         'user_id',
+        'guest_name',
+        'guest_email',
         'parent_id',
         'body',
         'status',
@@ -41,6 +43,11 @@ class BlogComment extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function getAuthorNameAttribute(): string
+    {
+        return $this->user?->name ?: ($this->guest_name ?: 'Guest');
     }
 
     public function parent()

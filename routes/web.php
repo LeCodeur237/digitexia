@@ -61,7 +61,6 @@ Route::redirect('/team-members', '/why-us', 301);
 Route::get('/life-at-digi', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/life-at-digi/{post:slug}', [BlogController::class, 'show'])->name('blog.show');
 Route::post('/life-at-digi/{post:slug}/comments', [BlogCommentController::class, 'store'])
-    ->middleware('auth')
     ->name('blog.comments.store');
 
 Route::get('/login', [LoginController::class, 'create'])->name('login');

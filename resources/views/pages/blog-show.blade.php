@@ -101,16 +101,25 @@
             <div class="article-comments-card">
                 <h2>{{ __('Comments') }}</h2>
                 @if ($post->allow_comments)
-                    @auth
-                        <form method="POST" action="{{ route('blog.comments.store', $post) }}">
-                            @csrf
-                            <textarea name="body" rows="5" placeholder="{{ __('Write your comment...') }}" required>{{ old('body') }}</textarea>
-                            <button type="submit" class="dx-btn dx-btn-primary">{{ __('Submit comment') }}</button>
-                        </form>
-                    @else
-                        <p>{{ __('Please login to leave a comment.') }}</p>
-                        <a href="{{ route('login') }}" class="dx-btn dx-btn-primary">{{ __('Login') }}</a>
-                    @endauth
+                    @if (session('status'))
+                        <div class="article-comment-alert">{{ session('status') }}</div>
+                    @endif
+
+                    @if ($errors->any())
+                        <div class="article-comment-alert error">{{ $errors->first() }}</div>
+                    @endif
+
+                    <form method="POST" action="{{ route('blog.comments.store', $post) }}">
+                        @csrf
+                        @guest
+                            <div class="article-comment-grid">
+                                <input type="text" name="guest_name" value="{{ old('guest_name') }}" placeholder="{{ __('Your name') }}" required>
+                                <input type="email" name="guest_email" value="{{ old('guest_email') }}" placeholder="{{ __('Your email address') }}" required>
+                            </div>
+                        @endguest
+                        <textarea name="body" rows="5" placeholder="{{ __('Write your comment...') }}" required>{{ old('body') }}</textarea>
+                        <button type="submit" class="dx-btn dx-btn-primary">{{ __('Submit comment') }}</button>
+                    </form>
                 @else
                     <p>{{ __('Comments are disabled for this article.') }}</p>
                 @endif
