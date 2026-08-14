@@ -29,6 +29,10 @@
                 <i class="ti ti-mail"></i>
                 <span>Subscribers</span>
             </a>
+            <a href="{{ route('surveys.admin.index') }}" class="{{ request()->routeIs('surveys.admin.*') ? 'active' : '' }}">
+                <i class="ti ti-clipboard-list"></i>
+                <span>Survey Data</span>
+            </a>
             <a href="{{ route('admin.profile.edit') }}" class="{{ request()->routeIs('admin.profile.*') ? 'active' : '' }}">
                 <i class="ti ti-user-cog"></i>
                 <span>Profile</span>

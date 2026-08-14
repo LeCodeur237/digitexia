@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\NewsletterSubscriberController;
 use App\Http\Controllers\Admin\ProfileController;
+use App\Http\Controllers\Admin\ProjectSurveySubmissionController;
 use App\Http\Controllers\BlogCommentController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
@@ -94,6 +95,15 @@ Route::prefix('admin/newsletter')
     ->group(function () {
         Route::get('/', [NewsletterSubscriberController::class, 'index'])->name('index');
         Route::delete('/{subscriber}', [NewsletterSubscriberController::class, 'destroy'])->name('destroy');
+    });
+
+Route::prefix('admin/surveys')
+    ->middleware('auth')
+    ->name('surveys.admin.')
+    ->group(function () {
+        Route::get('/', [ProjectSurveySubmissionController::class, 'index'])->name('index');
+        Route::get('/{submission}', [ProjectSurveySubmissionController::class, 'show'])->name('show');
+        Route::delete('/{submission}', [ProjectSurveySubmissionController::class, 'destroy'])->name('destroy');
     });
 
 Route::prefix('admin/profile')
