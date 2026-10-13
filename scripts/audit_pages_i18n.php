@@ -8,6 +8,7 @@ $pages = [
     'Home' => ['resources/views/pages/home.blade.php'],
     'The Problem' => ['resources/views/pages/problem.blade.php'],
     'Solutions' => ['resources/views/pages/solutions.blade.php'],
+    'Perfomia' => ['resources/views/pages/performia.blade.php'],
     'Solution Detail' => [
         'resources/views/pages/solution-detail.blade.php',
         'app/Http/Controllers/SolutionController.php',
@@ -38,7 +39,7 @@ foreach ($locales as $locale) {
 }
 
 $excludedExact = [
-    'DigiTexia', 'AquaWatch AI', 'WastePay', 'MedTrace', 'Performia', 'Flexicare',
+    'DigiTexia', 'AquaWatch AI', 'WastePay', 'MedTrace', 'Performia', 'Perfomia', 'Flexicare',
     'CREMIN-CAM', 'APEC', 'Light Group', 'LinkedIn', 'Facebook', 'EN', 'FR', 'ES', 'IT', 'ZH',
     'Email', 'Phone', 'Home', 'Blog', 'Contact', 'Projects', 'Solutions', 'Company', 'Partners',
     'CRM', 'ERP', 'KPI', 'KPIs', 'AI', 'IoT', 'CO2', 'CO₂', 'API', 'UX / UI',

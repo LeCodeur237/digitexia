@@ -64,7 +64,7 @@
         ],
     ];
 
-    $products = ['MedTrace', 'AquaWatch AI', 'WastePay', 'Flexicare', 'Performia'];
+    $products = ['MedTrace', 'AquaWatch AI', 'WastePay', 'Flexicare', 'Perfomia'];
 
     $culture = [
         [__('01'), __('Curiosity'), __('Asking why before deciding how.')],

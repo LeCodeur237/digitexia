@@ -134,7 +134,7 @@
         ],
         [
             'tag' => __('PRODUCT / PERFORMIA'),
-            'name' => 'Performia',
+            'name' => 'Perfomia',
             'positioning' => __('Performance and workforce execution platform for task delegation, attendance, KPIs and staff evaluation.'),
             'link' => url('/solutions/performia'),
             'rows' => [

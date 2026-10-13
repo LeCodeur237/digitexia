@@ -38,7 +38,7 @@
                 <p><a href="{{ url('/solutions/aquawatch-ai') }}">AquaWatch AI</a></p>
                 <p><a href="{{ url('/solutions/wastepay') }}">WastePay</a></p>
                 <p><a href="{{ url('/solutions/flexicare') }}">Flexicare</a></p>
-                <p><a href="{{ url('/solutions/performia') }}">Performia</a></p>
+                <p><a href="{{ url('/solutions/performia') }}">Perfomia</a></p>
             </div>
 
             <div>

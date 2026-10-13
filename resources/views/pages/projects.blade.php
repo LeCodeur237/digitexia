@@ -38,8 +38,8 @@
     $clientProjects = [
         [
             'tag' => __('CLIENT / FINANCIAL SERVICES'),
-            'name' => 'CREMIN-CAM Performance Deployment',
-            'positioning' => __('A tailored Performia deployment for a regulated financial institution.'),
+            'name' => 'CREMIN-CAM Perfomia Deployment',
+            'positioning' => __('A tailored Perfomia deployment for a regulated financial institution.'),
             'link' => 'https://www.cremin-cam.org',
             'rows' => [
                 [__('Challenge'), __('Manual performance tracking limited visibility into staff execution and KPIs.')],

@@ -27,7 +27,7 @@
         [
             'title' => __('Performance Execution Systems'),
             'text' => __('Structure tasks, attendance, KPI visibility and staff evaluation for distributed teams.'),
-            'cta' => __('Explore Performia'),
+            'cta' => __('Explore Perfomia'),
         ],
     ];
 
@@ -66,7 +66,7 @@
         ],
         [
             'tag' => __('PRODUCT / PERFORMANCE-04'),
-            'name' => 'Performia',
+            'name' => 'Perfomia',
             'link' => url('/solutions/performia'),
             'text' => __('Performance and workforce execution platform for task delegation, attendance, KPIs and staff evaluation.'),
             'features' => [__('KPI dashboards'), __('Staff evaluation')],
@@ -150,12 +150,12 @@
             <span>AquaWatch AI <b>{{ __('monitoring') }}</b></span>
             <span>WastePay <b>{{ __('traceability') }}</b></span>
             <span>Flexicare <b>{{ __('services') }}</b></span>
-            <span>Performia <b>{{ __('performance') }}</b></span>
+            <span>Perfomia <b>{{ __('performance') }}</b></span>
             <span>{{ __('Built for African operations') }} <b>99.98%</b></span>
             <span>AquaWatch AI <b>{{ __('monitoring') }}</b></span>
             <span>WastePay <b>{{ __('traceability') }}</b></span>
             <span>Flexicare <b>{{ __('services') }}</b></span>
-            <span>Performia <b>{{ __('performance') }}</b></span>
+            <span>Perfomia <b>{{ __('performance') }}</b></span>
             <span>{{ __('Built for African operations') }} <b>99.98%</b></span>
         </div>
     </div>

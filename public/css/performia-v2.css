@@ -1,0 +1,557 @@
+.perfomia-page {
+  min-height: 100vh;
+  --pf-bg: #f7f9fc;
+  --pf-surface: #ffffff;
+  --pf-surface-soft: #f1f6fd;
+  --pf-border: #e2eaf4;
+  --pf-border-strong: #cbd8ea;
+  --pf-text: #07111f;
+  --pf-muted: #526173;
+  --pf-dim: #7a8797;
+  --pf-blue: #155bd4;
+  --pf-blue-soft: #e7f0ff;
+  --pf-green: #00a86b;
+  background: var(--pf-bg);
+  color: var(--pf-text);
+  font-family: var(--dx-font-body);
+  overflow-x: hidden;
+}
+
+.perfomia-page *,
+.perfomia-page *::before,
+.perfomia-page *::after {
+  box-sizing: border-box;
+}
+
+.perfomia-page img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.perfomia-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 118px 0 74px;
+  background: var(--pf-surface);
+  border-bottom: 1px solid rgba(226, 234, 244, .85);
+}
+
+.perfomia-hero .dx-blueprint {
+  display: none;
+}
+
+.perfomia-hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, .82fr) minmax(520px, 1.18fr);
+  gap: 60px;
+  align-items: center;
+}
+
+.perfomia-hero-points {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--pf-border);
+  border-radius: 8px;
+  background: var(--pf-border);
+}
+
+.perfomia-hero-points span {
+  display: flex;
+  align-items: center;
+  min-height: 58px;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, .78);
+  color: var(--pf-text);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.perfomia-hero-copy {
+  display: grid;
+  gap: 20px;
+}
+
+.perfomia-logo-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--pf-muted);
+  font-family: var(--dx-font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.perfomia-logo-img {
+  width: 108px;
+  height: auto;
+}
+
+.perfomia-logo-placeholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 132px;
+  min-height: 42px;
+  padding: 8px 12px;
+  border: 1px dashed var(--pf-border-strong);
+  border-radius: 8px;
+  color: var(--pf-blue);
+  background: var(--pf-surface);
+  font-weight: 900;
+}
+
+.perfomia-hero h1,
+.perfomia-section-head h2,
+.perfomia-final-cta h2 {
+  margin: 0;
+  color: var(--pf-text);
+  font-family: var(--dx-font-body);
+  letter-spacing: 0;
+}
+
+.perfomia-hero h1 {
+  max-width: 600px;
+  font-size: clamp(34px, 3.7vw, 50px);
+  line-height: 1.08;
+  font-weight: 800;
+}
+
+.perfomia-lead {
+  max-width: 590px;
+  margin: 0;
+  color: var(--pf-muted);
+  font-size: 16px;
+  line-height: 1.72;
+}
+
+.perfomia-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.perfomia-actions.center {
+  justify-content: center;
+}
+
+.perfomia-page .dx-eyebrow {
+  margin-bottom: 12px;
+  color: var(--pf-blue);
+  font-size: 11px;
+  letter-spacing: .12em;
+}
+
+.perfomia-page .dx-eyebrow::before {
+  display: none;
+}
+
+.perfomia-page .dx-btn-primary {
+  background: var(--pf-blue);
+  color: #ffffff;
+}
+
+.perfomia-page .dx-btn-primary:hover {
+  background: #0f4fbd;
+  color: #ffffff;
+}
+
+.perfomia-page .dx-btn-secondary {
+  color: var(--pf-text);
+  border-color: var(--pf-border-strong);
+  background: #ffffff;
+}
+
+.perfomia-page .dx-btn-secondary:hover {
+  color: var(--pf-blue);
+  border-color: var(--pf-blue);
+}
+
+.perfomia-hero-media,
+.perfomia-showcase-main,
+.perfomia-shot-card {
+  border: 1px solid var(--pf-border);
+  border-radius: 8px;
+  background: var(--pf-surface);
+}
+
+.perfomia-hero-media {
+  padding: 8px;
+  box-shadow: 0 18px 54px rgba(15, 42, 79, .10);
+}
+
+.perfomia-hero-media img,
+.perfomia-showcase-main img,
+.perfomia-shot-card img {
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.perfomia-hero-media img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.perfomia-section {
+  padding: 76px 0;
+  background: var(--pf-surface);
+}
+
+.perfomia-section-soft {
+  background: var(--pf-bg);
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.perfomia-section-head {
+  max-width: 700px;
+  margin-bottom: 30px;
+}
+
+.perfomia-section-head h2 {
+  font-size: clamp(26px, 2.6vw, 36px);
+  line-height: 1.14;
+  font-weight: 800;
+}
+
+.perfomia-section-head p {
+  max-width: 660px;
+  margin: 12px 0 0;
+  color: var(--pf-muted);
+  font-size: 15.5px;
+  line-height: 1.72;
+}
+
+.perfomia-use-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.perfomia-use-card,
+.perfomia-role-card {
+  border: 1px solid var(--pf-border);
+  border-radius: 8px;
+  background: var(--pf-surface);
+  padding: 22px;
+  transition: border-color .18s ease, box-shadow .18s ease;
+  box-shadow: 0 1px 0 rgba(15, 42, 79, .02);
+}
+
+.perfomia-use-card:hover,
+.perfomia-role-card:hover,
+.perfomia-shot-card:hover {
+  border-color: var(--pf-border-strong);
+  box-shadow: 0 14px 34px rgba(15, 42, 79, .06);
+}
+
+.perfomia-section-soft .perfomia-use-card,
+.perfomia-section-soft .perfomia-role-card {
+  background: var(--pf-surface);
+}
+
+.perfomia-use-card h3,
+.perfomia-role-card h3 {
+  margin: 0 0 10px;
+  color: var(--pf-text);
+  font-family: var(--dx-font-body);
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.perfomia-use-card p,
+.perfomia-role-card p {
+  margin: 0;
+  color: var(--pf-muted);
+  font-size: 14px;
+  line-height: 1.68;
+}
+
+.perfomia-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.perfomia-chip-list span {
+  display: inline-flex;
+  padding: 7px 9px;
+  border: 1px solid #c7d9f5;
+  border-radius: 6px;
+  background: var(--pf-blue-soft);
+  color: #174b9b;
+  font-family: var(--dx-font-mono);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.perfomia-role-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  border: 1px solid var(--pf-border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--pf-surface);
+}
+
+.perfomia-role-card {
+  border: 0;
+  border-radius: 0;
+}
+
+.perfomia-role-card + .perfomia-role-card {
+  border-left: 1px solid var(--pf-border);
+}
+
+.perfomia-showcase {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.perfomia-showcase-main,
+.perfomia-shot-card {
+  overflow: hidden;
+  padding: 0;
+  box-shadow: 0 1px 0 rgba(15, 42, 79, .02);
+}
+
+.perfomia-showcase-main img {
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #f5f8fc;
+  border-radius: 8px;
+}
+
+.perfomia-shot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.perfomia-shot-card.is-mobile {
+  grid-column: auto;
+}
+
+.perfomia-shot-card img {
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #f5f8fc;
+}
+
+.perfomia-shot-card.is-mobile {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.perfomia-shot-card.is-mobile img {
+  width: auto;
+  max-width: min(100%, 220px);
+  height: 360px;
+  margin: 0 auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+.perfomia-shot-label {
+  margin: 0;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--pf-border);
+  color: var(--pf-blue);
+  font-family: var(--dx-font-mono);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.perfomia-image-placeholder {
+  min-height: 430px;
+  display: grid;
+  place-items: center;
+  gap: 8px;
+  padding: 24px;
+  border: 1px dashed var(--pf-border-strong);
+  border-radius: 6px;
+  background:
+    linear-gradient(rgba(15, 23, 42, .08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, .08) 1px, transparent 1px),
+    #f8fafc;
+  background-size: 34px 34px;
+  text-align: center;
+}
+
+.perfomia-image-placeholder.small {
+  min-height: 190px;
+}
+
+.perfomia-image-placeholder span {
+  display: block;
+  color: var(--pf-text);
+  font-weight: 900;
+}
+
+.perfomia-image-placeholder strong {
+  display: block;
+  color: var(--pf-blue);
+  font-family: var(--dx-font-mono);
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.perfomia-image-placeholder small {
+  color: var(--pf-dim);
+  font-family: var(--dx-font-mono);
+}
+
+.perfomia-faq {
+  display: grid;
+  gap: 10px;
+}
+
+.perfomia-faq details {
+  border: 1px solid var(--pf-border);
+  border-radius: 8px;
+  background: var(--pf-surface);
+  padding: 17px 19px;
+}
+
+.perfomia-faq summary {
+  cursor: pointer;
+  color: var(--pf-text);
+  font-weight: 900;
+}
+
+.perfomia-faq p {
+  margin: 14px 0 0;
+  color: var(--pf-muted);
+  line-height: 1.72;
+}
+
+.perfomia-final-cta {
+  padding: 86px 0;
+  text-align: center;
+  background: var(--pf-surface);
+  border-top: 0;
+}
+
+.perfomia-final-cta h2 {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.12;
+  font-weight: 800;
+}
+
+.perfomia-final-cta p {
+  max-width: 650px;
+  margin: 18px auto 28px;
+  color: var(--pf-muted);
+  line-height: 1.75;
+}
+
+.perfomia-contact-note {
+  max-width: 640px;
+  margin: 22px auto 0;
+  color: var(--pf-dim);
+  font-family: var(--dx-font-mono);
+  font-size: 12px;
+}
+
+.dx-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .55s ease, transform .55s ease;
+}
+
+.dx-reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dx-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 1080px) {
+  .perfomia-hero-grid,
+  .perfomia-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .perfomia-use-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .perfomia-shot-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .perfomia-hero-points {
+    grid-template-columns: 1fr;
+  }
+
+  .perfomia-hero {
+    padding-top: 112px;
+  }
+}
+
+@media (max-width: 760px) {
+  .perfomia-hero,
+  .perfomia-section,
+  .perfomia-final-cta {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .perfomia-page .dx-container {
+    width: min(var(--dx-container), calc(100% - 32px));
+  }
+
+  .perfomia-hero h1 {
+    font-size: 38px;
+  }
+
+  .perfomia-actions .dx-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .perfomia-role-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .perfomia-role-card + .perfomia-role-card {
+    border-left: 0;
+    border-top: 1px solid var(--pf-border);
+  }
+
+  .perfomia-image-placeholder {
+    min-height: 280px;
+  }
+
+  .perfomia-shot-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .perfomia-shot-card.is-mobile img {
+    height: 420px;
+  }
+}
