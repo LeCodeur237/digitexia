@@ -357,17 +357,28 @@
 
     <section class="dx-final-cta" id="cta-final">
         <div class="dx-container dx-reveal">
-            <div class="dx-eyebrow">{{ __('Let us talk') }}</div>
-            <h2>{{ __('Let us discuss your digital transformation goals') }}</h2>
-            <p class="dx-cta-subheading">
-                {{ __('Whatever stage your organization is at, we can talk through what digital transformation could look like for you.') }}
-            </p>
-            <p class="dx-cta-description">
-                {{ __('In a short conversation, we listen to your operational challenges and share how similar organizations have approached them: no pressure, no obligation.') }}
-            </p>
-            <div class="dx-cta-buttons">
-                <a href="tel:+237650945280" class="dx-btn dx-btn-primary">{{ __('Call (+237) 650 945 280') }}</a>
-                <a href="{{ url('/contact-us') }}" class="dx-btn dx-btn-secondary">{{ __('Send a Message') }}</a>
+            <div class="solutions-cta-grid">
+                <div class="solutions-cta-copy">
+                    <div class="dx-eyebrow">{{ __('Let us talk') }}</div>
+                    <h2>{{ __('Let us discuss your digital transformation goals') }}</h2>
+                    <p class="dx-cta-subheading">
+                        {{ __('Whatever stage your organization is at, we can talk through what digital transformation could look like for you.') }}
+                    </p>
+                    <p class="dx-cta-description">
+                        {{ __('In a short conversation, we listen to your operational challenges and share how similar organizations have approached them: no pressure, no obligation.') }}
+                    </p>
+                    <div class="dx-cta-buttons">
+                        <a href="tel:+237650945280" class="dx-btn dx-btn-primary">{{ __('Call (+237) 650 945 280') }}</a>
+                        <a href="{{ url('/contact-us') }}" class="dx-btn dx-btn-secondary">{{ __('Send a Message') }}</a>
+                    </div>
+                </div>
+                <div class="solutions-cta-visual" aria-hidden="true">
+                    <div class="solutions-cta-grid-lines"></div>
+                    <div class="solutions-cta-panel">
+                        <strong>{{ __('Let us talk') }}</strong>
+                        <p>{{ __('The best digital solutions start with a conversation, not a proposal.') }}</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

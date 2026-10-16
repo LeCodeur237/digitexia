@@ -82,20 +82,19 @@
         <div class="dx-blueprint"></div>
         <div class="dx-container team-hero-grid">
             <div class="team-hero-copy dx-reveal">
-                <div class="dx-eyebrow">{{ __('Team') }}</div>
                 <h1>{{ __('The people building what comes next.') }}</h1>
                 <p class="team-hero-subtitle">
                     {{ __('DigiTexia brings together technology, product and business expertise to design and deploy digital solutions that address real operational challenges, led by a founding team committed to that mission.') }}
                 </p>
                 <div class="team-actions">
-                    <a href="#leadership" class="dx-btn dx-btn-primary">{{ __('Meet the team') }}</a>
-                    <a href="{{ url('/contact-us') }}" class="dx-btn dx-btn-secondary">{{ __('Build with us') }}</a>
+                    <a href="#direction" class="dx-btn dx-btn-primary">{{ __('Meet the team') }}</a>
+                    <a href="#construire" class="dx-btn dx-btn-secondary">{{ __('Build with us') }}</a>
                 </div>
             </div>
 
             <div class="team-hero-media dx-reveal d1">
-                @if (file_exists(public_path('images/team/hero-team-2.png')))
-                    <img class="team-hero-image" src="{{ asset('images/team/hero-team-2.png') }}" alt="{{ __('DigiTexia team collaboration') }}">
+                @if (file_exists(public_path('images/team/hero-team-3.png')))
+                    <img class="team-hero-image" src="{{ asset('images/team/hero-team-3.png') }}" alt="{{ __('DigiTexia team collaboration') }}">
                 @else
                     <div class="team-image-placeholder hero-placeholder">
                         <span>{{ __('Team image placeholder') }}</span>
@@ -115,17 +114,29 @@
     </section>
 
     <section class="team-intro">
-        <div class="dx-container dx-reveal">
-            <div class="dx-eyebrow dx-eyebrow-center">{{ __('Our strength') }}</div>
-            <h2>{{ __('DigiTexia is built around capabilities, not job titles.') }}</h2>
-            <p>
-                {{ __('Our work combines engineering, product development, digital transformation, AI and business understanding, with different disciplines pulling toward the same mission: technology that solves real problems for organizations across Africa.') }}
-            </p>
-            <div class="team-signature">{{ __('Building AI-powered digital infrastructure for Africa.') }}</div>
+        <div class="dx-container team-intro-grid dx-reveal">
+            <div class="team-intro-media">
+                @if (file_exists(public_path('images/team/hero-team-1.png')))
+                    <img src="{{ asset('images/team/hero-team-1.png') }}" alt="{{ __('DigiTexia team collaboration') }}">
+                @else
+                    <div class="team-image-placeholder">
+                        <span>{{ __('Team image placeholder') }}</span>
+                        <strong>1200 x 800</strong>
+                    </div>
+                @endif
+            </div>
+            <div class="team-intro-copy">
+                <div class="dx-eyebrow">{{ __('Our strength') }}</div>
+                <h2>{{ __('DigiTexia is built around capabilities, not job titles.') }}</h2>
+                <p>
+                    {{ __('Our work combines engineering, product development, digital transformation, AI and business understanding, with different disciplines pulling toward the same mission: technology that solves real problems for organizations across Africa.') }}
+                </p>
+                <div class="team-signature">{{ __('Building AI-powered digital infrastructure for Africa.') }}</div>
+            </div>
         </div>
     </section>
 
-    <section id="leadership" class="dx-section">
+    <section id="direction" class="dx-section team-leadership-section">
         <div class="dx-container">
             <div class="dx-section-head dx-reveal">
                 <div class="dx-eyebrow">{{ __('Leadership') }}</div>
@@ -167,18 +178,16 @@
         </div>
     </section>
 
-    <section class="dx-section dx-section-alt">
+    <section class="dx-section dx-section-alt team-capabilities-section">
         <div class="dx-container">
             <div class="dx-section-head dx-reveal">
-                <div class="dx-eyebrow">{{ __('Collective expertise') }}</div>
                 <h2>{{ __('What the team brings together') }}</h2>
                 <p class="dx-section-intro">{{ __('Not a list of job titles, but the actual disciplines behind DigiTexia work.') }}</p>
             </div>
 
-            <div class="cap-grid dx-reveal d1">
+            <div class="team-disc-grid dx-reveal d1">
                 @foreach ($capabilities as $capability)
-                    <article class="cap-card">
-                        {!! $capability['icon'] !!}
+                    <article class="team-disc-card">
                         <h3>{{ $capability['title'] }}</h3>
                         <p>{{ $capability['text'] }}</p>
                     </article>
@@ -187,27 +196,36 @@
         </div>
     </section>
 
-    <section class="dx-section">
+    <section class="dx-section team-products-section">
         <div class="dx-container dx-reveal">
             <div class="products-panel">
                 <div>
                     <div class="dx-eyebrow">{{ __('Products') }}</div>
                     <h2>{{ __('Real people, behind real products.') }}</h2>
                     <p>{{ __('The team technical and product work spans DigiTexia flagship suite, from architecture and engineering to deployment support.') }}</p>
+                    <div class="products-tags">
+                        @foreach ($products as $product)
+                            <span>{{ $product }}</span>
+                        @endforeach
+                    </div>
                 </div>
-                <div class="products-tags">
-                    @foreach ($products as $product)
-                        <span>{{ $product }}</span>
-                    @endforeach
+                <div class="products-panel-visual">
+                    @if (file_exists(public_path('images/team/hero-team-2.png')))
+                        <img src="{{ asset('images/team/hero-team-2.png') }}" alt="{{ __('DigiTexia team collaboration') }}">
+                    @else
+                        <div class="team-image-placeholder">
+                            <span>{{ __('Team image placeholder') }}</span>
+                            <strong>1200 x 900</strong>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="dx-section dx-section-alt">
+    <section class="dx-section dx-section-alt team-culture-section">
         <div class="dx-container">
-            <div class="dx-section-head center dx-reveal">
-                <div class="dx-eyebrow dx-eyebrow-center">{{ __('How we work') }}</div>
+            <div class="dx-section-head dx-reveal">
                 <h2>{{ __('Culture & collaboration') }}</h2>
             </div>
             <div class="culture-grid dx-reveal d1">
@@ -234,8 +252,9 @@
         </div>
     </section>
 
-    <section id="cta-final" class="team-final-cta">
-        <div class="dx-container dx-reveal">
+    <section id="construire" class="team-final-cta">
+        <div class="dx-container team-cta-grid dx-reveal">
+            <div class="team-cta-copy">
             <div class="dx-eyebrow dx-eyebrow-center">{{ __('Build with us') }}</div>
             <h2>{{ __('Build what matters.') }}</h2>
             <p>
@@ -247,6 +266,14 @@
                     <span aria-hidden="true">→</span>
                 </a>
                 <a href="{{ url('/our-partners') }}" class="dx-btn dx-btn-secondary">{{ __('Explore Partnerships') }}</a>
+            </div>
+            </div>
+            <div class="team-cta-visual" aria-hidden="true">
+                <div class="team-cta-grid-lines"></div>
+                <div class="team-cta-panel">
+                    <strong>{{ __('Build what matters.') }}</strong>
+                    <p>{{ __('Whether you are a prospective client, a technology partner, an investor, or someone who wants to build meaningful technology with us, we would welcome the conversation.') }}</p>
+                </div>
             </div>
         </div>
     </section>

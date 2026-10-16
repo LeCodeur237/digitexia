@@ -1,3 +1,4 @@
+@unless (request()->is('our-partners'))
 <section class="dx-newsletter">
     <div class="dx-container">
         <div class="dx-newsletter-inner">
@@ -23,6 +24,7 @@
         </div>
     </div>
 </section>
+@endunless
 
 <footer class="dx-footer">
     <div class="dx-container">

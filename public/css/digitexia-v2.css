@@ -329,7 +329,7 @@ html.light-mode .dx-header {
   color: var(--dx-text);
 }
 
-.dx-nav-links a.active::after {
+.dx-nav-links > a.active::after {
   content: "";
   position: absolute;
   left: 0;
@@ -338,6 +338,10 @@ html.light-mode .dx-header {
   height: 2px;
   border-radius: 2px;
   background: var(--dx-gold);
+}
+
+.dx-dropdown > a.active {
+  box-shadow: inset 0 -2px var(--dx-gold);
 }
 
 .dx-dropdown {

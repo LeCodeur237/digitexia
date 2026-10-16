@@ -180,17 +180,28 @@
 
     <section class="dx-final-cta" id="cta-final">
         <div class="dx-container dx-reveal">
-            <div class="dx-eyebrow">{{ __('Let us build') }}</div>
-            <h2>{{ __('Let us design your next digital solution') }}</h2>
-            <p class="dx-cta-subheading">
-                {{ __('Every project in this portfolio started with a conversation about a real operational challenge.') }}
-            </p>
-            <p class="dx-cta-description">
-                {{ __('If your organization is facing one, we can discuss it and share how a similar solution might apply to your context.') }}
-            </p>
-            <div class="dx-cta-buttons">
-                <a href="tel:+237650945280" class="dx-btn dx-btn-primary">{{ __('Call (+237) 650 945 280') }}</a>
-                <a href="{{ url('/contact-us') }}" class="dx-btn dx-btn-secondary">{{ __('Discuss Your Project') }}</a>
+            <div class="projects-cta-grid">
+                <div class="projects-cta-copy">
+                    <div class="dx-eyebrow">{{ __('Let us build') }}</div>
+                    <h2>{{ __('Let us design your next digital solution') }}</h2>
+                    <p class="dx-cta-subheading">
+                        {{ __('Every project in this portfolio started with a conversation about a real operational challenge.') }}
+                    </p>
+                    <p class="dx-cta-description">
+                        {{ __('If your organization is facing one, we can discuss it and share how a similar solution might apply to your context.') }}
+                    </p>
+                    <div class="dx-cta-buttons">
+                        <a href="tel:+237650945280" class="dx-btn dx-btn-primary">{{ __('Call (+237) 650 945 280') }}</a>
+                        <a href="{{ url('/contact-us') }}" class="dx-btn dx-btn-secondary">{{ __('Discuss Your Project') }}</a>
+                    </div>
+                </div>
+                <div class="projects-cta-visual" aria-hidden="true">
+                    <div class="projects-cta-grid-lines"></div>
+                    <div class="projects-cta-panel">
+                        <strong>{{ __('Let us build') }}</strong>
+                        <p>{{ __('Every project in this portfolio started with a conversation about a real operational challenge.') }}</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

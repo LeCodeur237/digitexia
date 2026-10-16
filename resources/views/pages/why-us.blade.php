@@ -92,20 +92,32 @@
                 </div>
             </div>
             <div class="why-hero-visual">
-                <div class="why-placeholder why-placeholder-hero">
-                    <span>{{ __('Hero image placeholder') }}</span>
-                    <strong>1000 x 1100</strong>
-                </div>
+                @if (file_exists(public_path('images/abouts/hero-whyus.png')))
+                    <div class="why-placeholder why-placeholder-hero has-image">
+                        <img src="{{ asset('images/abouts/hero-whyus.png') }}" alt="DigiTexia technology partner">
+                    </div>
+                @else
+                    <div class="why-placeholder why-placeholder-hero">
+                        <span>{{ __('Hero image placeholder') }}</span>
+                        <strong>1000 x 1100</strong>
+                    </div>
+                @endif
             </div>
         </div>
     </section>
 
     <section class="company-intro">
         <div class="dx-container why-intro-grid dx-reveal">
-            <div class="why-placeholder why-placeholder-intro">
-                <span>{{ __('Workshop image placeholder') }}</span>
-                <strong>1200 x 800</strong>
-            </div>
+            @if (file_exists(public_path('images/abouts/equipe-whyus.png')))
+                <div class="why-placeholder why-placeholder-intro has-image">
+                    <img src="{{ asset('images/abouts/equipe-whyus.png') }}" alt="DigiTexia team working with a partner">
+                </div>
+            @else
+                <div class="why-placeholder why-placeholder-intro">
+                    <span>{{ __('Workshop image placeholder') }}</span>
+                    <strong>1200 x 800</strong>
+                </div>
+            @endif
             <div class="why-intro-copy">
                 <div class="dx-eyebrow">{{ __('Choosing a partner') }}</div>
                 <h2>{{ __('Choosing a technology partner is a strategic decision, not just a technical one.') }}</h2>
@@ -164,10 +176,16 @@
                 @endforeach
             </div>
 
-            <div class="why-placeholder why-placeholder-wide dx-reveal">
-                <span>{{ __('Panoramic image placeholder') }}</span>
-                <strong>1600 x 500</strong>
-            </div>
+            @if (file_exists(public_path('images/abouts/formation-whyus.png')))
+                <div class="why-placeholder why-placeholder-wide has-image dx-reveal">
+                    <img src="{{ asset('images/abouts/formation-whyus.png') }}" alt="DigiTexia team training during deployment">
+                </div>
+            @else
+                <div class="why-placeholder why-placeholder-wide dx-reveal">
+                    <span>{{ __('Panoramic image placeholder') }}</span>
+                    <strong>1600 x 500</strong>
+                </div>
+            @endif
         </div>
     </section>
 
@@ -190,19 +208,31 @@
         </div>
     </section>
 
-    <section class="dx-final-cta" id="cta-final">
+    <section class="dx-final-cta why-final-cta" id="cta-final">
         <div class="dx-container dx-reveal">
-            <div class="dx-eyebrow">{{ __('Let us talk') }}</div>
-            <h2>{{ __('Let us build the right digital solution together') }}</h2>
-            <p class="dx-cta-subheading">
-                {{ __('The best digital solutions start with a conversation, not a proposal.') }}
-            </p>
-            <p class="dx-cta-description">
-                {{ __('Tell us about your operational challenge. We will assess it directly and share a practical path forward, without obligation.') }}
-            </p>
-            <div class="dx-cta-buttons">
-                <a href="tel:+237650945280" class="dx-btn dx-btn-primary">{{ __('Call (+237) 650 945 280') }}</a>
-                <a href="{{ url('/contact-us') }}" class="dx-btn dx-btn-secondary">{{ __('Start a Conversation') }}</a>
+            <div class="why-cta-grid">
+                <div class="why-cta-copy">
+                    <div class="dx-eyebrow">{{ __('Let us talk') }}</div>
+                    <h2>{{ __('Let us build the right digital solution together') }}</h2>
+                    <p class="dx-cta-subheading">
+                        {{ __('The best digital solutions start with a conversation, not a proposal.') }}
+                    </p>
+                    <p class="dx-cta-description">
+                        {{ __('Tell us about your operational challenge. We will assess it directly and share a practical path forward, without obligation.') }}
+                    </p>
+                    <div class="dx-cta-buttons">
+                        <a href="tel:+237650945280" class="dx-btn dx-btn-primary">{{ __('Call (+237) 650 945 280') }}</a>
+                        <a href="{{ url('/contact-us') }}" class="dx-btn dx-btn-secondary">{{ __('Start a Conversation') }}</a>
+                    </div>
+                </div>
+
+                <div class="why-cta-visual" aria-hidden="true">
+                    <div class="why-cta-grid-lines"></div>
+                    <div class="why-cta-panel">
+                        <strong>{{ __('Long-Term Partnership') }}</strong>
+                        <p>{{ __('The best digital solutions start with a conversation, not a proposal.') }}</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
