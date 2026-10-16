@@ -76,30 +76,44 @@
 <main class="dx-why">
     <section class="page-hero">
         <div class="dx-blueprint"></div>
-        <div class="dx-container dx-reveal">
-            <div class="dx-eyebrow">{{ __('Why DigiTexia') }}</div>
-            <h1>{{ __('A technology partner built on trust, engineering excellence and long-term commitment.') }}</h1>
-            <p class="page-hero-subtitle">
-                {{ __('Organizations do not choose DigiTexia because we write code. They choose us because we combine technical rigor with a genuine understanding of the operational realities we solve for, and we stay invested well beyond deployment.') }}
-            </p>
-            <div class="page-hero-cta">
-                <a href="#cta-final" class="dx-btn dx-btn-primary">
-                    {{ __('Start a Conversation') }}
-                    <span class="dx-btn-arrow" aria-hidden="true">&rarr;</span>
-                </a>
-                <a href="{{ url('/projects') }}" class="dx-btn dx-btn-secondary">{{ __('See Our Work') }}</a>
+        <div class="dx-container why-hero-grid dx-reveal">
+            <div class="why-hero-copy">
+                <div class="dx-eyebrow">{{ __('Why DigiTexia') }}</div>
+                <h1>{{ __('A technology partner built on trust, engineering excellence and long-term commitment.') }}</h1>
+                <p class="page-hero-subtitle">
+                    {{ __('Organizations do not choose DigiTexia because we write code. They choose us because we combine technical rigor with a genuine understanding of the operational realities we solve for, and we stay invested well beyond deployment.') }}
+                </p>
+                <div class="page-hero-cta">
+                    <a href="#cta-final" class="dx-btn dx-btn-primary">
+                        {{ __('Start a Conversation') }}
+                        <span class="dx-btn-arrow" aria-hidden="true">&rarr;</span>
+                    </a>
+                    <a href="{{ url('/projects') }}" class="dx-btn dx-btn-secondary">{{ __('See Our Work') }}</a>
+                </div>
+            </div>
+            <div class="why-hero-visual">
+                <div class="why-placeholder why-placeholder-hero">
+                    <span>{{ __('Hero image placeholder') }}</span>
+                    <strong>1000 x 1100</strong>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="company-intro">
-        <div class="dx-container dx-reveal">
-            <div class="dx-eyebrow">{{ __('Choosing a partner') }}</div>
-            <h2>{{ __('Choosing a technology partner is a strategic decision, not just a technical one.') }}</h2>
-            <p class="lead">
-                {{ __('It is about more than execution. It is about a partner who understands your business challenges, designs solutions that scale with you, and stays engaged long enough to see the impact through. That is the role DigiTexia plays.') }}
-            </p>
-            <div class="brand-signature">{{ __('Building AI-powered digital infrastructure for Africa.') }}</div>
+        <div class="dx-container why-intro-grid dx-reveal">
+            <div class="why-placeholder why-placeholder-intro">
+                <span>{{ __('Workshop image placeholder') }}</span>
+                <strong>1200 x 800</strong>
+            </div>
+            <div class="why-intro-copy">
+                <div class="dx-eyebrow">{{ __('Choosing a partner') }}</div>
+                <h2>{{ __('Choosing a technology partner is a strategic decision, not just a technical one.') }}</h2>
+                <p class="lead">
+                    {{ __('It is about more than execution. It is about a partner who understands your business challenges, designs solutions that scale with you, and stays engaged long enough to see the impact through. That is the role DigiTexia plays.') }}
+                </p>
+                <div class="brand-signature">{{ __('Building AI-powered digital infrastructure for Africa.') }}</div>
+            </div>
         </div>
     </section>
 
@@ -113,7 +127,7 @@
                 </p>
             </div>
 
-            <div class="pillars-grid dx-reveal">
+            <div class="pillars-grid why-bento dx-reveal">
                 @foreach ($pillars as $pillar)
                     <article class="pillar-card">
                         {!! $pillar['icon'] !!}
@@ -148,6 +162,11 @@
                         <p>{{ $step[1] }}</p>
                     </article>
                 @endforeach
+            </div>
+
+            <div class="why-placeholder why-placeholder-wide dx-reveal">
+                <span>{{ __('Panoramic image placeholder') }}</span>
+                <strong>1600 x 500</strong>
             </div>
         </div>
     </section>

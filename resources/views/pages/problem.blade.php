@@ -19,25 +19,35 @@
 <main class="dx-problem">
     <section class="page-hero">
         <div class="dx-blueprint"></div>
-        <div class="dx-container dx-reveal">
-            <div class="dx-eyebrow">{{ __('The problem') }}</div>
-            <h1>{{ __('Operational fragmentation is quietly costing you the advantage.') }}</h1>
-            <p class="page-hero-subtitle">
-                {{ __('Most organizations do not lose ground in one dramatic failure. They lose it gradually in disconnected spreadsheets, delayed approvals and decisions made on data that is already out of date. DigiTexia exists to close that gap.') }}
-            </p>
-            <div class="page-hero-cta">
-                <a href="#assessment" class="dx-btn dx-btn-primary">
-                    {{ __('Request an Assessment') }}
-                    <span class="dx-btn-arrow" aria-hidden="true">&rarr;</span>
-                </a>
-                <a href="{{ url('/solutions') }}" class="dx-btn dx-btn-secondary">{{ __('See Our Solutions') }}</a>
+        <div class="dx-container problem-hero-grid dx-reveal">
+            <div class="problem-hero-copy">
+                <div class="dx-eyebrow">{{ __('The problem') }}</div>
+                <h1>{{ __('Operational fragmentation is quietly costing you the advantage.') }}</h1>
+                <p class="page-hero-subtitle">
+                    {{ __('Most organizations do not lose ground in one dramatic failure. They lose it gradually in disconnected spreadsheets, delayed approvals and decisions made on data that is already out of date. DigiTexia exists to close that gap.') }}
+                </p>
+                <div class="page-hero-cta">
+                    <a href="#assessment" class="dx-btn dx-btn-primary">
+                        {{ __('Request an Assessment') }}
+                        <span class="dx-btn-arrow" aria-hidden="true">&rarr;</span>
+                    </a>
+                    <a href="{{ url('/solutions') }}" class="dx-btn dx-btn-secondary">{{ __('See Our Solutions') }}</a>
+                </div>
+            </div>
+
+            <div class="problem-hero-visual">
+                <div class="problem-image-placeholder problem-image-hero has-image">
+                    <img src="{{ asset('images/problems/hero-problem.png') }}" alt="{{ __('Team surrounded by disconnected tools and documents') }}">
+                </div>
+                <div class="problem-visual-note problem-visual-note-top">{{ __('Disconnected signals') }}</div>
+                <div class="problem-visual-note problem-visual-note-bottom">{{ __('Operational visibility') }}</div>
             </div>
         </div>
     </section>
 
     <section class="dx-section problem-diagram-section">
         <div class="dx-container">
-            <div class="dx-section-head center dx-reveal">
+            <div class="dx-section-head problem-flow-head dx-reveal">
                 <div class="dx-eyebrow">{{ __('How fragmentation happens') }}</div>
                 <h2>{{ __('When systems do not talk to each other, everything slows down.') }}</h2>
                 <p class="dx-section-intro">
@@ -45,64 +55,27 @@
                 </p>
             </div>
 
-            <div class="diagram-panel dx-reveal">
-                <div class="diagram-col bad">
-                    <div class="diagram-label">{{ __('Fragmented operations') }}</div>
-                    <svg class="diagram-svg" viewBox="0 0 240 180" width="100%" height="auto" role="img" aria-label="{{ __('Fragmented operations diagram') }}">
-                        <g stroke="#E2665A" stroke-width="1.2" stroke-dasharray="3 4" opacity="0.6">
-                            <line x1="40" y1="30" x2="110" y2="70"/>
-                            <line x1="200" y1="35" x2="150" y2="80"/>
-                            <line x1="30" y1="140" x2="95" y2="100"/>
-                            <line x1="210" y1="145" x2="160" y2="105"/>
-                        </g>
-                        <g fill="none" stroke="#E2665A" stroke-width="1.4">
-                            <rect x="12" y="14" width="56" height="32" rx="6"/>
-                            <rect x="172" y="18" width="56" height="32" rx="6"/>
-                            <rect x="4" y="124" width="56" height="32" rx="6"/>
-                            <rect x="182" y="128" width="56" height="32" rx="6"/>
-                            <circle cx="122" cy="90" r="18"/>
-                        </g>
-                        <g font-family="IBM Plex Mono" font-size="8" fill="#94A1C2" text-anchor="middle">
-                            <text x="40" y="34">{{ __('Sheets') }}</text>
-                            <text x="200" y="38">{{ __('Email') }}</text>
-                            <text x="32" y="144">{{ __('Paper') }}</text>
-                            <text x="210" y="148">{{ __('Apps') }}</text>
-                            <text x="122" y="94">?</text>
-                        </g>
-                    </svg>
+            <div class="problem-flow dx-reveal">
+                <div class="problem-flow-box problem-flow-box-bad">
+                    <h3>{{ __('Fragmented operations') }}</h3>
+                    <div class="problem-chips">
+                        <span>{{ __('Sheets') }}</span>
+                        <span>{{ __('Email') }}</span>
+                        <span>{{ __('Paper') }}</span>
+                        <span>{{ __('Apps') }}</span>
+                    </div>
                 </div>
 
-                <div class="diagram-divider" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
-                        <path d="M5 12h14M13 6l6 6-6 6"/>
-                    </svg>
-                    <span>DigiTexia</span>
-                </div>
+                <div class="problem-flow-hub">DigiTexia</div>
 
-                <div class="diagram-col good">
-                    <div class="diagram-label">{{ __('Unified infrastructure') }}</div>
-                    <svg class="diagram-svg" viewBox="0 0 240 180" width="100%" height="auto" role="img" aria-label="{{ __('Unified infrastructure diagram') }}">
-                        <g stroke="#39D6B4" stroke-width="1.4">
-                            <line x1="40" y1="30" x2="122" y2="90"/>
-                            <line x1="200" y1="35" x2="122" y2="90"/>
-                            <line x1="30" y1="140" x2="122" y2="90"/>
-                            <line x1="210" y1="145" x2="122" y2="90"/>
-                        </g>
-                        <g fill="none" stroke="#E3A73C" stroke-width="1.4">
-                            <rect x="12" y="14" width="56" height="32" rx="6"/>
-                            <rect x="172" y="18" width="56" height="32" rx="6"/>
-                            <rect x="4" y="124" width="56" height="32" rx="6"/>
-                            <rect x="182" y="128" width="56" height="32" rx="6"/>
-                        </g>
-                        <circle cx="122" cy="90" r="20" fill="#0F1728" stroke="#39D6B4" stroke-width="1.6"/>
-                        <g font-family="IBM Plex Mono" font-size="8" fill="#94A1C2" text-anchor="middle">
-                            <text x="40" y="34">{{ __('Inventory') }}</text>
-                            <text x="200" y="38">{{ __('Reports') }}</text>
-                            <text x="32" y="144">{{ __('Approvals') }}</text>
-                            <text x="210" y="148">{{ __('Records') }}</text>
-                        </g>
-                        <text x="122" y="94" font-family="IBM Plex Mono" font-size="9" fill="#39D6B4" text-anchor="middle">DGX</text>
-                    </svg>
+                <div class="problem-flow-box problem-flow-box-good">
+                    <h3>{{ __('Unified infrastructure') }}</h3>
+                    <div class="problem-chips">
+                        <span>{{ __('Inventory') }}</span>
+                        <span>{{ __('Reports') }}</span>
+                        <span>{{ __('Approvals') }}</span>
+                        <span>{{ __('Records') }}</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -118,7 +91,14 @@
                 </p>
             </div>
 
-            <div class="problem-detail-grid dx-reveal">
+            <div class="problem-breakdown-grid">
+                <aside class="problem-breakdown-visual dx-reveal">
+                    <div class="problem-image-placeholder problem-image-breakdown has-image">
+                        <img class="problem-breakdown-image" src="{{ asset('images/problems/rupture-problem.png') }}" alt="{{ __('Manager searching across several screens and records') }}">
+                    </div>
+                </aside>
+
+                <div class="problem-detail-grid dx-reveal">
                 <div class="problem-detail">
                     <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
                     <div>
@@ -193,6 +173,7 @@
                         </ul>
                     </div>
                 </div>
+                </div>
             </div>
         </div>
     </section>
@@ -236,6 +217,10 @@
                     </ul>
                 </div>
             </div>
+
+            <div class="problem-wide-placeholder has-image dx-reveal">
+                <img class="problem-after-image" src="{{ asset('images/problems/after-now-problem.png') }}" alt="{{ __('Unified operations room or connected infrastructure dashboard') }}">
+            </div>
         </div>
     </section>
 
@@ -273,17 +258,29 @@
 
     <section class="dx-final-cta problem-final-cta" id="assessment">
         <div class="dx-container dx-reveal">
-            <div class="dx-eyebrow">{{ __('Clarity before investment') }}</div>
-            <h2>{{ __('We identify the highest-impact problem before recommending a solution') }}</h2>
-            <p class="dx-cta-subheading">
-                {{ __('No organization needs to fix everything at once. A strategic assessment shows exactly where fragmentation is costing the most and the fastest path to closing that gap.') }}
-            </p>
-            <p class="dx-cta-description">
-                {{ __('In a working session with your team, we map your current operational model, identify the highest-impact workflow and recommend the optimal digital path: product, custom build or hybrid.') }}
-            </p>
-            <div class="dx-cta-buttons">
-                <a href="tel:+237650945280" class="dx-btn dx-btn-primary">{{ __('Call (+237) 650 945 280') }}</a>
-                <a href="{{ url('/contact-us') }}" class="dx-btn dx-btn-secondary">{{ __('Request an Assessment') }}</a>
+            <div class="problem-cta-grid">
+                <div class="problem-cta-copy">
+                    <div class="dx-eyebrow">{{ __('Clarity before investment') }}</div>
+                    <h2>{{ __('We identify the highest-impact problem before recommending a solution') }}</h2>
+                    <p class="dx-cta-subheading">
+                        {{ __('No organization needs to fix everything at once. A strategic assessment shows exactly where fragmentation is costing the most and the fastest path to closing that gap.') }}
+                    </p>
+                    <p class="dx-cta-description">
+                        {{ __('In a working session with your team, we map your current operational model, identify the highest-impact workflow and recommend the optimal digital path: product, custom build or hybrid.') }}
+                    </p>
+                    <div class="dx-cta-buttons">
+                        <a href="tel:+237650945280" class="dx-btn dx-btn-primary">{{ __('Call (+237) 650 945 280') }}</a>
+                        <a href="{{ url('/contact-us') }}" class="dx-btn dx-btn-secondary">{{ __('Request an Assessment') }}</a>
+                    </div>
+                </div>
+
+                <div class="problem-cta-visual">
+                    <div class="problem-cta-grid-lines" aria-hidden="true"></div>
+                    <div class="problem-cta-panel">
+                        <strong>{{ __('Strategic Assessment') }}</strong>
+                        <p>{{ __('Clarity before investment.') }}</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

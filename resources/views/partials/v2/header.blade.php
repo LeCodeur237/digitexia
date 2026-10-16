@@ -11,7 +11,7 @@
     $isCompanyPage = $isTeamPage || $isPartnersPage || $isBlogPage || $isContactPage;
 @endphp
 
-<header class="dx-header">
+<header class="dx-header {{ $isHomePage ? 'dx-header-home' : '' }}">
     <nav class="dx-nav" aria-label="{{ __('Primary navigation') }}">
         <a href="{{ url('/') }}" class="dx-logo" aria-label="DigiTexia">
             <img src="{{ asset('logo/logo-digi.png') }}" alt="DigiTexia" class="dx-logo-img">

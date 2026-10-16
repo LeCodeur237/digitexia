@@ -8,39 +8,13 @@
 @endpush
 
 @php
-    $flagshipProjects = [
-        [
-            'tag' => __('FLAGSHIP / AQUAWATCH AI'),
-            'name' => 'AquaWatch AI',
-            'positioning' => __('An AI-powered water monitoring and operational intelligence platform.'),
-            'link' => url('/solutions/aquawatch-ai'),
-            'rows' => [
-                [__('Problem'), __('Water infrastructure is hard to monitor manually, so losses and failures go undetected too long.')],
-                [__('Designed for'), __('Utilities and organizations managing water infrastructure.')],
-                [__('Value created'), __('Improved resource management and faster, better-informed decisions.')],
-                [__('Why innovative'), __('Applies AI-driven monitoring to infrastructure that has long relied on manual inspection.')],
-            ],
-        ],
-        [
-            'tag' => __('FLAGSHIP / WASTEPAY'),
-            'name' => 'WastePay',
-            'positioning' => __('A smart waste management system using QR tracking and recycling incentives.'),
-            'link' => url('/solutions/wastepay'),
-            'rows' => [
-                [__('Problem'), __('Waste collection and recycling programs lack reliable traceability and incentive structures.')],
-                [__('Designed for'), __('Municipalities, waste operators, NGOs and circular economy initiatives.')],
-                [__('Value created'), __('Verified waste flows, stronger citizen participation and clearer operational reporting.')],
-                [__('Why innovative'), __('Connects field collection, QR verification and incentive logic in one digital workflow.')],
-            ],
-        ],
-    ];
-
     $clientProjects = [
         [
             'tag' => __('CLIENT / FINANCIAL SERVICES'),
             'name' => 'CREMIN-CAM Perfomia Deployment',
+            'image' => 'images/projets/perfomia-projets.png',
             'positioning' => __('A tailored Perfomia deployment for a regulated financial institution.'),
-            'link' => 'https://www.cremin-cam.org',
+            'link' => 'https://perfomia.cremin-cam.org',
             'rows' => [
                 [__('Challenge'), __('Manual performance tracking limited visibility into staff execution and KPIs.')],
                 [__('Objective'), __('Deploy a performance management platform tailored to the institution operating model.')],
@@ -49,18 +23,20 @@
         ],
         [
             'tag' => __('CLIENT / PROFESSIONAL ASSOCIATION'),
-            'name' => 'APEC Cameroun Digital Presence',
-            'positioning' => __('A modernized digital identity for a national professional association.'),
+            'name' => 'APEC Cameroun Social Design',
+            'image' => 'images/projets/apec-projets.png',
+            'positioning' => __('Social media design management for LinkedIn and Facebook.'),
             'link' => 'https://web.facebook.com/profile.php?id=61575062085703&locale=fr_FR',
             'rows' => [
-                [__('Challenge'), __('An outdated digital presence weakened the association credibility with members and partners.')],
-                [__('Objective'), __("Modernize the organization's digital identity to reflect its role and standing.")],
-                [__('Value delivered'), __('A refreshed digital presence that strengthens credibility with members, partners and the public.')],
+                [__('Challenge'), __('The association needed consistent, professional designs for its public communications.')],
+                [__('Objective'), __('Create and manage designs for publication on LinkedIn and Facebook.')],
+                [__('Value delivered'), __('A stronger social media presence with clear, recognizable and publication-ready visuals.')],
             ],
         ],
         [
             'tag' => __('CLIENT / ENTERPRISE'),
             'name' => 'Light Group Digital Platform',
+            'image' => 'images/projets/lightgroup-projets.png',
             'positioning' => __('A cleaner digital presentation for an enterprise brand and its stakeholders.'),
             'link' => 'https://www.lightgroup.co.com/',
             'rows' => [
@@ -90,94 +66,76 @@
 <main class="dx-projects">
     <section class="page-hero">
         <div class="dx-blueprint"></div>
-        <div class="dx-container dx-reveal">
-            <div class="dx-eyebrow">{{ __('Projects') }}</div>
-            <h1>{{ __('A portfolio of digital solutions built to solve real operational challenges.') }}</h1>
-            <p class="page-hero-subtitle">
-                {{ __('From proprietary products to tailored enterprise platforms, every DigiTexia project reflects the same discipline: engineering excellence in service of measurable business impact.') }}
-            </p>
-            <div class="page-hero-cta">
-                <a href="#flagship" class="dx-btn dx-btn-primary">
-                    {{ __('View Portfolio') }}
-                    <span class="dx-btn-arrow" aria-hidden="true">&rarr;</span>
-                </a>
-                <a href="#cta-final" class="dx-btn dx-btn-secondary">{{ __('Discuss Your Project') }}</a>
+        <div class="dx-container project-hero-grid dx-reveal">
+            <div>
+                <div class="dx-eyebrow">{{ __('Projects') }}</div>
+                <h1>{{ __('Selected projects built around real operational needs.') }}</h1>
+                <p class="page-hero-subtitle">
+                    {{ __('Explore selected collaborations where DigiTexia helped organizations improve their digital presence, structure their operations and communicate with greater clarity.') }}
+                </p>
+                <div class="page-hero-cta">
+                    <a href="#projects" class="dx-btn dx-btn-primary">
+                        {{ __('View Projects') }}
+                        <span class="dx-btn-arrow" aria-hidden="true">&rarr;</span>
+                    </a>
+                    <a href="#cta-final" class="dx-btn dx-btn-secondary">{{ __('Discuss Your Project') }}</a>
+                </div>
+            </div>
+            <div class="project-hero-visual has-image" aria-label="{{ __('Projects context image') }}">
+                <img src="{{ asset('images/projets/hero-projets.png') }}" alt="{{ __('DigiTexia project team and digital infrastructure') }}">
             </div>
         </div>
     </section>
 
     <section class="company-intro">
-        <div class="dx-container dx-reveal">
-            <div class="dx-eyebrow">{{ __('Our portfolio') }}</div>
-            <h2>{{ __('We build proprietary products and tailored enterprise solutions, and hold both to the same standard.') }}</h2>
-            <p class="lead">
-                {{ __('Every project starts from a real operational need, not a technology looking for a use case. Whether we deploy a proven product or engineer a custom platform, the objective is the same: infrastructure designed to deliver long-term value.') }}
-            </p>
-            <div class="brand-signature">{{ __('Building AI-powered digital infrastructure for Africa.') }}</div>
-        </div>
-    </section>
-
-    <section class="dx-section" id="flagship">
-        <div class="dx-container">
-            <div class="dx-section-head dx-reveal">
-                <div class="dx-eyebrow">{{ __('Flagship solutions') }}</div>
-                <h2>{{ __('Proprietary digital products, deployed and proven') }}</h2>
-                <p class="dx-section-intro">
-                    {{ __('Proprietary products engineered for real infrastructure and operational challenges across Africa.') }}
+        <div class="dx-container project-intro-grid dx-reveal">
+            <div class="project-intro-visual has-image" aria-label="{{ __('Project team image') }}">
+                <img src="{{ asset('images/projets/equipe-projets.png') }}" alt="{{ __('DigiTexia team shaping digital projects') }}">
+            </div>
+            <div>
+                <div class="dx-eyebrow">{{ __('Our work') }}</div>
+                <h2>{{ __('Real projects, shaped around real organizations.') }}</h2>
+                <p class="lead">
+                    {{ __('Each realization starts with a concrete need, a defined audience and a clear business objective. The result is a digital asset designed to be useful, credible and ready for real-world use.') }}
                 </p>
-            </div>
-
-            <div class="portfolio-grid dx-reveal">
-                @foreach ($flagshipProjects as $project)
-                    <article class="project-card">
-                        <div class="project-tag">{{ $project['tag'] }}</div>
-                        <h3>{{ $project['name'] }}</h3>
-                        <p class="positioning">{{ $project['positioning'] }}</p>
-                        <div class="field-list">
-                            @foreach ($project['rows'] as $row)
-                                <div class="field-row">
-                                    <span class="field-label">{{ $row[0] }}</span>
-                                    <span>{{ $row[1] }}</span>
-                                </div>
-                            @endforeach
-                        </div>
-                        <div class="project-link">
-                            <a href="{{ $project['link'] }}" class="dx-card-link">{{ __('Learn more') }} <span aria-hidden="true">&rarr;</span></a>
-                        </div>
-                    </article>
-                @endforeach
+                <div class="brand-signature">{{ __('Building AI-powered digital infrastructure for Africa.') }}</div>
             </div>
         </div>
     </section>
 
-    <section class="dx-section dx-section-alt">
+    <section class="dx-section dx-section-alt projects-client" id="projects">
         <div class="dx-container">
             <div class="dx-section-head dx-reveal">
-                <div class="dx-eyebrow">{{ __('Client solutions') }}</div>
-                <h2>{{ __('Custom platforms, built around real business transformation') }}</h2>
+                <div class="dx-eyebrow">{{ __('Selected projects') }}</div>
+                <h2>{{ __('Digital work delivered for organizations and their audiences') }}</h2>
                 <p class="dx-section-intro">
-                    {{ __('Beyond our own products, we engineer bespoke digital infrastructure for organizations with specific operational requirements.') }}
+                    {{ __('From platform deployment to social media design and digital presentation, these projects show how we turn a specific need into a practical result.') }}
                 </p>
             </div>
 
             <div class="portfolio-grid dx-reveal">
                 @foreach ($clientProjects as $project)
                     <article class="project-card">
-                        <div class="project-tag">{{ $project['tag'] }}</div>
-                        <h3>{{ $project['name'] }}</h3>
-                        <p class="positioning">{{ $project['positioning'] }}</p>
-                        <div class="field-list">
-                            @foreach ($project['rows'] as $row)
-                                <div class="field-row">
-                                    <span class="field-label">{{ $row[0] }}</span>
-                                    <span>{{ $row[1] }}</span>
-                                </div>
-                            @endforeach
+                        <div class="project-visual has-image" aria-label="{{ $project['name'] }}">
+                            <img src="{{ asset($project['image']) }}" alt="{{ $project['name'] }}">
                         </div>
-                        <div class="project-link">
-                            <a href="{{ $project['link'] }}" class="dx-card-link" @if (str_starts_with($project['link'], 'http')) target="_blank" rel="noreferrer" @endif>
-                                {{ __('Open project') }} <span aria-hidden="true">&rarr;</span>
-                            </a>
+                        <div class="project-card-copy">
+                            <div class="project-tag">{{ $project['tag'] }}</div>
+                            <h3>{{ $project['name'] }}</h3>
+                            <p class="positioning">{{ $project['positioning'] }}</p>
+                            <div class="field-list">
+                                @foreach ($project['rows'] as $row)
+                                    <div class="field-row">
+                                        <span class="field-label">{{ $row[0] }}</span>
+                                        <span>{{ $row[1] }}</span>
+                                    </div>
+                                @endforeach
+                            </div>
+                            <div class="project-link">
+                                <a href="{{ $project['link'] }}" class="dx-card-link" @if (str_starts_with($project['link'], 'http')) target="_blank" rel="noreferrer" @endif>
+                                    {{ __('Open project') }} <span aria-hidden="true">&rarr;</span>
+                                </a>
+                            </div>
                         </div>
                     </article>
                 @endforeach

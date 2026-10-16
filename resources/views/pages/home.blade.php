@@ -8,26 +8,42 @@
 @endpush
 
 @php
-    $needs = [
+    $products = [
         [
-            'title' => __('Water Infrastructure Monitoring'),
-            'text' => __('Predict failures, monitor boreholes and improve visibility across rural and distributed water systems.'),
-            'cta' => __('Discover AquaWatch AI'),
+            'need' => __('Water Infrastructure Monitoring'),
+            'name' => 'AquaWatch AI',
+            'link' => url('/solutions/aquawatch-ai'),
+            'image' => 'images/home-solutions-1.png',
+            'text' => __('Smart water monitoring for boreholes and rural systems, with IoT sensing and AI prediction of failures.'),
+            'outcome' => __('Reduce downtime, improve maintenance planning and protect access to water.'),
+            'code' => 'AQ',
         ],
         [
-            'title' => __('Waste & Circular Economy Operations'),
-            'text' => __('Track waste flows, verify collection, structure recycling incentives and improve accountability across operators.'),
-            'cta' => __('Discover WastePay'),
+            'need' => __('Waste & Circular Economy Operations'),
+            'name' => 'WastePay',
+            'link' => url('/solutions/wastepay'),
+            'image' => 'images/home-solutions-2.png',
+            'text' => __('Smart waste management with QR tracking, verified collection and incentives for recycling.'),
+            'outcome' => __('Improve collection transparency and increase circular economy participation.'),
+            'code' => 'WP',
         ],
         [
-            'title' => __('Service Operations Management'),
-            'text' => __('Help households discover, compare and connect with trusted domestic and care professionals.'),
-            'cta' => __('Discover Flexicare'),
+            'need' => __('Service Operations Management'),
+            'name' => 'Flexicare',
+            'link' => url('/solutions/flexicare'),
+            'image' => 'images/home-solutions-3.png',
+            'text' => __('Trusted household services platform for childcare, domestic support and care professionals.'),
+            'outcome' => __('Create safer connections between households and qualified professionals.'),
+            'code' => 'FC',
         ],
         [
-            'title' => __('Performance Execution Systems'),
-            'text' => __('Structure tasks, attendance, KPI visibility and staff evaluation for distributed teams.'),
-            'cta' => __('Explore Perfomia'),
+            'need' => __('Performance Execution Systems'),
+            'name' => 'Perfomia',
+            'link' => url('/solutions/performia'),
+            'image' => 'images/home-solutions-4.png',
+            'text' => __('Performance and workforce execution platform for task delegation, attendance, KPIs and staff evaluation.'),
+            'outcome' => __('Give managers clearer execution visibility and faster performance decisions.'),
+            'code' => 'PF',
         ],
     ];
 
@@ -39,39 +55,26 @@
         [__('Compliance & Audit Risk'), __('Weak traceability makes it harder to prove what happened, when it happened and who validated it.')],
     ];
 
-    $products = [
-        [
-            'tag' => __('PRODUCT / WATER-01'),
-            'name' => 'AquaWatch AI',
-            'link' => url('/solutions/aquawatch-ai'),
-            'text' => __('Smart water monitoring for boreholes and rural systems, with IoT sensing and AI prediction of failures.'),
-            'features' => [__('IoT monitoring'), __('Failure prediction')],
-            'outcome' => __('Reduce downtime, improve maintenance planning and protect access to water.'),
-        ],
-        [
-            'tag' => __('PRODUCT / WASTE-02'),
-            'name' => 'WastePay',
-            'link' => url('/solutions/wastepay'),
-            'text' => __('Smart waste management with QR tracking, verified collection and incentives for recycling.'),
-            'features' => [__('QR traceability'), __('Recycling incentives')],
-            'outcome' => __('Improve collection transparency and increase circular economy participation.'),
-        ],
-        [
-            'tag' => __('PRODUCT / SERVICE-03'),
-            'name' => 'Flexicare',
-            'link' => url('/solutions/flexicare'),
-            'text' => __('Trusted household services platform for childcare, domestic support and care professionals.'),
-            'features' => [__('Professional profiles'), __('Trust mechanisms')],
-            'outcome' => __('Create safer connections between households and qualified professionals.'),
-        ],
-        [
-            'tag' => __('PRODUCT / PERFORMANCE-04'),
-            'name' => 'Perfomia',
-            'link' => url('/solutions/performia'),
-            'text' => __('Performance and workforce execution platform for task delegation, attendance, KPIs and staff evaluation.'),
-            'features' => [__('KPI dashboards'), __('Staff evaluation')],
-            'outcome' => __('Give managers clearer execution visibility and faster performance decisions.'),
-        ],
+    $reasons = [
+        [__('Engineering Excellence'), __('We build systems around your operating model, data needs and security requirements.')],
+        [__('Secure & Scalable Infrastructure'), __('Our platforms are designed to scale across teams, regions and public-private operations.')],
+        [__('Built for African Realities'), __('We account for field constraints, connectivity gaps, distributed teams and local adoption patterns.')],
+        [__('Partnership & Support'), __('From assessment to deployment and optimization, we stay focused on measurable operational value.')],
+    ];
+
+    $steps = [
+        [__('Strategic Assessment'), __('We analyze your operational model and identify the highest-impact data or infrastructure workflow.')],
+        [__('Solution Architecture'), __('We define the system architecture, data flows, dashboards and governance requirements.')],
+        [__('Engineering & Validation'), __('We build, test and validate the platform with the teams who will use it every day.')],
+        [__('Deployment & Optimization'), __('We support launch, adoption and ongoing improvements so the system creates measurable value.')],
+    ];
+
+    $outcomes = [
+        [__('Automated Decision-Making'), __('Critical workflows move from manual follow-up to structured decision systems.')],
+        [__('Lower Operational Errors'), __('Validation, traceability and dashboards reduce inconsistent reporting and duplicated work.')],
+        [__('Unified Intelligence'), __('Information flows across teams, sites and stakeholders through one trusted operational layer.')],
+        [__('Executive Visibility'), __('Leadership sees infrastructure, service and territory performance in real time.')],
+        [__('Sustainable Productivity'), __('Teams recover time lost to manual checks and focus on higher-value execution.')],
     ];
 @endphp
 
@@ -79,136 +82,105 @@
 @include('partials.v2.header')
 
 <main class="dx-home">
-    <section class="hero">
-        <div class="dx-blueprint"></div>
+    <section class="home-hero">
         <div class="dx-container hero-grid">
-            <div class="hero-content dx-reveal">
-                <div class="dx-eyebrow">{{ __('Digital infrastructure') }} &middot; {{ __('Africa') }}</div>
+            <div class="hero-copy dx-reveal">
+                <div class="home-eyebrow">{{ __('Digital infrastructure') }} <span>&middot;</span> {{ __('Africa') }}</div>
                 <h1>{{ __('AI-powered digital infrastructure for African operations') }}</h1>
-                <p class="hero-subtitle">
-                    {{ __('DigiTexia designs and deploys intelligent systems that help governments, NGOs and enterprises monitor infrastructure, structure data and make faster operational decisions.') }}
-                </p>
-                <div class="hero-meta">
+                <p class="hero-lead">{{ __('DigiTexia designs and deploys intelligent systems that help governments, NGOs and enterprises monitor infrastructure, structure data and make faster operational decisions.') }}</p>
+
+                <div class="hero-actions">
+                    <a href="{{ url('/contact-us') }}" class="dx-btn dx-btn-primary">{{ __('Schedule a Consultation') }}</a>
+                    <a href="#solutions" class="dx-btn dx-btn-secondary">{{ __('Explore Our Solutions') }}</a>
+                </div>
+
+                <div class="hero-signals" aria-label="{{ __('Infrastructure intelligence') }}">
                     <span>{{ __('AI and IoT systems') }}</span>
                     <span>{{ __('Secure data infrastructure') }}</span>
                     <span>{{ __('Real-time analytics') }}</span>
                 </div>
-                <div class="hero-cta">
-                    <a href="#cta-final" class="dx-btn dx-btn-primary">{{ __('Schedule a Consultation') }} <span class="dx-btn-arrow">&rarr;</span></a>
-                    <a href="#solutions" class="dx-btn dx-btn-secondary">{{ __('Explore Our Solutions') }}</a>
-                </div>
             </div>
 
             <div class="hero-visual dx-reveal">
-                <div class="console">
-                    <div class="console-top">
-                        <span class="console-title">{{ __('DIGITEXIA') }} &middot; {{ __('INFRASTRUCTURE CONSOLE') }}</span>
-                        <span class="console-status"><span class="dot-live"></span>{{ __('LIVE SIGNALS') }}</span>
-                    </div>
-                    <div class="console-tabs">
-                        <span class="active">{{ __('Water') }}</span>
-                        <span>{{ __('Waste') }}</span>
-                        <span>{{ __('Carbon') }}</span>
-                        <span>{{ __('Cities') }}</span>
-                        <span>{{ __('Reports') }}</span>
-                    </div>
-                    <div class="console-metrics">
-                        <div class="metric">
-                            <div class="metric-value" data-count="2847">0</div>
-                            <div class="metric-label">{{ __('Field signals processed') }}</div>
-                            <div class="metric-change">&uarr; 18.2%</div>
-                        </div>
-                        <div class="metric">
-                            <div class="metric-value" data-count="94" data-suffix="%">0</div>
-                            <div class="metric-label">{{ __('Data reliability') }}</div>
-                            <div class="metric-change">&uarr; 6.4%</div>
-                        </div>
-                        <div class="metric">
-                            <div class="metric-value" data-count="0.3" data-suffix="%" data-decimals="1">0</div>
-                            <div class="metric-label">{{ __('Manual error rate') }}</div>
-                            <div class="metric-change down">&darr; 91%</div>
-                        </div>
-                        <div class="metric">
-                            <div class="metric-value" data-count="312">0</div>
-                            <div class="metric-label">{{ __('Connected assets') }}</div>
-                            <div class="metric-change">&uarr; 24%</div>
-                        </div>
-                    </div>
-                    <div class="console-footer">
-                        <span>{{ __('Infrastructure intelligence') }} &middot; {{ __('last 12 weeks') }}</span>
-                        <svg class="spark" width="90" height="26" viewBox="0 0 90 26" fill="none" aria-hidden="true">
-                            <polyline points="0,20 12,17 24,19 36,10 48,13 60,6 72,9 90,2" stroke="#39D6B4" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
+                <figure class="hero-image-frame">
+                    <img src="{{ asset('images/hero-home.png') }}" alt="{{ __('AI-powered digital infrastructure for African operations') }}" width="1563" height="1006">
+                </figure>
+
+                <div class="hero-console" aria-label="{{ __('Infrastructure intelligence') }}">
+                    <span class="console-caption">{{ __('Infrastructure intelligence') }} &middot; {{ __('last 12 weeks') }}</span>
+                    <div><span>{{ __('Data reliability') }}</span><strong>99.98%</strong></div>
+                    <div><span>{{ __('Manual error rate') }}</span><strong>&minus;91%</strong></div>
+                    <div><span>{{ __('Connected assets') }}</span><strong>+24%</strong></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="ticker-wrap">
-        <div class="ticker-track">
-            <span>AquaWatch AI <b>{{ __('monitoring') }}</b></span>
-            <span>WastePay <b>{{ __('traceability') }}</b></span>
-            <span>Flexicare <b>{{ __('services') }}</b></span>
-            <span>Perfomia <b>{{ __('performance') }}</b></span>
-            <span>{{ __('Built for African operations') }} <b>99.98%</b></span>
-            <span>AquaWatch AI <b>{{ __('monitoring') }}</b></span>
-            <span>WastePay <b>{{ __('traceability') }}</b></span>
-            <span>Flexicare <b>{{ __('services') }}</b></span>
-            <span>Perfomia <b>{{ __('performance') }}</b></span>
-            <span>{{ __('Built for African operations') }} <b>99.98%</b></span>
-        </div>
-    </div>
-
-    <section class="company-intro">
-        <div class="dx-container">
-            <div class="dx-eyebrow dx-eyebrow-center">{{ __('Who we are') }}</div>
-            <h2>{{ __('DigiTexia is a technology company that designs, engineers and deploys AI-powered digital infrastructure for African organizations that need stronger operational intelligence.') }}</h2>
-            <p class="lead">{{ __('We combine field data, automation, cloud systems and decision dashboards to solve real operational challenges in water, waste, climate and territorial governance.') }}</p>
-            <div class="brand-signature">{{ __('Building intelligent infrastructure systems for Africa.') }}</div>
+    <section class="home-intro">
+        <div class="dx-container intro-grid">
+            <figure class="intro-image dx-reveal">
+                <img src="{{ asset('images/hero-team.png') }}" alt="" width="896" height="1200" loading="lazy">
+            </figure>
+            <div class="intro-copy dx-reveal">
+                <div class="home-eyebrow">{{ __('Who we are') }}</div>
+                <h2>{{ __('A technology company that designs, builds and deploys the digital infrastructure of African organizations.') }}</h2>
+                <p>{{ __('We combine field data, automation, cloud systems and decision dashboards to solve real operational challenges in water, waste, climate and territorial governance.') }}</p>
+                <a href="{{ url('/why-us') }}" class="home-text-link">{{ __('Why DigiTexia') }} <span aria-hidden="true">&rarr;</span></a>
+            </div>
         </div>
     </section>
 
-    <section class="dx-section" id="needs">
+    <section class="home-products" id="solutions">
         <div class="dx-container">
-            <div class="dx-section-head dx-reveal">
-                <div class="dx-eyebrow">{{ __('Business needs') }}</div>
-                <h2>{{ __('The challenges we solve') }}</h2>
-                <p class="dx-section-intro">{{ __('From field monitoring to infrastructure governance, we build systems that convert fragmented operations into usable intelligence.') }}</p>
+            <div class="section-heading dx-reveal">
+                <div class="home-eyebrow">{{ __('Solutions') }}</div>
+                <h2>{{ __('Our AI-powered infrastructure products') }}</h2>
+                <p>{{ __('Purpose-built systems for critical African infrastructure workflows. Deploy a product layer or engineer a custom platform.') }}</p>
             </div>
 
-            <div class="cards-grid dx-reveal">
-                @foreach ($needs as $need)
-                    <div class="card">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 2 4 5v6c0 5.2 3.4 8.7 8 10 4.6-1.3 8-4.8 8-10V5l-8-3z"/><path d="M9 12h6M9 15h4"/></svg>
-                        <h3>{{ $need['title'] }}</h3>
-                        <p>{{ $need['text'] }}</p>
-                        <a href="#solutions" class="card-cta">{{ $need['cta'] }} <span aria-hidden="true">&rarr;</span></a>
-                    </div>
+            <div class="product-list">
+                @foreach ($products as $product)
+                    <article class="product-row dx-reveal">
+                        <div class="product-media has-image" aria-label="{{ $product['name'] }}">
+                            <img class="product-media-image" src="{{ asset($product['image']) }}" alt="{{ $product['name'] }}">
+                        </div>
+                        <div class="product-copy">
+                            <p class="product-need">{{ $product['need'] }}</p>
+                            <h3>{{ $product['name'] }}</h3>
+                            <p>{{ $product['text'] }}</p>
+                            <div class="product-outcome">
+                                <strong>{{ __('Business outcome') }}</strong>
+                                <span>{{ $product['outcome'] }}</span>
+                            </div>
+                            <a href="{{ $product['link'] }}" class="home-text-link">{{ __('Learn more') }} <span aria-hidden="true">&rarr;</span></a>
+                        </div>
+                    </article>
                 @endforeach
             </div>
+
+            <a href="{{ url('/solutions') }}" class="dx-btn dx-btn-secondary products-all">{{ __('View all solutions') }}</a>
         </div>
     </section>
 
-    <section class="dx-section dx-section-alt">
+    <section class="home-problem" id="problem">
         <div class="dx-container">
-            <div class="dx-section-head dx-reveal">
-                <div class="dx-eyebrow">{{ __('The problem') }}</div>
+            <div class="section-heading dx-reveal">
+                <div class="home-eyebrow">{{ __('The problem') }}</div>
                 <h2>{{ __('The cost of operational fragmentation') }}</h2>
-                <p class="dx-section-intro">{{ __('When critical systems are not connected, organizations lose visibility, speed and control. Fragmentation compounds across teams, assets and territories.') }}</p>
+                <p>{{ __('When critical systems are not connected, organizations lose visibility, speed and control. Fragmentation compounds across teams, assets and territories.') }}</p>
             </div>
 
-            <div class="problems-grid dx-reveal">
+            <div class="problem-grid dx-reveal">
                 @foreach ($problems as $problem)
-                    <div class="problem-card">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4M12 17h.01"/></svg>
+                    <article class="problem-card">
+                        <span class="problem-index">{{ str_pad((string) $loop->iteration, 2, '0', STR_PAD_LEFT) }}</span>
                         <h3>{{ $problem[0] }}</h3>
                         <p>{{ $problem[1] }}</p>
-                    </div>
+                    </article>
                 @endforeach
             </div>
 
-            <div class="problem-cta dx-reveal">
+            <div class="assessment-panel dx-reveal">
                 <div>
                     <h3>{{ __('Clarity before investment.') }}</h3>
                     <p>{{ __('We assess your operational model, identify the highest-impact challenge and recommend the optimal digital path.') }}</p>
@@ -218,159 +190,98 @@
         </div>
     </section>
 
-    <section class="dx-section" id="solutions">
-        <div class="dx-container">
-            <div class="dx-section-head dx-reveal">
-                <div class="dx-eyebrow">{{ __('Solutions') }}</div>
-                <h2>{{ __('Our AI-powered infrastructure products') }}</h2>
-                <p class="dx-section-intro">{{ __('Purpose-built systems for critical African infrastructure workflows. Deploy a product layer or engineer a custom platform.') }}</p>
-            </div>
-
-            <div class="products-grid dx-reveal">
-                @foreach ($products as $product)
-                    <div class="product-card">
-                        <div class="product-tag">{{ $product['tag'] }}</div>
-                        <h3>{{ $product['name'] }}</h3>
-                        <p>{{ $product['text'] }}</p>
-                        <div class="product-features">
-                            @foreach ($product['features'] as $feature)
-                                <span>{{ $feature }}</span>
-                            @endforeach
-                        </div>
-                        <p class="product-outcome"><strong>{{ __('Business outcome') }}</strong>{{ $product['outcome'] }}</p>
-                        <a href="{{ $product['link'] }}" class="product-link">{{ __('Learn more') }} <span aria-hidden="true">&rarr;</span></a>
-                    </div>
-                @endforeach
-            </div>
-
-            <div class="solutions-cta dx-reveal">
-                <a href="{{ url('/solutions') }}" class="dx-btn dx-btn-secondary">{{ __('View all solutions') }}</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="dx-section dx-section-alt">
-        <div class="dx-container">
-            <div class="dx-section-head dx-reveal">
-                <div class="dx-eyebrow">{{ __('Why DigiTexia') }}</div>
+    <section class="home-why" id="why">
+        <div class="dx-container why-grid">
+            <div class="why-heading dx-reveal">
+                <div class="home-eyebrow">{{ __('Why DigiTexia') }}</div>
                 <h2>{{ __('Why organizations choose DigiTexia') }}</h2>
+                <figure class="why-image">
+                    <img src="{{ asset('images/home-us.png') }}" alt="" width="896" height="1200" loading="lazy">
+                </figure>
             </div>
 
-            <div class="reasons-grid dx-reveal">
-                <div class="reason-card">
-                    <div class="reason-number">01</div>
-                    <h3>{{ __('Engineering Excellence') }}</h3>
-                    <p>{{ __('We build systems around your operating model, data needs and security requirements.') }}</p>
-                </div>
-                <div class="reason-card">
-                    <div class="reason-number">02</div>
-                    <h3>{{ __('Secure & Scalable Infrastructure') }}</h3>
-                    <p>{{ __('Our platforms are designed to scale across teams, regions and public-private operations.') }}</p>
-                </div>
-                <div class="reason-card">
-                    <div class="reason-number">03</div>
-                    <h3>{{ __('Built for African Realities') }}</h3>
-                    <p>{{ __('We account for field constraints, connectivity gaps, distributed teams and local adoption patterns.') }}</p>
-                </div>
-                <div class="reason-card">
-                    <div class="reason-number">04</div>
-                    <h3>{{ __('Partnership & Support') }}</h3>
-                    <p>{{ __('From assessment to deployment and optimization, we stay focused on measurable operational value.') }}</p>
-                </div>
+            <div class="reason-list dx-reveal">
+                @foreach ($reasons as $reason)
+                    <article class="reason-item">
+                        <span>{{ str_pad((string) $loop->iteration, 2, '0', STR_PAD_LEFT) }}</span>
+                        <div>
+                            <h3>{{ $reason[0] }}</h3>
+                            <p>{{ $reason[1] }}</p>
+                        </div>
+                    </article>
+                @endforeach
+                <a href="{{ url('/why-us') }}" class="home-text-link light-link">{{ __('Why DigiTexia') }} <span aria-hidden="true">&rarr;</span></a>
             </div>
         </div>
     </section>
 
-    <section class="dx-section statistics">
+    <section class="home-evidence">
         <div class="dx-container">
-            <div class="dx-section-head center dx-reveal">
-                <div class="dx-eyebrow dx-eyebrow-center">{{ __('Track record') }}</div>
+            <div class="section-heading compact dx-reveal">
+                <div class="home-eyebrow">{{ __('Track record') }}</div>
                 <h2>{{ __('DigiTexia at a glance') }}</h2>
             </div>
-            <div class="stats-grid dx-reveal">
-                <div class="stat-card">
-                    <div class="stat-number" data-count="4">0</div>
-                    <div class="stat-label">{{ __('Core infrastructure product lines') }}</div>
-                    <div class="stat-descriptor">{{ __('Focused') }}</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" data-count="5" data-suffix="+">0</div>
-                    <div class="stat-label">{{ __('Years of African technology leadership') }}</div>
-                    <div class="stat-descriptor">{{ __('Regional') }}</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" data-count="100" data-suffix="%">0</div>
-                    <div class="stat-label">{{ __('Enterprise-grade delivery mindset') }}</div>
-                    <div class="stat-descriptor">{{ __('Rigorous') }}</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" data-count="0">0</div>
-                    <div class="stat-label">{{ __('Tolerance for unclear data') }}</div>
-                    <div class="stat-descriptor">{{ __('Always') }}</div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="dx-section" id="workflow">
-        <div class="dx-container">
-            <div class="dx-section-head dx-reveal">
-                <div class="dx-eyebrow">{{ __('Methodology') }}</div>
+            <div class="stat-strip dx-reveal">
+                <div><strong>4</strong><span>{{ __('Core infrastructure product lines') }}</span></div>
+                <div><strong>5+</strong><span>{{ __('Years of African technology leadership') }}</span></div>
+                <div><strong>100%</strong><span>{{ __('Enterprise-grade delivery mindset') }}</span></div>
+                <div><strong>0</strong><span>{{ __('Tolerance for unclear data') }}</span></div>
+            </div>
+
+            <div class="process-heading dx-reveal">
+                <div class="home-eyebrow">{{ __('Methodology') }}</div>
                 <h2>{{ __('Our strategic delivery process') }}</h2>
             </div>
 
-            <div class="workflow-steps dx-reveal">
-                <div class="step">
-                    <div class="step-number">01</div>
-                    <h3>{{ __('Strategic Assessment') }}</h3>
-                    <p>{{ __('We analyze your operational model and identify the highest-impact data or infrastructure workflow.') }}</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">02</div>
-                    <h3>{{ __('Solution Architecture') }}</h3>
-                    <p>{{ __('We define the system architecture, data flows, dashboards and governance requirements.') }}</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">03</div>
-                    <h3>{{ __('Engineering & Validation') }}</h3>
-                    <p>{{ __('We build, test and validate the platform with the teams who will use it every day.') }}</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">04</div>
-                    <h3>{{ __('Deployment & Optimization') }}</h3>
-                    <p>{{ __('We support launch, adoption and ongoing improvements so the system creates measurable value.') }}</p>
-                </div>
+            <div class="process-grid dx-reveal">
+                @foreach ($steps as $step)
+                    <article class="process-step">
+                        <span>{{ str_pad((string) $loop->iteration, 2, '0', STR_PAD_LEFT) }}</span>
+                        <h3>{{ $step[0] }}</h3>
+                        <p>{{ $step[1] }}</p>
+                    </article>
+                @endforeach
             </div>
         </div>
     </section>
 
-    <section class="dx-section dx-section-alt">
-        <div class="dx-container">
-            <div class="dx-section-head dx-reveal">
-                <div class="dx-eyebrow">{{ __('Outcomes') }}</div>
+    <section class="home-outcomes">
+        <div class="dx-container outcomes-grid">
+            <div class="outcomes-intro dx-reveal">
+                <div class="home-eyebrow">{{ __('Outcomes') }}</div>
                 <h2>{{ __('Measurable impact on your operations') }}</h2>
-                <p class="dx-section-intro">{{ __('The goal is stronger visibility, fewer errors, faster decisions and infrastructure systems that can scale.') }}</p>
+                <p>{{ __('The goal is stronger visibility, fewer errors, faster decisions and infrastructure systems that can scale.') }}</p>
+                <div class="outcome-visual">
+                    <img src="{{ asset('images/home-operations.png') }}" alt="{{ __('Operational visibility') }}">
+                </div>
             </div>
 
-            <div class="impact-grid dx-reveal">
-                <div class="impact-card"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg><h3>{{ __('Automated Decision-Making') }}</h3><p>{{ __('Critical workflows move from manual follow-up to structured decision systems.') }}</p></div>
-                <div class="impact-card"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 2 4 5v6c0 5.2 3.4 8.7 8 10 4.6-1.3 8-4.8 8-10V5l-8-3z"/><path d="m9 12 2 2 4-4"/></svg><h3>{{ __('Lower Operational Errors') }}</h3><p>{{ __('Validation, traceability and dashboards reduce inconsistent reporting and duplicated work.') }}</p></div>
-                <div class="impact-card"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="5" cy="12" r="2.4"/><circle cx="19" cy="6" r="2.4"/><circle cx="19" cy="18" r="2.4"/><path d="M7.2 11 17 6.8M7.2 13l9.8 4.2"/></svg><h3>{{ __('Unified Intelligence') }}</h3><p>{{ __('Information flows across teams, sites and stakeholders through one trusted operational layer.') }}</p></div>
-                <div class="impact-card"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg><h3>{{ __('Executive Visibility') }}</h3><p>{{ __('Leadership sees infrastructure, service and territory performance in real time.') }}</p></div>
-                <div class="impact-card"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 19V10M11 19V5M18 19v-7"/><path d="M2 19h20"/></svg><h3>{{ __('Sustainable Productivity') }}</h3><p>{{ __('Teams recover time lost to manual checks and focus on higher-value execution.') }}</p></div>
+            <div class="outcome-list dx-reveal">
+                @foreach ($outcomes as $outcome)
+                    <article>
+                        <span>{{ str_pad((string) $loop->iteration, 2, '0', STR_PAD_LEFT) }}</span>
+                        <div><h3>{{ $outcome[0] }}</h3><p>{{ $outcome[1] }}</p></div>
+                    </article>
+                @endforeach
             </div>
         </div>
     </section>
 
-    <section class="dx-final-cta" id="cta-final">
-        <div class="dx-container dx-reveal">
-            <div class="dx-eyebrow dx-eyebrow-center">{{ __('Get started') }}</div>
-            <h2>{{ __('Build the infrastructure intelligence your organization needs.') }}</h2>
-            <p class="dx-cta-subheading">{{ __('Let us discuss how AI-powered digital infrastructure can drive measurable impact for your organization.') }}</p>
-            <p class="dx-cta-description">{{ __('In a strategic consultation, we assess your challenges, recommend the right product or platform and define a practical implementation roadmap.') }}</p>
-            <div class="dx-cta-buttons">
-                <a href="tel:+237650945280" class="dx-btn dx-btn-primary">{{ __('Call (+237) 650 945 280') }}</a>
-                <a href="{{ url('/contact-us') }}" class="dx-btn dx-btn-secondary">{{ __('Schedule a Consultation') }}</a>
+    <section class="home-cta" id="cta-final">
+        <div class="dx-container cta-grid dx-reveal">
+            <div>
+                <div class="home-eyebrow">{{ __('Get started') }}</div>
+                <h2>{{ __('Build the infrastructure intelligence your organization needs.') }}</h2>
+                <p>{{ __('In a strategic consultation, we assess your challenges, recommend the right product or platform and define a practical implementation roadmap.') }}</p>
+                <div class="cta-actions">
+                    <a href="{{ url('/contact-us') }}" class="dx-btn cta-primary">{{ __('Schedule a Consultation') }}</a>
+                    <a href="tel:+237650945280" class="dx-btn cta-secondary">{{ __('Call (+237) 650 945 280') }}</a>
+                </div>
+            </div>
+            <div class="cta-note">
+                <span>{{ __('Infrastructure intelligence') }}</span>
+                <strong>{{ __('Building intelligent infrastructure systems for Africa.') }}</strong>
             </div>
         </div>
     </section>

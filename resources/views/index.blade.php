@@ -167,7 +167,7 @@
         <link rel="stylesheet" href="{{ asset('css/theme-fixes.css') }}?v={{ filemtime(public_path('css/theme-fixes.css')) }}">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('css/digitexia-v2.css') }}?v={{ filemtime(public_path('css/digitexia-v2.css')) }}">
     @else
         @stack('styles')
@@ -176,6 +176,11 @@
     @hasSection('digitexia_v2')
         @stack('styles')
         <style>
+            .dx-page,
+            .dx-page :where(h1, h2, h3, h4, h5, h6, p, a, button, input, textarea, select, label, span, small, dt, dd, li) {
+                font-family: "Bricolage Grotesque", sans-serif !important;
+            }
+
             .dx-page :is(
                 .dx-btn-primary,
                 .dx-blog .featured-badge,

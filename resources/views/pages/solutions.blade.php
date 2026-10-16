@@ -91,6 +91,7 @@
         [
             'tag' => __('PRODUCT / MEDTRACE'),
             'name' => 'MedTrace',
+            'image' => 'images/solutions/medtrace-solutions.png',
             'positioning' => __('Secure healthcare traceability with QR-based access to critical patient information.'),
             'link' => url('/solutions/medtrace'),
             'rows' => [
@@ -102,6 +103,7 @@
         [
             'tag' => __('PRODUCT / AQUAWATCH AI'),
             'name' => 'AquaWatch AI',
+            'image' => 'images/solutions/aquawatch-solutions.png',
             'positioning' => __('IoT and AI-powered monitoring for water and hydraulic infrastructure.'),
             'link' => url('/solutions/aquawatch-ai'),
             'rows' => [
@@ -113,6 +115,7 @@
         [
             'tag' => __('PRODUCT / WASTEPAY'),
             'name' => 'WastePay',
+            'image' => 'images/solutions/wastpay-solutions.png',
             'positioning' => __('Smart waste management with QR tracking and recycling incentives.'),
             'link' => url('/solutions/wastepay'),
             'rows' => [
@@ -124,6 +127,7 @@
         [
             'tag' => __('PRODUCT / FLEXICARE'),
             'name' => 'Flexicare',
+            'image' => 'images/solutions/flexicare-solutions.png',
             'positioning' => __('Trusted household services platform connecting families with qualified care and domestic professionals.'),
             'link' => url('/solutions/flexicare'),
             'rows' => [
@@ -135,6 +139,7 @@
         [
             'tag' => __('PRODUCT / PERFORMIA'),
             'name' => 'Perfomia',
+            'image' => 'images/solutions/perfomia-solutions.png',
             'positioning' => __('Performance and workforce execution platform for task delegation, attendance, KPIs and staff evaluation.'),
             'link' => url('/solutions/performia'),
             'rows' => [
@@ -172,30 +177,43 @@
 <main class="dx-solutions">
     <section class="page-hero">
         <div class="dx-blueprint"></div>
-        <div class="dx-container dx-reveal">
-            <div class="dx-eyebrow">{{ __('Solutions') }}</div>
-            <h1>{{ __('Intelligent digital solutions, built around how your organization actually operates.') }}</h1>
-            <p class="page-hero-subtitle">
-                {{ __('DigiTexia designs, engineers and deploys the platforms that help organizations modernize operations, improve efficiency and accelerate growth: infrastructure built to move your business forward, not software for its own sake.') }}
-            </p>
-            <div class="page-hero-cta">
-                <a href="#cta-final" class="dx-btn dx-btn-primary">
-                    {{ __('Schedule a Consultation') }}
-                    <span class="dx-btn-arrow" aria-hidden="true">&rarr;</span>
-                </a>
-                <a href="#flagship" class="dx-btn dx-btn-secondary">{{ __('View Flagship Products') }}</a>
+        <div class="dx-container solutions-hero-grid dx-reveal">
+            <div class="solutions-hero-copy">
+                <div class="dx-eyebrow">{{ __('Solutions') }}</div>
+                <h1>{{ __('Intelligent digital solutions, built around how your organization actually operates.') }}</h1>
+                <p class="page-hero-subtitle">
+                    {{ __('DigiTexia designs, engineers and deploys the platforms that help organizations modernize operations, improve efficiency and accelerate growth: infrastructure built to move your business forward, not software for its own sake.') }}
+                </p>
+                <div class="page-hero-cta">
+                    <a href="#cta-final" class="dx-btn dx-btn-primary">
+                        {{ __('Schedule a Consultation') }}
+                        <span class="dx-btn-arrow" aria-hidden="true">&rarr;</span>
+                    </a>
+                    <a href="#flagship" class="dx-btn dx-btn-secondary">{{ __('View Flagship Products') }}</a>
+                </div>
+            </div>
+
+            <div class="solutions-hero-visual" aria-label="{{ __('Solutions context image') }}">
+                <div class="solutions-image-placeholder solutions-image-hero has-image">
+                    <img src="{{ asset('images/solutions/hero-solutions.png') }}" alt="{{ __('Engineering team and client around a platform model') }}">
+                </div>
             </div>
         </div>
     </section>
 
     <section class="company-intro">
-        <div class="dx-container dx-reveal">
-            <div class="dx-eyebrow">{{ __('Our approach') }}</div>
-            <h2>{{ __('Every solution starts with a real operational need, never a template.') }}</h2>
-            <p class="lead">
-                {{ __('We combine technology, engineering and innovation to design digital ecosystems that scale with your organization. Each platform is shaped around how your teams actually work today, and where your operations need to go next.') }}
-            </p>
-            <div class="brand-signature">{{ __('Building AI-powered digital infrastructure for Africa.') }}</div>
+        <div class="dx-container solutions-intro-grid dx-reveal">
+            <div class="solutions-image-placeholder solutions-image-intro has-image" aria-label="{{ __('Workshop image') }}">
+                <img src="{{ asset('images/solutions/image-1-solutions.png') }}" alt="{{ __('Client and engineering team shaping a digital workflow') }}">
+            </div>
+            <div>
+                <div class="dx-eyebrow">{{ __('Our approach') }}</div>
+                <h2>{{ __('Every solution starts with a real operational need, never a template.') }}</h2>
+                <p class="lead">
+                    {{ __('We combine technology, engineering and innovation to design digital ecosystems that scale with your organization. Each platform is shaped around how your teams actually work today, and where your operations need to go next.') }}
+                </p>
+                <div class="brand-signature">{{ __('Building AI-powered digital infrastructure for Africa.') }}</div>
+            </div>
         </div>
     </section>
 
@@ -228,9 +246,9 @@
         </div>
     </section>
 
-    <section class="dx-section dx-section-alt">
+    <section class="dx-section dx-section-alt solutions-impact">
         <div class="dx-container">
-            <div class="dx-section-head center dx-reveal">
+            <div class="dx-section-head dx-reveal">
                 <div class="dx-eyebrow">{{ __('Business impact') }}</div>
                 <h2>{{ __('Measurable outcomes across every engagement') }}</h2>
                 <p class="dx-section-intro">
@@ -250,7 +268,7 @@
         </div>
     </section>
 
-    <section class="dx-section" id="flagship">
+    <section class="dx-section solutions-products" id="flagship">
         <div class="dx-container">
             <div class="dx-section-head dx-reveal">
                 <div class="dx-eyebrow">{{ __('Flagship products') }}</div>
@@ -263,19 +281,29 @@
             <div class="flagship-grid dx-reveal">
                 @foreach ($products as $product)
                     <article class="product-card">
-                        <div class="product-tag">{{ $product['tag'] }}</div>
-                        <h3>{{ $product['name'] }}</h3>
-                        <p class="positioning">{{ $product['positioning'] }}</p>
-                        <div class="field-list">
-                            @foreach ($product['rows'] as $row)
-                                <div class="field-row">
-                                    <span class="field-label">{{ $row[0] }}</span>
-                                    <span>{{ $row[1] }}</span>
-                                </div>
-                            @endforeach
+                        <div class="product-visual{{ isset($product['image']) ? ' has-image' : '' }}" aria-label="{{ $product['name'] }}">
+                            @if (isset($product['image']))
+                                <img src="{{ asset($product['image']) }}" alt="{{ $product['name'] }}">
+                            @else
+                                <span>{{ __('Product image placeholder') }}</span>
+                                <strong>1000 x 750</strong>
+                            @endif
                         </div>
-                        <div class="product-link">
-                            <a href="{{ $product['link'] }}" class="dx-card-link">{{ __('Learn more') }} <span aria-hidden="true">&rarr;</span></a>
+                        <div class="product-card-copy">
+                            <div class="product-tag">{{ $product['tag'] }}</div>
+                            <h3>{{ $product['name'] }}</h3>
+                            <p class="positioning">{{ $product['positioning'] }}</p>
+                            <div class="field-list">
+                                @foreach ($product['rows'] as $row)
+                                    <div class="field-row">
+                                        <span class="field-label">{{ $row[0] }}</span>
+                                        <span>{{ $row[1] }}</span>
+                                    </div>
+                                @endforeach
+                            </div>
+                            <div class="product-link">
+                                <a href="{{ $product['link'] }}" class="dx-card-link">{{ __('Learn more') }} <span aria-hidden="true">&rarr;</span></a>
+                            </div>
                         </div>
                     </article>
                 @endforeach
@@ -293,6 +321,10 @@
                 </p>
             </div>
 
+            <div class="solutions-wide-placeholder dx-reveal has-image" aria-label="{{ __('Sector landscape image') }}">
+                <img src="{{ asset('images/solutions/panorama-solutions.png') }}" alt="{{ __('Sectors and infrastructure in one connected view') }}">
+            </div>
+
             <div class="industries-grid dx-reveal">
                 @foreach ($industries as $industry)
                     <article class="industry-card">
@@ -304,7 +336,7 @@
         </div>
     </section>
 
-    <section class="dx-section">
+    <section class="dx-section solutions-partner">
         <div class="dx-container">
             <div class="dx-section-head dx-reveal">
                 <div class="dx-eyebrow">{{ __('Why DigiTexia') }}</div>

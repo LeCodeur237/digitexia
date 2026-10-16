@@ -1,13 +1,26 @@
 <section class="dx-newsletter">
     <div class="dx-container">
-        <h3>{{ __('Stay informed with the latest digital infrastructure insights.') }}</h3>
-        <p>{{ __('Subscribe for practical perspectives on AI, data systems, infrastructure monitoring and digital transformation across Africa.') }}</p>
+        <div class="dx-newsletter-inner">
+            <div class="dx-newsletter-copy">
+                <div class="dx-eyebrow">{{ __('Newsletter') }}</div>
+                <h3>{{ __('Stay informed with the latest digital infrastructure insights.') }}</h3>
+                <p>{{ __('Subscribe for practical perspectives on AI, data systems, infrastructure monitoring and digital transformation across Africa.') }}</p>
+                <small>{{ __('Footer Newsletter Note') }}</small>
+            </div>
 
-        <form class="dx-newsletter-form" method="post" action="{{ route('newsletter.subscribe') }}">
-            @csrf
-            <input type="email" name="newsletter_email" value="{{ old('newsletter_email') }}" placeholder="{{ __('Your email address') }}" aria-label="{{ __('Your email address') }}" required>
-            <button type="submit" class="dx-btn dx-btn-primary">{{ __('Subscribe') }}</button>
-        </form>
+            <form class="dx-newsletter-form" method="post" action="{{ route('newsletter.subscribe') }}">
+                @csrf
+                <label class="sr-only" for="newsletter-email">{{ __('Your email address') }}</label>
+                <div class="dx-newsletter-field">
+                    <i class="ti ti-mail" aria-hidden="true"></i>
+                    <input id="newsletter-email" type="email" name="newsletter_email" value="{{ old('newsletter_email') }}" placeholder="{{ __('Your email address') }}" aria-label="{{ __('Your email address') }}" autocomplete="email" required>
+                </div>
+                <button type="submit" class="dx-btn dx-btn-primary">
+                    <span>{{ __('Subscribe') }}</span>
+                    <i class="ti ti-arrow-up-right" aria-hidden="true"></i>
+                </button>
+            </form>
+        </div>
     </div>
 </section>
 
