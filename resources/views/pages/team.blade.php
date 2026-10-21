@@ -20,9 +20,9 @@
             'image_size' => '900 x 1100',
         ],
         [
-            'name' => 'Lucien',
+            'name' => 'Eraste Lucien DZOU',
             'role' => __('Chief Technology Officer & Co-Founder'),
-            'initials' => 'LU',
+            'initials' => 'ED',
             'positioning' => __('Co-founder and CTO, leading technology and engineering.'),
             'bio' => __('Lucien co-founded DigiTexia and leads its technology and engineering direction as CTO. His work spans full-stack development, AI-powered product design, IoT and digital transformation.'),
             'expertise' => [__('Software Engineering'), __('Artificial Intelligence'), __('IoT'), __('Product Development')],

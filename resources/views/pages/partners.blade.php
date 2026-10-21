@@ -188,10 +188,9 @@
                     </article>
                 @endforeach
             </div>
-            <div class="partner-image-placeholder partner-wide-visual dx-reveal" role="img" aria-label="{{ __('Panoramic image placeholder') }}">
-                <span>{{ __('Panoramic image placeholder') }}</span>
-                <strong>1600 x 500</strong>
-            </div>
+            <figure class="partner-photo partner-wide-visual dx-reveal">
+                <img src="{{ asset('partners/partner-last.png') }}" alt="{{ __('Partners working together on a digital project') }}" loading="lazy">
+            </figure>
         </div>
     </section>
 
