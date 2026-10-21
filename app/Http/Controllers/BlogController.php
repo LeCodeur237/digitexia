@@ -29,7 +29,14 @@ class BlogController extends Controller
 
         $post->load(['author', 'editor', 'comments.user']);
 
-        return view('pages.blog-show', compact('post'));
+        $relatedPost = BlogPost::query()
+            ->published()
+            ->where('visibility', 'public')
+            ->whereKeyNot($post->getKey())
+            ->latest('published_at')
+            ->first();
+
+        return view('pages.blog-show', compact('post', 'relatedPost'));
     }
 
     public function adminIndex()

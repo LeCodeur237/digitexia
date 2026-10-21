@@ -1,5 +1,6 @@
 .mt-page .fx-hero-media { margin: 0; }
 .mt-page .fx-status::before { background: #79adff; }
+.mt-page .fx-steps p { margin-top: 8px; color: var(--fx-muted); font-size: 13px; }
 .mt-page .fx-hero-media img { object-position: center; }
 .mt-image-caption {
   position: absolute;

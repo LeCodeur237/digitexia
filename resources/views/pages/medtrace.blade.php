@@ -8,6 +8,16 @@
 <link rel="stylesheet" href="{{ asset('css/medtrace-v2.css') }}?v={{ filemtime(public_path('css/medtrace-v2.css')) }}">
 @endpush
 
+@php
+    $workflowDescriptions = [
+        'The patient is registered in the system.',
+        'A structured identity is linked to the record.',
+        'The provider identity and credentials are confirmed.',
+        'Access to information remains controlled.',
+        'Audit trails are created as part of normal use.',
+    ];
+@endphp
+
 @section('fullpage')
 @include('partials.v2.header')
 
@@ -98,7 +108,7 @@
             <div class="fx-section-head"><div class="dx-eyebrow">{{ __('How it works') }}</div><h2>{{ __('From patient registration to compliance') }}</h2></div>
             <ol class="fx-steps">
                 @foreach ($solution['workflow'] as $step)
-                    <li><span>{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}</span><h3>{{ __($step) }}</h3></li>
+                    <li><span>{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}</span><h3>{{ __($step) }}</h3><p>{{ __($workflowDescriptions[$loop->index]) }}</p></li>
                 @endforeach
             </ol>
         </div>
