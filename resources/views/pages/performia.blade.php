@@ -9,7 +9,7 @@
 
 @php
     $demoUrl = url('/contact-us');
-    $loginUrl = '#performia-login-placeholder';
+    $loginUrl = 'https://perfomia.digitexia.org';
 
     $assets = [
         'logo' => 'images/performia/perfomia-logo.png',
@@ -231,9 +231,6 @@
             <div class="perfomia-actions">
                 <a href="{{ $demoUrl }}" class="dx-btn dx-btn-primary">{{ __('Request a demonstration') }}</a>
                 <a href="{{ $loginUrl }}" class="dx-btn dx-btn-secondary">{{ __('Access the platform') }}</a>
-            </div>
-            <div id="performia-login-placeholder" class="perfomia-contact-note">
-                {{ __('Commercial contact and platform access can be connected to the final Perfomia environment.') }}
             </div>
             </div>
             <div class="perfomia-cta-visual" aria-hidden="true">
