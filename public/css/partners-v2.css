@@ -268,30 +268,33 @@ html.light-mode .dx-partners .partner-grow-panel { border: 0; background: #004aa
   color: #fff;
   text-align: left;
 }
-.dx-partners .partner-final-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(320px, .9fr); gap: 56px; align-items: center; }
-.dx-partners .partner-final-copy { min-width: 0; }
-.dx-partners .partner-final-copy :is(h2, p, .dx-eyebrow) { color: #fff !important; -webkit-text-fill-color: #fff !important; }
-.dx-partners .partner-final-copy .dx-eyebrow { justify-content: flex-start; }
-.dx-partners .partner-final-copy h2 { max-width: 20ch; margin: 0 0 16px; font-size: clamp(2rem, 3.4vw, 2.8rem); line-height: 1.12; }
-.dx-partners .partner-final-copy .dx-cta-subheading,
-.dx-partners .partner-final-copy .dx-cta-description { max-width: 58ch; margin: 0 0 14px; font-size: .98rem; line-height: 1.65; }
-.dx-partners .partner-final-copy .dx-cta-description { margin-bottom: 26px; color: #dce8f8 !important; }
-.dx-partners .partner-final-copy .dx-cta-buttons { justify-content: flex-start; }
-.dx-partners .partner-final-copy .dx-btn-primary,
-.dx-partners .partner-newsletter .dx-btn-primary { background: var(--partner-green); color: var(--partner-ink) !important; }
-.dx-partners .partner-final-copy .dx-btn-secondary { border-color: rgba(255,255,255,.65); color: #fff !important; }
-.dx-partners .partner-newsletter { padding: 28px; border: 1px solid rgba(255,255,255,.22); border-radius: 8px; background: rgba(13,27,42,.24); }
-.dx-partners .partner-newsletter h3 { margin: 0 0 10px; color: #fff; font-size: 1.18rem; line-height: 1.3; }
-.dx-partners .partner-newsletter p { margin: 0; color: #dce8f8; font-size: .93rem; line-height: 1.6; }
-.dx-partners .partner-newsletter form { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; margin-top: 16px; }
-.dx-partners .partner-newsletter input { min-width: 0; padding: 12px 14px; border: 1px solid #d3deeb; border-radius: 6px; background: #fff; color: var(--partner-ink); font: inherit; }
+.dx-partners .partner-final-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, .72fr); gap: 82px; align-items: center; text-align: left; }
+.dx-partners .partner-cta-copy { min-width: 0; text-align: left; }
+.dx-partners .partner-cta-copy :is(h2, p, .dx-eyebrow) { color: #fff !important; -webkit-text-fill-color: #fff !important; }
+.dx-partners .partner-cta-copy .dx-eyebrow { justify-content: flex-start; }
+.dx-partners .partner-cta-copy h2 { max-width: 18ch; margin: 0 0 20px; font-size: clamp(2rem, 3vw, 2.8rem); line-height: 1.12; }
+.dx-partners .partner-cta-copy .dx-cta-subheading { max-width: 700px; margin: 0 0 12px; font-size: 1.06rem; line-height: 1.65; }
+.dx-partners .partner-cta-copy .dx-cta-description { max-width: 700px; margin: 0 0 34px; color: #dce8f8 !important; font-size: .95rem; line-height: 1.7; }
+.dx-partners .partner-cta-copy .dx-cta-buttons { justify-content: flex-start; }
+.dx-partners .partner-cta-copy .dx-btn-primary { background: var(--partner-green); color: #fff !important; }
+.dx-partners .partner-cta-copy .dx-btn-secondary { border-color: rgba(255,255,255,.65); color: #fff !important; }
+.dx-partners .partner-cta-visual { position: relative; min-width: 0; min-height: 380px; aspect-ratio: 10 / 8; overflow: hidden; border: 1px solid rgba(255,255,255,.22); border-radius: 12px; background: rgba(7,17,31,.28); }
+.dx-partners .partner-cta-grid-lines { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.1) 1px,transparent 1px); background-size: 32px 32px; }
+.dx-partners .partner-cta-panel { position: absolute; inset: 18%; z-index: 1; display: flex; flex-direction: column; justify-content: center; padding: 32px; border: 1px solid rgba(255,255,255,.16); border-radius: 8px; background: var(--partner-blue); color: #fff; box-shadow: 0 14px 30px rgba(0,0,0,.18); text-align: center; }
+.dx-partners .partner-cta-panel :is(strong, p) { color: #fff !important; -webkit-text-fill-color: #fff !important; }
+.dx-partners .partner-cta-panel strong { font-size: 1.5rem; }
+.dx-partners .partner-cta-panel p { margin: 8px 0 0; font-size: 1rem; line-height: 1.6; }
 
 @media (max-width: 900px) {
   .dx-partners .partner-hero-grid,
   .dx-partners .partner-intro-grid { gap: 38px; }
   .dx-partners .partner-hero-grid { grid-template-columns: minmax(0, 1fr) minmax(300px, .86fr); }
   .dx-partners .partner-value-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .dx-partners .partner-final-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+}
+
+@media (max-width: 1080px) {
+  .dx-partners .partner-final-grid { grid-template-columns: 1fr; gap: 44px; }
+  .dx-partners .partner-cta-visual { width: 100%; max-width: 680px; min-height: 320px; }
 }
 
 @media (max-width: 700px) {
@@ -300,7 +303,7 @@ html.light-mode .dx-partners .partner-grow-panel { border: 0; background: #004aa
   .dx-partners .page-hero { padding: 120px 0 64px; }
   .dx-partners .partner-hero-grid,
   .dx-partners .partner-intro-grid,
-  .dx-partners .partner-final-grid { grid-template-columns: 1fr; gap: 30px; }
+  .dx-partners .partner-final-grid { grid-template-columns: 1fr; gap: 36px; }
   .dx-partners .partner-hero-copy h1 { font-size: clamp(2.25rem, 9vw, 3.2rem); }
   .dx-partners .page-hero-subtitle { font-size: 1rem; }
   .dx-partners .partner-hero-visual { min-height: 300px; max-height: 480px; }
@@ -318,18 +321,16 @@ html.light-mode .dx-partners .partner-grow-panel { border: 0; background: #004aa
   .dx-partners .partner-grow-panel { grid-template-columns: 1fr; gap: 22px; padding: 28px; }
   .dx-partners .partner-wide-visual { min-height: 180px; margin-top: 30px; }
   .dx-partners .partner-final-cta { padding: 68px 0; }
-  .dx-partners .partner-newsletter { padding: 22px; }
+  .dx-partners .partner-cta-visual { min-height: 320px; max-width: 560px; }
 }
 
 @media (max-width: 460px) {
   .dx-partners .page-hero-cta { flex-direction: column; }
   .dx-partners .page-hero-cta .dx-btn,
   .dx-partners .partner-grow-panel .dx-btn,
-  .dx-partners .partner-final-copy .dx-btn,
-  .dx-partners .partner-newsletter .dx-btn { width: 100%; justify-content: center; }
+  .dx-partners .partner-cta-copy .dx-btn { width: 100%; justify-content: center; }
   .dx-partners .cat-grid,
   .dx-partners .logo-wall,
   .dx-partners .partner-value-grid,
   .dx-partners .partner-steps { grid-template-columns: 1fr; }
-  .dx-partners .partner-newsletter form { grid-template-columns: 1fr; }
 }

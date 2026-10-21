@@ -13,21 +13,26 @@
     $otherPosts = $featuredPost ? $postsCollection->reject(fn ($post) => $post->id === $featuredPost->id)->values() : collect();
     $featuredTag = $featuredPost && !empty($featuredPost->tags) ? ($featuredPost->tags[0] ?? 'Blog') : 'Blog';
     $topics = [
-        __('All'),
-        __('AI & Intelligent Systems'),
-        __('Digital Transformation'),
-        __('Digital Infrastructure'),
-        __('Innovation'),
-        __('Africa & Technology'),
-        __('Industry Insights'),
+        'all' => __('All'),
+        'ai' => __('AI & Intelligent Systems'),
+        'dt' => __('Digital Transformation'),
+        'infra' => __('Digital Infrastructure'),
+        'innovation' => __('Innovation'),
+        'africa' => __('Africa & Technology'),
+        'industry' => __('Industry Insights'),
     ];
+    $topicContent = fn ($post) => \Illuminate\Support\Str::lower(implode(' ', [
+        $post->title ?? '',
+        $post->excerpt ?? '',
+        collect($post->tags ?? [])->implode(' '),
+    ]));
 @endphp
 
 @section('fullpage')
 @include('partials.v2.header')
 
 <main class="dx-blog">
-    <section class="page-hero">
+    <section class="page-hero blog-hero">
         <div class="dx-blueprint"></div>
         <div class="dx-container dx-reveal">
             <div class="dx-eyebrow">{{ __('Blog') }} / {{ __('Life at Digi') }}</div>
@@ -35,19 +40,18 @@
             <p class="page-hero-subtitle">
                 {{ __('We share what we learn building digital infrastructure across Africa: practical perspectives on AI, enterprise technology and the real-world challenges organizations face.') }}
             </p>
+            <div class="cat-pills blog-topic-filters dx-reveal" role="group" aria-label="{{ __('Blog topics') }}">
+                @foreach ($topics as $key => $topic)
+                    <button type="button" class="cat-pill {{ $loop->first ? 'active' : '' }}" data-blog-filter="{{ $key }}" aria-pressed="{{ $loop->first ? 'true' : 'false' }}">{{ $topic }}</button>
+                @endforeach
+            </div>
         </div>
     </section>
 
-    <section class="dx-section" id="blog">
+    <section class="dx-section blog-listing" id="blog">
         <div class="dx-container">
-            <div class="cat-pills dx-reveal" aria-label="{{ __('Blog topics') }}">
-                @foreach ($topics as $topic)
-                    <span class="cat-pill {{ $loop->first ? 'active' : '' }}">{{ $topic }}</span>
-                @endforeach
-            </div>
-
             @if ($featuredPost)
-                <article class="featured-card dx-reveal">
+                <article class="featured-card dx-reveal" data-blog-entry data-topic-content="{{ $topicContent($featuredPost) }}">
                     <a href="{{ route('blog.show', $featuredPost) }}" class="featured-media" aria-label="{{ $featuredPost->title }}">
                         @if ($featuredPost->cover_image)
                             @php
@@ -57,7 +61,10 @@
                             @endphp
                             <img src="{{ $featuredCover }}" alt="{{ $featuredPost->cover_image_alt ?: $featuredPost->title }}">
                         @else
-                            <div class="media-placeholder">DGX</div>
+                            <div class="media-placeholder blog-image-placeholder">
+                                <span>{{ __('Hero image placeholder') }}</span>
+                                <strong>1400 x 900</strong>
+                            </div>
                         @endif
                         <span class="featured-badge">{{ __('Featured') }}</span>
                     </a>
@@ -112,26 +119,30 @@
             @endif
 
             @if ($otherPosts->count())
-                <div class="dx-section-head dx-reveal blog-latest-head">
-                    <div class="dx-eyebrow">{{ __('Latest insights') }}</div>
-                    <h2>{{ __('Recent articles') }}</h2>
-                    <p class="dx-section-intro">{{ __('Articles are published in English so the editorial voice stays consistent across markets.') }}</p>
-                </div>
+                <div class="blog-latest-block">
+                    <div class="dx-section-head dx-reveal blog-latest-head">
+                        <div class="dx-eyebrow">{{ __('Latest insights') }}</div>
+                        <h2>{{ __('Recent articles') }}</h2>
+                        <p class="dx-section-intro">{{ __('Articles are published in English so the editorial voice stays consistent across markets.') }}</p>
+                    </div>
 
-                <div class="articles-grid dx-reveal">
-                    @foreach ($otherPosts->take(9) as $post)
-                        @php
-                            $tag = !empty($post->tags) ? ($post->tags[0] ?? 'Blog') : 'Blog';
-                            $cover = $post->cover_image && \Illuminate\Support\Str::startsWith($post->cover_image, ['http://', 'https://', '/'])
-                                ? $post->cover_image
-                                : ($post->cover_image ? asset('storage/' . $post->cover_image) : null);
-                        @endphp
-                        <article class="article-card">
+                    <div class="articles-grid dx-reveal">
+                        @foreach ($otherPosts->take(9) as $post)
+                            @php
+                                $tag = !empty($post->tags) ? ($post->tags[0] ?? 'Blog') : 'Blog';
+                                $cover = $post->cover_image && \Illuminate\Support\Str::startsWith($post->cover_image, ['http://', 'https://', '/'])
+                                    ? $post->cover_image
+                                    : ($post->cover_image ? asset('storage/' . $post->cover_image) : null);
+                            @endphp
+                            <article class="article-card" data-blog-entry data-topic-content="{{ $topicContent($post) }}">
                             <a href="{{ route('blog.show', $post) }}" class="article-media" aria-label="{{ $post->title }}">
                                 @if ($cover)
                                     <img src="{{ $cover }}" alt="{{ $post->cover_image_alt ?: $post->title }}">
                                 @else
-                                    <div class="media-placeholder">DGX</div>
+                                    <div class="media-placeholder blog-image-placeholder">
+                                        <span>{{ __('Product image placeholder') }}</span>
+                                        <strong>1200 x 750</strong>
+                                    </div>
                                 @endif
                             </a>
                             <div class="article-body">
@@ -146,36 +157,82 @@
                                     <a href="{{ route('blog.show', $post) }}" class="read-more">{{ __('Read more') }} <span aria-hidden="true">&rarr;</span></a>
                                 </div>
                             </div>
-                        </article>
-                    @endforeach
-                </div>
-
-                @if (isset($posts) && $posts->hasPages())
-                    <div class="pagination-wrap">
-                        {{ $posts->links() }}
+                            </article>
+                        @endforeach
                     </div>
-                @endif
+
+                    @if (isset($posts) && $posts->hasPages())
+                        <div class="pagination-wrap">
+                            {{ $posts->links() }}
+                        </div>
+                    @endif
+                </div>
             @endif
+
+            <p class="blog-filter-empty" data-blog-filter-empty role="status" hidden>
+                {{ __('No articles in this topic yet.') }}
+            </p>
         </div>
     </section>
 
-    <section class="dx-final-cta">
-        <div class="dx-container dx-reveal">
-            <div class="dx-eyebrow">{{ __('Let us talk') }}</div>
-            <h2>{{ __('Have a digital challenge to solve? Let us talk.') }}</h2>
-            <p class="dx-cta-subheading">
-                {{ __('If something you read here connects to a challenge your organization is facing, we welcome the conversation.') }}
-            </p>
-            <div class="dx-cta-buttons">
-                <a href="{{ url('/contact-us') }}" class="dx-btn dx-btn-primary">
-                    {{ __('Start a Conversation') }}
-                    <span class="dx-btn-arrow" aria-hidden="true">&rarr;</span>
-                </a>
-                <a href="{{ url('/solutions') }}" class="dx-btn dx-btn-secondary">{{ __('Explore Our Solutions') }}</a>
+    <section class="dx-final-cta blog-final-cta" id="parlons">
+        <div class="dx-container blog-cta-grid dx-reveal">
+            <div class="blog-cta-copy">
+                <div class="dx-eyebrow">{{ __('Let us talk') }}</div>
+                <h2>{{ __('Let us build the right digital solution together') }}</h2>
+                <p class="dx-cta-subheading">{{ __('The best digital solutions start with a conversation, not a proposal.') }}</p>
+                <p class="dx-cta-description">{{ __('Tell us about your operational challenge. We will assess it directly and share a practical path forward, without obligation.') }}</p>
+                <div class="dx-cta-buttons">
+                    <a href="tel:+237650945280" class="dx-btn dx-btn-primary">{{ __('Call (+237) 650 945 280') }}</a>
+                    <a href="{{ url('/contact-us') }}" class="dx-btn dx-btn-secondary">{{ __('Start a Conversation') }}</a>
+                </div>
+            </div>
+            <div class="blog-cta-visual" aria-hidden="true">
+                <div class="blog-cta-grid-lines"></div>
+                <div class="blog-cta-panel">
+                    <strong>{{ __('Long-Term Partnership') }}</strong>
+                    <p>{{ __('The best digital solutions start with a conversation, not a proposal.') }}</p>
+                </div>
             </div>
         </div>
     </section>
 </main>
+
+<script>
+(() => {
+    const filters = document.querySelectorAll('[data-blog-filter]');
+    const entries = document.querySelectorAll('[data-blog-entry]');
+    const empty = document.querySelector('[data-blog-filter-empty]');
+    if (!filters.length || !entries.length || !empty) return;
+
+    const patterns = {
+        ai: /\b(ai|artificial intelligence|machine learning|intelligent systems?)\b/i,
+        dt: /digital transformation|transformation numerique|digital change/i,
+        infra: /digital infrastructure|infrastructure|iot|infrastructure numerique/i,
+        innovation: /innovation|innovative|emerging technology/i,
+        africa: /africa|african|cameroon|afrique|cameroun/i,
+        industry: /industry|sector|enterprise|industry insights|secteur/i,
+    };
+
+    filters.forEach((filter) => {
+        filter.addEventListener('click', () => {
+            const topic = filter.dataset.blogFilter;
+            let visible = 0;
+            filters.forEach((item) => {
+                const active = item === filter;
+                item.classList.toggle('active', active);
+                item.setAttribute('aria-pressed', active ? 'true' : 'false');
+            });
+            entries.forEach((entry) => {
+                const matches = topic === 'all' || (patterns[topic] && patterns[topic].test(entry.dataset.topicContent || ''));
+                entry.hidden = !matches;
+                if (matches) visible++;
+            });
+            empty.hidden = visible > 0;
+        });
+    });
+})();
+</script>
 
 @include('partials.v2.footer')
 @endsection

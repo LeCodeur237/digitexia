@@ -24,6 +24,14 @@ class SolutionController extends Controller
 
         $slug = $aliases[$slug] ?? $slug;
 
+        if ($slug === 'flexicare') {
+            return view('pages.flexicare', ['solution' => $this->getSolutionsData()['flexicare']]);
+        }
+
+        if ($slug === 'medtrace') {
+            return view('pages.medtrace', ['solution' => $this->getSolutionsData()['medtrace']]);
+        }
+
         // Si une vue spécifique existe pour cette solution, on l'affiche directement
         if (view()->exists("pages.$slug")) {
             return view("pages.$slug");

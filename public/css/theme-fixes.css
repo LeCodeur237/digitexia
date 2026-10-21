@@ -298,3 +298,20 @@ html.light-mode :is(.mockup, .card, .reason-card, .post-card, .feat-card, .partn
     color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
 }
+
+/* Keep Perfomia's dark bands legible when light mode forces dark text globally. */
+html.light-mode .perfomia-page .perfomia-facts :is(strong, span),
+html.light-mode .perfomia-page .perfomia-roles-section .perfomia-section-head :is(.dx-eyebrow, h2, p),
+html.light-mode .perfomia-page .perfomia-final-cta :is(.dx-eyebrow, h2, p, a, span, strong) {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+html.light-mode .fx-page .fx-hero-note :is(strong, span),
+html.light-mode .fx-page .mt-image-caption,
+html.light-mode .fx-page .fx-answer :is(h3, p, li),
+html.light-mode .fx-page .fx-dark :is(.dx-eyebrow, h2, p, span),
+html.light-mode .fx-page .fx-final-cta :is(.dx-eyebrow, h2, p, a, span, strong) {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}

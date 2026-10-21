@@ -59,6 +59,16 @@
         [__('Can Perfomia be used in French and English?'), __('Yes. The interface can be used in French or English.')],
     ];
 
+    $shots = [
+        ['key' => 'dashboard', 'label' => __('Dashboard'), 'alt' => __('Perfomia dashboard screenshot')],
+        ['key' => 'tasks', 'label' => __('Tasks board'), 'alt' => __('Perfomia tasks board screenshot')],
+        ['key' => 'taskDetail', 'label' => __('Task detail'), 'alt' => __('Perfomia task detail screenshot')],
+        ['key' => 'couriers', 'label' => __('Mail list'), 'alt' => __('Perfomia mail list screenshot')],
+        ['key' => 'courierDetail', 'label' => __('Mail treatment'), 'alt' => __('Perfomia mail treatment screenshot')],
+        ['key' => 'evaluations', 'label' => __('Evaluations'), 'alt' => __('Perfomia evaluations screenshot')],
+        ['key' => 'mobile', 'label' => __('Mobile application'), 'alt' => __('Perfomia mobile application screenshot')],
+    ];
+
 @endphp
 
 @section('fullpage')
@@ -66,8 +76,9 @@
 
 <main class="perfomia-page">
     <section class="perfomia-hero">
-        <div class="dx-blueprint"></div>
-        <div class="dx-container perfomia-hero-grid">
+        <div class="dx-container">
+            <nav class="perfomia-breadcrumb" aria-label="{{ __('Solutions') }}"><a href="{{ url('/solutions') }}">{{ __('Solutions') }}</a><span aria-hidden="true">/</span><span>Perfomia</span></nav>
+            <div class="perfomia-hero-grid">
             <div class="perfomia-hero-copy dx-reveal">
                 <div class="perfomia-logo-line">
                     @if (file_exists(public_path($assets['logo'])))
@@ -87,25 +98,33 @@
                     <a href="{{ $demoUrl }}" class="dx-btn dx-btn-primary">{{ __('Request a demonstration') }} <span class="dx-btn-arrow" aria-hidden="true">&rarr;</span></a>
                     <a href="{{ $loginUrl }}" class="dx-btn dx-btn-secondary">{{ __('Access the platform') }}</a>
                 </div>
+                <div class="perfomia-hero-uses" aria-label="{{ __('Main uses') }}">
+                    @foreach ([__('Projects and tasks'), __('Mail and document flows'), __('Teams, evaluations and reports')] as $point)
+                        <span>{{ $point }}</span>
+                    @endforeach
+                </div>
             </div>
 
             <div class="perfomia-hero-media dx-reveal">
-                @if (file_exists(public_path($assets['hero'])))
-                    <img src="{{ asset($assets['hero']) }}" alt="{{ __('Perfomia enterprise dashboard screenshot') }}">
+                @if (file_exists(public_path($assets['dashboard'])))
+                    <img src="{{ asset($assets['dashboard']) }}" alt="{{ __('Perfomia enterprise dashboard screenshot') }}" fetchpriority="high">
                 @else
                     <div class="perfomia-image-placeholder">
                         <span>{{ __('Real Perfomia dashboard screenshot') }}</span>
-                        <strong>{{ $assets['hero'] }}</strong>
+                        <strong>{{ $assets['dashboard'] }}</strong>
                         <small>1600 x 1000</small>
                     </div>
                 @endif
             </div>
-
-            <div class="perfomia-hero-points dx-reveal">
-                @foreach ([__('Projects and tasks'), __('Mail and document flows'), __('Teams, evaluations and reports')] as $point)
-                    <span>{{ $point }}</span>
-                @endforeach
             </div>
+        </div>
+    </section>
+
+    <section class="perfomia-facts" aria-label="{{ __('Perfomia') }}">
+        <div class="dx-container perfomia-facts-grid">
+            <div><strong>3</strong><span>{{ __('Main uses') }}</span></div>
+            <div><strong>2</strong><span>{{ __('Apps') }} : {{ __('Web application') }} / {{ __('Mobile application') }}</span></div>
+            <div><strong>2</strong><span>{{ __('Languages') }} : FR / EN</span></div>
         </div>
     </section>
 
@@ -133,7 +152,7 @@
         </div>
     </section>
 
-    <section class="perfomia-section perfomia-section-soft">
+    <section class="perfomia-section perfomia-roles-section">
         <div class="dx-container">
             <div class="perfomia-section-head dx-reveal">
                 <div class="dx-eyebrow">{{ __('Role-based workspaces') }}</div>
@@ -142,10 +161,15 @@
             </div>
 
             <div class="perfomia-role-grid dx-reveal">
-                @foreach ($roles as $role)
+                @foreach ($roles as $index => $role)
                     <article class="perfomia-role-card">
+                        <div class="perfomia-role-image">
+                            <img src="{{ asset($assets[$index === 0 ? 'dashboard' : 'tasks']) }}" alt="{{ $index === 0 ? __('Perfomia dashboard screenshot') : __('Perfomia tasks board screenshot') }}" loading="lazy">
+                        </div>
+                        <div class="perfomia-role-body">
                         <h3>{{ $role['title'] }}</h3>
                         <p>{{ $role['text'] }}</p>
+                        </div>
                     </article>
                 @endforeach
             </div>
@@ -160,42 +184,22 @@
                 <p>{{ __('Explore the dashboard, task management, mail tracking, evaluations and mobile access through real Perfomia screens.') }}</p>
             </div>
 
-            <div class="perfomia-showcase dx-reveal">
-                <article class="perfomia-showcase-main">
-                    <div class="perfomia-shot-label">{{ __('Web application') }}</div>
-                    @if (file_exists(public_path($assets['dashboard'])))
-                        <img src="{{ asset($assets['dashboard']) }}" alt="{{ __('Perfomia dashboard screenshot') }}">
-                    @else
-                        <div class="perfomia-image-placeholder">
-                            <span>{{ __('Dashboard screenshot') }}</span>
-                            <strong>{{ $assets['dashboard'] }}</strong>
-                            <small>2538 x 1258</small>
-                        </div>
-                    @endif
-                </article>
-
-                <div class="perfomia-shot-grid">
-                    @foreach ([
-                        ['path' => $assets['tasks'], 'label' => __('Tasks board'), 'alt' => __('Perfomia tasks board screenshot')],
-                        ['path' => $assets['taskDetail'], 'label' => __('Task detail'), 'alt' => __('Perfomia task detail screenshot')],
-                        ['path' => $assets['couriers'], 'label' => __('Mail list'), 'alt' => __('Perfomia mail list screenshot')],
-                        ['path' => $assets['courierDetail'], 'label' => __('Mail treatment'), 'alt' => __('Perfomia mail treatment screenshot')],
-                        ['path' => $assets['evaluations'], 'label' => __('Evaluations'), 'alt' => __('Perfomia evaluations screenshot')],
-                        ['path' => $assets['mobile'], 'label' => __('Mobile application'), 'alt' => __('Perfomia mobile application screenshot'), 'mobile' => true],
-                    ] as $shot)
-                        <article class="perfomia-shot-card{{ !empty($shot['mobile']) ? ' is-mobile' : '' }}">
-                            <div class="perfomia-shot-label">{{ $shot['label'] }}</div>
-                            @if (file_exists(public_path($shot['path'])))
-                                <img src="{{ asset($shot['path']) }}" alt="{{ $shot['alt'] }}">
-                            @else
-                                <div class="perfomia-image-placeholder small">
-                                    <span>{{ $shot['label'] }}</span>
-                                    <strong>{{ $shot['path'] }}</strong>
-                                </div>
-                            @endif
-                        </article>
+            <div class="perfomia-showcase dx-reveal" data-perfomia-gallery>
+                <div class="perfomia-tabs" role="tablist" aria-label="{{ __('Web and mobile preview') }}">
+                    @foreach ($shots as $index => $shot)
+                        <button type="button" role="tab" id="perfomia-tab-{{ $index }}" aria-controls="perfomia-panel-{{ $index }}" aria-selected="{{ $index === 0 ? 'true' : 'false' }}" tabindex="{{ $index === 0 ? '0' : '-1' }}">{{ $shot['label'] }}</button>
                     @endforeach
                 </div>
+                @foreach ($shots as $index => $shot)
+                    <div class="perfomia-panel{{ $shot['key'] === 'mobile' ? ' is-mobile' : '' }}" role="tabpanel" id="perfomia-panel-{{ $index }}" aria-labelledby="perfomia-tab-{{ $index }}" tabindex="0" @if($index !== 0) hidden @endif>
+                        @if (file_exists(public_path($assets[$shot['key']])))
+                            <img src="{{ asset($assets[$shot['key']]) }}" alt="{{ $shot['alt'] }}" loading="lazy">
+                        @else
+                            <div class="perfomia-image-placeholder"><strong>{{ $assets[$shot['key']] }}</strong></div>
+                        @endif
+                        <p>{{ $shot['label'] }} · {{ $shot['key'] === 'mobile' ? __('Mobile application') : __('Web application') }}</p>
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -219,16 +223,24 @@
     </section>
 
     <section class="perfomia-final-cta">
-        <div class="dx-container dx-reveal">
-            <div class="dx-eyebrow dx-eyebrow-center">{{ __('Request a demo') }}</div>
+        <div class="dx-container perfomia-cta-grid dx-reveal">
+            <div class="perfomia-cta-copy">
+            <div class="dx-eyebrow">{{ __('Request a demo') }}</div>
             <h2>{{ __('See how Perfomia can fit your organization.') }}</h2>
             <p>{{ __('A short demonstration can show how projects, tasks, mail flows, evaluations and reports come together in one workspace.') }}</p>
-            <div class="perfomia-actions center">
+            <div class="perfomia-actions">
                 <a href="{{ $demoUrl }}" class="dx-btn dx-btn-primary">{{ __('Request a demonstration') }}</a>
                 <a href="{{ $loginUrl }}" class="dx-btn dx-btn-secondary">{{ __('Access the platform') }}</a>
             </div>
             <div id="performia-login-placeholder" class="perfomia-contact-note">
                 {{ __('Commercial contact and platform access can be connected to the final Perfomia environment.') }}
+            </div>
+            </div>
+            <div class="perfomia-cta-visual" aria-hidden="true">
+                <div class="perfomia-cta-panel">
+                    <strong>Perfomia</strong>
+                    <span>{{ __('Web and mobile work management platform') }}</span>
+                </div>
             </div>
         </div>
     </section>
@@ -240,6 +252,26 @@
 @push('scripts')
 <script>
 document.addEventListener('DOMContentLoaded', function () {
+  var gallery = document.querySelector('[data-perfomia-gallery]');
+  if (gallery) {
+    var tabs = Array.from(gallery.querySelectorAll('[role="tab"]'));
+    var panels = Array.from(gallery.querySelectorAll('[role="tabpanel"]'));
+    function activate(index) {
+      tabs.forEach(function (tab, i) {
+        tab.setAttribute('aria-selected', i === index ? 'true' : 'false');
+        tab.tabIndex = i === index ? 0 : -1;
+        panels[i].hidden = i !== index;
+      });
+      tabs[index].focus();
+    }
+    tabs.forEach(function (tab, index) {
+      tab.addEventListener('click', function () { activate(index); });
+      tab.addEventListener('keydown', function (event) {
+        var next = event.key === 'ArrowRight' ? (index + 1) % tabs.length : event.key === 'ArrowLeft' ? (index - 1 + tabs.length) % tabs.length : event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 : -1;
+        if (next !== -1) { event.preventDefault(); activate(next); }
+      });
+    });
+  }
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {

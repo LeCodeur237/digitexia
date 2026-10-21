@@ -215,28 +215,26 @@
 
     <section class="dx-final-cta partner-final-cta" id="collaborate">
         <div class="dx-container partner-final-grid dx-reveal">
-            <div class="partner-final-copy">
-                <h2>{{ __('Let us build the future of digital innovation together') }}</h2>
+            <div class="partner-cta-copy">
+                <div class="dx-eyebrow">{{ __('Let us talk') }}</div>
+                <h2>{{ __('Let us build the right digital solution together') }}</h2>
                 <p class="dx-cta-subheading">
-                    {{ __('Whether you are a technology provider, an institution or a research organization, we can explore what a partnership could look like.') }}
+                    {{ __('The best digital solutions start with a conversation, not a proposal.') }}
                 </p>
                 <p class="dx-cta-description">
-                    {{ __('Tell us about your organization and what you hope to build. We will take it from there.') }}
+                    {{ __('Tell us about your operational challenge. We will assess it directly and share a practical path forward, without obligation.') }}
                 </p>
                 <div class="dx-cta-buttons">
-                    <a href="{{ url('/contact-us') }}" class="dx-btn dx-btn-primary">{{ __('Start a Conversation') }}</a>
-                    <a href="tel:+237650945280" class="dx-btn dx-btn-secondary">{{ __('Call (+237) 650 945 280') }}</a>
+                    <a href="tel:+237650945280" class="dx-btn dx-btn-primary">{{ __('Call (+237) 650 945 280') }}</a>
+                    <a href="{{ url('/contact-us') }}" class="dx-btn dx-btn-secondary">{{ __('Start a Conversation') }}</a>
                 </div>
             </div>
-            <div class="partner-newsletter">
-                <h3>{{ __('Stay informed with the latest digital infrastructure insights.') }}</h3>
-                <p>{{ __('Subscribe for practical perspectives on AI, data systems, infrastructure monitoring and digital transformation across Africa.') }}</p>
-                <form method="post" action="{{ route('newsletter.subscribe') }}">
-                    @csrf
-                    <label class="sr-only" for="partners-newsletter-email">{{ __('Your email address') }}</label>
-                    <input id="partners-newsletter-email" type="email" name="newsletter_email" value="{{ old('newsletter_email') }}" placeholder="{{ __('Your email address') }}" autocomplete="email" required>
-                    <button type="submit" class="dx-btn dx-btn-primary">{{ __('Subscribe') }}</button>
-                </form>
+            <div class="partner-cta-visual" aria-hidden="true">
+                <div class="partner-cta-grid-lines"></div>
+                <div class="partner-cta-panel">
+                    <strong>{{ __('Long-Term Partnership') }}</strong>
+                    <p>{{ __('The best digital solutions start with a conversation, not a proposal.') }}</p>
+                </div>
             </div>
         </div>
     </section>

@@ -555,3 +555,113 @@
     height: 420px;
   }
 }
+
+/* Product page refresh */
+.perfomia-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+  color: var(--pf-muted);
+  font-size: 13px;
+}
+
+.perfomia-breadcrumb a { color: var(--pf-blue); font-weight: 700; }
+.perfomia-hero-grid { grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); gap: 54px; }
+.perfomia-hero h1 { max-width: 17ch; }
+.perfomia-logo-line { display: grid; justify-items: start; gap: 8px; }
+.perfomia-logo-img { width: 140px !important; height: auto; }
+.perfomia-hero-media { padding: 8px; }
+.perfomia-hero-media img { aspect-ratio: 16 / 10; object-fit: contain; background: #f1f6fd; }
+.perfomia-hero-uses { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.perfomia-hero-uses span {
+  padding: 8px 12px;
+  border-radius: 4px;
+  background: var(--pf-blue-soft);
+  color: #174b9b;
+  font-size: 12px;
+  font-weight: 700;
+}
+.perfomia-facts { background: #0b459e; color: #fff; }
+.perfomia-facts-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.perfomia-facts-grid > div { display: flex; align-items: center; gap: 15px; min-height: 114px; padding: 22px 32px; }
+.perfomia-facts-grid > div + div { border-left: 1px solid rgba(255,255,255,.22); }
+.perfomia-facts strong { color: #fff; font-size: 38px; line-height: 1; }
+.perfomia-facts span { color: #fff; font-size: 13px; line-height: 1.45; font-weight: 700; }
+.perfomia-use-card { border-top: 3px solid var(--pf-blue); padding: 27px; }
+.perfomia-roles-section { background: #12213a; }
+.perfomia-roles-section .dx-eyebrow,
+.perfomia-roles-section .perfomia-section-head h2,
+.perfomia-roles-section .perfomia-section-head p { color: #fff; }
+.perfomia-roles-section .perfomia-section-head p { color: #d8e3f1; }
+.perfomia-role-grid { gap: 18px; border: 0; background: transparent; }
+.perfomia-role-card,
+.perfomia-role-card + .perfomia-role-card { padding: 0; overflow: hidden; border: 1px solid #dbe5f1; border-radius: 8px; }
+.perfomia-role-image { aspect-ratio: 16 / 9; overflow: hidden; background: #edf3fa; }
+.perfomia-role-image img { height: 100%; object-fit: contain; }
+.perfomia-role-body { padding: 25px 27px 30px; }
+.perfomia-tabs { display: flex; gap: 4px; overflow-x: auto; border-bottom: 1px solid var(--pf-border); scrollbar-width: thin; }
+.perfomia-tabs button {
+  flex: 0 0 auto;
+  min-height: 48px;
+  padding: 11px 16px;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: transparent;
+  color: var(--pf-muted);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.perfomia-tabs button[aria-selected="true"] { color: var(--pf-blue); border-bottom-color: var(--pf-blue); }
+.perfomia-tabs button:focus-visible { outline: 2px solid var(--pf-blue); outline-offset: -3px; }
+.perfomia-panel { padding: 22px; border: 1px solid var(--pf-border); border-top: 0; background: var(--pf-surface-soft); }
+.perfomia-panel[hidden] { display: none; }
+.perfomia-panel img { width: 100%; height: auto; max-height: 650px; object-fit: contain; box-shadow: 0 8px 26px rgba(15,42,79,.12); }
+.perfomia-panel.is-mobile img { width: auto; max-width: 100%; max-height: 580px; margin-inline: auto; }
+.perfomia-panel p { margin: 16px 0 0; color: var(--pf-muted); font-size: 13px; font-weight: 700; }
+.perfomia-final-cta { padding: 88px 0; background: #0b49a6; text-align: left; }
+.perfomia-cta-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: 70px; align-items: center; }
+.perfomia-final-cta .dx-eyebrow,
+.perfomia-final-cta h2,
+.perfomia-final-cta p { color: #fff; }
+.perfomia-final-cta h2 { max-width: 700px; margin: 0; }
+.perfomia-final-cta p { max-width: 650px; margin: 18px 0 26px; }
+.perfomia-final-cta .perfomia-contact-note { max-width: 650px; margin: 20px 0 0; color: #d4e5fc; font-size: 11px; }
+.perfomia-final-cta .dx-btn-primary { background: #00bd70; color: #fff; }
+.perfomia-final-cta .dx-btn-primary:hover { background: #00a563; }
+.perfomia-final-cta .dx-btn-secondary { background: transparent; border-color: rgba(255,255,255,.65); color: #fff; }
+.perfomia-final-cta .dx-btn-secondary:hover { background: rgba(255,255,255,.1); border-color: #fff; color: #fff; }
+.perfomia-cta-visual {
+  min-height: 330px;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+  border: 1px solid rgba(255,255,255,.24);
+  border-radius: 8px;
+  background-color: #073b87;
+  background-image: linear-gradient(rgba(255,255,255,.09) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.09) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+.perfomia-cta-panel { width: min(100%, 290px); padding: 34px 28px; border: 1px solid rgba(255,255,255,.22); border-radius: 6px; background: #0b49a6; text-align: center; }
+.perfomia-cta-panel strong { display: block; color: #fff; font-size: 25px; }
+.perfomia-cta-panel span { display: block; margin-top: 10px; color: #fff; font-size: 14px; line-height: 1.5; }
+
+@media (max-width: 1080px) {
+  .perfomia-hero-grid,
+  .perfomia-cta-grid { grid-template-columns: 1fr; }
+  .perfomia-cta-visual { min-height: 260px; }
+}
+
+@media (max-width: 760px) {
+  .perfomia-hero { padding-top: 96px; }
+  .perfomia-hero h1 { font-size: 36px; }
+  .perfomia-facts-grid { grid-template-columns: 1fr; }
+  .perfomia-facts-grid > div { min-height: 84px; padding: 18px 8px; }
+  .perfomia-facts-grid > div + div { border-left: 0; border-top: 1px solid rgba(255,255,255,.22); }
+  .perfomia-role-grid { grid-template-columns: 1fr; }
+  .perfomia-role-card + .perfomia-role-card { border: 1px solid #dbe5f1; }
+  .perfomia-panel { padding: 10px; }
+  .perfomia-cta-grid { gap: 30px; }
+}

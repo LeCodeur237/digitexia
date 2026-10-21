@@ -11,26 +11,15 @@
 @include('partials.v2.header')
 
 <main class="dx-contact">
-    <section class="page-hero">
+    <section class="page-hero contact-hero" id="contact-form">
         <div class="dx-blueprint"></div>
-        <div class="dx-container dx-reveal">
-            <div class="dx-eyebrow">{{ __('Contact') }}</div>
-            <h1>{{ __('Every successful digital transformation starts with a conversation.') }}</h1>
-            <p class="page-hero-subtitle">
-                {{ __('Whether you are starting a new initiative or improving one already underway, we welcome the chance to hear about it. Tell us about your organization, your challenge and where you want to go.') }}
-            </p>
-        </div>
-    </section>
-
-    <section class="dx-section" id="contact-form">
-        <div class="dx-container">
-            <div class="contact-grid dx-reveal">
-                <div class="info-panel">
-                    <h2>{{ __('Let us talk about your project') }}</h2>
-                    <p>
-                        {{ __('DigiTexia collaborates with organizations to design digital solutions that create measurable impact. We are an accessible technology partner, committed to meaningful communication from the first message onward.') }}
+        <div class="dx-container contact-grid dx-reveal">
+            <div class="info-panel">
+                    <div class="dx-eyebrow">{{ __('Contact') }}</div>
+                    <h1>{{ __('Every successful digital transformation starts with a conversation.') }}</h1>
+                    <p class="page-hero-subtitle">
+                        {{ __('Whether you are starting a new initiative or improving one already underway, we welcome the chance to hear about it. Tell us about your organization, your challenge and where you want to go.') }}
                     </p>
-
                     <div class="info-block">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m3 6 9 6 9-6"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg>
                         <div>
@@ -55,18 +44,10 @@
                         </div>
                     </div>
 
-                    <div class="topics-label">{{ __('We are glad to discuss') }}</div>
-                    <div class="topics-list">
-                        <span>{{ __('Digital Transformation') }}</span>
-                        <span>{{ __('Enterprise Software') }}</span>
-                        <span>{{ __('Artificial Intelligence') }}</span>
-                        <span>{{ __('Digital Infrastructure') }}</span>
-                        <span>{{ __('Strategic Partnerships') }}</span>
-                        <span>{{ __('Product Development') }}</span>
-                    </div>
-                </div>
+            </div>
 
-                <div class="form-panel">
+            <div class="form-panel">
+                    <h2>{{ __('Start the Conversation') }}</h2>
                     <p class="form-lead">
                         {{ __('Share a few details about your organization and what you hope to build. The more context you give us, the more useful our first conversation will be.') }}
                     </p>
@@ -141,21 +122,51 @@
                             <p>{{ __('We review every inquiry carefully and respond to discuss the most appropriate next steps for your project.') }}</p>
                         </div>
                     </form>
-                </div>
             </div>
         </div>
     </section>
 
-    <section class="dx-final-cta">
-        <div class="dx-container dx-reveal">
-            <div class="dx-eyebrow">{{ __('Let us collaborate') }}</div>
-            <h2>{{ __('Let us build the future of digital innovation together') }}</h2>
-            <p class="dx-cta-subheading">
-                {{ __('Prefer to talk directly? Reach us by phone or email. We are accessible, and we would be glad to hear from you.') }}
-            </p>
-            <div class="dx-cta-buttons">
-                <a href="tel:+237650945280" class="dx-btn dx-btn-primary">{{ __('Call (+237) 650 945 280') }}</a>
-                <a href="mailto:contactdigitexia@gmail.com" class="dx-btn dx-btn-secondary">{{ __('Email DigiTexia') }}</a>
+    <section class="dx-section contact-topics-section">
+        <div class="dx-container contact-topics-grid dx-reveal">
+            <div class="contact-topics-copy">
+                <h2>{{ __('We are glad to discuss') }}</h2>
+                <div class="topics-list">
+                    <span>{{ __('Digital Transformation') }}</span>
+                    <span>{{ __('Enterprise Software') }}</span>
+                    <span>{{ __('Artificial Intelligence') }}</span>
+                    <span>{{ __('Digital Infrastructure') }}</span>
+                    <span>{{ __('Strategic Partnerships') }}</span>
+                    <span>{{ __('Product Development') }}</span>
+                </div>
+                <div class="contact-discuss-actions">
+                    <a href="mailto:anne.dzou@digitexia.org" class="dx-btn dx-btn-primary">{{ __('Discuss with Anne') }}</a>
+                    <a href="mailto:eraste.dzou@digitexia.org" class="dx-btn dx-btn-secondary">{{ __('Discuss with Lucien') }}</a>
+                </div>
+            </div>
+            <div class="contact-map-visual">
+                <img src="{{ asset('images/carte-contact.png') }}" alt="{{ __('Yaounde, Cameroon') }}" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <section class="dx-final-cta contact-final-cta" id="contact-cta">
+        <div class="dx-container contact-final-grid dx-reveal">
+            <div class="contact-cta-copy">
+                <div class="dx-eyebrow">{{ __('Let us talk') }}</div>
+                <h2>{{ __('Let us build the right digital solution together') }}</h2>
+                <p class="dx-cta-subheading">{{ __('The best digital solutions start with a conversation, not a proposal.') }}</p>
+                <p class="dx-cta-description">{{ __('Tell us about your operational challenge. We will assess it directly and share a practical path forward, without obligation.') }}</p>
+                <div class="dx-cta-buttons">
+                    <a href="tel:+237650945280" class="dx-btn dx-btn-primary">{{ __('Call (+237) 650 945 280') }}</a>
+                    <a href="#contactForm" class="dx-btn dx-btn-secondary">{{ __('Start a Conversation') }}</a>
+                </div>
+            </div>
+            <div class="contact-cta-visual" aria-hidden="true">
+                <div class="contact-cta-grid-lines"></div>
+                <div class="contact-cta-panel">
+                    <strong>{{ __('Long-Term Partnership') }}</strong>
+                    <p>{{ __('The best digital solutions start with a conversation, not a proposal.') }}</p>
+                </div>
             </div>
         </div>
     </section>
