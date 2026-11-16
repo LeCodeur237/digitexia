@@ -311,6 +311,18 @@
         </div>
     </section>
 
+    <section class="dx-section dx-section-alt solutions-concept">
+        <div class="dx-container solutions-concept-grid">
+            <div class="solutions-concept-copy">
+                <div class="dx-eyebrow">{{ __('shes-safe.status') }}</div>
+                <h2>{{ __('shes-safe.catalog_title') }}</h2>
+                <p>{{ __('shes-safe.catalog_text') }}</p>
+                <a href="{{ route('solutions.show', 'shes-safe') }}" class="dx-card-link">{{ __('shes-safe.view_concept') }} <span aria-hidden="true">&rarr;</span></a>
+            </div>
+            <img src="{{ asset('images/shes-safe/bracelet-concept.png') }}" alt="{{ __('shes-safe.concept_visual') }}" loading="lazy">
+        </div>
+    </section>
+
     <section class="dx-section dx-section-alt">
         <div class="dx-container">
             <div class="dx-section-head dx-reveal">

@@ -29,6 +29,7 @@ class SitemapController extends Controller
             'wastepay',
             'flexicare',
             'performia',
+            'shes-safe',
         ];
 
         foreach ($solutionSlugs as $slug) {

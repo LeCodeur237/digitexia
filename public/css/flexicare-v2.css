@@ -83,6 +83,10 @@ html:not(.light-mode) .fx-page {
 .fx-gallery-tabs button:focus-visible { outline: 2px solid var(--fx-blue); outline-offset: -3px; }
 .fx-gallery-panel[hidden] { display: none; }
 .fx-gallery-panel { padding: 24px; border: 1px solid var(--fx-line); border-top: 0; background: var(--fx-soft); }
+.fx-mobile-gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.fx-mobile-gallery figure { min-width: 0; margin: 0; }
+.fx-mobile-gallery img { display: block; width: 100%; height: auto; border: 1px solid var(--fx-line); border-radius: 8px; background: var(--fx-surface); }
+.fx-mobile-gallery figcaption { margin-top: 12px; color: var(--fx-ink); font-size: 14px; font-weight: 700; text-align: center; }
 .fx-gallery-placeholder { display: grid; place-content: center; gap: 10px; min-height: 360px; border: 1px dashed var(--fx-line); border-radius: 6px; background: var(--fx-surface); text-align: center; }
 .fx-gallery-placeholder span { color: var(--fx-blue); font-size: 12px; font-weight: 800; text-transform: uppercase; }
 .fx-gallery-placeholder strong { color: var(--fx-ink); font-size: 18px; }
@@ -121,6 +125,7 @@ html:not(.light-mode) .fx-page {
   .fx-overview-grid, .fx-challenge-grid { grid-template-columns: 1fr; }
   .fx-overview-grid > div + div { border-left: 0; border-top: 1px solid var(--fx-line); }
   .fx-cap-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fx-mobile-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .fx-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @media (max-width: 600px) {
@@ -132,6 +137,8 @@ html:not(.light-mode) .fx-page {
   .fx-cap-grid, .fx-steps { grid-template-columns: 1fr; }
   .fx-actions .dx-btn { width: 100%; justify-content: center; white-space: normal; text-align: center; }
   .fx-gallery-panel { padding: 12px; }
+  .fx-mobile-gallery { gap: 12px; }
+  .fx-mobile-gallery figcaption { font-size: 12px; }
   .fx-gallery-placeholder { min-height: 260px; padding: 18px; }
   .fx-final-grid { gap: 32px; }
   .fx-final-visual { min-height: 240px; }

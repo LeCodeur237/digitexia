@@ -54,6 +54,7 @@
                 <p><a href="{{ url('/solutions/wastepay') }}">WastePay</a></p>
                 <p><a href="{{ url('/solutions/flexicare') }}">Flexicare</a></p>
                 <p><a href="{{ url('/solutions/performia') }}">Perfomia</a></p>
+                <p><a href="{{ url('/solutions/shes-safe') }}">SHE'S SAFE</a></p>
             </div>
 
             <div>

@@ -47,7 +47,26 @@
         <div class="fx-section-head"><div class="dx-eyebrow">{{ __('Platform & deployment') }}</div><h2>{{ __($solution['gallery_title']) }}</h2><p>{{ __($solution['gallery_intro']) }}</p></div>
         <div class="fx-gallery" data-fx-gallery>
             <div class="fx-gallery-tabs" role="tablist" aria-label="{{ __($solution['gallery_title']) }}">@foreach ([__('Platform Screenshots'), __('Deployment'), __('Architecture')] as $label)<button type="button" role="tab" id="fx-tab-{{ $loop->index }}" aria-controls="fx-panel-{{ $loop->index }}" aria-selected="{{ $loop->first ? 'true' : 'false' }}" tabindex="{{ $loop->first ? '0' : '-1' }}">{{ $label }}</button>@endforeach</div>
-            @foreach ([__('Platform Screenshots'), __('Deployment'), __('Architecture')] as $label)<div class="fx-gallery-panel" role="tabpanel" id="fx-panel-{{ $loop->index }}" aria-labelledby="fx-tab-{{ $loop->index }}" tabindex="0" @if(!$loop->first) hidden @endif><div class="fx-gallery-placeholder"><span>{{ $label }}</span><strong>{{ $loop->first ? __('Platform screenshots coming soon') : __('Coming soon') }}</strong></div></div>@endforeach
+            <div class="fx-gallery-panel" role="tabpanel" id="fx-panel-0" aria-labelledby="fx-tab-0" tabindex="0">
+                <div class="fx-mobile-gallery">
+                    @foreach ([
+                        ['image' => 'mobile-dashboard.jpg', 'label' => __('Dashboard')],
+                        ['image' => 'mobile-wallet.jpg', 'label' => __('Secure payments')],
+                        ['image' => 'mobile-missions.jpg', 'label' => __('Mission management')],
+                        ['image' => 'mobile-new-mission.jpg', 'label' => __('Create a mission')],
+                    ] as $screen)
+                        <figure>
+                            <img src="{{ asset('images/flexicare/' . $screen['image']) }}" alt="FlexiCare - {{ $screen['label'] }}" loading="lazy">
+                            <figcaption>{{ $screen['label'] }}</figcaption>
+                        </figure>
+                    @endforeach
+                </div>
+            </div>
+            @foreach ([__('Deployment'), __('Architecture')] as $label)
+                <div class="fx-gallery-panel" role="tabpanel" id="fx-panel-{{ $loop->iteration }}" aria-labelledby="fx-tab-{{ $loop->iteration }}" tabindex="0" hidden>
+                    <div class="fx-gallery-placeholder"><span>{{ $label }}</span><strong>{{ __('Coming soon') }}</strong></div>
+                </div>
+            @endforeach
         </div>
     </div></section>
 
