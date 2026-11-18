@@ -13,8 +13,8 @@ class ShesSafePageTest extends TestCase
             ->assertOk()
             ->assertSee("SHE'S SAFE")
             ->assertSee("Un geste discret pour demander de l'aide.")
-            ->assertSee('pendentif SOS')
-            ->assertSee('images/shes-safe/necklace-concept.png')
+            ->assertSee('bracelet SOS')
+            ->assertSee('images/shes-safe/bracelet-concept.png')
             ->assertSee('images/shes-safe/technical-diagram-v2.png');
     }
 

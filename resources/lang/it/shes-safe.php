@@ -1,15 +1,15 @@
 <?php
 
 return [
-    'page_title' => "SHE'S SAFE | Concept di collana-gioiello SOS - DigiTexia",
-    'seo_description' => "Scopri SHE'S SAFE, un concept di collana-gioiello SOS collegata a un'app mobile. Prototipo e test devono ancora essere realizzati.",
+    'page_title' => "SHE'S SAFE | Concept di braccialetto SOS - DigiTexia",
+    'seo_description' => "Scopri SHE'S SAFE, un concept di braccialetto SOS collegato a un'app mobile. Prototipo e test devono ancora essere realizzati.",
     'status' => 'Concept da validare',
     'catalog_title' => "SHE'S SAFE, un concept da esplorare",
-    'catalog_text' => 'Una collana-gioiello SOS e un’app Android previste per semplificare una richiesta discreta di aiuto. Prototipo e test devono ancora essere realizzati.',
+    'catalog_text' => 'Un braccialetto SOS e un’app Android previsti per semplificare una richiesta discreta di aiuto. Prototipo e test devono ancora essere realizzati.',
     'view_concept' => 'Scopri il concept',
     'hero_title' => 'Un gesto discreto per chiedere aiuto.',
-    'hero_text' => "SHE'S SAFE esplora un ciondolo SOS discreto, indossato come collana-gioiello e collegato a un'app Android. L'idea è avvisare contatti fidati quando prendere il telefono è difficile.",
-    'concept_visual' => 'Visualizzazione concettuale di una collana-gioiello SOS e di un telefono, non fotografia di un prototipo.',
+    'hero_text' => "SHE'S SAFE esplora un braccialetto SOS discreto, pensato come gioiello e collegato a un'app Android. L'idea è avvisare contatti fidati quando prendere il telefono è difficile.",
+    'concept_visual' => 'Visualizzazione concettuale di un braccialetto SOS e di un telefono, non fotografia di un prototipo.',
     'discover' => 'Scopri il funzionamento previsto',
     'discuss' => 'Parliamo del progetto',
     'problem_title' => 'Quando il telefono non è a portata di mano',
@@ -22,14 +22,14 @@ return [
     'flow_title' => 'Un percorso SOS in quattro passaggi',
     'flow_intro' => 'Questo è il funzionamento previsto per la prima versione, da confermare con prototipi e test.',
     'flow' => [
-        ['Tenere premuto', 'Tenere premuto il comando discreto del ciondolo per tre secondi.'],
-        ['Trasmettere', 'Il ciondolo invia un segnale Bluetooth al telefono vicino.'],
+        ['Tenere premuto', 'Tenere premuto il comando discreto del braccialetto per tre secondi.'],
+        ['Trasmettere', 'Il braccialetto invia un segnale Bluetooth al telefono vicino.'],
         ['Avvisare', "L'app tenta di inviare un SOS e la posizione disponibile ai contatti autorizzati."],
         ['Verificare', "L'app mostra lo stato della connessione e dell'invio."],
     ],
     'activation_note' => "La vibrazione confermerebbe l'attivazione locale, non la ricezione dell'allerta da parte di un contatto.",
     'architecture_title' => 'Un sistema semplice con dipendenze reali',
-    'architecture_intro' => 'Il percorso mostra un flusso concettuale: ciondolo, app, rete e contatti fidati. Non rappresenta un sistema testato.',
+    'architecture_intro' => 'Il percorso mostra un flusso concettuale: braccialetto, app, rete e contatti fidati. Non rappresenta un sistema testato.',
     'diagram_alt' => 'Schema concettuale del dispositivo: sensori, controller ESP32, rete, app mobile, GPS e contatti di emergenza.',
     'diagram_caption' => 'Schema a blocchi fornito per un dispositivo di sicurezza connesso. Non convalida un prototipo hardware né il funzionamento o le prestazioni del sistema.',
     'architecture_steps' => [
@@ -40,7 +40,7 @@ return [
     ],
     'limitations_title' => "Da cosa dipende l'allerta",
     'limitations' => [
-        'Un telefono vicino, acceso e associato al ciondolo.',
+        'Un telefono vicino, acceso e associato al braccialetto.',
         'Bluetooth, permessi di localizzazione e rete funzionante.',
         'Disponibilità di Internet o SMS supportati.',
     ],
@@ -48,7 +48,7 @@ return [
     'validation_intro' => 'Il progetto è in fase concettuale. Non esistono ancora un prototipo completato, un pilota svolto o risultati misurati.',
     'validation' => [
         ['Ricerca', 'Confrontarsi con donne in Camerun e definire bisogni e costi.'],
-        ['Prototipo', "Sviluppare un ciondolo-gioiello BLE e un'app Android."],
+        ['Prototipo', "Sviluppare un braccialetto BLE e un'app Android."],
         ['Test controllati', 'Valutare connessione, privacy, usabilità e consegna degli avvisi.'],
         ['Miglioramenti', 'Perfezionare il concept prima di considerare una produzione limitata.'],
     ],

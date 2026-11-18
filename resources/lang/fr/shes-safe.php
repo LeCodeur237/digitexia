@@ -1,15 +1,15 @@
 <?php
 
 return [
-    'page_title' => "SHE'S SAFE | Concept de collier-bijou SOS - DigiTexia",
-    'seo_description' => "Découvrez SHE'S SAFE, un concept de collier-bijou SOS relié à une application mobile pour faciliter une demande d'aide discrète. Prototype et tests à venir.",
+    'page_title' => "SHE'S SAFE | Concept de bracelet SOS - DigiTexia",
+    'seo_description' => "Découvrez SHE'S SAFE, un concept de bracelet SOS relié à une application mobile pour faciliter une demande d'aide discrète. Prototype et tests à venir.",
     'status' => "Concept à valider",
     'catalog_title' => "SHE'S SAFE, un concept à explorer",
-    'catalog_text' => "Un collier-bijou SOS et une application Android envisagés pour simplifier une demande d'aide discrète. Le prototype et les tests restent à réaliser.",
+    'catalog_text' => "Un bracelet SOS et une application Android envisagés pour simplifier une demande d'aide discrète. Le prototype et les tests restent à réaliser.",
     'view_concept' => 'Découvrir le concept',
     'hero_title' => "Un geste discret pour demander de l'aide.",
-    'hero_text' => "SHE'S SAFE explore un pendentif SOS discret, porté en collier comme un bijou et relié à une application Android. L'idée : solliciter des contacts de confiance lorsque prendre son téléphone est difficile.",
-    'concept_visual' => "Visuel conceptuel d'un collier-bijou SOS et d'un téléphone, pas photographie d'un prototype.",
+    'hero_text' => "SHE'S SAFE explore un bracelet SOS discret, pensé comme un bijou et relié à une application Android. L'idée : solliciter des contacts de confiance lorsque prendre son téléphone est difficile.",
+    'concept_visual' => "Visuel conceptuel d'un bracelet SOS et d'un téléphone, pas photographie d'un prototype.",
     'discover' => "Découvrir le fonctionnement envisagé",
     'discuss' => "Parler du projet",
     'problem_title' => "Quand le téléphone n'est pas accessible",
@@ -22,14 +22,14 @@ return [
     'flow_title' => "Un parcours SOS en quatre étapes",
     'flow_intro' => "Voici le fonctionnement prévu pour une première version, sous réserve de prototypage et de tests.",
     'flow' => [
-        ['Maintenir', "Maintenir la commande discrète du pendentif pendant trois secondes."],
-        ['Transmettre', "Le pendentif envoie un signal Bluetooth au téléphone proche."],
+        ['Maintenir', "Maintenir la commande discrète du bracelet pendant trois secondes."],
+        ['Transmettre', "Le bracelet envoie un signal Bluetooth au téléphone proche."],
         ['Alerter', "L'application tente d'envoyer un SOS et la position disponible aux contacts autorisés."],
         ['Vérifier', "L'application indique l'état de la connexion et de l'envoi."],
     ],
     'activation_note' => "La vibration confirmerait l'activation locale, pas la réception de l'alerte par un contact.",
     'architecture_title' => "Une architecture simple, avec des dépendances réelles",
-    'architecture_intro' => "Le parcours décrit un flux conceptuel : pendentif, application, réseau, puis contacts de confiance. Il ne représente pas un système déjà testé.",
+    'architecture_intro' => "Le parcours décrit un flux conceptuel : bracelet, application, réseau, puis contacts de confiance. Il ne représente pas un système déjà testé.",
     'diagram_alt' => "Schéma conceptuel du dispositif : capteurs, contrôleur ESP32, réseau, application mobile, GPS et contacts d'urgence.",
     'diagram_caption' => "Schéma de blocs fourni pour un dispositif de sécurité connecté. Il ne valide ni un prototype matériel ni le fonctionnement ou les performances du système.",
     'architecture_steps' => [
@@ -40,7 +40,7 @@ return [
     ],
     'limitations_title' => "Ce dont l'alerte dépend",
     'limitations' => [
-        'Un téléphone proche, allumé et connecté au pendentif.',
+        'Un téléphone proche, allumé et connecté au bracelet.',
         'Le Bluetooth, les autorisations de localisation et un réseau fonctionnel.',
         "La disponibilité d'Internet ou des SMS pris en charge.",
     ],
@@ -48,7 +48,7 @@ return [
     'validation_intro' => "Le projet est au stade de concept. Il n'existe pas encore de prototype achevé, de pilote réalisé ni de résultats mesurés.",
     'validation' => [
         ['Recherche', 'Échanger avec des utilisatrices au Cameroun et préciser les besoins et les coûts.'],
-        ['Prototype', "Développer le pendentif-bijou BLE et l'application Android associée."],
+        ['Prototype', "Développer le bracelet BLE et l'application Android associée."],
         ['Essais contrôlés', "Évaluer la connexion, la confidentialité, l'usage et l'acheminement des alertes."],
         ['Ajustements', "Améliorer le concept avant d'envisager une production limitée."],
     ],

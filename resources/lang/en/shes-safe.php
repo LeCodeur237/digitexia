@@ -1,15 +1,15 @@
 <?php
 
 return [
-    'page_title' => "SHE'S SAFE | SOS necklace concept - DigiTexia",
-    'seo_description' => "Explore SHE'S SAFE, an SOS jewelry necklace concept connected to a mobile app for a more discreet request for help. Prototyping and testing are still ahead.",
+    'page_title' => "SHE'S SAFE | SOS bracelet concept - DigiTexia",
+    'seo_description' => "Explore SHE'S SAFE, an SOS bracelet concept connected to a mobile app for a more discreet request for help. Prototyping and testing are still ahead.",
     'status' => 'Concept to validate',
     'catalog_title' => "SHE'S SAFE, a concept to explore",
-    'catalog_text' => 'A proposed SOS jewelry necklace and Android app designed to simplify a discreet request for help. Prototyping and testing are still ahead.',
+    'catalog_text' => 'A proposed SOS bracelet and Android app designed to simplify a discreet request for help. Prototyping and testing are still ahead.',
     'view_concept' => 'Explore the concept',
     'hero_title' => 'One discreet action to ask for help.',
-    'hero_text' => "SHE'S SAFE explores a discreet SOS pendant worn as a necklace and connected to an Android app. The idea: reach trusted contacts when taking out a phone is difficult.",
-    'concept_visual' => 'Concept visual of an SOS jewelry necklace and phone, not a photograph of a prototype.',
+    'hero_text' => "SHE'S SAFE explores a discreet SOS bracelet, designed as a piece of jewelry and connected to an Android app. The idea: reach trusted contacts when taking out a phone is difficult.",
+    'concept_visual' => 'Concept visual of an SOS bracelet and phone, not a photograph of a prototype.',
     'discover' => 'Explore the proposed flow',
     'discuss' => 'Discuss the project',
     'problem_title' => 'When the phone is out of reach',
@@ -22,14 +22,14 @@ return [
     'flow_title' => 'A four-step SOS flow',
     'flow_intro' => 'This is the proposed first-version flow, subject to prototyping and testing.',
     'flow' => [
-        ['Press and hold', 'Hold the discreet pendant control for three seconds.'],
-        ['Transmit', 'The pendant sends a Bluetooth signal to the nearby phone.'],
+        ['Press and hold', 'Hold the discreet bracelet control for three seconds.'],
+        ['Transmit', 'The bracelet sends a Bluetooth signal to the nearby phone.'],
         ['Notify', 'The app attempts to send an SOS and available location to authorized contacts.'],
         ['Check status', 'The app indicates connection and delivery status.'],
     ],
     'activation_note' => 'Vibration would confirm local activation, not delivery to a contact.',
     'architecture_title' => 'A simple architecture with real dependencies',
-    'architecture_intro' => 'The flow shows a concept: pendant, app, network and trusted contacts. It is not a tested system.',
+    'architecture_intro' => 'The flow shows a concept: bracelet, app, network and trusted contacts. It is not a tested system.',
     'diagram_alt' => 'Conceptual device diagram: sensors, ESP32 controller, network, mobile app, GPS and emergency contacts.',
     'diagram_caption' => 'Supplied block diagram for a connected safety device. It does not validate a hardware prototype, system operation or performance.',
     'architecture_steps' => [
@@ -40,7 +40,7 @@ return [
     ],
     'limitations_title' => 'What an alert depends on',
     'limitations' => [
-        'A nearby powered-on phone paired with the pendant.',
+        'A nearby powered-on phone paired with the bracelet.',
         'Bluetooth, location permissions and a working network.',
         'Internet or supported SMS availability.',
     ],
@@ -48,7 +48,7 @@ return [
     'validation_intro' => 'This project is at concept stage. There is no completed prototype, completed pilot or measured result yet.',
     'validation' => [
         ['Research', 'Talk with women in Cameroon and refine needs and costs.'],
-        ['Prototype', 'Build a BLE jewelry pendant and companion Android app.'],
+        ['Prototype', 'Build a BLE bracelet and companion Android app.'],
         ['Controlled tests', 'Assess connectivity, privacy, usability and alert delivery.'],
         ['Refine', 'Improve the concept before considering a small production run.'],
     ],

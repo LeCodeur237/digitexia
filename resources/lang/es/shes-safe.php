@@ -1,15 +1,15 @@
 <?php
 
 return [
-    'page_title' => "SHE'S SAFE | Concepto de collar-joya SOS - DigiTexia",
-    'seo_description' => "Conozca SHE'S SAFE, un concepto de collar-joya SOS vinculado a una aplicación móvil. El prototipo y las pruebas aún están pendientes.",
+    'page_title' => "SHE'S SAFE | Concepto de pulsera SOS - DigiTexia",
+    'seo_description' => "Conozca SHE'S SAFE, un concepto de pulsera SOS vinculada a una aplicación móvil. El prototipo y las pruebas aún están pendientes.",
     'status' => 'Concepto por validar',
     'catalog_title' => "SHE'S SAFE, un concepto por explorar",
-    'catalog_text' => 'Un collar-joya SOS y una aplicación Android previstos para simplificar una solicitud discreta de ayuda. El prototipo y las pruebas están pendientes.',
+    'catalog_text' => 'Una pulsera SOS y una aplicación Android previstas para simplificar una solicitud discreta de ayuda. El prototipo y las pruebas están pendientes.',
     'view_concept' => 'Conocer el concepto',
     'hero_title' => 'Un gesto discreto para pedir ayuda.',
-    'hero_text' => "SHE'S SAFE explora un colgante SOS discreto, llevado como un collar-joya y conectado a una aplicación Android. La idea es avisar a contactos de confianza cuando sacar el teléfono resulta difícil.",
-    'concept_visual' => 'Visualización conceptual de un collar-joya SOS y un teléfono; no es la fotografía de un prototipo.',
+    'hero_text' => "SHE'S SAFE explora una pulsera SOS discreta, diseñada como una joya y conectada a una aplicación Android. La idea es avisar a contactos de confianza cuando sacar el teléfono resulta difícil.",
+    'concept_visual' => 'Visualización conceptual de una pulsera SOS y un teléfono; no es la fotografía de un prototipo.',
     'discover' => 'Conocer el funcionamiento previsto',
     'discuss' => 'Hablar del proyecto',
     'problem_title' => 'Cuando el teléfono no está al alcance',
@@ -22,14 +22,14 @@ return [
     'flow_title' => 'Una secuencia SOS en cuatro pasos',
     'flow_intro' => 'Así se prevé que funcione la primera versión, sujeto a prototipos y pruebas.',
     'flow' => [
-        ['Mantener pulsado', 'Mantener pulsado el control discreto del colgante durante tres segundos.'],
-        ['Transmitir', 'El colgante envía una señal Bluetooth al teléfono cercano.'],
+        ['Mantener pulsado', 'Mantener pulsado el control discreto de la pulsera durante tres segundos.'],
+        ['Transmitir', 'La pulsera envía una señal Bluetooth al teléfono cercano.'],
         ['Avisar', 'La aplicación intenta enviar un SOS y la ubicación disponible a contactos autorizados.'],
         ['Comprobar', 'La aplicación muestra el estado de la conexión y del envío.'],
     ],
     'activation_note' => 'La vibración confirmaría la activación local, no la recepción de la alerta por un contacto.',
     'architecture_title' => 'Una arquitectura sencilla con dependencias reales',
-    'architecture_intro' => 'El recorrido muestra un flujo conceptual: colgante, aplicación, red y contactos de confianza. No representa un sistema probado.',
+    'architecture_intro' => 'El recorrido muestra un flujo conceptual: pulsera, aplicación, red y contactos de confianza. No representa un sistema probado.',
     'diagram_alt' => 'Diagrama conceptual del dispositivo: sensores, controlador ESP32, red, aplicación móvil, GPS y contactos de emergencia.',
     'diagram_caption' => 'Diagrama de bloques proporcionado para un dispositivo de seguridad conectado. No valida un prototipo físico ni el funcionamiento o rendimiento del sistema.',
     'architecture_steps' => [
@@ -40,7 +40,7 @@ return [
     ],
     'limitations_title' => 'De qué depende una alerta',
     'limitations' => [
-        'Un teléfono cercano, encendido y vinculado al colgante.',
+        'Un teléfono cercano, encendido y vinculado a la pulsera.',
         'Bluetooth, permisos de ubicación y una red funcional.',
         'Disponibilidad de Internet o SMS compatibles.',
     ],
@@ -48,7 +48,7 @@ return [
     'validation_intro' => 'El proyecto está en fase de concepto. Todavía no hay un prototipo terminado, un piloto completado ni resultados medidos.',
     'validation' => [
         ['Investigación', 'Hablar con mujeres en Camerún y precisar necesidades y costes.'],
-        ['Prototipo', 'Desarrollar un colgante-joya BLE y su aplicación Android.'],
+        ['Prototipo', 'Desarrollar una pulsera BLE y su aplicación Android.'],
         ['Pruebas controladas', 'Evaluar conexión, privacidad, uso y entrega de alertas.'],
         ['Mejoras', 'Perfeccionar el concepto antes de considerar una producción limitada.'],
     ],

@@ -1,15 +1,15 @@
 <?php
 
 return [
-    'page_title' => "SHE'S SAFE | SOS 首饰项链概念 - DigiTexia",
-    'seo_description' => "了解 SHE'S SAFE：一款连接手机应用的 SOS 首饰项链概念。原型开发和测试尚未完成。",
+    'page_title' => "SHE'S SAFE | SOS 手环概念 - DigiTexia",
+    'seo_description' => "了解 SHE'S SAFE：一款连接手机应用的 SOS 手环概念。原型开发和测试尚未完成。",
     'status' => '待验证的概念',
     'catalog_title' => "SHE'S SAFE：值得探索的概念",
-    'catalog_text' => '拟议中的 SOS 首饰项链与 Android 应用，旨在简化低调的求助请求。原型和测试尚未完成。',
+    'catalog_text' => '拟议中的 SOS 手环与 Android 应用，旨在简化低调的求助请求。原型和测试尚未完成。',
     'view_concept' => '了解概念',
     'hero_title' => '用一个低调的动作发出求助请求。',
-    'hero_text' => "SHE'S SAFE 探索一款作为首饰佩戴的精致 SOS 吊坠项链，与 Android 应用连接，旨在难以取用手机时联系可信赖的人。",
-    'concept_visual' => 'SOS 首饰项链与手机的概念示意图，并非实物原型照片。',
+    'hero_text' => "SHE'S SAFE 探索一款精致低调的 SOS 首饰手环，并与 Android 应用连接，旨在难以取用手机时联系可信赖的人。",
+    'concept_visual' => 'SOS 手环与手机的概念示意图，并非实物原型照片。',
     'discover' => '了解拟议流程',
     'discuss' => '讨论项目',
     'problem_title' => '手机不在手边时',
@@ -22,14 +22,14 @@ return [
     'flow_title' => '四步 SOS 流程',
     'flow_intro' => '以下是第一版拟议流程，仍需通过原型和测试验证。',
     'flow' => [
-        ['长按', '长按吊坠上的隐蔽控制键三秒。'],
-        ['传输', '吊坠通过蓝牙向附近手机发送信号。'],
+        ['长按', '长按手环上的隐蔽控制键三秒。'],
+        ['传输', '手环通过蓝牙向附近手机发送信号。'],
         ['通知', '应用尝试向授权联系人发送 SOS 和可用位置信息。'],
         ['查看状态', '应用显示连接与发送状态。'],
     ],
     'activation_note' => '震动只会确认本地激活，不代表联系人已收到警报。',
     'architecture_title' => '结构简单，但依赖条件真实存在',
-    'architecture_intro' => '以下为概念流程：吊坠、应用、网络、可信联系人，并非已经测试的系统。',
+    'architecture_intro' => '以下为概念流程：手环、应用、网络、可信联系人，并非已经测试的系统。',
     'diagram_alt' => '设备概念图：传感器、ESP32 控制器、网络、手机应用、GPS 和紧急联系人。',
     'diagram_caption' => '所提供的联网安全设备模块图，不代表硬件原型、系统运行或性能已经过验证。',
     'architecture_steps' => [
@@ -40,7 +40,7 @@ return [
     ],
     'limitations_title' => '警报发送依赖于',
     'limitations' => [
-        '附近已开机并与吊坠配对的手机。',
+        '附近已开机并与手环配对的手机。',
         '蓝牙、定位权限及正常运行的网络。',
         '可用的互联网连接或受支持的短信服务。',
     ],
@@ -48,7 +48,7 @@ return [
     'validation_intro' => '项目仍处于概念阶段，尚无完成的原型、试点或实测结果。',
     'validation' => [
         ['调研', '与喀麦隆女性交流，明确需求和成本。'],
-        ['原型', '开发 BLE 首饰吊坠和配套 Android 应用。'],
+        ['原型', '开发 BLE 手环和配套 Android 应用。'],
         ['受控测试', '评估连接、隐私、易用性和警报送达。'],
         ['改进', '在考虑小批量生产前完善概念。'],
     ],

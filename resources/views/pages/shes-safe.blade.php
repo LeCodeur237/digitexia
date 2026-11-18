@@ -31,7 +31,7 @@
                     </div>
                 </div>
                 <figure class="ss-hero-image">
-                    <img src="{{ asset('images/shes-safe/necklace-concept.png') }}" alt="{{ __('shes-safe.concept_visual') }}" fetchpriority="high">
+                    <img src="{{ asset('images/shes-safe/bracelet-concept.png') }}" alt="{{ __('shes-safe.concept_visual') }}" fetchpriority="high">
                     <figcaption>{{ __('shes-safe.concept_visual') }}</figcaption>
                 </figure>
             </div>
